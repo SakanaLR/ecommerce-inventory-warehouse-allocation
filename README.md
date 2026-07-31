@@ -40,7 +40,7 @@ Product descriptions are treated as display fields rather than SKU identifiers. 
 
 ## Project Workflow
 
-The analysis is organized into four notebooks:
+The analysis is organized into five notebooks:
 
 ### 01 Data Cleaning
 
@@ -112,6 +112,20 @@ Main outputs:
 - `outputs/warehouse_allocation_summary.csv`
 - `outputs/management_kpi_summary.csv`
 
+### 05 Working Capital Impact
+
+Extends the inventory analytics workflow into a finance-facing working capital analysis.
+
+This notebook loads `outputs/sku_profile_classification.csv` and uses simulated inventory and cost fields to estimate inventory value, stockout revenue exposure, and overstock capital exposure. If the simulated inventory fields are not present in the source file, the notebook recreates the simulated inventory layer deterministically for reproducibility.
+
+Main outputs:
+
+- `outputs/working_capital_summary.csv`
+- `outputs/top_overstock_capital_exposure.csv`
+- `outputs/top_stockout_revenue_exposure.csv`
+- `outputs/inventory_value_by_sku_class.csv`
+- `outputs/inventory_value_by_warehouse_strategy.csv`
+
 ## Key Results
 
 After cleaning and transformation:
@@ -148,6 +162,15 @@ Warehouse strategy outputs:
 - Overstock Review / Reduce Replenishment: 924 SKUs
 - Standard Replenishment Review: 1,597 SKUs
 
+Working capital impact based on simulated inventory and cost assumptions:
+
+- Total SKUs analyzed: 3,917
+- Stockout Risk SKUs: 1,432
+- Overstock Risk SKUs: 924
+- Estimated inventory value: 1,090,613.07
+- Stockout revenue exposure: 645,275.56
+- Overstock capital exposure: 124,125.96
+
 ## Main Output Files
 
 | Output file | Purpose |
@@ -161,6 +184,11 @@ Warehouse strategy outputs:
 | `outputs/overstock_risk_list.csv` | SKUs that may require overstock review or reduced replenishment. |
 | `outputs/warehouse_allocation_summary.csv` | Summary of warehouse strategy groups. |
 | `outputs/management_kpi_summary.csv` | Consolidated KPI summary for portfolio and management review. |
+| `outputs/working_capital_summary.csv` | Finance-facing summary of simulated inventory value, stockout revenue exposure, and overstock capital exposure. |
+| `outputs/top_overstock_capital_exposure.csv` | SKUs with the highest simulated overstock capital exposure. |
+| `outputs/top_stockout_revenue_exposure.csv` | SKUs with the highest simulated stockout revenue exposure. |
+| `outputs/inventory_value_by_sku_class.csv` | Simulated inventory value summarized by SKU class. |
+| `outputs/inventory_value_by_warehouse_strategy.csv` | Simulated inventory value summarized by warehouse strategy. |
 
 ## Repository Structure
 
@@ -190,7 +218,8 @@ ecommerce-inventory-warehouse-allocation/
 │   ├── 01_data_cleaning.ipynb
 │   ├── 02_sql_business_queries.ipynb
 │   ├── 03_sku_classification.ipynb
-│   └── 04_replenishment_warehouse_allocation.ipynb
+│   ├── 04_replenishment_warehouse_allocation.ipynb
+│   └── 05_working_capital_impact.ipynb
 │
 ├── outputs/
 │   ├── top_sku_revenue_contribution.csv
@@ -203,7 +232,12 @@ ecommerce-inventory-warehouse-allocation/
 │   ├── replenishment_recommendations.csv
 │   ├── overstock_risk_list.csv
 │   ├── warehouse_allocation_summary.csv
-│   └── management_kpi_summary.csv
+│   ├── management_kpi_summary.csv
+│   ├── working_capital_summary.csv
+│   ├── top_overstock_capital_exposure.csv
+│   ├── top_stockout_revenue_exposure.csv
+│   ├── inventory_value_by_sku_class.csv
+│   └── inventory_value_by_warehouse_strategy.csv
 │
 └── docs/
     └── management_summary.md
@@ -243,6 +277,7 @@ notebooks/01_data_cleaning.ipynb
 notebooks/02_sql_business_queries.ipynb
 notebooks/03_sku_classification.ipynb
 notebooks/04_replenishment_warehouse_allocation.ipynb
+notebooks/05_working_capital_impact.ipynb
 ```
 
 5. Review the generated outputs:
@@ -265,9 +300,9 @@ The raw dataset should be placed locally under `data/raw/Online Retail.xlsx` bef
 
 The public dataset does not include actual inventory levels, supplier lead times, unit costs, storage volume, warehouse capacity, or fulfillment methods.
 
-Inventory-related fields are simulated to demonstrate how transaction-level sales data can be extended into replenishment planning and warehouse allocation analysis.
+Inventory-related fields and cost fields are simulated to demonstrate how transaction-level sales data can be extended into replenishment planning, warehouse allocation analysis, and finance-facing working capital analysis.
 
-Stockout risk, overstock risk, and warehouse strategy outputs are illustrative decision-support examples. They should not be interpreted as real operational recommendations or actual company inventory decisions.
+Stockout risk, overstock risk, warehouse strategy, and working capital exposure outputs are illustrative decision-support examples. They should not be interpreted as real operational recommendations, accounting values, or actual company inventory decisions.
 
 No confidential company data is used.
 
@@ -277,4 +312,4 @@ This project uses public transaction data and simulated inventory assumptions.
 
 No confidential company data is used.
 
-The analysis is intended to demonstrate a reproducible business analytics workflow for SKU classification, replenishment planning, inventory risk review, and warehouse allocation decision support.
+The analysis is intended to demonstrate a reproducible business analytics workflow for SKU classification, replenishment planning, inventory risk review, warehouse allocation, and simulated working capital decision support.
