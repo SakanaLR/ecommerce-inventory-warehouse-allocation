@@ -1,0 +1,9 @@
+standard_field,source_field,required,data_type,description
+invoice_no,InvoiceNo,yes,string,Unique transaction or invoice identifier.
+stock_code,StockCode,yes,string,Product or SKU identifier used as the normalized SKU key.
+description,Description,no,string,Product description used as a display field.
+quantity,Quantity,yes,numeric,Quantity sold on the transaction line.
+invoice_date,InvoiceDate,yes,datetime,Transaction or invoice timestamp.
+unit_price,UnitPrice,yes,numeric,Unit selling price for the transaction line.
+customer_id,CustomerID,no,string,Customer identifier when available.
+country,Country,no,string,Customer country or sales region when available.

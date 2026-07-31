@@ -28,3 +28,6 @@ database/*.sqlite3
 # Temporary files
 tmp/
 temp/
+# Generated interim data
+data/interim/*.csv
+!data/interim/.gitkeep
