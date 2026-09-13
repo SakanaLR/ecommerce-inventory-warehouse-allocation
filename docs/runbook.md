@@ -229,3 +229,7 @@ python scripts/standardize_raw_sales.py \
 ```
 
 This standardization layer prepares a normalized dataset for future pipeline refactoring. Notebook 01 does not yet automatically consume `data/interim/standardized_sales.csv`.
+
+### Optional Standardized-Input Cleaning
+
+`notebooks/01_data_cleaning.ipynb` remains the original UCI-input cleaning notebook and the current production/portfolio workflow. As an optional path, `notebooks/01b_data_cleaning_standardized_input.ipynb` consumes `data/interim/standardized_sales.csv` and writes only to `data/processed_standardized/`, so it does not overwrite the original outputs under `data/processed/`. Notebook 01b is a preparation layer for future reusable pipeline refactoring, not yet a replacement for the original workflow.
