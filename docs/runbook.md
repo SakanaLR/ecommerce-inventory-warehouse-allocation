@@ -237,3 +237,35 @@ This standardization layer prepares a normalized dataset for future pipeline ref
 ### Optional Standardized-Input SQL Queries
 
 `notebooks/02_sql_business_queries.ipynb` remains the original SQL workflow. The optional standardized-input workflow, `notebooks/02b_sql_business_queries_standardized_input.ipynb`, uses `stock_code` as the normalized SKU key and treats `description` as a display field. Because notebook 02 may group some SKU outputs by both `stock_code` and `description`, exact value parity is not expected for every SKU-level output. This difference is intentional and follows the project-wide SKU definition.
+
+## Full Standardized-Input Workflow
+
+Run the following preparation workflow from the project root.
+
+1. Validate the raw input:
+
+   ```bash
+   python scripts/validate_input_data.py \
+     --input "data/raw/Online Retail.xlsx" \
+     --mapping "config/schema_mapping_template.csv" \
+     --output "outputs/data_quality_precheck.csv"
+   ```
+
+2. Standardize the raw sales data:
+
+   ```bash
+   python scripts/standardize_raw_sales.py \
+     --input "data/raw/Online Retail.xlsx" \
+     --mapping "config/schema_mapping_template.csv" \
+     --output "data/interim/standardized_sales.csv"
+   ```
+
+3. Run the standardized-input notebooks in order:
+
+   1. `notebooks/01b_data_cleaning_standardized_input.ipynb`
+   2. `notebooks/02b_sql_business_queries_standardized_input.ipynb`
+   3. `notebooks/03b_sku_classification_standardized_input.ipynb`
+   4. `notebooks/04b_replenishment_warehouse_allocation_standardized_input.ipynb`
+   5. `notebooks/05b_working_capital_impact_standardized_input.ipynb`
+
+The b-notebooks are preparation layers for reusable pipeline refactoring and do not replace the original notebooks yet. They write standardized artifacts to `data/processed_standardized/` and `outputs_standardized/`; generated CSVs in those directories are ignored by Git. Throughout this workflow, `stock_code` is the normalized SKU key and `description` is a display field. Inventory, warehouse, cost, and financial-exposure fields are simulated for demonstration and are not real company data or accounting values.
