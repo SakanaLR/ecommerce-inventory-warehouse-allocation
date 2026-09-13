@@ -155,6 +155,9 @@ Inventory risk findings based on simulated inventory assumptions:
 
 Warehouse strategy outputs:
 
+- `warehouse_strategy_count`: 6 unique warehouse strategies
+- `warehouse_allocation_segment_count`: 7 SKU classification × warehouse strategy summary combinations
+
 - Local Warehouse Priority: 784 SKUs
 - Stable Local Warehouse Inventory: 208 SKUs
 - Small-Batch Replenishment / Monitor Closely: 69 SKUs

@@ -269,3 +269,5 @@ Run the following preparation workflow from the project root.
    5. `notebooks/05b_working_capital_impact_standardized_input.ipynb`
 
 The b-notebooks are preparation layers for reusable pipeline refactoring and do not replace the original notebooks yet. They write standardized artifacts to `data/processed_standardized/` and `outputs_standardized/`; generated CSVs in those directories are ignored by Git. Throughout this workflow, `stock_code` is the normalized SKU key and `description` is a display field. Inventory, warehouse, cost, and financial-exposure fields are simulated for demonstration and are not real company data or accounting values.
+
+Warehouse metrics use two explicit definitions: `warehouse_strategy_count` is the number of unique warehouse strategies (`warehouse_strategy.nunique()`), currently 6; `warehouse_allocation_segment_count` is the number of SKU-class-by-strategy rows in `warehouse_allocation_summary`, currently 7.
