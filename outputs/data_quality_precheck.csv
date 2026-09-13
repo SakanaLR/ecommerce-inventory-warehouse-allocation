@@ -1,0 +1,20 @@
+check,status,detail,row_count
+raw_column_whitespace_stripped,pass,No leading/trailing whitespace detected in raw column names.,0
+required_standard_fields_mapped,pass,All required standard fields are present in the mapping file.,0
+required_source_fields_non_blank,pass,All required standard fields have non-blank source_field mappings.,0
+duplicate_standard_fields,pass,No duplicate standard_field values detected.,0
+duplicate_source_fields,pass,No duplicate non-blank source_field values detected.,0
+required_source_fields_exist,pass,All required source fields are present.,0
+missing_required_values:invoice_no,pass,Missing values in InvoiceNo.,0
+missing_required_values:stock_code,pass,Missing values in StockCode.,0
+missing_required_values:quantity,pass,Missing values in Quantity.,0
+numeric_parseability:quantity,pass,Values in Quantity that cannot be parsed as numeric.,0
+missing_required_values:invoice_date,pass,Missing values in InvoiceDate.,0
+date_parseability:invoice_date,pass,Values in InvoiceDate that cannot be parsed as dates.,0
+missing_required_values:unit_price,pass,Missing values in UnitPrice.,0
+numeric_parseability:unit_price,pass,Values in UnitPrice that cannot be parsed as numeric.,0
+non_positive_quantity_records,warn,Rows where Quantity is less than or equal to zero.,10624
+non_positive_unit_price_records,warn,Rows where UnitPrice is less than or equal to zero.,2517
+duplicate_rows,warn,Exact duplicate rows in the raw file.,5268
+raw_row_count,info,Total rows loaded from the raw file.,541909
+raw_column_count,info,Total columns loaded from the raw file.,8
