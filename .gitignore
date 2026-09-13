@@ -34,3 +34,6 @@ data/interim/*.csv
 # Generated standardized processed data
 data/processed_standardized/*.csv
 !data/processed_standardized/.gitkeep
+# Generated standardized output data
+outputs_standardized/*.csv
+!outputs_standardized/.gitkeep

@@ -233,3 +233,7 @@ This standardization layer prepares a normalized dataset for future pipeline ref
 ### Optional Standardized-Input Cleaning
 
 `notebooks/01_data_cleaning.ipynb` remains the original UCI-input cleaning notebook and the current production/portfolio workflow. As an optional path, `notebooks/01b_data_cleaning_standardized_input.ipynb` consumes `data/interim/standardized_sales.csv` and writes only to `data/processed_standardized/`, so it does not overwrite the original outputs under `data/processed/`. Notebook 01b is a preparation layer for future reusable pipeline refactoring, not yet a replacement for the original workflow.
+
+### Optional Standardized-Input SQL Queries
+
+`notebooks/02_sql_business_queries.ipynb` remains the original SQL workflow. The optional standardized-input workflow, `notebooks/02b_sql_business_queries_standardized_input.ipynb`, uses `stock_code` as the normalized SKU key and treats `description` as a display field. Because notebook 02 may group some SKU outputs by both `stock_code` and `description`, exact value parity is not expected for every SKU-level output. This difference is intentional and follows the project-wide SKU definition.
