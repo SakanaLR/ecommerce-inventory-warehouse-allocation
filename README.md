@@ -1,163 +1,132 @@
-# E-Commerce Inventory Forecasting & Warehouse Allocation Model
+# E-Commerce Inventory, Warehouse & Working Capital Analytics
 
 ## Overview
 
-This project analyzes public e-commerce transaction data and converts transaction-level sales records into SKU-level inventory and warehouse allocation decision support.
+This portfolio project turns public e-commerce transaction data into SKU-level decision support for finance and operations teams. It connects sales history to product prioritization, replenishment review, inventory risk, warehouse strategy, and working-capital exposure.
 
-The project demonstrates how cleaned sales data can be used to identify high-priority SKUs, long-tail products, stockout risk, overstock risk, and practical warehouse strategies.
+The repository includes two parallel paths:
 
-This is a portfolio project for business analytics, inventory planning, and data-driven operations decision support.
+- An original five-notebook workflow built for the UCI Online Retail dataset.
+- A standardized-input preparation workflow that validates and maps source columns before running equivalent analysis in the `b` notebooks.
+
+The standardized path demonstrates how the analysis can be adapted to future datasets without replacing the original portfolio workflow yet.
 
 ## Business Value
 
-The project shows how an e-commerce operator can move from raw transaction records to practical inventory review outputs.
+The analysis translates transaction records into decisions that matter across several business functions:
 
-Instead of treating all products equally, the workflow separates core revenue-driving SKUs, stable high-turnover SKUs, volatile SKUs, long-tail SKUs, stockout-risk SKUs, and overstock-risk SKUs. This supports more targeted replenishment, warehouse space allocation, and management review.
+| Business area | Decision support produced |
+| --- | --- |
+| Inventory planning | Identifies replenishment candidates, stockout risk, overstock risk, safety stock, and reorder points. |
+| Operations | Segments SKUs by revenue, turnover, and demand volatility to support differentiated inventory policies. |
+| Warehouse management | Assigns simulated warehouse strategies and summarizes SKU allocation segments. |
+| Finance | Estimates simulated inventory value, stockout revenue exposure, and overstock capital exposure. |
+| Management reporting | Produces concise KPI tables and ranked review lists for operational follow-up. |
+
+Rather than applying one inventory policy to every product, the workflow distinguishes core revenue drivers, stable and volatile high-turnover items, regular products, and long-tail SKUs.
 
 ## Business Questions
 
-This project answers three practical management questions:
+1. Which SKUs contribute the most revenue and unit demand?
+2. Which products should receive replenishment priority?
+3. Which SKUs may create stockout or overstock risk?
+4. Which products belong in local warehouses versus limited-stock strategies?
+5. How much simulated inventory value and financial exposure sits within each SKU class and warehouse strategy?
 
-1. Which SKUs should receive replenishment priority?
-2. Which SKUs may create stockout or overstock risk?
-3. Which SKUs should be prioritized for local warehouse inventory versus external or limited-stock strategies?
+## End-to-End Workflow
 
-## Data Source
+```mermaid
+flowchart LR
+    A[Raw sales data] --> B[Validation and schema mapping]
+    B --> C[Standardized transactions]
+    C --> D[Cleaning and SKU master]
+    D --> E[SQL demand analysis]
+    E --> F[SKU classification]
+    F --> G[Simulated inventory risk and warehouse allocation]
+    G --> H[Simulated working-capital exposure]
+    H --> I[Management CSV outputs]
+```
 
-The project uses the public UCI Online Retail dataset as the transaction-level sales data source.
+The original workflow starts directly from the UCI workbook. The standardized-input workflow adds validation and schema mapping, then writes downstream processed and analytical outputs to separate standardized directories so the original notebook outputs remain unchanged.
 
-Dataset link: https://archive.ics.uci.edu/dataset/352/online+retail
+## Analytical Components
 
-The dataset includes invoice-level sales records with product code, product description, quantity, invoice date, unit price, customer ID, and country.
+### 01 — Data Cleaning
 
-No confidential company data is used.
+- Removes exact duplicates and invalid sales records.
+- Separates returns and cancellations.
+- Excludes postage, fees, discounts, bank charges, manual adjustments, and other non-product lines.
+- Creates clean sales, monthly SKU sales, a normalized SKU master, description checks, and a data-quality summary.
 
-## SKU Definition
+### 02 — SQL Business Analysis
 
-This project uses `stock_code` as the normalized SKU key.
+- Loads cleaned product sales into SQLite.
+- Produces top-SKU revenue and unit contribution, long-tail SKU, country demand, and monthly trend outputs.
 
-Product descriptions are treated as display fields rather than SKU identifiers. This prevents the same stock code from being split into multiple SKU profiles when product descriptions vary across transactions.
+### 03 — SKU Classification
 
-## Project Workflow
+- Builds one profile per normalized SKU.
+- Classifies SKUs as High-Revenue Priority, High-Turnover Stable, High-Turnover Volatile, Long-Tail, or Regular.
+- Uses revenue contribution, sales volume, and demand volatility while retaining descriptions for display.
 
-The analysis is organized into five notebooks:
+### 04 — Replenishment and Warehouse Allocation
 
-### 01 Data Cleaning
+- Applies deterministic simulated inventory assumptions.
+- Calculates daily demand, safety stock, reorder point, replenishment quantity, inventory coverage, and inventory risk.
+- Assigns warehouse strategies and creates management KPI summaries.
 
-Cleans the raw transaction data and creates a valid product sales dataset.
+### 05 — Working Capital Impact
 
-Main steps include:
+- Estimates simulated inventory value.
+- Quantifies simulated stockout revenue exposure and overstock capital exposure.
+- Summarizes exposure by SKU class and warehouse strategy.
 
-- Removing duplicate rows.
-- Separating cancellations and returns.
-- Removing invalid sales records.
-- Excluding records without product descriptions.
-- Excluding non-product transaction lines such as postage, fees, discounts, bank charges, and manual adjustments.
-- Creating a SKU master table.
-- Creating a SKU description consistency check.
-- Creating monthly SKU-level sales records.
-- Creating a data quality summary table.
+## Standardized Reusable Input Workflow
 
-Main outputs:
+The standardized path adds a schema-controlled preparation layer for future reusable pipeline refactoring:
 
-- `data/processed/clean_sales.csv`
-- `data/processed/returns_cancellations.csv`
-- `data/processed/non_product_lines.csv`
-- `data/processed/sku_master.csv`
-- `data/processed/sku_description_check.csv`
-- `data/processed/monthly_sku_sales.csv`
-- `data/processed/data_quality_summary.csv`
+1. `scripts/validate_input_data.py` checks required fields and common data-quality issues.
+2. `scripts/standardize_raw_sales.py` maps configured source columns to canonical names; the template defines five required fields and three optional mappings.
+3. Notebooks `01b` through `05b` reproduce the analytical workflow using standardized inputs.
+4. The standardized transaction file is written to `data/interim/`; downstream CSVs are written to `data/processed_standardized/` and `outputs_standardized/`. These generated standardized CSVs are ignored by Git.
 
-### 02 SQL Business Queries
+The `b` notebooks are preparation layers. They do not replace the original notebooks yet.
 
-Loads cleaned product sales data into SQLite and generates business summary tables using SQL.
+### SKU definition
 
-The SQL queries are embedded in `notebooks/02_sql_business_queries.ipynb`.
-
-Main outputs:
-
-- `outputs/top_sku_revenue_contribution.csv`
-- `outputs/top_sku_unit_contribution.csv`
-- `outputs/long_tail_skus.csv`
-- `outputs/country_demand_summary.csv`
-- `outputs/monthly_sales_trend.csv`
-
-### 03 SKU Classification
-
-Builds SKU-level profiles and classifies products based on revenue contribution, sales volume, and demand volatility.
-
-Main SKU classes include:
-
-- High-Revenue Priority
-- High-Turnover Stable
-- High-Turnover Volatile
-- Long-Tail
-- Regular
-
-Main outputs:
-
-- `outputs/sku_profile_classification.csv`
-- `outputs/sku_classification_summary.csv`
-
-### 04 Replenishment and Warehouse Allocation
-
-Extends SKU classification into replenishment and warehouse allocation recommendations.
-
-This notebook simulates inventory-related fields because the public dataset does not include actual inventory levels, supplier lead times, unit costs, storage volume, warehouse capacity, or fulfillment method.
-
-Main outputs:
-
-- `outputs/replenishment_recommendations.csv`
-- `outputs/overstock_risk_list.csv`
-- `outputs/warehouse_allocation_summary.csv`
-- `outputs/management_kpi_summary.csv`
-
-### 05 Working Capital Impact
-
-Extends the inventory analytics workflow into a finance-facing working capital analysis.
-
-This notebook loads `outputs/sku_profile_classification.csv` and uses simulated inventory and cost fields to estimate inventory value, stockout revenue exposure, and overstock capital exposure. If the simulated inventory fields are not present in the source file, the notebook recreates the simulated inventory layer deterministically for reproducibility.
-
-Main outputs:
-
-- `outputs/working_capital_summary.csv`
-- `outputs/top_overstock_capital_exposure.csv`
-- `outputs/top_stockout_revenue_exposure.csv`
-- `outputs/inventory_value_by_sku_class.csv`
-- `outputs/inventory_value_by_warehouse_strategy.csv`
+`stock_code` is the normalized SKU key throughout the standardized workflow. `description` is a display field, not part of the grouping key. This prevents description variations from splitting one stock code into multiple SKU profiles.
 
 ## Key Results
 
-After cleaning and transformation:
+### Data preparation
 
 - Valid product sales transactions: 522,716 rows
-- Returns / cancellations: 10,587 rows
+- Returns and cancellations: 10,587 rows
 - Non-product transaction rows excluded: 2,162 rows
 - Monthly SKU-level sales records: 34,020 rows
 - SKU master records: 3,917 SKUs
 - SKU profiles classified: 3,917 SKUs
 
-SKU classification findings:
+### SKU portfolio
 
-- High-Revenue Priority SKUs: 784 SKUs
-- High-Revenue Priority SKUs contributed approximately 78.8% of total revenue and 66.1% of total units sold
-- Regular SKUs: 1,684 SKUs
-- High-Turnover Stable SKUs: 208 SKUs
-- High-Turnover Volatile SKUs: 69 SKUs
-- Long-Tail SKUs: 1,172 SKUs
-- Long-Tail SKUs contributed approximately 1.3% of total revenue and 0.6% of total units sold
+| SKU class | SKU count | Selected contribution metrics |
+| --- | ---: | --- |
+| High-Revenue Priority | 784 | Approximately 78.8% of revenue and 66.1% of units |
+| Regular | 1,684 | — |
+| High-Turnover Stable | 208 | — |
+| High-Turnover Volatile | 69 | — |
+| Long-Tail | 1,172 | Approximately 1.3% of revenue and 0.6% of units |
 
-Inventory risk findings based on simulated inventory assumptions:
+### Simulated inventory risk
 
 - Normal inventory position: 1,561 SKUs
 - Stockout Risk: 1,432 SKUs
 - Overstock Risk: 924 SKUs
 
-Warehouse strategy outputs:
+### Simulated warehouse strategy
 
 - `warehouse_strategy_count`: 6 unique warehouse strategies
 - `warehouse_allocation_segment_count`: 7 SKU classification × warehouse strategy summary combinations
-
 - Local Warehouse Priority: 784 SKUs
 - Stable Local Warehouse Inventory: 208 SKUs
 - Small-Batch Replenishment / Monitor Closely: 69 SKUs
@@ -165,7 +134,7 @@ Warehouse strategy outputs:
 - Overstock Review / Reduce Replenishment: 924 SKUs
 - Standard Replenishment Review: 1,597 SKUs
 
-Working capital impact based on simulated inventory and cost assumptions:
+### Simulated working-capital impact
 
 - Total SKUs analyzed: 3,917
 - Stockout Risk SKUs: 1,432
@@ -174,145 +143,147 @@ Working capital impact based on simulated inventory and cost assumptions:
 - Stockout revenue exposure: 645,275.56
 - Overstock capital exposure: 124,125.96
 
-## Main Output Files
+## Representative Outputs
 
-| Output file | Purpose |
+| Output file | Business use |
 | --- | --- |
-| `data/processed/clean_sales.csv` | Cleaned valid product sales transactions used as the main analytical dataset. |
-| `data/processed/sku_master.csv` | Normalized SKU reference table using `stock_code` as the SKU key. |
-| `data/processed/sku_description_check.csv` | Check for stock codes with multiple product descriptions. |
-| `data/processed/data_quality_summary.csv` | Summary of the data cleaning process and row counts. |
-| `outputs/sku_profile_classification.csv` | SKU-level classification output with revenue, demand, volatility, and recommended action fields. |
-| `outputs/replenishment_recommendations.csv` | SKUs that may require replenishment based on simulated inventory and reorder point logic. |
-| `outputs/overstock_risk_list.csv` | SKUs that may require overstock review or reduced replenishment. |
-| `outputs/warehouse_allocation_summary.csv` | Summary of warehouse strategy groups. |
-| `outputs/management_kpi_summary.csv` | Consolidated KPI summary for portfolio and management review. |
-| `outputs/working_capital_summary.csv` | Finance-facing summary of simulated inventory value, stockout revenue exposure, and overstock capital exposure. |
-| `outputs/top_overstock_capital_exposure.csv` | SKUs with the highest simulated overstock capital exposure. |
-| `outputs/top_stockout_revenue_exposure.csv` | SKUs with the highest simulated stockout revenue exposure. |
-| `outputs/inventory_value_by_sku_class.csv` | Simulated inventory value summarized by SKU class. |
-| `outputs/inventory_value_by_warehouse_strategy.csv` | Simulated inventory value summarized by warehouse strategy. |
+| `data/processed/clean_sales.csv` | Analysis-ready valid product transactions. |
+| `data/processed/sku_master.csv` | SKU reference table keyed by `stock_code`. |
+| `outputs/sku_profile_classification.csv` | SKU segmentation with revenue, demand, and volatility measures. |
+| `outputs/replenishment_recommendations.csv` | Prioritized replenishment review list based on simulated inventory. |
+| `outputs/overstock_risk_list.csv` | SKUs requiring simulated overstock review. |
+| `outputs/warehouse_allocation_summary.csv` | SKU-class-by-warehouse-strategy allocation summary. |
+| `outputs/management_kpi_summary.csv` | Consolidated operational and inventory KPIs. |
+| `outputs/working_capital_summary.csv` | Finance-facing simulated inventory and exposure summary. |
+| `outputs/top_overstock_capital_exposure.csv` | Highest simulated overstock capital exposures. |
+| `outputs/top_stockout_revenue_exposure.csv` | Highest simulated stockout revenue exposures. |
 
-## Repository Structure
+The standardized workflow creates equivalent outputs under `data/processed_standardized/` and `outputs_standardized/`.
 
-```text
-ecommerce-inventory-warehouse-allocation/
-│
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── data/
-│   ├── raw/
-│   │   └── Online Retail.xlsx
-│   └── processed/
-│       ├── clean_sales.csv
-│       ├── returns_cancellations.csv
-│       ├── non_product_lines.csv
-│       ├── sku_master.csv
-│       ├── sku_description_check.csv
-│       ├── monthly_sku_sales.csv
-│       └── data_quality_summary.csv
-│
-├── database/
-│   └── ecommerce_inventory.db  # generated by notebook 02, not committed
-│
-├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_sql_business_queries.ipynb
-│   ├── 03_sku_classification.ipynb
-│   ├── 04_replenishment_warehouse_allocation.ipynb
-│   └── 05_working_capital_impact.ipynb
-│
-├── outputs/
-│   ├── top_sku_revenue_contribution.csv
-│   ├── top_sku_unit_contribution.csv
-│   ├── long_tail_skus.csv
-│   ├── country_demand_summary.csv
-│   ├── monthly_sales_trend.csv
-│   ├── sku_profile_classification.csv
-│   ├── sku_classification_summary.csv
-│   ├── replenishment_recommendations.csv
-│   ├── overstock_risk_list.csv
-│   ├── warehouse_allocation_summary.csv
-│   ├── management_kpi_summary.csv
-│   ├── working_capital_summary.csv
-│   ├── top_overstock_capital_exposure.csv
-│   ├── top_stockout_revenue_exposure.csv
-│   ├── inventory_value_by_sku_class.csv
-│   └── inventory_value_by_warehouse_strategy.csv
-│
-└── docs/
-    └── management_summary.md
-```
+## Tools and Skills Demonstrated
+
+- Python and pandas for validation, transformation, aggregation, and deterministic simulation
+- SQLite and SQL for business analysis
+- Schema mapping and reusable input standardization
+- SKU segmentation and demand-volatility analysis
+- Inventory, warehouse, and working-capital KPI design
+- Reproducible Jupyter notebook workflows and CSV output contracts
 
 ## How to Run
 
-1. Create and activate a virtual environment:
+### Setup
+
+Create and activate a virtual environment:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 ```
 
-For Windows:
+On Windows:
 
-```bash
+```powershell
 .venv\Scripts\activate
 ```
 
-2. Install dependencies:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Place the raw dataset in the following path:
+Place the UCI workbook at:
 
 ```text
 data/raw/Online Retail.xlsx
 ```
 
-4. Run the notebooks in order:
+### Option A — Original notebook workflow
 
-```text
-notebooks/01_data_cleaning.ipynb
-notebooks/02_sql_business_queries.ipynb
-notebooks/03_sku_classification.ipynb
-notebooks/04_replenishment_warehouse_allocation.ipynb
-notebooks/05_working_capital_impact.ipynb
-```
+Run these notebooks in order:
 
-5. Review the generated outputs:
+1. `notebooks/01_data_cleaning.ipynb`
+2. `notebooks/02_sql_business_queries.ipynb`
+3. `notebooks/03_sku_classification.ipynb`
+4. `notebooks/04_replenishment_warehouse_allocation.ipynb`
+5. `notebooks/05_working_capital_impact.ipynb`
+
+Review the generated files in:
 
 ```text
 data/processed/
 outputs/
-docs/management_summary.md
 ```
 
-## Generated Files Note
+### Option B — Standardized-input workflow
 
-The SQLite database file under `database/` is generated by `02_sql_business_queries.ipynb` and is not intended to be committed to GitHub.
+From the project root, validate the source data:
 
-The processed CSV files in `data/processed/` and final CSV outputs in `outputs/` may be included for portfolio review, but they can also be regenerated by running the notebooks in order.
+```bash
+python scripts/validate_input_data.py \
+  --input "data/raw/Online Retail.xlsx" \
+  --mapping "config/schema_mapping_template.csv" \
+  --output "outputs/data_quality_precheck.csv"
+```
 
-The raw dataset should be placed locally under `data/raw/Online Retail.xlsx` before running the workflow.
+Create the standardized transaction file:
+
+```bash
+python scripts/standardize_raw_sales.py \
+  --input "data/raw/Online Retail.xlsx" \
+  --mapping "config/schema_mapping_template.csv" \
+  --output "data/interim/standardized_sales.csv"
+```
+
+Then run these notebooks in order:
+
+1. `notebooks/01b_data_cleaning_standardized_input.ipynb`
+2. `notebooks/02b_sql_business_queries_standardized_input.ipynb`
+3. `notebooks/03b_sku_classification_standardized_input.ipynb`
+4. `notebooks/04b_replenishment_warehouse_allocation_standardized_input.ipynb`
+5. `notebooks/05b_working_capital_impact_standardized_input.ipynb`
+
+Review the generated files in:
+
+```text
+data/processed_standardized/
+outputs_standardized/
+```
+
+## Repository Structure
+
+```text
+ecommerce-inventory-warehouse-allocation/
+├── config/
+│   └── schema_mapping_template.csv
+├── data/
+│   ├── raw/
+│   ├── interim/
+│   ├── processed/
+│   └── processed_standardized/
+├── notebooks/
+│   ├── 01_data_cleaning.ipynb ... 05_working_capital_impact.ipynb
+│   └── 01b_data_cleaning_standardized_input.ipynb ... 05b_working_capital_impact_standardized_input.ipynb
+├── outputs/
+├── outputs_standardized/
+├── scripts/
+│   ├── validate_input_data.py
+│   └── standardize_raw_sales.py
+├── docs/
+│   ├── management_summary.md
+│   └── runbook.md
+├── README.md
+└── requirements.txt
+```
+
+## Data Source
+
+The project uses the public [UCI Online Retail dataset](https://archive.ics.uci.edu/dataset/352/online+retail), which contains invoice-level product sales with quantity, date, price, customer, and country fields. No confidential company data is used.
 
 ## Assumptions and Limitations
 
-The public dataset does not include actual inventory levels, supplier lead times, unit costs, storage volume, warehouse capacity, or fulfillment methods.
+The source dataset does not include actual inventory balances, supplier lead times, unit costs, storage volumes, warehouse capacity, or fulfillment assignments.
 
-Inventory-related fields and cost fields are simulated to demonstrate how transaction-level sales data can be extended into replenishment planning, warehouse allocation analysis, and finance-facing working capital analysis.
+Inventory, warehouse, cost, stockout-risk, overstock-risk, and financial-exposure fields are simulated for portfolio demonstration. The deterministic assumptions support reproducibility, but the resulting recommendations and monetary values are not real company inventory data, operational decisions, or accounting figures.
 
-Stockout risk, overstock risk, warehouse strategy, and working capital exposure outputs are illustrative decision-support examples. They should not be interpreted as real operational recommendations, accounting values, or actual company inventory decisions.
-
-No confidential company data is used.
-
-## Disclaimer
-
-This project uses public transaction data and simulated inventory assumptions.
-
-No confidential company data is used.
-
-The analysis is intended to demonstrate a reproducible business analytics workflow for SKU classification, replenishment planning, inventory risk review, warehouse allocation, and simulated working capital decision support.
+The standardized-input notebooks are a preparation layer for future pipeline refactoring. They are not yet a packaged production pipeline and do not replace the original workflow.
