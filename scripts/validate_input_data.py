@@ -16,6 +16,7 @@ REQUIRED_STANDARD_FIELDS = {
     "invoice_date",
     "unit_price",
 }
+REQUIRED_FLAG_VALUES = {"yes", "true", "1", "y"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -170,7 +171,7 @@ def validate_mapping_quality(mapping: pd.DataFrame, results: list[dict]) -> None
         add_result(
             results,
             "duplicate_source_fields",
-            "warn",
+            "fail",
             "Duplicate non-blank source_field values in mapping file: "
             + ", ".join(duplicate_source_fields),
             len(duplicate_source_fields),
@@ -219,7 +220,10 @@ def validate(df: pd.DataFrame, mapping: pd.DataFrame) -> pd.DataFrame:
     validate_mapping_quality(mapping, results)
 
     mapped = mapping[mapping["source_field"].notna() & (mapping["source_field"] != "")]
-    required_mapped = mapped[mapped["required"].isin({"yes", "true", "1", "y"})]
+    required_mapped = mapped[
+        mapped["standard_field"].isin(REQUIRED_STANDARD_FIELDS)
+        | mapped["required"].isin(REQUIRED_FLAG_VALUES)
+    ]
 
     missing_required = [
         row.source_field
@@ -250,7 +254,10 @@ def validate(df: pd.DataFrame, mapping: pd.DataFrame) -> pd.DataFrame:
         source_field = row.source_field
         standard_field = row.standard_field
         expected_type = row.data_type
-        is_required = row.required in {"yes", "true", "1", "y"}
+        is_required = (
+            standard_field in REQUIRED_STANDARD_FIELDS
+            or row.required in REQUIRED_FLAG_VALUES
+        )
 
         if is_required:
             required_values = df[source_field].replace(r"^\s*$", pd.NA, regex=True)
@@ -372,7 +379,7 @@ def print_summary(report: pd.DataFrame, output_path: Path) -> None:
         print("\nValidation result: PASS.")
 
 
-def main() -> None:
+def main() -> int:
     args = parse_args()
     input_path = Path(args.input)
     mapping_path = Path(args.mapping)
@@ -390,7 +397,8 @@ def main() -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     report.to_csv(output_path, index=False)
     print_summary(report, output_path)
+    return 1 if report["status"].eq("fail").any() else 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
