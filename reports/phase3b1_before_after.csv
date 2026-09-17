@@ -1,0 +1,29 @@
+comparison,area,metric,before,after,change,change_pct
+reports/baseline_end_phase3a -> live,sales,valid_product_sales_rows,519627.0,519627.0,0.0,0.0
+reports/baseline_end_phase3a -> live,sales,total_revenue,9818872.18,9818872.18,0.0,0.0
+reports/baseline_end_phase3a -> live,sales,total_units,5337158.0,5337158.0,0.0,0.0
+reports/baseline_end_phase3a -> live,sales,order_count,19646.0,19646.0,0.0,0.0
+reports/baseline_end_phase3a -> live,sales,sku_count,3790.0,3790.0,0.0,0.0
+reports/baseline_end_phase3a -> live,sales,non_product_rows_excluded,2435.0,2435.0,0.0,0.0
+reports/baseline_end_phase3a -> live,demand,median avg_monthly_units,38.0417,38.0417,0.0,0.0
+reports/baseline_end_phase3a -> live,demand,median demand_cv,1.0144,1.0144,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,High-Revenue Priority | sku_count,758.0,758.0,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,High-Revenue Priority | revenue_share,0.7777,0.7777,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,Regular | sku_count,1631.0,1631.0,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,Regular | revenue_share,0.1622,0.1622,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,High-Turnover Stable | sku_count,182.0,182.0,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,High-Turnover Stable | revenue_share,0.0332,0.0332,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,Long-Tail | sku_count,1133.0,1133.0,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,Long-Tail | revenue_share,0.0147,0.0147,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,High-Turnover Volatile | sku_count,86.0,86.0,0.0,0.0
+reports/baseline_end_phase3a -> live,sku_class,High-Turnover Volatile | revenue_share,0.0123,0.0123,0.0,0.0
+reports/baseline_end_phase3a -> live,simulated_inventory,stockout_risk_sku_count,1326.0,536.0,-790.0,-0.5958
+reports/baseline_end_phase3a -> live,simulated_inventory,overstock_risk_sku_count,1086.0,1008.0,-78.0,-0.0718
+reports/baseline_end_phase3a -> live,simulated_inventory,replenishment_recommendation_count,1326.0,536.0,-790.0,-0.5958
+reports/baseline_end_phase3a -> live,simulated_working_capital_gbp,total_estimated_inventory_value,637918.62,1805589.48,1167670.8599999999,1.8304
+reports/baseline_end_phase3a -> live,simulated_working_capital_gbp,stockout_revenue_exposure,563830.24,84414.16,-479416.07999999996,-0.8503
+reports/baseline_end_phase3a -> live,simulated_working_capital_gbp,overstock_capital_exposure,135218.48,53315.26,-81903.22,-0.6057
+reports/baseline_end_phase3a -> live,simulated_working_capital_gbp,annual_holding_cost,,451397.56,,
+reports/baseline_end_phase3a -> live,simulated_working_capital_gbp,eoq_capped_skus,,2242.0,,
+reports/baseline_end_phase3a -> live,reversals,revenue_removed | full_cancellation,387988.81,387988.81,0.0,0.0
+reports/baseline_end_phase3a -> live,reversals,revenue_removed | manual_credit,38970.0,38970.0,0.0,0.0

@@ -1,0 +1,11 @@
+step,row_count,note
+standardized_input,541909,Rows in data/interim/standardized_sales.csv
+after_duplicate_removal,536641,Rows after removing exact duplicates
+returns_cancellations_separated,10587,Cancellation invoices and negative-quantity lines saved separately
+valid_sales_before_exclusions,524878,Valid sales lines before non-product and reversal exclusions
+non_product_lines_excluded,2435,Lines matched by config/non_product_stock_codes.csv
+manual_credit_reversals_removed,1,Sales reversed by a reviewed manual credit (config/manual_reversals.csv)
+fully_reversed_sales_removed,2815,Sales fully cancelled later by the same customer (same price preferred)
+valid_product_sales_final,519627,Final product sales lines used for analysis
+monthly_sku_sales_records,33360,Rows in the monthly SKU sales table
+sku_master_records,3790,Distinct normalized stock codes

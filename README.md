@@ -4,26 +4,23 @@
 
 This portfolio project turns public e-commerce transaction data into SKU-level decision support for finance and operations teams. It connects sales history to product prioritization, replenishment review, inventory risk, warehouse strategy, and working-capital exposure.
 
-The repository includes two parallel paths:
+The workflow validates and standardizes the raw file, cleans it with tested rules, and then runs five analysis notebooks in sequence. All monetary values are in GBP, the currency of the source data.
 
-- An original five-notebook workflow built for the UCI Online Retail dataset.
-- A standardized-input preparation workflow that validates and maps source columns before running equivalent analysis in the `b` notebooks.
+## Data Quality Highlight
 
-The standardized path demonstrates how the analysis can be adapted to future datasets without replacing the original portfolio workflow yet.
+Compared with the original pipeline, the corrected cleaning step lowers revenue by **£447,212 (4.4%)**. The review found these causes:
 
-## Business Value
+- **Cancelled orders counted as sales.** Two orders of 80,995 and 74,215 units were cancelled within minutes but still counted, which pushed both SKUs into the top 10 by revenue.
+- **A keying error reversed off-ledger.** A £38,970 line (60 × £649.50) was reversed by a manual credit note rather than a cancellation of the same stock code, so it needed its own reviewed rule.
+- **A bad-debt adjustment treated as a product.** A £11,062 "Adjust bad debt" line was classified as a top SKU and carried 38.8% of the simulated inventory value.
+- **Other non-product lines and split codes.** Carriage, packing charges, gift vouchers, and samples were still in the product data, and 112 products were split across lower-case and upper-case stock codes.
 
-The analysis translates transaction records into decisions that matter across several business functions:
+Cancellations are matched to sales at the same unit price where possible, and every removed line records its match quality.
 
-| Business area | Decision support produced |
-| --- | --- |
-| Inventory planning | Identifies replenishment candidates, stockout risk, overstock risk, safety stock, and reorder points. |
-| Operations | Segments SKUs by revenue, turnover, and demand volatility to support differentiated inventory policies. |
-| Warehouse management | Assigns simulated warehouse strategies and summarizes SKU allocation segments. |
-| Finance | Estimates simulated inventory value, stockout revenue exposure, and overstock capital exposure. |
-| Management reporting | Produces concise KPI tables and ranked review lists for operational follow-up. |
-
-Rather than applying one inventory policy to every product, the workflow distinguishes core revenue drivers, stable and volatile high-turnover items, regular products, and long-tail SKUs.
+[`reports/phase1_data_correctness.md`](reports/phase1_data_correctness.md) holds:
+- the fixes and a reconciliation of the revenue change;
+- tables against the original baseline;
+- a separate table for the revision made within Phase 1 after an external review.
 
 ## Business Questions
 
@@ -37,170 +34,184 @@ Rather than applying one inventory policy to every product, the workflow disting
 
 ```mermaid
 flowchart LR
-    A[Raw sales data] --> B[Validation and schema mapping]
+    A[Raw sales file] --> B[Validate against schema mapping]
     B --> C[Standardized transactions]
-    C --> D[Cleaning and SKU master]
-    D --> E[SQL demand analysis]
-    E --> F[SKU classification]
-    F --> G[Simulated inventory risk and warehouse allocation]
-    G --> H[Simulated working-capital exposure]
+    C --> D[01 Cleaning and SKU master]
+    D --> E[02 SQL demand analysis]
+    E --> F[03 SKU classification]
+    F --> G[04 Simulated inventory risk and warehouse allocation]
+    G --> H[05 Simulated working-capital exposure]
     H --> I[Management CSV outputs]
 ```
-
-The original workflow starts directly from the UCI workbook. The standardized-input workflow adds validation and schema mapping, then writes downstream processed and analytical outputs to separate standardized directories so the original notebook outputs remain unchanged.
 
 ## Analytical Components
 
 ### 01 — Data Cleaning
 
-- Removes exact duplicates and invalid sales records.
-- Separates returns and cancellations.
-- Excludes postage, fees, discounts, bank charges, manual adjustments, and other non-product lines.
-- Creates clean sales, monthly SKU sales, a normalized SKU master, description checks, and a data-quality summary.
+- Cleaning rules live in `src/retail_analytics/cleaning.py` and are unit-tested in `tests/test_cleaning.py`.
+- Stock codes are normalized: trimmed and upper-cased.
+- Exact duplicates and invalid lines are removed; returns and cancellations are saved separately.
+- Non-product lines are excluded using `config/non_product_stock_codes.csv`; the loader rejects blank, duplicate, or overlapping rules.
+- Sales reversed by a reviewed manual credit (`config/manual_reversals.csv`) are removed.
+- Sales that the same customer later cancelled in full are removed, preferring a sale at the same unit price.
+- Review lists (nothing is removed from these): manual-credit candidates and price anomalies.
+- Outputs: clean sales, reversed sales with match quality, SKU master, monthly SKU sales, month coverage, and a data-quality summary.
 
 ### 02 — SQL Business Analysis
 
-- Loads cleaned product sales into SQLite.
-- Produces top-SKU revenue and unit contribution, long-tail SKU, country demand, and monthly trend outputs.
+- Loads cleaned sales into in-memory SQLite and uses CTEs and joins to the SKU master and month-coverage tables.
+- Produces top-SKU revenue and unit contribution, long-tail SKUs, country demand, and a monthly trend that flags truncated months.
 
 ### 03 — SKU Classification
 
-- Builds one profile per normalized SKU.
-- Classifies SKUs as High-Revenue Priority, High-Turnover Stable, High-Turnover Volatile, Long-Tail, or Regular.
-- Uses revenue contribution, sales volume, and demand volatility while retaining descriptions for display.
+- Builds a SKU × month demand panel (`src/retail_analytics/demand.py`) over the 12 full months, zero-filled from each SKU's first sale month; the truncated December 2011 is excluded.
+- Builds one profile per SKU: totals over all months, demand statistics from the panel, and a `short_history` flag for SKUs with fewer than 3 months.
+- Classifies each SKU as High-Revenue Priority, High-Turnover Stable, High-Turnover Volatile, Long-Tail, or Regular.
+  - Revenue, volume, and long-tail cut-offs are percentiles.
+  - A high-turnover SKU is volatile when its demand CV is above 1.0 or its history is short.
 
 ### 04 — Replenishment and Warehouse Allocation
 
-- Applies deterministic simulated inventory assumptions.
-- Calculates daily demand, safety stock, reorder point, replenishment quantity, inventory coverage, and inventory risk.
-- Assigns warehouse strategies and creates management KPI summaries.
+- Simulates inventory, lead time, storage volume, and unit cost from `config/simulation_assumptions.json` (`src/retail_analytics/simulation.py`).
+  - Each SKU's draws come from a hash of the seed, field, and stock code, so they do not change when other SKUs are added, removed, or re-ordered.
+  - The model is selected per field in `config/simulation_assumptions.json`'s `methods` block. The current configuration uses a reorder-point-plus-EOQ policy band for current inventory, a per-class service-level target for safety stock (z-score × monthly demand volatility × √lead time), an EOQ formula (capped at 180 days of coverage) for order quantity, and a max-stock rule for overstock. A simpler fixed-range/volatility-factor/top-up model is also supported and used for before/after comparison (`reports/baseline_end_phase3a/`).
+- Saves the full simulated layer to `outputs/sku_inventory_simulation.csv`.
+- Calculates daily demand, safety stock, reorder point, EOQ, replenishment quantity, inventory coverage, and inventory risk.
+- Assigns warehouse strategies and builds a management KPI table from the data-quality summary, with no hardcoded values.
 
 ### 05 — Working Capital Impact
 
-- Estimates simulated inventory value.
-- Quantifies simulated stockout revenue exposure and overstock capital exposure.
+- Reads the simulated layer saved by notebook 04, and checks that a fresh simulation reproduces it exactly.
+- Estimates simulated inventory value, stockout revenue exposure, and overstock capital exposure.
 - Summarizes exposure by SKU class and warehouse strategy.
-
-## Standardized Reusable Input Workflow
-
-The standardized path adds a schema-controlled preparation layer for future reusable pipeline refactoring:
-
-1. `scripts/validate_input_data.py` checks required fields and common data-quality issues.
-2. `scripts/standardize_raw_sales.py` maps configured source columns to canonical names; the template defines five required fields and three optional mappings.
-3. Notebooks `01b` through `05b` reproduce the analytical workflow using standardized inputs.
-4. The standardized transaction file is written to `data/interim/`; downstream CSVs are written to `data/processed_standardized/` and `outputs_standardized/`. These generated standardized CSVs are ignored by Git.
-
-The `b` notebooks are preparation layers. They do not replace the original notebooks yet.
-
-### SKU definition
-
-`stock_code` is the normalized SKU key throughout the standardized workflow. `description` is a display field, not part of the grouping key. This prevents description variations from splitting one stock code into multiple SKU profiles.
 
 ## Key Results
 
 ### Data preparation
 
-- Valid product sales transactions: 522,716 rows
-- Returns and cancellations: 10,587 rows
-- Non-product transaction rows excluded: 2,162 rows
-- Monthly SKU-level sales records: 34,020 rows
-- SKU master records: 3,917 SKUs
-- SKU profiles classified: 3,917 SKUs
+| Step | Rows |
+| --- | ---: |
+| Raw transactions | 541,909 |
+| After duplicate removal | 536,641 |
+| Returns and cancellations separated | 10,587 |
+| Non-product lines excluded | 2,435 |
+| Sales reversed by a reviewed manual credit | 1 |
+| Sales fully reversed by a cancellation | 2,815 |
+| **Valid product sales lines** | **519,627** |
+| Monthly SKU sales records | 33,360 |
+| SKUs | 3,790 |
+
+Clean sales total £9.82M of revenue across 19,646 orders and 38 countries. The United Kingdom accounts for 84.7% of revenue, and 25.3% of lines have no customer ID; those lines are kept because the analysis is SKU-level.
 
 ### SKU portfolio
 
-| SKU class | SKU count | Selected contribution metrics |
-| --- | ---: | --- |
-| High-Revenue Priority | 784 | Approximately 78.8% of revenue and 66.1% of units |
-| Regular | 1,684 | — |
-| High-Turnover Stable | 208 | — |
-| High-Turnover Volatile | 69 | — |
-| Long-Tail | 1,172 | Approximately 1.3% of revenue and 0.6% of units |
+| SKU class | SKUs | Revenue share | Unit share |
+| --- | ---: | ---: | ---: |
+| High-Revenue Priority | 758 | 77.8% | 64.6% |
+| Regular | 1,631 | 16.2% | 18.6% |
+| High-Turnover Stable | 182 | 3.3% | 10.8% |
+| Long-Tail | 1,133 | 1.5% | 0.7% |
+| High-Turnover Volatile | 86 | 1.2% | 5.3% |
+
+About 20% of SKUs generate 78% of revenue, while about 30% of SKUs generate 1.5%.
+
+On the zero-filled monthly basis, median demand is 38.0 units per month with a median CV of 1.01. Averaging only the months with sales would overstate demand at least twofold for 827 SKUs; see [`reports/phase3a_demand_and_simulation.md`](reports/phase3a_demand_and_simulation.md).
 
 ### Simulated inventory risk
 
-- Normal inventory position: 1,561 SKUs
-- Stockout Risk: 1,432 SKUs
-- Overstock Risk: 924 SKUs
+- Normal: 2,246 SKUs
+- Stockout Risk: 536 SKUs
+- Overstock Risk: 1,008 SKUs
 
 ### Simulated warehouse strategy
 
-- `warehouse_strategy_count`: 6 unique warehouse strategies
-- `warehouse_allocation_segment_count`: 7 SKU classification × warehouse strategy summary combinations
-- Local Warehouse Priority: 784 SKUs
-- Stable Local Warehouse Inventory: 208 SKUs
-- Small-Batch Replenishment / Monitor Closely: 69 SKUs
-- External or Limited Stock Strategy: 335 SKUs
-- Overstock Review / Reduce Replenishment: 924 SKUs
-- Standard Replenishment Review: 1,597 SKUs
+| Warehouse strategy | SKUs |
+| --- | ---: |
+| Standard Replenishment Review | 1,164 |
+| Overstock Review / Reduce Replenishment | 1,008 |
+| Local Warehouse Priority | 748 |
+| External or Limited Stock Strategy | 626 |
+| Stable Local Warehouse Inventory | 171 |
+| Small-Batch Replenishment / Monitor Closely | 73 |
 
-### Simulated working-capital impact
+These are 6 strategies, forming 7 SKU-class × strategy segments.
 
-- Total SKUs analyzed: 3,917
-- Stockout Risk SKUs: 1,432
-- Overstock Risk SKUs: 924
-- Estimated inventory value: 1,090,613.07
-- Stockout revenue exposure: 645,275.56
-- Overstock capital exposure: 124,125.96
+### Simulated working-capital impact (GBP)
+
+| Metric | Value |
+| --- | ---: |
+| Estimated inventory value | 1,805,589.48 |
+| Annual holding cost | 451,397.56 |
+| Stockout revenue exposure | 84,414.16 |
+| Overstock capital exposure | 53,315.26 |
+
+Stockout revenue exposure is the shortfall to the reorder point valued at selling price. It is an upper-bound indicator of sales at risk, not a forecast of lost revenue. Annual holding cost is only computed when the order-quantity method is EOQ; a simpler model without EOQ leaves it unavailable rather than defaulting to zero.
 
 ## Representative Outputs
 
 | Output file | Business use |
 | --- | --- |
-| `data/processed/clean_sales.csv` | Analysis-ready valid product transactions. |
-| `data/processed/sku_master.csv` | SKU reference table keyed by `stock_code`. |
-| `outputs/sku_profile_classification.csv` | SKU segmentation with revenue, demand, and volatility measures. |
-| `outputs/replenishment_recommendations.csv` | Prioritized replenishment review list based on simulated inventory. |
-| `outputs/overstock_risk_list.csv` | SKUs requiring simulated overstock review. |
-| `outputs/warehouse_allocation_summary.csv` | SKU-class-by-warehouse-strategy allocation summary. |
-| `outputs/management_kpi_summary.csv` | Consolidated operational and inventory KPIs. |
-| `outputs/working_capital_summary.csv` | Finance-facing simulated inventory and exposure summary. |
-| `outputs/top_overstock_capital_exposure.csv` | Highest simulated overstock capital exposures. |
-| `outputs/top_stockout_revenue_exposure.csv` | Highest simulated stockout revenue exposures. |
-
-The standardized workflow creates equivalent outputs under `data/processed_standardized/` and `outputs_standardized/`.
+| `data/processed/clean_sales.csv` | Analysis-ready product sales lines (generated locally, not committed) |
+| `data/processed/sku_master.csv` | SKU reference table keyed by `stock_code` |
+| `data/processed/reversed_sales.csv` | Removed sales with reversal type, matched credit, price difference, and match quality |
+| `data/processed/price_anomalies.csv` | Lines priced at least 10× their SKU median, for review |
+| `data/processed/manual_credit_candidates.csv` | Manual credits that may reverse a sale line, for review |
+| `data/processed/data_quality_summary.csv` | Row counts for every cleaning step |
+| `outputs/sku_profile_classification.csv` | SKU segmentation with revenue, demand, and volatility measures |
+| `outputs/replenishment_recommendations.csv` | Prioritized replenishment review list based on simulated inventory |
+| `outputs/overstock_risk_list.csv` | SKUs requiring simulated overstock review |
+| `outputs/warehouse_allocation_summary.csv` | SKU class × warehouse strategy summary |
+| `outputs/management_kpi_summary.csv` | Consolidated operational and inventory KPIs |
+| `outputs/working_capital_summary.csv` | Finance-facing simulated inventory and exposure summary |
+| `reports/phase1_before_after.csv` | Impact of the data-correctness fixes, compared with the original baseline |
+| `data/processed/sku_month_demand.csv` | Zero-filled SKU × month demand panel |
+| `outputs/sku_inventory_simulation.csv` | Full simulated inventory layer shared by notebooks 04 and 05 |
+| `reports/phase3a_before_after.csv` | Impact of the demand-basis and simulation changes, compared with the end of Phase 1 |
 
 ## Tools and Skills Demonstrated
 
 - Python and pandas for validation, transformation, aggregation, and deterministic simulation
-- SQLite and SQL for business analysis
+- SQL (SQLite) with CTEs and joins for business reporting
+- Data-quality investigation, rule design, and before/after reconciliation
 - Schema mapping and reusable input standardization
 - SKU segmentation and demand-volatility analysis
 - Inventory, warehouse, and working-capital KPI design
-- Reproducible Jupyter notebook workflows and CSV output contracts
+- Demand-panel construction (zero-filled months) and deterministic, order-independent simulation
+- Unit testing with pytest and reproducible notebook execution
 
 ## How to Run
 
 ### Setup
 
-Create and activate a virtual environment:
-
 ```bash
 python -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements-dev.txt
 ```
 
-On Windows:
+Place the UCI workbook at `data/raw/Online Retail.xlsx`.
 
-```powershell
-.venv\Scripts\activate
-```
+### Run the pipeline
 
-Install dependencies:
+From the project root:
 
 ```bash
-pip install -r requirements.txt
+python scripts/validate_input_data.py \
+  --input "data/raw/Online Retail.xlsx" \
+  --mapping "config/schema_mapping_template.csv" \
+  --output "outputs/data_quality_precheck.csv"
+
+python scripts/standardize_raw_sales.py \
+  --input "data/raw/Online Retail.xlsx" \
+  --mapping "config/schema_mapping_template.csv" \
+  --output "data/interim/standardized_sales.csv"
 ```
 
-Place the UCI workbook at:
+Then run the notebooks in order, either interactively or from the command line:
 
-```text
-data/raw/Online Retail.xlsx
+```bash
+jupyter nbconvert --to notebook --execute --inplace notebooks/0*.ipynb
 ```
-
-### Option A — Original notebook workflow
-
-Run these notebooks in order:
 
 1. `notebooks/01_data_cleaning.ipynb`
 2. `notebooks/02_sql_business_queries.ipynb`
@@ -208,82 +219,71 @@ Run these notebooks in order:
 4. `notebooks/04_replenishment_warehouse_allocation.ipynb`
 5. `notebooks/05_working_capital_impact.ipynb`
 
-Review the generated files in:
-
-```text
-data/processed/
-outputs/
-```
-
-### Option B — Standardized-input workflow
-
-From the project root, validate the source data:
+### Tests and baseline comparison
 
 ```bash
-python scripts/validate_input_data.py \
-  --input "data/raw/Online Retail.xlsx" \
-  --mapping "config/schema_mapping_template.csv" \
-  --output "outputs/data_quality_precheck.csv"
+python -m pytest -W error
+python scripts/compare_to_baseline.py --baseline reports/baseline_before_phase1 --current reports/baseline_end_phase1 --prefix phase1
+python scripts/compare_to_baseline.py --baseline reports/baseline_end_phase1 --current reports/baseline_end_phase3a --prefix phase3a
+python scripts/check_simulation_stability.py
 ```
 
-Create the standardized transaction file:
+To run the whole chain (validation, standardization, notebooks 01–05, comparisons, and tests) in one step:
 
 ```bash
-python scripts/standardize_raw_sales.py \
-  --input "data/raw/Online Retail.xlsx" \
-  --mapping "config/schema_mapping_template.csv" \
-  --output "data/interim/standardized_sales.csv"
-```
-
-Then run these notebooks in order:
-
-1. `notebooks/01b_data_cleaning_standardized_input.ipynb`
-2. `notebooks/02b_sql_business_queries_standardized_input.ipynb`
-3. `notebooks/03b_sku_classification_standardized_input.ipynb`
-4. `notebooks/04b_replenishment_warehouse_allocation_standardized_input.ipynb`
-5. `notebooks/05b_working_capital_impact_standardized_input.ipynb`
-
-Review the generated files in:
-
-```text
-data/processed_standardized/
-outputs_standardized/
+mkdir -p tmp && bash scripts/verify_pipeline.sh > tmp/verify_pipeline.log 2>&1
 ```
 
 ## Repository Structure
 
 ```text
 ecommerce-inventory-warehouse-allocation/
+├── archive/notebooks/        # Previous notebook versions (original and standardized-input tracks)
 ├── config/
-│   └── schema_mapping_template.csv
+│   ├── schema_mapping_template.csv
+│   ├── non_product_stock_codes.csv
+│   ├── manual_reversals.csv
+│   └── simulation_assumptions.json
 ├── data/
 │   ├── raw/
-│   ├── interim/
-│   ├── processed/
-│   └── processed_standardized/
-├── notebooks/
-│   ├── 01_data_cleaning.ipynb ... 05_working_capital_impact.ipynb
-│   └── 01b_data_cleaning_standardized_input.ipynb ... 05b_working_capital_impact_standardized_input.ipynb
-├── outputs/
-├── outputs_standardized/
-├── scripts/
-│   ├── validate_input_data.py
-│   └── standardize_raw_sales.py
+│   ├── interim/              # Generated standardized file (not committed)
+│   └── processed/
 ├── docs/
 │   ├── management_summary.md
 │   └── runbook.md
+├── notebooks/                # 01–05 analysis notebooks
+├── outputs/
+├── reports/
+│   ├── baseline_before_phase1/     # Original pipeline snapshot
+│   ├── baseline_end_phase1/        # Snapshot at the end of Phase 1
+│   ├── phase1_*.csv, phase1_data_correctness.md
+│   └── phase3a_*.csv, phase3a_demand_and_simulation.md
+├── scripts/
+│   ├── validate_input_data.py
+│   ├── standardize_raw_sales.py
+│   ├── compare_to_baseline.py
+│   ├── check_simulation_stability.py
+│   └── verify_pipeline.sh
+├── src/retail_analytics/
+│   ├── cleaning.py
+│   ├── demand.py
+│   └── simulation.py
+├── tests/
+├── CHANGELOG.md
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── requirements-dev.txt
 ```
 
 ## Data Source
 
-The project uses the public [UCI Online Retail dataset](https://archive.ics.uci.edu/dataset/352/online+retail), which contains invoice-level product sales with quantity, date, price, customer, and country fields. No confidential company data is used.
+The project uses the public [UCI Online Retail dataset](https://archive.ics.uci.edu/dataset/352/online+retail): invoice-level sales from a UK-based online retailer between 1 December 2010 and 9 December 2011. No confidential company data is used.
 
 ## Assumptions and Limitations
 
-The source dataset does not include actual inventory balances, supplier lead times, unit costs, storage volumes, warehouse capacity, or fulfillment assignments.
-
-Inventory, warehouse, cost, stockout-risk, overstock-risk, and financial-exposure fields are simulated for portfolio demonstration. The deterministic assumptions support reproducibility, but the resulting recommendations and monetary values are not real company inventory data, operational decisions, or accounting figures.
-
-The standardized-input notebooks are a preparation layer for future pipeline refactoring. They are not yet a packaged production pipeline and do not replace the original workflow.
+- The source data has no inventory balances, supplier lead times, unit costs, storage volumes, warehouse capacity, or fulfillment assignments. These fields, and every risk, strategy, and monetary exposure derived from them, are simulated for demonstration. They are not real inventory decisions or accounting figures.
+- Current inventory position scales with each SKU's own reorder point and EOQ (a policy band), and safety stock uses a per-class service-level formula rather than a simple volatility factor. A simpler model (fixed inventory range, volatility-factor safety stock, fixed reorder quantity) is still supported for comparison; see `config/simulation_assumptions.json`'s `methods` block.
+- Demand statistics cover the 12 full months only. SKUs with fewer than 3 months of history are flagged (`short_history`) and never classed as stable, but a SKU's revenue rank still takes priority over that flag when assigning it to High-Revenue Priority — so a short-history SKU's demand-volatility statistic should not be assumed accurate just because it landed in that class (27 of 758 High-Revenue Priority SKUs currently have short history).
+- Partial returns are not netted against sales. 93 cancellations were matched to a sale at a different unit price because no same-price sale existed; they are listed for review.
+- Only reviewed manual-credit reversals are removed; other candidates are reported, not applied.
+- December 2011 covers only nine days and is flagged as a truncated month.

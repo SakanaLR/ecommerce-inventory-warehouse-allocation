@@ -1,0 +1,6 @@
+step,method_inventory,method_safety_stock,method_order_quantity,method_overstock,stockout_skus,overstock_skus,normal_skus,high_revenue_priority_stockout_skus,estimated_inventory_value,annual_holding_cost,stockout_revenue_exposure,overstock_capital_exposure,median_safety_stock_units,median_reorder_point_units,recommended_order_units
+0. Phase 3A model,fixed_range,volatility_factor,top_up,coverage_only,1326,1086,1378,466,637918.62,159479.4,563830.24,135218.48,10.0,29.0,285193.0
+1. + service-level safety stock,fixed_range,service_level,top_up,coverage_only,1855,1086,849,613,637918.62,159479.4,1296241.69,135218.48,33.0,56.0,602059.0
+2. + EOQ order quantity (180-day cap),fixed_range,service_level,eoq,coverage_only,1855,1086,849,613,637918.62,159479.4,1296241.69,135218.48,33.0,56.0,1451220.0
+3. + max-stock overstock rule,fixed_range,service_level,eoq,max_stock,1855,978,957,613,637918.62,159479.4,1296241.69,147692.24,33.0,56.0,1451220.0
+4. + policy-band inventory (Phase 3B-1),policy_band,service_level,eoq,max_stock,536,1008,2246,158,1805589.48,451397.56,84414.16,53315.26,33.0,56.0,298331.0

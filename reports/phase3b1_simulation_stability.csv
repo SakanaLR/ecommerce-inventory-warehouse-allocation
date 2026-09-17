@@ -1,0 +1,10 @@
+method,scenario,sku_count,share_of_other_skus_with_changed_simulated_fields,share_of_other_skus_with_changed_risk_flag
+legacy row-position draws,remove first SKU,3790,1.0,0.3275
+legacy row-position draws,remove middle SKU,3790,1.0,0.3109
+legacy row-position draws,shuffle row order,3790,1.0,0.3166
+"per-SKU hashed draws, Phase 3A rules",remove first SKU,3790,0.0,0.0
+"per-SKU hashed draws, Phase 3A rules",remove middle SKU,3790,0.0,0.0
+"per-SKU hashed draws, Phase 3A rules",shuffle row order,3790,0.0,0.0
+"per-SKU hashed draws, current model",remove first SKU,3790,0.0,0.0
+"per-SKU hashed draws, current model",remove middle SKU,3790,0.0,0.0
+"per-SKU hashed draws, current model",shuffle row order,3790,0.0,0.0

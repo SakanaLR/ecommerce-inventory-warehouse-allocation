@@ -1,0 +1,1327 @@
+stock_code,description,sku_class,avg_monthly_units,current_inventory,supplier_lead_time_days,safety_stock,reorder_point,recommended_replenishment_qty,inventory_risk,warehouse_strategy
+21212,PACK OF 72 RETROSPOT CAKE CASES,High-Revenue Priority,2980.75,192,45,1385.0,5856.0,5664.0,Stockout Risk,Local Warehouse Priority
+22197,POPCORN HOLDER,High-Revenue Priority,4204.916666666667,154,21,1273.0,4216.0,4062.0,Stockout Risk,Local Warehouse Priority
+84077,WORLD WAR 2 GLIDERS ASSTD DESIGNS,High-Revenue Priority,4445.333333333333,295,21,1217.0,4329.0,4034.0,Stockout Risk,Local Warehouse Priority
+23084,RABBIT NIGHT LIGHT,High-Revenue Priority,3772.142857142858,237,21,1592.0,4232.0,3995.0,Stockout Risk,Local Warehouse Priority
+85099B,JUMBO BAG RED RETROSPOT,High-Revenue Priority,3866.25,169,21,896.0,3602.0,3433.0,Stockout Risk,Local Warehouse Priority
+23199,JUMBO BAG APPLES,High-Revenue Priority,1755.75,213,45,899.0,3533.0,3320.0,Stockout Risk,Local Warehouse Priority
+23206,LUNCH BAG APPLE DESIGN,High-Revenue Priority,1488.25,124,45,678.0,2910.0,2786.0,Stockout Risk,Local Warehouse Priority
+23202,JUMBO BAG VINTAGE LEAF,High-Revenue Priority,1458.7142857142858,156,45,667.0,2855.0,2699.0,Stockout Risk,Local Warehouse Priority
+23581,JUMBO BAG PAISLEY PARK,High-Revenue Priority,2105.5,294,30,863.0,2968.0,2674.0,Stockout Risk,Local Warehouse Priority
+15036,ASSORTED COLOURS SILK FAN,High-Revenue Priority,1977.75,207,30,848.0,2826.0,2619.0,Stockout Risk,Local Warehouse Priority
+20724,RED RETROSPOT CHARLOTTE BAG,High-Revenue Priority,1400.25,229,45,697.0,2797.0,2568.0,Stockout Risk,Local Warehouse Priority
+21213,PACK OF 72 SKULL CAKE CASES,High-Revenue Priority,1248.25,63,45,672.0,2544.0,2481.0,Stockout Risk,Local Warehouse Priority
+23203,JUMBO BAG VINTAGE DOILY,High-Revenue Priority,2782.5714285714284,123,21,639.0,2587.0,2464.0,Stockout Risk,Local Warehouse Priority
+20719,WOODLAND CHARLOTTE BAG,High-Revenue Priority,1057.5833333333333,81,45,508.0,2094.0,2013.0,Stockout Risk,Local Warehouse Priority
+47566,PARTY BUNTING,High-Revenue Priority,1496.1666666666667,159,30,620.0,2116.0,1957.0,Stockout Risk,Local Warehouse Priority
+23207,LUNCH BAG ALPHABET DESIGN,High-Revenue Priority,960.5,242,45,517.0,1958.0,1716.0,Stockout Risk,Local Warehouse Priority
+23310,BUBBLEGUM RING ASSORTED,High-Revenue Priority,1927.5,148,21,435.0,1784.0,1636.0,Stockout Risk,Local Warehouse Priority
+84879,ASSORTED COLOUR BIRD ORNAMENT,High-Revenue Priority,2916.9166666666665,289,14,516.0,1877.0,1588.0,Stockout Risk,Local Warehouse Priority
+20712,JUMBO BAG WOODLAND ANIMALS,High-Revenue Priority,782.0833333333334,164,45,419.0,1592.0,1428.0,Stockout Risk,Local Warehouse Priority
+23077,DOUGHNUT LIP GLOSS,High-Revenue Priority,1087.4444444444443,108,30,435.0,1522.0,1414.0,Stockout Risk,Local Warehouse Priority
+22423,REGENCY CAKESTAND 3 TIER,High-Revenue Priority,1088.0,68,30,361.0,1449.0,1381.0,Stockout Risk,Local Warehouse Priority
+23298,SPOTTY BUNTING,High-Revenue Priority,1188.7142857142858,221,30,402.0,1591.0,1370.0,Stockout Risk,Local Warehouse Priority
+20725,LUNCH BAG RED RETROSPOT,High-Revenue Priority,1551.0833333333333,80,21,349.0,1435.0,1355.0,Stockout Risk,Local Warehouse Priority
+22969,HOMEMADE JAM SCENTED CANDLES,High-Revenue Priority,1020.1666666666666,44,30,375.0,1395.0,1351.0,Stockout Risk,Local Warehouse Priority
+21181,PLEASE ONE PERSON METAL SIGN,High-Revenue Priority,957.5833333333334,58,30,429.0,1387.0,1329.0,Stockout Risk,Local Warehouse Priority
+23344,JUMBO BAG 50'S CHRISTMAS,High-Revenue Priority,1491.6666666666667,241,21,517.0,1561.0,1320.0,Stockout Risk,Local Warehouse Priority
+21497,FANCY FONTS BIRTHDAY WRAP,High-Revenue Priority,677.0833333333334,159,45,431.0,1447.0,1288.0,Stockout Risk,Local Warehouse Priority
+21977,PACK OF 60 PINK PAISLEY CAKE CASES,High-Revenue Priority,2042.8333333333333,55,14,338.0,1291.0,1236.0,Stockout Risk,Local Warehouse Priority
+23205,CHARLOTTE BAG VINTAGE ALPHABET,High-Revenue Priority,696.5,144,45,324.0,1369.0,1225.0,Stockout Risk,Local Warehouse Priority
+23439,HAND WARMER RED LOVE HEART,High-Revenue Priority,879.0,58,30,385.0,1264.0,1206.0,Stockout Risk,Local Warehouse Priority
+23245,SET OF 3 REGENCY CAKE TINS,High-Revenue Priority,1008.0,136,30,322.0,1330.0,1194.0,Stockout Risk,Local Warehouse Priority
+22492,MINI PAINT SET VINTAGE,High-Revenue Priority,2183.0833333333335,182,14,350.0,1369.0,1187.0,Stockout Risk,Local Warehouse Priority
+22469,HEART OF WICKER SMALL,High-Revenue Priority,1483.0833333333333,262,21,403.0,1441.0,1179.0,Stockout Risk,Local Warehouse Priority
+84991,60 TEATIME FAIRY CAKE CASES,High-Revenue Priority,1496.4166666666667,241,21,355.0,1402.0,1161.0,Stockout Risk,Local Warehouse Priority
+23343,JUMBO BAG VINTAGE CHRISTMAS,High-Revenue Priority,840.1666666666666,117,30,412.0,1252.0,1135.0,Stockout Risk,Local Warehouse Priority
+23493,VINTAGE DOILY TRAVEL SEWING KIT,High-Revenue Priority,1173.3333333333333,77,21,358.0,1179.0,1102.0,Stockout Risk,Local Warehouse Priority
+20727,LUNCH BAG  BLACK SKULL.,High-Revenue Priority,985.75,240,30,338.0,1324.0,1084.0,Stockout Risk,Local Warehouse Priority
+21929,JUMBO BAG PINK VINTAGE PAISLEY,High-Revenue Priority,883.1666666666666,112,30,310.0,1193.0,1081.0,Stockout Risk,Local Warehouse Priority
+22178,VICTORIAN GLASS HANGING T-LIGHT,High-Revenue Priority,1927.9166666666667,123,14,302.0,1202.0,1079.0,Stockout Risk,Local Warehouse Priority
+22662,LUNCH BAG DOLLY GIRL DESIGN,High-Revenue Priority,553.0833333333334,50,45,297.0,1127.0,1077.0,Stockout Risk,Local Warehouse Priority
+16014,SMALL CHINESE STYLE SCISSOR,High-Revenue Priority,1104.8333333333333,127,21,404.0,1177.0,1050.0,Stockout Risk,Local Warehouse Priority
+22909,SET OF 20 VINTAGE CHRISTMAS NAPKINS,High-Revenue Priority,671.1666666666666,27,30,392.0,1063.0,1036.0,Stockout Risk,Local Warehouse Priority
+23307,SET OF 60 PANTRY DESIGN CAKE CASES,High-Revenue Priority,1902.1666666666667,151,14,293.0,1181.0,1030.0,Stockout Risk,Local Warehouse Priority
+22386,JUMBO BAG PINK POLKADOT,High-Revenue Priority,1712.0833333333333,75,14,298.0,1097.0,1022.0,Stockout Risk,Local Warehouse Priority
+85099C,JUMBO  BAG BAROQUE BLACK WHITE,High-Revenue Priority,1113.5,24,21,257.0,1036.0,1012.0,Stockout Risk,Local Warehouse Priority
+20726,LUNCH BAG WOODLAND,High-Revenue Priority,804.3333333333334,75,30,274.0,1078.0,1003.0,Stockout Risk,Local Warehouse Priority
+21928,JUMBO BAG SCANDINAVIAN BLUE PAISLEY,High-Revenue Priority,829.6666666666666,152,30,285.0,1115.0,963.0,Stockout Risk,Local Warehouse Priority
+84992,72 SWEETHEART FAIRY CAKE CASES,High-Revenue Priority,1081.75,64,21,264.0,1021.0,957.0,Stockout Risk,Local Warehouse Priority
+22151,PLACE SETTING WHITE HEART,High-Revenue Priority,1196.5833333333333,188,21,301.0,1139.0,951.0,Stockout Risk,Local Warehouse Priority
+20974,12 PENCILS SMALL TUBE SKULL,High-Revenue Priority,576.3333333333334,260,45,325.0,1190.0,930.0,Stockout Risk,Local Warehouse Priority
+21915,RED  HARMONICA IN BOX,High-Revenue Priority,1727.75,204,14,327.0,1133.0,929.0,Stockout Risk,Local Warehouse Priority
+21790,VINTAGE SNAP CARDS,High-Revenue Priority,1148.5,207,21,329.0,1133.0,926.0,Stockout Risk,Local Warehouse Priority
+21166,COOK WITH WINE METAL SIGN,High-Revenue Priority,783.0,192,30,329.0,1112.0,920.0,Stockout Risk,Local Warehouse Priority
+84946,ANTIQUE SILVER T-LIGHT GLASS,High-Revenue Priority,1522.0833333333333,57,14,254.0,964.0,907.0,Stockout Risk,Local Warehouse Priority
+21080,SET/20 RED RETROSPOT PAPER NAPKINS,High-Revenue Priority,1079.6666666666667,105,21,245.0,1001.0,896.0,Stockout Risk,Local Warehouse Priority
+21703,BAG 125G SWIRLY MARBLES,High-Revenue Priority,763.6666666666666,201,30,327.0,1091.0,890.0,Stockout Risk,Local Warehouse Priority
+23301,GARDENERS KNEELING PAD KEEP CALM,High-Revenue Priority,1143.2857142857142,244,21,328.0,1128.0,884.0,Stockout Risk,Local Warehouse Priority
+21326,AGED GLASS SILVER T-LIGHT HOLDER,High-Revenue Priority,827.9166666666666,271,30,316.0,1144.0,873.0,Stockout Risk,Local Warehouse Priority
+22993,SET OF 4 PANTRY JELLY MOULDS,High-Revenue Priority,1209.9,244,21,268.0,1115.0,871.0,Stockout Risk,Local Warehouse Priority
+35970,ZINC FOLKART SLEIGH BELLS,High-Revenue Priority,383.9166666666667,86,45,381.0,957.0,871.0,Stockout Risk,Local Warehouse Priority
+20728,LUNCH BAG CARS BLUE,High-Revenue Priority,968.5833333333334,48,21,233.0,911.0,863.0,Stockout Risk,Local Warehouse Priority
+22699,ROSES REGENCY TEACUP AND SAUCER,High-Revenue Priority,779.9166666666666,193,30,272.0,1052.0,859.0,Stockout Risk,Local Warehouse Priority
+23296,SET OF 6 TEA TIME BAKING CASES,High-Revenue Priority,984.0,86,21,252.0,941.0,855.0,Stockout Risk,Local Warehouse Priority
+22998,TRAVEL CARD WALLET KEEP CALM,High-Revenue Priority,1195.9,287,21,293.0,1130.0,843.0,Stockout Risk,Local Warehouse Priority
+84755,COLOUR GLASS T-LIGHT HOLDER HANGING,High-Revenue Priority,1350.3333333333333,34,14,246.0,876.0,842.0,Stockout Risk,Local Warehouse Priority
+85123A,WHITE HANGING HEART T-LIGHT HOLDER,High-Revenue Priority,2880.8333333333335,62,7,231.0,903.0,841.0,Stockout Risk,Local Warehouse Priority
+23209,LUNCH BAG VINTAGE DOILY,High-Revenue Priority,1816.142857142857,272,14,253.0,1101.0,829.0,Stockout Risk,Local Warehouse Priority
+21731,RED TOADSTOOL LED NIGHT LIGHT,High-Revenue Priority,1123.25,265,21,303.0,1089.0,824.0,Stockout Risk,Local Warehouse Priority
+22720,SET OF 3 CAKE TINS PANTRY DESIGN,High-Revenue Priority,607.4166666666666,29,30,245.0,852.0,823.0,Stockout Risk,Local Warehouse Priority
+23583,LUNCH BAG PAISLEY PARK,High-Revenue Priority,1493.5,184,14,310.0,1007.0,823.0,Stockout Risk,Local Warehouse Priority
+23297,SET 40 HEART SHAPE PETIT FOUR CASES,High-Revenue Priority,856.2,104,21,306.0,905.0,801.0,Stockout Risk,Local Warehouse Priority
+22988,SOLDIERS EGG CUP,High-Revenue Priority,714.0,196,30,271.0,985.0,789.0,Stockout Risk,Local Warehouse Priority
+23171,REGENCY TEA PLATE GREEN,High-Revenue Priority,863.5714285714286,71,21,256.0,860.0,789.0,Stockout Risk,Local Warehouse Priority
+23354,6 GIFT TAGS 50'S CHRISTMAS,High-Revenue Priority,876.25,67,21,243.0,856.0,789.0,Stockout Risk,Local Warehouse Priority
+22551,PLASTERS IN TIN SPACEBOY,High-Revenue Priority,651.25,131,30,254.0,905.0,774.0,Stockout Risk,Local Warehouse Priority
+23144,ZINC T-LIGHT HOLDER STARS SMALL,High-Revenue Priority,613.0,93,30,232.0,845.0,752.0,Stockout Risk,Local Warehouse Priority
+23200,JUMBO BAG PEARS,High-Revenue Priority,975.2857142857144,167,21,227.0,910.0,743.0,Stockout Risk,Local Warehouse Priority
+22659,LUNCH BOX I LOVE LONDON,High-Revenue Priority,944.5,176,21,249.0,910.0,734.0,Stockout Risk,Local Warehouse Priority
+21975,PACK OF 60 DINOSAUR CAKE CASES,High-Revenue Priority,1015.1666666666666,238,21,256.0,967.0,729.0,Stockout Risk,Local Warehouse Priority
+23284,DOORMAT KEEP CALM AND COME IN,High-Revenue Priority,635.375,176,30,269.0,904.0,728.0,Stockout Risk,Local Warehouse Priority
+22147,FELTCRAFT BUTTERFLY HEARTS,High-Revenue Priority,445.0,256,45,305.0,972.0,716.0,Stockout Risk,Local Warehouse Priority
+82583,HOT BATHS METAL SIGN,High-Revenue Priority,577.0,106,30,242.0,819.0,713.0,Stockout Risk,Local Warehouse Priority
+23263,SET OF 3 WOODEN HEART DECORATIONS,High-Revenue Priority,605.3333333333334,133,30,238.0,843.0,710.0,Stockout Risk,Local Warehouse Priority
+22907,PACK OF 20 NAPKINS PANTRY DESIGN,High-Revenue Priority,530.75,31,30,180.0,711.0,680.0,Stockout Risk,Local Warehouse Priority
+23285,PINK VINTAGE SPOT BEAKER,High-Revenue Priority,799.8333333333334,153,21,270.0,830.0,677.0,Stockout Risk,Local Warehouse Priority
+23175,REGENCY MILK JUG PINK,High-Revenue Priority,439.57142857142856,284,45,299.0,958.0,674.0,Stockout Risk,Local Warehouse Priority
+23275,SET OF 3 HANGING OWLS OLLIE BEAK,High-Revenue Priority,558.5,163,30,264.0,822.0,659.0,Stockout Risk,Local Warehouse Priority
+22489,PACK OF 12 TRADITIONAL CRAYONS,High-Revenue Priority,775.1666666666666,77,21,186.0,729.0,652.0,Stockout Risk,Local Warehouse Priority
+84212,"ASSORTED FLOWER COLOUR ""LEIS""",High-Revenue Priority,855.5833333333334,184,21,237.0,836.0,652.0,Stockout Risk,Local Warehouse Priority
+23288,GREEN VINTAGE SPOT BEAKER,High-Revenue Priority,765.3333333333334,171,21,265.0,801.0,630.0,Stockout Risk,Local Warehouse Priority
+22385,JUMBO BAG SPACEBOY DESIGN,High-Revenue Priority,683.6666666666666,36,21,179.0,658.0,622.0,Stockout Risk,Local Warehouse Priority
+23078,ICE CREAM PEN LIP GLOSS,High-Revenue Priority,750.0,82,21,167.0,692.0,610.0,Stockout Risk,Local Warehouse Priority
+20723,STRAWBERRY CHARLOTTE BAG,High-Revenue Priority,785.5,123,21,181.0,731.0,608.0,Stockout Risk,Local Warehouse Priority
+22630,DOLLY GIRL LUNCH BOX,High-Revenue Priority,950.25,292,21,235.0,900.0,608.0,Stockout Risk,Local Warehouse Priority
+23355,HOT WATER BOTTLE KEEP CALM,High-Revenue Priority,1275.0,240,14,253.0,848.0,608.0,Stockout Risk,Local Warehouse Priority
+22355,CHARLOTTE BAG SUKI DESIGN,High-Revenue Priority,1406.9166666666667,256,14,204.0,861.0,605.0,Stockout Risk,Local Warehouse Priority
+23300,GARDENERS KNEELING PAD CUP OF TEA,High-Revenue Priority,889.1428571428571,235,21,215.0,837.0,602.0,Stockout Risk,Local Warehouse Priority
+22577,WOODEN HEART CHRISTMAS SCANDINAVIAN,High-Revenue Priority,824.0,72,14,282.0,667.0,595.0,Stockout Risk,Local Warehouse Priority
+22951,60 CAKE CASES DOLLY GIRL DESIGN,High-Revenue Priority,601.5,219,30,208.0,810.0,591.0,Stockout Risk,Local Warehouse Priority
+22555,PLASTERS IN TIN STRONGMAN,High-Revenue Priority,485.5,80,30,170.0,656.0,576.0,Stockout Risk,Local Warehouse Priority
+17003,BROCADE RING PURSE,High-Revenue Priority,1893.5833333333333,36,7,169.0,611.0,575.0,Stockout Risk,Local Warehouse Priority
+23240,SET OF 4 KNICK KNACK TINS DOILY,High-Revenue Priority,666.0,289,30,194.0,860.0,571.0,Stockout Risk,Local Warehouse Priority
+21165,BEWARE OF THE CAT METAL SIGN,High-Revenue Priority,334.3333333333333,110,45,177.0,678.0,568.0,Stockout Risk,Local Warehouse Priority
+22740,POLKADOT PEN,High-Revenue Priority,570.1666666666666,270,30,263.0,833.0,563.0,Stockout Risk,Local Warehouse Priority
+21124,SET/10 BLUE POLKADOT PARTY CANDLES,High-Revenue Priority,327.3333333333333,117,45,187.0,678.0,561.0,Stockout Risk,Local Warehouse Priority
+22961,JAM MAKING SET PRINTED,High-Revenue Priority,1263.0833333333333,230,14,200.0,789.0,559.0,Stockout Risk,Local Warehouse Priority
+22243,5 HOOK HANGER RED MAGIC TOADSTOOL,High-Revenue Priority,257.6666666666667,61,45,232.0,618.0,557.0,Stockout Risk,Local Warehouse Priority
+22384,LUNCH BAG PINK POLKADOT,High-Revenue Priority,861.0,268,21,221.0,824.0,556.0,Stockout Risk,Local Warehouse Priority
+22867,HAND WARMER BIRD DESIGN,High-Revenue Priority,470.8333333333333,208,30,292.0,763.0,555.0,Stockout Risk,Local Warehouse Priority
+22417,PACK OF 60 SPACEBOY CAKE CASES,High-Revenue Priority,687.25,85,21,156.0,637.0,552.0,Stockout Risk,Local Warehouse Priority
+21914,BLUE HARMONICA IN BOX,High-Revenue Priority,615.5,57,21,177.0,608.0,551.0,Stockout Risk,Local Warehouse Priority
+23309,SET OF 60 I LOVE LONDON CAKE CASES,High-Revenue Priority,1236.0,216,14,187.0,764.0,548.0,Stockout Risk,Local Warehouse Priority
+21175,GIN + TONIC DIET METAL SIGN,High-Revenue Priority,825.4166666666666,287,21,256.0,834.0,547.0,Stockout Risk,Local Warehouse Priority
+85152,HAND OVER THE CHOCOLATE   SIGN,High-Revenue Priority,609.75,292,30,225.0,835.0,543.0,Stockout Risk,Local Warehouse Priority
+23353,6 GIFT TAGS VINTAGE CHRISTMAS,High-Revenue Priority,941.5,59,14,161.0,600.0,541.0,Stockout Risk,Local Warehouse Priority
+22411,JUMBO SHOPPER VINTAGE RED PAISLEY,High-Revenue Priority,978.3333333333334,84,14,163.0,620.0,536.0,Stockout Risk,Local Warehouse Priority
+84692,BOX OF 24 COCKTAIL PARASOLS,High-Revenue Priority,640.3333333333334,52,21,139.0,587.0,535.0,Stockout Risk,Local Warehouse Priority
+21137,BLACK RECORD COVER FRAME,High-Revenue Priority,838.75,35,14,177.0,568.0,533.0,Stockout Risk,Local Warehouse Priority
+22759,SET OF 3 NOTEBOOKS IN PARCEL,High-Revenue Priority,451.9166666666667,136,30,203.0,655.0,519.0,Stockout Risk,Local Warehouse Priority
+22950,36 DOILIES VINTAGE CHRISTMAS,High-Revenue Priority,814.1666666666666,57,14,196.0,576.0,519.0,Stockout Risk,Local Warehouse Priority
+23321,SMALL WHITE HEART OF WICKER,High-Revenue Priority,753.6666666666666,207,21,195.0,723.0,516.0,Stockout Risk,Local Warehouse Priority
+22467,GUMBALL COAT RACK,High-Revenue Priority,630.5,82,21,156.0,597.0,515.0,Stockout Risk,Local Warehouse Priority
+22382,LUNCH BAG SPACEBOY DESIGN,High-Revenue Priority,856.0833333333334,26,14,138.0,538.0,512.0,Stockout Risk,Local Warehouse Priority
+22086,PAPER CHAIN KIT 50'S CHRISTMAS,High-Revenue Priority,1402.8333333333333,34,7,218.0,545.0,511.0,Stockout Risk,Local Warehouse Priority
+23350,ROLL WRAP VINTAGE SPOT,High-Revenue Priority,618.25,77,21,155.0,588.0,511.0,Stockout Risk,Local Warehouse Priority
+23306,SET OF 36 DOILIES PANTRY DESIGN,High-Revenue Priority,467.3333333333333,159,30,199.0,666.0,507.0,Stockout Risk,Local Warehouse Priority
+23243,SET OF TEA COFFEE SUGAR TINS PANTRY,High-Revenue Priority,782.8333333333334,36,14,167.0,532.0,496.0,Stockout Risk,Local Warehouse Priority
+23230,WRAP ALPHABET DESIGN,High-Revenue Priority,711.4545454545455,186,21,176.0,674.0,488.0,Stockout Risk,Local Warehouse Priority
+23295,SET OF 12 MINI LOAF BAKING CASES,High-Revenue Priority,1184.2,232,14,165.0,718.0,486.0,Stockout Risk,Local Warehouse Priority
+21704,BAG 250G SWIRLY MARBLES,High-Revenue Priority,422.5,98,30,152.0,574.0,476.0,Stockout Risk,Local Warehouse Priority
+23349,ROLL WRAP VINTAGE CHRISTMAS,High-Revenue Priority,733.0,247,21,209.0,722.0,475.0,Stockout Risk,Local Warehouse Priority
+82494L,WOODEN FRAME ANTIQUE WHITE,High-Revenue Priority,540.0833333333334,268,30,202.0,742.0,474.0,Stockout Risk,Local Warehouse Priority
+20971,PINK BLUE FELT CRAFT TRINKET BOX,High-Revenue Priority,774.4166666666666,92,14,203.0,564.0,472.0,Stockout Risk,Local Warehouse Priority
+23286,BLUE VINTAGE SPOT BEAKER,High-Revenue Priority,835.8333333333334,101,14,180.0,570.0,469.0,Stockout Risk,Local Warehouse Priority
+23174,REGENCY SUGAR BOWL GREEN,High-Revenue Priority,423.42857142857144,149,30,193.0,616.0,467.0,Stockout Risk,Local Warehouse Priority
+23176,ABC TREASURE BOOK BOX,High-Revenue Priority,233.55555555555551,30,45,147.0,497.0,467.0,Stockout Risk,Local Warehouse Priority
+22629,SPACEBOY LUNCH BOX,High-Revenue Priority,1151.8333333333333,268,14,184.0,722.0,454.0,Stockout Risk,Local Warehouse Priority
+20711,JUMBO BAG TOYS,High-Revenue Priority,416.3333333333333,135,30,167.0,583.0,448.0,Stockout Risk,Local Warehouse Priority
+21791,VINTAGE HEADS AND TAILS CARD GAME,High-Revenue Priority,619.5833333333334,167,21,181.0,615.0,448.0,Stockout Risk,Local Warehouse Priority
+71477,COLOUR GLASS. STAR T-LIGHT HOLDER,High-Revenue Priority,520.25,90,21,163.0,527.0,437.0,Stockout Risk,Local Warehouse Priority
+23198,PANTRY MAGNETIC  SHOPPING LIST,High-Revenue Priority,522.1666666666666,269,30,182.0,704.0,435.0,Stockout Risk,Local Warehouse Priority
+71459,HANGING JAM JAR T-LIGHT HOLDER,High-Revenue Priority,1118.0833333333333,279,14,186.0,708.0,429.0,Stockout Risk,Local Warehouse Priority
+20713,JUMBO BAG OWLS,High-Revenue Priority,889.5833333333334,161,14,173.0,588.0,427.0,Stockout Risk,Local Warehouse Priority
+22090,PAPER BUNTING RETROSPOT,High-Revenue Priority,615.25,178,21,174.0,605.0,427.0,Stockout Risk,Local Warehouse Priority
+23170,REGENCY TEA PLATE ROSES,High-Revenue Priority,945.5714285714286,193,14,170.0,611.0,418.0,Stockout Risk,Local Warehouse Priority
+85099F,JUMBO BAG STRAWBERRY,High-Revenue Priority,1396.5,35,7,124.0,450.0,415.0,Stockout Risk,Local Warehouse Priority
+21871,SAVE THE PLANET MUG,High-Revenue Priority,389.5,144,30,167.0,556.0,412.0,Stockout Risk,Local Warehouse Priority
+23165,LARGE CERAMIC TOP STORAGE JAR,High-Revenue Priority,406.2857142857143,130,30,131.0,537.0,407.0,Stockout Risk,Local Warehouse Priority
+21094,SET/6 RED SPOTTY PAPER PLATES,High-Revenue Priority,724.6666666666666,50,14,117.0,455.0,405.0,Stockout Risk,Local Warehouse Priority
+84945,MULTI COLOUR SILVER T-LIGHT HOLDER,High-Revenue Priority,817.75,128,14,149.0,531.0,403.0,Stockout Risk,Local Warehouse Priority
+21931,JUMBO STORAGE BAG SUKI,High-Revenue Priority,1081.4166666666667,263,14,159.0,664.0,401.0,Stockout Risk,Local Warehouse Priority
+22326,ROUND SNACK BOXES SET OF4 WOODLAND,High-Revenue Priority,687.0,29,14,107.0,428.0,399.0,Stockout Risk,Local Warehouse Priority
+20979,36 PENCILS TUBE RED RETROSPOT,High-Revenue Priority,299.75,225,45,173.0,623.0,398.0,Stockout Risk,Local Warehouse Priority
+22616,PACK OF 12 LONDON TISSUES,High-Revenue Priority,2123.6666666666665,277,7,175.0,671.0,394.0,Stockout Risk,Local Warehouse Priority
+22149,FELTCRAFT 6 FLOWER FRIENDS,High-Revenue Priority,455.3333333333333,58,21,130.0,449.0,391.0,Stockout Risk,Local Warehouse Priority
+22595,GINGHAM HEART DECORATION,High-Revenue Priority,557.5833333333334,22,14,148.0,408.0,386.0,Stockout Risk,Local Warehouse Priority
+23497,CLASSIC CHROME BICYCLE BELL,High-Revenue Priority,752.5,153,14,182.0,533.0,380.0,Stockout Risk,Local Warehouse Priority
+84380,SET OF 3 BUTTERFLY COOKIE CUTTERS,High-Revenue Priority,464.5833333333333,49,21,104.0,429.0,380.0,Stockout Risk,Local Warehouse Priority
+22908,PACK OF 20 NAPKINS RED APPLES,High-Revenue Priority,353.1666666666667,117,30,136.0,489.0,372.0,Stockout Risk,Local Warehouse Priority
+22348,TEA BAG PLATE RED RETROSPOT,High-Revenue Priority,335.1666666666667,86,30,114.0,449.0,363.0,Stockout Risk,Local Warehouse Priority
+21498,RED RETROSPOT WRAP,High-Revenue Priority,841.75,160,14,129.0,522.0,362.0,Stockout Risk,Local Warehouse Priority
+62018,SOMBRERO,High-Revenue Priority,350.4166666666667,21,21,134.0,379.0,358.0,Stockout Risk,Local Warehouse Priority
+82482,WOODEN PICTURE FRAME WHITE FINISH,High-Revenue Priority,718.1666666666666,86,14,109.0,444.0,358.0,Stockout Risk,Local Warehouse Priority
+22728,ALARM CLOCK BAKELIKE PINK,High-Revenue Priority,427.9166666666667,262,30,183.0,611.0,349.0,Stockout Risk,Local Warehouse Priority
+22053,EMPIRE DESIGN ROSETTE,High-Revenue Priority,353.6666666666667,87,21,186.0,434.0,347.0,Stockout Risk,Local Warehouse Priority
+22727,ALARM CLOCK BAKELIKE RED,High-Revenue Priority,560.5,22,14,101.0,363.0,341.0,Stockout Risk,Local Warehouse Priority
+21122,SET/10 PINK POLKADOT PARTY CANDLES,High-Revenue Priority,430.75,68,21,106.0,408.0,340.0,Stockout Risk,Local Warehouse Priority
+22466,FAIRY TALE COTTAGE NIGHT LIGHT,High-Revenue Priority,248.0,41,30,130.0,378.0,337.0,Stockout Risk,Local Warehouse Priority
+22631,CIRCUS PARADE LUNCH BOX,High-Revenue Priority,299.4166666666667,72,30,109.0,408.0,336.0,Stockout Risk,Local Warehouse Priority
+23351,ROLL WRAP 50'S CHRISTMAS,High-Revenue Priority,790.75,187,14,154.0,523.0,336.0,Stockout Risk,Local Warehouse Priority
+23189,SET OF 12 FORK CANDLES,High-Revenue Priority,297.25,59,30,97.0,394.0,335.0,Stockout Risk,Local Warehouse Priority
+23308,SET OF 60 VINTAGE LEAF CAKE CASES,High-Revenue Priority,950.1666666666666,263,14,153.0,596.0,333.0,Stockout Risk,Local Warehouse Priority
+21385,IVORY HANGING DECORATION  HEART,High-Revenue Priority,319.8333333333333,107,30,119.0,439.0,332.0,Stockout Risk,Local Warehouse Priority
+23570,TRADITIONAL PICK UP STICKS GAME,High-Revenue Priority,1182.0,90,7,141.0,417.0,327.0,Stockout Risk,Local Warehouse Priority
+23319,BOX OF 6 MINI 50'S CRACKERS,High-Revenue Priority,686.2,140,14,142.0,462.0,322.0,Stockout Risk,Local Warehouse Priority
+85049E,SCANDINAVIAN REDS RIBBONS,High-Revenue Priority,240.08333333333337,29,30,111.0,351.0,322.0,Stockout Risk,Local Warehouse Priority
+22418,10 COLOUR SPACEBOY PEN,High-Revenue Priority,525.0,177,21,129.0,496.0,319.0,Stockout Risk,Local Warehouse Priority
+23172,REGENCY TEA PLATE PINK,High-Revenue Priority,519.2857142857143,202,21,154.0,518.0,316.0,Stockout Risk,Local Warehouse Priority
+22804,CANDLEHOLDER PINK HANGING HEART,High-Revenue Priority,244.75,30,30,98.0,343.0,313.0,Stockout Risk,Local Warehouse Priority
+21672,WHITE SPOT RED CERAMIC DRAWER KNOB,High-Revenue Priority,407.3333333333333,237,30,142.0,549.0,312.0,Stockout Risk,Local Warehouse Priority
+22029,SPACEBOY BIRTHDAY CARD,High-Revenue Priority,648.75,84,14,93.0,396.0,312.0,Stockout Risk,Local Warehouse Priority
+22960,JAM MAKING SET WITH JARS,High-Revenue Priority,696.5,119,14,105.0,430.0,311.0,Stockout Risk,Local Warehouse Priority
+21086,SET/6 RED SPOTTY PAPER CUPS,High-Revenue Priority,590.1666666666666,243,21,139.0,552.0,309.0,Stockout Risk,Local Warehouse Priority
+23082,SET 6 PAPER TABLE LANTERN HEARTS,High-Revenue Priority,309.0,113,30,110.0,419.0,306.0,Stockout Risk,Local Warehouse Priority
+22741,FUNKY DIVA PEN,High-Revenue Priority,682.0,128,14,113.0,431.0,303.0,Stockout Risk,Local Warehouse Priority
+22457,NATURAL SLATE HEART CHALKBOARD,High-Revenue Priority,681.5,113,14,93.0,411.0,298.0,Stockout Risk,Local Warehouse Priority
+23293,SET OF 12 FAIRY CAKE BAKING CASES,High-Revenue Priority,1584.4,196,7,120.0,490.0,294.0,Stockout Risk,Local Warehouse Priority
+20718,RED RETROSPOT SHOPPER BAG,High-Revenue Priority,369.6666666666667,53,21,86.0,345.0,292.0,Stockout Risk,Local Warehouse Priority
+21232,STRAWBERRY CERAMIC TRINKET BOX,High-Revenue Priority,932.3333333333334,295,14,149.0,584.0,289.0,Stockout Risk,Local Warehouse Priority
+21671,RED SPOT CERAMIC DRAWER KNOB,High-Revenue Priority,354.4166666666667,180,30,115.0,469.0,289.0,Stockout Risk,Local Warehouse Priority
+20914,SET/5 RED RETROSPOT LID GLASS BOWLS,High-Revenue Priority,514.0,32,14,80.0,320.0,288.0,Stockout Risk,Local Warehouse Priority
+22114,HOT WATER BOTTLE TEA AND SYMPATHY,High-Revenue Priority,425.0,34,14,124.0,322.0,288.0,Stockout Risk,Local Warehouse Priority
+23177,TREASURE ISLAND BOOK BOX,High-Revenue Priority,221.44444444444449,35,30,96.0,317.0,282.0,Stockout Risk,Local Warehouse Priority
+22189,CREAM HEART CARD HOLDER,High-Revenue Priority,656.1666666666666,170,14,144.0,450.0,280.0,Stockout Risk,Local Warehouse Priority
+15056N,EDWARDIAN PARASOL NATURAL,High-Revenue Priority,329.5,175,30,125.0,454.0,279.0,Stockout Risk,Local Warehouse Priority
+22219,LOVEBIRD HANGING DECORATION WHITE,High-Revenue Priority,337.4166666666667,181,30,120.0,457.0,276.0,Stockout Risk,Local Warehouse Priority
+22273,FELTCRAFT DOLL MOLLY,High-Revenue Priority,250.25,110,30,134.0,384.0,274.0,Stockout Risk,Local Warehouse Priority
+84988,SET OF 72 PINK HEART PAPER DOILIES,High-Revenue Priority,356.25,61,21,86.0,335.0,274.0,Stockout Risk,Local Warehouse Priority
+22491,PACK OF 12 COLOURED PENCILS,High-Revenue Priority,325.3333333333333,46,21,87.0,315.0,269.0,Stockout Risk,Local Warehouse Priority
+22112,CHOCOLATE HOT WATER BOTTLE,High-Revenue Priority,451.5,57,14,113.0,324.0,267.0,Stockout Risk,Local Warehouse Priority
+23201,JUMBO BAG ALPHABET,High-Revenue Priority,1536.625,212,7,118.0,477.0,265.0,Stockout Risk,Local Warehouse Priority
+23571,TRADITIONAL NAUGHTS & CROSSES,High-Revenue Priority,1305.5,195,7,154.0,459.0,264.0,Stockout Risk,Local Warehouse Priority
+22722,SET OF 6 SPICE TINS PANTRY DESIGN,High-Revenue Priority,487.4166666666667,220,21,139.0,480.0,260.0,Stockout Risk,Local Warehouse Priority
+23076,ICE CREAM SUNDAE LIP GLOSS,High-Revenue Priority,867.1111111111111,287,14,142.0,547.0,260.0,Stockout Risk,Local Warehouse Priority
+82600,NO SINGING METAL SIGN,High-Revenue Priority,466.25,46,14,87.0,305.0,259.0,Stockout Risk,Local Warehouse Priority
+22041,"RECORD FRAME 7"" SINGLE SIZE",High-Revenue Priority,357.1666666666667,223,30,123.0,480.0,257.0,Stockout Risk,Local Warehouse Priority
+22556,PLASTERS IN TIN CIRCUS PARADE,High-Revenue Priority,487.4166666666667,198,21,114.0,455.0,257.0,Stockout Risk,Local Warehouse Priority
+22834,HAND WARMER BABUSHKA DESIGN,High-Revenue Priority,389.5,62,14,136.0,318.0,256.0,Stockout Risk,Local Warehouse Priority
+22333,RETROSPOT PARTY BAG + STICKER SET,High-Revenue Priority,369.25,97,21,91.0,349.0,252.0,Stockout Risk,Local Warehouse Priority
+21314,SMALL GLASS HEART TRINKET POT,High-Revenue Priority,334.1666666666667,193,30,109.0,443.0,250.0,Stockout Risk,Local Warehouse Priority
+22666,RECIPE BOX PANTRY YELLOW DESIGN,High-Revenue Priority,644.5833333333334,165,14,114.0,415.0,250.0,Stockout Risk,Local Warehouse Priority
+22561,WOODEN SCHOOL COLOURING SET,High-Revenue Priority,463.0833333333333,58,14,91.0,307.0,249.0,Stockout Risk,Local Warehouse Priority
+84836,ZINC METAL HEART DECORATION,High-Revenue Priority,488.0,213,21,118.0,460.0,247.0,Stockout Risk,Local Warehouse Priority
+82582,AREA PATROLLED METAL SIGN,High-Revenue Priority,346.4166666666667,83,21,85.0,327.0,244.0,Stockout Risk,Local Warehouse Priority
+22620,4 TRADITIONAL SPINNING TOPS,High-Revenue Priority,392.3333333333333,133,21,101.0,376.0,243.0,Stockout Risk,Local Warehouse Priority
+22791,T-LIGHT GLASS FLUTED ANTIQUE,High-Revenue Priority,610.3333333333334,151,14,109.0,394.0,243.0,Stockout Risk,Local Warehouse Priority
+22083,PAPER CHAIN KIT RETROSPOT,High-Revenue Priority,369.5833333333333,107,21,86.0,345.0,238.0,Stockout Risk,Local Warehouse Priority
+22646,CERAMIC STRAWBERRY CAKE MONEY BANK,High-Revenue Priority,283.6666666666667,36,21,74.0,273.0,237.0,Stockout Risk,Local Warehouse Priority
+22900,SET 2 TEA TOWELS I LOVE LONDON,High-Revenue Priority,394.5833333333333,21,14,74.0,258.0,237.0,Stockout Risk,Local Warehouse Priority
+22464,HANGING METAL HEART LANTERN,High-Revenue Priority,235.08333333333337,73,30,74.0,309.0,236.0,Stockout Risk,Local Warehouse Priority
+22139,RETROSPOT TEA SET CERAMIC 11 PC,High-Revenue Priority,358.9166666666667,263,30,139.0,498.0,235.0,Stockout Risk,Local Warehouse Priority
+22978,PANTRY ROLLING PIN,High-Revenue Priority,239.9,127,30,120.0,360.0,233.0,Stockout Risk,Local Warehouse Priority
+23382,BOX OF 6 CHRISTMAS CAKE DECORATIONS,High-Revenue Priority,754.0,221,14,97.0,449.0,228.0,Stockout Risk,Local Warehouse Priority
+23552,BICYCLE PUNCTURE REPAIR KIT,High-Revenue Priority,623.0,136,14,73.0,364.0,228.0,Stockout Risk,Local Warehouse Priority
+20717,STRAWBERRY SHOPPER BAG,High-Revenue Priority,235.58333333333337,110,30,101.0,337.0,227.0,Stockout Risk,Local Warehouse Priority
+22772,PINK DRAWER KNOB ACRYLIC EDWARDIAN,High-Revenue Priority,313.0,200,30,114.0,427.0,227.0,Stockout Risk,Local Warehouse Priority
+22113,GREY HEART HOT WATER BOTTLE,High-Revenue Priority,257.4166666666667,48,21,90.0,270.0,222.0,Stockout Risk,Local Warehouse Priority
+21174,POTTERING IN THE SHED METAL SIGN,High-Revenue Priority,321.1666666666667,224,30,123.0,444.0,220.0,Stockout Risk,Local Warehouse Priority
+21238,RED RETROSPOT CUP,High-Revenue Priority,323.9166666666667,220,30,115.0,439.0,219.0,Stockout Risk,Local Warehouse Priority
+22952,60 CAKE CASES VINTAGE CHRISTMAS,High-Revenue Priority,1253.5,245,7,172.0,464.0,219.0,Stockout Risk,Local Warehouse Priority
+84347,ROTATING SILVER ANGELS T-LIGHT HLDR,High-Revenue Priority,714.1666666666666,54,7,106.0,273.0,219.0,Stockout Risk,Local Warehouse Priority
+15056BL,EDWARDIAN PARASOL BLACK,High-Revenue Priority,227.25,258,45,134.0,475.0,217.0,Stockout Risk,Local Warehouse Priority
+22697,GREEN REGENCY TEACUP AND SAUCER,High-Revenue Priority,574.3333333333334,134,14,82.0,350.0,216.0,Stockout Risk,Local Warehouse Priority
+22356,CHARLOTTE BAG PINK POLKADOT,High-Revenue Priority,775.4166666666666,269,14,122.0,484.0,215.0,Stockout Risk,Local Warehouse Priority
+22970,LONDON BUS COFFEE MUG,High-Revenue Priority,354.0,21,14,66.0,231.0,210.0,Stockout Risk,Local Warehouse Priority
+23089,GLASS BON BON JAR,High-Revenue Priority,322.85714285714283,98,21,82.0,308.0,210.0,Stockout Risk,Local Warehouse Priority
+23232,WRAP VINTAGE LEAF DESIGN,High-Revenue Priority,747.7272727272727,261,14,122.0,471.0,210.0,Stockout Risk,Local Warehouse Priority
+23236,STORAGE TIN VINTAGE DOILY,High-Revenue Priority,409.6666666666667,46,14,63.0,254.0,208.0,Stockout Risk,Local Warehouse Priority
+22621,TRADITIONAL KNITTING NANCY,High-Revenue Priority,481.3333333333333,280,21,144.0,481.0,201.0,Stockout Risk,Local Warehouse Priority
+47591D,PINK FAIRY CAKE CHILDRENS APRON,High-Revenue Priority,270.5833333333333,175,30,105.0,376.0,201.0,Stockout Risk,Local Warehouse Priority
+84970S,HANGING HEART ZINC T-LIGHT HOLDER,High-Revenue Priority,730.5,29,7,60.0,230.0,201.0,Stockout Risk,Local Warehouse Priority
+21169,YOU'RE CONFUSING ME METAL SIGN,High-Revenue Priority,345.5833333333333,26,14,63.0,224.0,198.0,Stockout Risk,Local Warehouse Priority
+22726,ALARM CLOCK BAKELIKE GREEN,High-Revenue Priority,502.0,131,14,94.0,328.0,197.0,Stockout Risk,Local Warehouse Priority
+23182,TOILET SIGN OCCUPIED OR VACANT,High-Revenue Priority,409.77777777777777,59,14,65.0,256.0,197.0,Stockout Risk,Local Warehouse Priority
+21670,BLUE SPOT CERAMIC DRAWER KNOB,High-Revenue Priority,357.1666666666667,25,14,54.0,221.0,196.0,Stockout Risk,Local Warehouse Priority
+21993,FLORAL FOLK STATIONERY SET,High-Revenue Priority,149.33333333333334,21,30,68.0,217.0,196.0,Stockout Risk,Local Warehouse Priority
+84997C,CHILDRENS CUTLERY POLKADOT BLUE,High-Revenue Priority,329.0833333333333,269,30,136.0,465.0,196.0,Stockout Risk,Local Warehouse Priority
+22750,FELTCRAFT PRINCESS LOLA DOLL,High-Revenue Priority,160.83333333333334,141,45,95.0,336.0,195.0,Stockout Risk,Local Warehouse Priority
+23332,IVORY WICKER HEART LARGE,High-Revenue Priority,474.75,239,21,102.0,434.0,195.0,Stockout Risk,Local Warehouse Priority
+21891,TRADITIONAL WOODEN SKIPPING ROPE,High-Revenue Priority,627.0833333333334,213,14,114.0,407.0,194.0,Stockout Risk,Local Warehouse Priority
+23210,WHITE ROCKING HORSE HAND PAINTED,High-Revenue Priority,421.6666666666667,90,14,87.0,284.0,194.0,Stockout Risk,Local Warehouse Priority
+23238,SET OF 4 KNICK KNACK TINS LONDON,High-Revenue Priority,280.6666666666667,64,21,61.0,257.0,193.0,Stockout Risk,Local Warehouse Priority
+20975,12 PENCILS SMALL TUBE RED RETROSPOT,High-Revenue Priority,517.75,169,14,116.0,358.0,189.0,Stockout Risk,Local Warehouse Priority
+23188,VINTAGE  2 METER FOLDING RULER,High-Revenue Priority,531.3333333333334,158,14,99.0,347.0,189.0,Stockout Risk,Local Warehouse Priority
+48111,DOORMAT 3 SMILEY CATS,High-Revenue Priority,96.25,44,45,88.0,232.0,188.0,Stockout Risk,Local Warehouse Priority
+21108,FAIRY CAKE FLANNEL ASSORTED COLOUR,High-Revenue Priority,575.0833333333334,44,7,94.0,228.0,184.0,Stockout Risk,Local Warehouse Priority
+23163,REGENCY SUGAR TONGS,High-Revenue Priority,212.875,109,30,80.0,293.0,184.0,Stockout Risk,Local Warehouse Priority
+22077,6 RIBBONS RUSTIC CHARM,High-Revenue Priority,739.3333333333334,281,14,119.0,464.0,183.0,Stockout Risk,Local Warehouse Priority
+23534,WALL ART STOP FOR TEA,High-Revenue Priority,641.5,209,14,93.0,392.0,183.0,Stockout Risk,Local Warehouse Priority
+22940,FELTCRAFT CHRISTMAS FAIRY,High-Revenue Priority,151.5,169,45,124.0,351.0,182.0,Stockout Risk,Local Warehouse Priority
+21479,WHITE SKULL HOT WATER BOTTLE,High-Revenue Priority,299.4166666666667,45,14,86.0,226.0,181.0,Stockout Risk,Local Warehouse Priority
+23389,SPACEBOY MINI BACKPACK,High-Revenue Priority,354.3333333333333,144,21,76.0,324.0,180.0,Stockout Risk,Local Warehouse Priority
+84970L,SINGLE HEART ZINC T-LIGHT HOLDER,High-Revenue Priority,506.5833333333333,138,14,82.0,318.0,180.0,Stockout Risk,Local Warehouse Priority
+84997B,CHILDRENS CUTLERY RETROSPOT RED,High-Revenue Priority,370.25,61,14,66.0,239.0,178.0,Stockout Risk,Local Warehouse Priority
+22328,ROUND SNACK BOXES SET OF 4 FRUITS,High-Revenue Priority,560.0,199,14,115.0,376.0,177.0,Stockout Risk,Local Warehouse Priority
+21216,"SET 3 RETROSPOT TEA,COFFEE,SUGAR",High-Revenue Priority,173.41666666666666,169,45,85.0,345.0,176.0,Stockout Risk,Local Warehouse Priority
+22558,CLOTHES PEGS RETROSPOT PACK 24,High-Revenue Priority,696.8333333333334,42,7,55.0,218.0,176.0,Stockout Risk,Local Warehouse Priority
+23166,MEDIUM CERAMIC TOP STORAGE JAR,High-Revenue Priority,478.0,123,14,76.0,299.0,176.0,Stockout Risk,Local Warehouse Priority
+22295,HEART FILIGREE DOVE LARGE,High-Revenue Priority,228.41666666666663,48,21,61.0,221.0,173.0,Stockout Risk,Local Warehouse Priority
+22570,FELTCRAFT CUSHION RABBIT,High-Revenue Priority,236.75,154,30,90.0,327.0,173.0,Stockout Risk,Local Warehouse Priority
+47556B,TEA TIME TEA TOWELS,High-Revenue Priority,236.36363636363637,21,14,83.0,193.0,172.0,Stockout Risk,Local Warehouse Priority
+21669,BLUE STRIPE CERAMIC DRAWER KNOB,High-Revenue Priority,431.0,102,14,68.0,269.0,167.0,Stockout Risk,Local Warehouse Priority
+23109,PACK OF SIX LED TEA LIGHTS,High-Revenue Priority,293.7142857142857,27,14,57.0,194.0,167.0,Stockout Risk,Local Warehouse Priority
+21244,BLUE POLKADOT PLATE,High-Revenue Priority,189.58333333333337,27,21,58.0,191.0,164.0,Stockout Risk,Local Warehouse Priority
+84997D,CHILDRENS CUTLERY POLKADOT PINK,High-Revenue Priority,438.3333333333333,260,21,117.0,424.0,164.0,Stockout Risk,Local Warehouse Priority
+21559,STRAWBERRY LUNCH BOX WITH CUTLERY,High-Revenue Priority,324.1666666666667,276,30,115.0,439.0,163.0,Stockout Risk,Local Warehouse Priority
+79321,CHILLI LIGHTS,High-Revenue Priority,813.5833333333334,112,7,81.0,271.0,159.0,Stockout Risk,Local Warehouse Priority
+23526,WALL ART DOG LICENCE,High-Revenue Priority,410.5,227,21,93.0,380.0,153.0,Stockout Risk,Local Warehouse Priority
+22693,GROW A FLYTRAP OR SUNFLOWER IN TIN,High-Revenue Priority,1326.25,298,7,141.0,450.0,152.0,Stockout Risk,Local Warehouse Priority
+23582,VINTAGE DOILY JUMBO BAG RED,High-Revenue Priority,1290.5,289,7,134.0,435.0,146.0,Stockout Risk,Local Warehouse Priority
+21243,PINK  POLKADOT PLATE,High-Revenue Priority,186.83333333333337,117,30,70.0,257.0,140.0,Stockout Risk,Local Warehouse Priority
+21668,RED STRIPE CERAMIC DRAWER KNOB,High-Revenue Priority,452.5833333333333,144,14,73.0,284.0,140.0,Stockout Risk,Local Warehouse Priority
+22578,WOODEN STAR CHRISTMAS SCANDINAVIAN,High-Revenue Priority,769.1666666666666,175,7,135.0,314.0,139.0,Stockout Risk,Local Warehouse Priority
+22780,LIGHT GARLAND BUTTERFILES PINK,High-Revenue Priority,110.0,26,30,55.0,165.0,139.0,Stockout Risk,Local Warehouse Priority
+21907,I'M ON HOLIDAY METAL SIGN,High-Revenue Priority,190.16666666666663,124,30,71.0,261.0,137.0,Stockout Risk,Local Warehouse Priority
+22554,PLASTERS IN TIN WOODLAND ANIMALS,High-Revenue Priority,633.1666666666666,268,14,110.0,405.0,137.0,Stockout Risk,Local Warehouse Priority
+23169,CLASSIC GLASS COOKIE JAR,High-Revenue Priority,212.0,148,30,73.0,285.0,137.0,Stockout Risk,Local Warehouse Priority
+23229,VINTAGE DONKEY TAIL GAME,High-Revenue Priority,283.6666666666667,42,14,47.0,179.0,137.0,Stockout Risk,Local Warehouse Priority
+20972,PINK CREAM FELT CRAFT TRINKET BOX,High-Revenue Priority,593.0833333333334,52,7,50.0,188.0,136.0,Stockout Risk,Local Warehouse Priority
+22771,CLEAR DRAWER KNOB ACRYLIC EDWARDIAN,High-Revenue Priority,537.5,191,14,75.0,326.0,135.0,Stockout Risk,Local Warehouse Priority
+23159,SET OF 5 PANCAKE DAY MAGNETS,High-Revenue Priority,253.33333333333337,103,21,60.0,237.0,134.0,Stockout Risk,Local Warehouse Priority
+22779,WOODEN OWLS LIGHT GARLAND,High-Revenue Priority,126.16666666666669,57,30,63.0,189.0,132.0,Stockout Risk,Local Warehouse Priority
+84978,HANGING HEART JAR T-LIGHT HOLDER,High-Revenue Priority,1015.25,192,7,87.0,324.0,132.0,Stockout Risk,Local Warehouse Priority
+22910,PAPER CHAIN KIT VINTAGE CHRISTMAS,High-Revenue Priority,787.25,167,7,114.0,298.0,131.0,Stockout Risk,Local Warehouse Priority
+23541,WALL ART CLASSIC PUDDINGS,High-Revenue Priority,431.0,141,14,70.0,271.0,130.0,Stockout Risk,Local Warehouse Priority
+21877,HOME SWEET HOME MUG,High-Revenue Priority,361.5,247,21,121.0,374.0,127.0,Stockout Risk,Local Warehouse Priority
+48194,DOORMAT HEARTS,High-Revenue Priority,282.0,158,21,87.0,284.0,126.0,Stockout Risk,Local Warehouse Priority
+21155,RED RETROSPOT PEG BAG,High-Revenue Priority,256.4166666666667,221,30,90.0,346.0,125.0,Stockout Risk,Local Warehouse Priority
+22502,PICNIC BASKET WICKER SMALL,High-Revenue Priority,150.75,104,30,76.0,227.0,123.0,Stockout Risk,Local Warehouse Priority
+22431,WATERING CAN BLUE ELEPHANT,High-Revenue Priority,169.66666666666666,240,45,107.0,362.0,122.0,Stockout Risk,Local Warehouse Priority
+22663,JUMBO BAG DOLLY GIRL DESIGN,High-Revenue Priority,278.25,265,30,109.0,387.0,122.0,Stockout Risk,Local Warehouse Priority
+23569,TRADTIONAL ALPHABET STAMP SET,High-Revenue Priority,348.0,115,14,75.0,237.0,122.0,Stockout Risk,Local Warehouse Priority
+22065,CHRISTMAS PUDDING TRINKET POT,High-Revenue Priority,516.8333333333334,292,14,171.0,412.0,120.0,Stockout Risk,Local Warehouse Priority
+21930,JUMBO STORAGE BAG SKULLS,High-Revenue Priority,511.5833333333333,210,14,90.0,329.0,119.0,Stockout Risk,Local Warehouse Priority
+21733,RED HANGING HEART T-LIGHT HOLDER,High-Revenue Priority,630.0833333333334,95,7,66.0,213.0,118.0,Stockout Risk,Local Warehouse Priority
+20685,DOORMAT RED RETROSPOT,High-Revenue Priority,328.0833333333333,97,14,61.0,214.0,117.0,Stockout Risk,Local Warehouse Priority
+22962,JAM JAR WITH PINK LID,High-Revenue Priority,320.5,93,14,58.0,208.0,115.0,Stockout Risk,Local Warehouse Priority
+23014,GLASS APOTHECARY BOTTLE ELIXIR,High-Revenue Priority,136.16666666666666,161,45,70.0,274.0,113.0,Stockout Risk,Local Warehouse Priority
+22632,HAND WARMER RED RETROSPOT,High-Revenue Priority,350.1666666666667,282,21,149.0,394.0,112.0,Stockout Risk,Local Warehouse Priority
+48187,DOORMAT NEW ENGLAND,High-Revenue Priority,313.5833333333333,97,14,63.0,209.0,112.0,Stockout Risk,Local Warehouse Priority
+21524,DOORMAT SPOTTY HOME SWEET HOME,High-Revenue Priority,142.25,27,21,38.0,138.0,111.0,Stockout Risk,Local Warehouse Priority
+22144,CHRISTMAS CRAFT LITTLE FRIENDS,High-Revenue Priority,315.5833333333333,249,21,139.0,360.0,111.0,Stockout Risk,Local Warehouse Priority
+84375,SET OF 20 KIDS COOKIE CUTTERS,High-Revenue Priority,345.4166666666667,113,14,62.0,223.0,110.0,Stockout Risk,Local Warehouse Priority
+22766,PHOTO FRAME CORNICE,High-Revenue Priority,267.0,155,21,77.0,264.0,109.0,Stockout Risk,Local Warehouse Priority
+21430,SET/3 RED GINGHAM ROSE STORAGE BOX,High-Revenue Priority,247.16666666666663,234,30,95.0,342.0,108.0,Stockout Risk,Local Warehouse Priority
+22084,PAPER CHAIN KIT EMPIRE,High-Revenue Priority,430.4166666666667,234,14,139.0,340.0,106.0,Stockout Risk,Local Warehouse Priority
+22549,PICTURE DOMINOES,High-Revenue Priority,248.91666666666663,63,14,52.0,168.0,105.0,Stockout Risk,Local Warehouse Priority
+22661,CHARLOTTE BAG DOLLY GIRL DESIGN,High-Revenue Priority,424.0,163,14,68.0,266.0,103.0,Stockout Risk,Local Warehouse Priority
+21121,SET/10 RED POLKADOT PARTY CANDLES,High-Revenue Priority,537.4166666666666,246,14,97.0,348.0,102.0,Stockout Risk,Local Warehouse Priority
+23536,WALL ART VILLAGE SHOW,High-Revenue Priority,296.5,95,14,59.0,197.0,102.0,Stockout Risk,Local Warehouse Priority
+23215,JINGLE BELL HEART ANTIQUE SILVER,High-Revenue Priority,565.5,294,14,131.0,395.0,101.0,Stockout Risk,Local Warehouse Priority
+22989,SET 2 PANTRY DESIGN TEA TOWELS,High-Revenue Priority,274.2,79,14,51.0,179.0,100.0,Stockout Risk,Local Warehouse Priority
+23256,CHILDRENS CUTLERY SPACEBOY,High-Revenue Priority,247.0,134,21,61.0,234.0,100.0,Stockout Risk,Local Warehouse Priority
+21833,CAMOUFLAGE LED TORCH,High-Revenue Priority,218.16666666666663,214,30,94.0,312.0,98.0,Stockout Risk,Local Warehouse Priority
+23247,BISCUIT TIN 50'S CHRISTMAS,High-Revenue Priority,338.0,132,14,72.0,230.0,98.0,Stockout Risk,Local Warehouse Priority
+21868,POTTING SHED TEA MUG,High-Revenue Priority,204.0,105,21,59.0,202.0,97.0,Stockout Risk,Local Warehouse Priority
+22148,EASTER CRAFT 4 CHICKS,High-Revenue Priority,159.08333333333334,171,30,109.0,268.0,97.0,Stockout Risk,Local Warehouse Priority
+22296,HEART IVORY TRELLIS LARGE,High-Revenue Priority,257.5,63,14,40.0,160.0,97.0,Stockout Risk,Local Warehouse Priority
+23530,WALL ART ONLY ONE PERSON,High-Revenue Priority,414.0,288,21,95.0,385.0,97.0,Stockout Risk,Local Warehouse Priority
+82483,WOOD 2 DRAWER CABINET WHITE FINISH,High-Revenue Priority,181.0,152,30,68.0,249.0,97.0,Stockout Risk,Local Warehouse Priority
+84378,SET OF 3 HEART COOKIE CUTTERS,High-Revenue Priority,510.5,246,14,104.0,342.0,96.0,Stockout Risk,Local Warehouse Priority
+21172,PARTY METAL SIGN,High-Revenue Priority,281.9166666666667,184,21,82.0,279.0,95.0,Stockout Risk,Local Warehouse Priority
+22158,3 HEARTS HANGING DECORATION RUSTIC,High-Revenue Priority,273.4166666666667,215,21,118.0,309.0,94.0,Stockout Risk,Local Warehouse Priority
+22174,PHOTO CUBE,High-Revenue Priority,261.0,99,14,71.0,193.0,94.0,Stockout Risk,Local Warehouse Priority
+22957,SET 3 PAPER VINTAGE CHICK PAPER EGG,High-Revenue Priority,161.36363636363637,27,14,46.0,121.0,94.0,Stockout Risk,Local Warehouse Priority
+22567,20 DOLLY PEGS RETROSPOT,High-Revenue Priority,200.16666666666663,47,14,47.0,140.0,93.0,Stockout Risk,Local Warehouse Priority
+23318,BOX OF 6 MINI VINTAGE CRACKERS,High-Revenue Priority,688.0,139,7,70.0,231.0,92.0,Stockout Risk,Local Warehouse Priority
+23556,LANDMARK FRAME COVENT GARDEN,High-Revenue Priority,212.0,233,30,112.0,324.0,91.0,Stockout Risk,Local Warehouse Priority
+22560,TRADITIONAL MODELLING CLAY,High-Revenue Priority,599.1666666666666,102,7,52.0,192.0,90.0,Stockout Risk,Local Warehouse Priority
+22775,PURPLE DRAWERKNOB ACRYLIC EDWARDIAN,High-Revenue Priority,251.66666666666663,149,21,63.0,239.0,90.0,Stockout Risk,Local Warehouse Priority
+22904,CALENDAR PAPER CUT DESIGN,High-Revenue Priority,152.83333333333334,58,21,41.0,148.0,90.0,Stockout Risk,Local Warehouse Priority
+22187,GREEN CHRISTMAS TREE CARD HOLDER,High-Revenue Priority,102.33333333333331,175,45,111.0,264.0,89.0,Stockout Risk,Local Warehouse Priority
+22271,FELTCRAFT DOLL ROSIE,High-Revenue Priority,141.75,47,21,37.0,136.0,89.0,Stockout Risk,Local Warehouse Priority
+23168,CLASSIC CAFE SUGAR DISPENSER,High-Revenue Priority,451.1428571428572,49,7,32.0,137.0,88.0,Stockout Risk,Local Warehouse Priority
+22835,HOT WATER BOTTLE I AM SO POORLY,High-Revenue Priority,234.33333333333337,84,14,62.0,171.0,87.0,Stockout Risk,Local Warehouse Priority
+85132C,CHARLIE AND LOLA FIGURES TINS,High-Revenue Priority,126.83333333333331,110,30,70.0,197.0,87.0,Stockout Risk,Local Warehouse Priority
+23494,VINTAGE DOILY DELUXE SEWING KIT,High-Revenue Priority,214.33333333333337,227,30,99.0,313.0,86.0,Stockout Risk,Local Warehouse Priority
+23158,SET OF 5 LUCKY CAT MAGNETS,High-Revenue Priority,275.3333333333333,277,30,86.0,361.0,84.0,Stockout Risk,Local Warehouse Priority
+23035,DRAWER KNOB CERAMIC IVORY,High-Revenue Priority,344.8333333333333,234,21,76.0,317.0,83.0,Stockout Risk,Local Warehouse Priority
+21535,RED RETROSPOT SMALL MILK JUG,High-Revenue Priority,204.91666666666663,199,30,74.0,279.0,80.0,Stockout Risk,Local Warehouse Priority
+22866,HAND WARMER SCOTTY DOG DESIGN,High-Revenue Priority,495.6666666666667,111,7,75.0,191.0,80.0,Stockout Risk,Local Warehouse Priority
+20676,RED RETROSPOT BOWL,High-Revenue Priority,409.0833333333333,51,7,34.0,129.0,78.0,Stockout Risk,Local Warehouse Priority
+22302,COFFEE MUG PEARS  DESIGN,High-Revenue Priority,188.25,48,14,38.0,126.0,78.0,Stockout Risk,Local Warehouse Priority
+22087,PAPER BUNTING WHITE LACE,High-Revenue Priority,332.5833333333333,163,14,85.0,240.0,77.0,Stockout Risk,Local Warehouse Priority
+22749,FELTCRAFT PRINCESS CHARLOTTE DOLL,High-Revenue Priority,186.08333333333337,46,14,35.0,122.0,76.0,Stockout Risk,Local Warehouse Priority
+22142,CHRISTMAS CRAFT WHITE FAIRY,High-Revenue Priority,258.25,125,14,79.0,200.0,75.0,Stockout Risk,Local Warehouse Priority
+22557,PLASTERS IN TIN VINTAGE PAISLEY,High-Revenue Priority,378.8333333333333,284,21,94.0,359.0,75.0,Stockout Risk,Local Warehouse Priority
+23535,WALL ART BICYCLE SAFETY,High-Revenue Priority,518.0,83,7,37.0,158.0,75.0,Stockout Risk,Local Warehouse Priority
+22563,HAPPY STENCIL CRAFT,High-Revenue Priority,206.66666666666663,60,14,38.0,134.0,74.0,Stockout Risk,Local Warehouse Priority
+22865,HAND WARMER OWL DESIGN,High-Revenue Priority,626.75,163,7,91.0,237.0,74.0,Stockout Risk,Local Warehouse Priority
+22117,METAL SIGN HER DINNER IS SERVED,High-Revenue Priority,109.58333333333331,63,21,58.0,135.0,72.0,Stockout Risk,Local Warehouse Priority
+21033,JUMBO BAG CHARLIE AND LOLA TOYS,High-Revenue Priority,160.91666666666666,96,21,54.0,167.0,71.0,Stockout Risk,Local Warehouse Priority
+22585,PACK OF 6 BIRDY GIFT TAGS,High-Revenue Priority,507.5833333333333,268,14,102.0,339.0,71.0,Stockout Risk,Local Warehouse Priority
+22698,PINK REGENCY TEACUP AND SAUCER,High-Revenue Priority,455.5,76,7,41.0,147.0,71.0,Stockout Risk,Local Warehouse Priority
+22992,REVOLVER WOODEN RULER,High-Revenue Priority,482.7,248,14,94.0,319.0,71.0,Stockout Risk,Local Warehouse Priority
+48184,DOORMAT ENGLISH ROSE,High-Revenue Priority,165.08333333333334,41,14,34.0,111.0,70.0,Stockout Risk,Local Warehouse Priority
+21231,SWEETHEART CERAMIC TRINKET BOX,High-Revenue Priority,485.5,235,14,77.0,304.0,69.0,Stockout Risk,Local Warehouse Priority
+22505,MEMO BOARD COTTAGE DESIGN,High-Revenue Priority,119.41666666666669,179,45,69.0,248.0,69.0,Stockout Risk,Local Warehouse Priority
+21756,BATH BUILDING BLOCK WORD,High-Revenue Priority,65.41666666666667,66,45,34.0,132.0,66.0,Stockout Risk,Local Warehouse Priority
+23503,PLAYING CARDS KEEP CALM & CARRY ON,High-Revenue Priority,1142.0,286,7,86.0,352.0,66.0,Stockout Risk,Local Warehouse Priority
+23555,LANDMARK FRAME NOTTING HILL,High-Revenue Priority,205.5,83,14,52.0,148.0,65.0,Stockout Risk,Local Warehouse Priority
+22352,LUNCH BOX WITH CUTLERY RETROSPOT,High-Revenue Priority,253.66666666666663,96,14,42.0,160.0,64.0,Stockout Risk,Local Warehouse Priority
+22745,POPPY'S PLAYHOUSE BEDROOM,High-Revenue Priority,164.58333333333334,40,14,27.0,104.0,64.0,Stockout Risk,Local Warehouse Priority
+22943,CHRISTMAS LIGHTS 10 VINTAGE BAUBLES,High-Revenue Priority,110.58333333333331,63,21,50.0,127.0,64.0,Stockout Risk,Local Warehouse Priority
+23129,HEART SHAPED HOLLY WREATH,High-Revenue Priority,133.14285714285714,78,21,49.0,142.0,64.0,Stockout Risk,Local Warehouse Priority
+79000,MOROCCAN TEA GLASS,High-Revenue Priority,346.8333333333333,285,21,106.0,349.0,64.0,Stockout Risk,Local Warehouse Priority
+22088,PAPER BUNTING COLOURED LACE,High-Revenue Priority,153.16666666666666,47,14,39.0,110.0,63.0,Stockout Risk,Local Warehouse Priority
+22628,PICNIC BOXES SET OF 3 RETROSPOT,High-Revenue Priority,77.75,50,30,35.0,113.0,63.0,Stockout Risk,Local Warehouse Priority
+23191,BUNDLE OF 3 RETRO NOTE BOOKS,High-Revenue Priority,302.57142857142856,220,21,70.0,282.0,62.0,Stockout Risk,Local Warehouse Priority
+22633,HAND WARMER UNION JACK,High-Revenue Priority,366.25,77,7,53.0,138.0,61.0,Stockout Risk,Local Warehouse Priority
+21257,VICTORIAN SEWING BOX MEDIUM,High-Revenue Priority,53.75,55,45,33.0,114.0,59.0,Stockout Risk,Local Warehouse Priority
+23135,SMALL ZINC HEART WALL ORGANISER,High-Revenue Priority,190.25,76,14,46.0,135.0,59.0,Stockout Risk,Local Warehouse Priority
+23192,BUNDLE OF 3 ALPHABET EXERCISE BOOKS,High-Revenue Priority,470.2857142857143,86,7,35.0,145.0,59.0,Stockout Risk,Local Warehouse Priority
+21429,RED GINGHAM ROSE JEWELLERY BOX,High-Revenue Priority,136.41666666666666,36,14,30.0,94.0,58.0,Stockout Risk,Local Warehouse Priority
+21912,VINTAGE SNAKES & LADDERS,High-Revenue Priority,124.5,63,21,33.0,120.0,57.0,Stockout Risk,Local Warehouse Priority
+22568,FELTCRAFT CUSHION OWL,High-Revenue Priority,266.6666666666667,31,7,26.0,88.0,57.0,Stockout Risk,Local Warehouse Priority
+23130,MISTLETOE HEART WREATH GREEN,High-Revenue Priority,131.28571428571428,231,45,91.0,288.0,57.0,Stockout Risk,Local Warehouse Priority
+84029E,RED WOOLLY HOTTIE WHITE HEART.,High-Revenue Priority,359.75,224,14,113.0,281.0,57.0,Stockout Risk,Local Warehouse Priority
+21892,TRADITIONAL WOODEN CATCH CUP GAME,High-Revenue Priority,247.41666666666663,107,14,47.0,162.0,55.0,Stockout Risk,Local Warehouse Priority
+48173C,DOORMAT BLACK FLOCK,High-Revenue Priority,150.58333333333334,109,21,58.0,163.0,54.0,Stockout Risk,Local Warehouse Priority
+22667,RECIPE BOX RETROSPOT,High-Revenue Priority,221.5,169,21,63.0,218.0,49.0,Stockout Risk,Local Warehouse Priority
+21623,VINTAGE UNION JACK MEMOBOARD,High-Revenue Priority,266.6666666666667,153,14,76.0,200.0,47.0,Stockout Risk,Local Warehouse Priority
+21539,RED RETROSPOT BUTTER DISH,High-Revenue Priority,80.5,31,21,21.0,77.0,46.0,Stockout Risk,Local Warehouse Priority
+22652,TRAVEL SEWING KIT,High-Revenue Priority,423.4166666666667,227,14,75.0,273.0,46.0,Stockout Risk,Local Warehouse Priority
+47566B,TEA TIME PARTY BUNTING,High-Revenue Priority,210.33333333333337,24,7,21.0,70.0,46.0,Stockout Risk,Local Warehouse Priority
+21755,LOVE BUILDING BLOCK WORD,High-Revenue Priority,164.5,59,14,27.0,104.0,45.0,Stockout Risk,Local Warehouse Priority
+23126,FELTCRAFT GIRL AMELIE KIT,High-Revenue Priority,116.44444444444444,68,21,31.0,113.0,45.0,Stockout Risk,Local Warehouse Priority
+20973,12 PENCIL SMALL TUBE WOODLAND,High-Revenue Priority,351.0833333333333,85,7,47.0,129.0,44.0,Stockout Risk,Local Warehouse Priority
+22378,WALL TIDY RETROSPOT,High-Revenue Priority,188.83333333333337,94,14,50.0,138.0,44.0,Stockout Risk,Local Warehouse Priority
+22383,LUNCH BAG SUKI DESIGN,High-Revenue Priority,1020.4166666666666,275,7,81.0,319.0,44.0,Stockout Risk,Local Warehouse Priority
+22746,POPPY'S PLAYHOUSE LIVINGROOM,High-Revenue Priority,117.33333333333331,31,14,20.0,75.0,44.0,Stockout Risk,Local Warehouse Priority
+23012,GLASS APOTHECARY BOTTLE PERFUME,High-Revenue Priority,165.83333333333334,115,21,42.0,158.0,43.0,Stockout Risk,Local Warehouse Priority
+21934,SKULL SHOULDER BAG,High-Revenue Priority,192.33333333333337,21,7,18.0,63.0,42.0,Stockout Risk,Local Warehouse Priority
+22738,RIBBON REEL SNOWY VILLAGE,High-Revenue Priority,161.66666666666666,81,14,47.0,122.0,41.0,Stockout Risk,Local Warehouse Priority
+84997A,CHILDRENS CUTLERY POLKADOT GREEN,High-Revenue Priority,209.66666666666663,162,21,56.0,203.0,41.0,Stockout Risk,Local Warehouse Priority
+22111,SCOTTIE DOG HOT WATER BOTTLE,High-Revenue Priority,353.9166666666667,215,14,90.0,255.0,40.0,Stockout Risk,Local Warehouse Priority
+22627,MINT KITCHEN SCALES,High-Revenue Priority,67.58333333333333,56,30,28.0,96.0,40.0,Stockout Risk,Local Warehouse Priority
+48185,DOORMAT FAIRY CAKE,High-Revenue Priority,244.0,46,7,29.0,86.0,40.0,Stockout Risk,Local Warehouse Priority
+21746,SMALL RED RETROSPOT WINDMILL,High-Revenue Priority,255.25,225,21,85.0,264.0,39.0,Stockout Risk,Local Warehouse Priority
+23553,LANDMARK FRAME CAMDEN TOWN,High-Revenue Priority,214.0,36,7,24.0,74.0,38.0,Stockout Risk,Local Warehouse Priority
+23299,FOOD COVER WITH BEADS SET 2,High-Revenue Priority,142.85714285714286,65,14,35.0,102.0,37.0,Stockout Risk,Local Warehouse Priority
+84987,SET OF 36 TEATIME PAPER DOILIES,High-Revenue Priority,252.75,129,14,48.0,166.0,37.0,Stockout Risk,Local Warehouse Priority
+23426,METAL SIGN DROP YOUR PANTS,High-Revenue Priority,399.6666666666667,201,14,50.0,237.0,36.0,Stockout Risk,Local Warehouse Priority
+22956,36 FOIL HEART CAKE CASES,High-Revenue Priority,149.58333333333334,111,21,40.0,145.0,34.0,Stockout Risk,Local Warehouse Priority
+23322,LARGE WHITE HEART OF WICKER,High-Revenue Priority,492.6666666666667,122,7,41.0,156.0,34.0,Stockout Risk,Local Warehouse Priority
+21874,GIN AND TONIC MUG,High-Revenue Priority,240.0,224,21,89.0,257.0,33.0,Stockout Risk,Local Warehouse Priority
+23167,SMALL CERAMIC TOP STORAGE JAR,High-Revenue Priority,705.7142857142857,210,7,77.0,242.0,32.0,Stockout Risk,Local Warehouse Priority
+23557,LANDMARK FRAME BAKER STREET,High-Revenue Priority,172.5,236,30,96.0,268.0,32.0,Stockout Risk,Local Warehouse Priority
+21933,PINK VINTAGE PAISLEY PICNIC BAG,High-Revenue Priority,218.16666666666663,125,14,54.0,156.0,31.0,Stockout Risk,Local Warehouse Priority
+22624,IVORY KITCHEN SCALES,High-Revenue Priority,150.83333333333334,174,30,54.0,205.0,31.0,Stockout Risk,Local Warehouse Priority
+23204,CHARLOTTE BAG APPLES DESIGN,High-Revenue Priority,938.125,261,7,73.0,292.0,31.0,Stockout Risk,Local Warehouse Priority
+82001S,VINYL RECORD FRAME SILVER,High-Revenue Priority,138.75,61,14,26.0,91.0,30.0,Stockout Risk,Local Warehouse Priority
+21164,HOME SWEET HOME METAL SIGN,High-Revenue Priority,141.25,109,21,39.0,138.0,29.0,Stockout Risk,Local Warehouse Priority
+23313,VINTAGE CHRISTMAS BUNTING,High-Revenue Priority,528.4,151,7,57.0,180.0,29.0,Stockout Risk,Local Warehouse Priority
+72351B,SET/6 PINK  BUTTERFLY T-LIGHTS,High-Revenue Priority,171.91666666666666,29,7,18.0,58.0,29.0,Stockout Risk,Local Warehouse Priority
+84508A,CAMOUFLAGE DESIGN TEDDY,High-Revenue Priority,135.91666666666666,173,30,65.0,201.0,28.0,Stockout Risk,Local Warehouse Priority
+21242,RED RETROSPOT PLATE,High-Revenue Priority,267.75,228,21,68.0,255.0,27.0,Stockout Risk,Local Warehouse Priority
+22580,ADVENT CALENDAR GINGHAM SACK,High-Revenue Priority,101.83333333333331,55,14,33.0,81.0,26.0,Stockout Risk,Local Warehouse Priority
+23156,SET OF 5 MINI GROCERY MAGNETS,High-Revenue Priority,176.66666666666666,141,21,43.0,167.0,26.0,Stockout Risk,Local Warehouse Priority
+23320,GIANT 50'S CHRISTMAS CRACKER,High-Revenue Priority,459.0,275,14,87.0,301.0,26.0,Stockout Risk,Local Warehouse Priority
+20677,PINK POLKADOT BOWL,High-Revenue Priority,293.75,159,14,46.0,183.0,24.0,Stockout Risk,Local Warehouse Priority
+21217,RED RETROSPOT ROUND CAKE TINS,High-Revenue Priority,86.91666666666667,63,21,25.0,86.0,23.0,Stockout Risk,Local Warehouse Priority
+22191,IVORY DINER WALL CLOCK,High-Revenue Priority,117.08333333333331,60,14,28.0,83.0,23.0,Stockout Risk,Local Warehouse Priority
+84030E,ENGLISH ROSE HOT WATER BOTTLE,High-Revenue Priority,126.08333333333331,22,7,16.0,45.0,23.0,Stockout Risk,Local Warehouse Priority
+22730,ALARM CLOCK BAKELIKE IVORY,High-Revenue Priority,229.91666666666663,54,7,22.0,76.0,22.0,Stockout Risk,Local Warehouse Priority
+22966,GINGERBREAD MAN COOKIE CUTTER,High-Revenue Priority,597.1666666666666,169,7,52.0,191.0,22.0,Stockout Risk,Local Warehouse Priority
+82551,LAUNDRY 15C METAL SIGN,High-Revenue Priority,239.91666666666663,56,7,22.0,78.0,22.0,Stockout Risk,Local Warehouse Priority
+23127,FELTCRAFT GIRL NICOLE KIT,High-Revenue Priority,76.44444444444444,32,14,14.0,50.0,18.0,Stockout Risk,Local Warehouse Priority
+23311,VINTAGE CHRISTMAS STOCKING,High-Revenue Priority,431.6,275,14,92.0,293.0,18.0,Stockout Risk,Local Warehouse Priority
+22429,ENAMEL MEASURING JUG CREAM,High-Revenue Priority,103.16666666666669,123,30,37.0,140.0,17.0,Stockout Risk,Local Warehouse Priority
+22895,SET OF 2 TEA TOWELS APPLE AND PEARS,High-Revenue Priority,168.83333333333334,92,14,30.0,109.0,17.0,Stockout Risk,Local Warehouse Priority
+23239,SET OF 4 KNICK KNACK TINS POPPIES,High-Revenue Priority,123.16666666666669,23,7,11.0,40.0,17.0,Stockout Risk,Local Warehouse Priority
+23255,CHILDRENS CUTLERY CIRCUS PARADE,High-Revenue Priority,121.375,99,21,31.0,116.0,17.0,Stockout Risk,Local Warehouse Priority
+21154,RED RETROSPOT OVEN GLOVE,High-Revenue Priority,308.1666666666667,269,21,69.0,285.0,16.0,Stockout Risk,Local Warehouse Priority
+21481,FAWN BLUE HOT WATER BOTTLE,High-Revenue Priority,254.83333333333337,163,14,60.0,179.0,16.0,Stockout Risk,Local Warehouse Priority
+22668,PINK BABY BUNTING,High-Revenue Priority,175.5,234,30,70.0,246.0,12.0,Stockout Risk,Local Warehouse Priority
+22813,PACK 3 BOXES BIRD PANNETONE,High-Revenue Priority,192.25,52,7,19.0,64.0,12.0,Stockout Risk,Local Warehouse Priority
+84029G,KNITTED UNION FLAG HOT WATER BOTTLE,High-Revenue Priority,252.58333333333337,179,14,73.0,191.0,12.0,Stockout Risk,Local Warehouse Priority
+22941,CHRISTMAS LIGHTS 10 REINDEER,High-Revenue Priority,123.0,197,30,85.0,208.0,11.0,Stockout Risk,Local Warehouse Priority
+23118,PARISIENNE JEWELLERY DRAWER,High-Revenue Priority,101.85714285714286,199,45,57.0,210.0,11.0,Stockout Risk,Local Warehouse Priority
+21380,WOODEN HAPPY BIRTHDAY GARLAND,High-Revenue Priority,179.91666666666666,50,7,17.0,59.0,9.0,Stockout Risk,Local Warehouse Priority
+22432,WATERING CAN PINK BUNNY,High-Revenue Priority,136.91666666666666,189,30,61.0,198.0,9.0,Stockout Risk,Local Warehouse Priority
+22947,WOODEN ADVENT CALENDAR RED,High-Revenue Priority,62.0,100,30,47.0,109.0,9.0,Stockout Risk,Local Warehouse Priority
+22596,CHRISTMAS STAR WISH LIST CHALKBOARD,High-Revenue Priority,442.8333333333333,143,7,48.0,151.0,8.0,Stockout Risk,Local Warehouse Priority
+22854,CREAM SWEETHEART EGG HOLDER,High-Revenue Priority,63.916666666666664,58,21,21.0,66.0,8.0,Stockout Risk,Local Warehouse Priority
+22812,PACK 3 BOXES CHRISTMAS PANNETONE,High-Revenue Priority,142.41666666666666,101,14,42.0,108.0,7.0,Stockout Risk,Local Warehouse Priority
+21210,SET OF 72 RETROSPOT PAPER  DOILIES,High-Revenue Priority,469.0,145,7,42.0,151.0,6.0,Stockout Risk,Local Warehouse Priority
+21770,OPEN CLOSED METAL SIGN,High-Revenue Priority,171.0,112,14,38.0,118.0,6.0,Stockout Risk,Local Warehouse Priority
+22688,DOORMAT PEACE ON EARTH BLUE,High-Revenue Priority,58.583333333333336,67,21,31.0,72.0,5.0,Stockout Risk,Local Warehouse Priority
+22690,DOORMAT HOME SWEET HOME BLUE,High-Revenue Priority,132.16666666666666,197,30,70.0,202.0,5.0,Stockout Risk,Local Warehouse Priority
+23103,JINGLE BELL HEART DECORATION,High-Revenue Priority,550.0,177,7,54.0,182.0,5.0,Stockout Risk,Local Warehouse Priority
+23131,MISTLETOE HEART WREATH CREAM,High-Revenue Priority,117.375,252,45,81.0,257.0,5.0,Stockout Risk,Local Warehouse Priority
+22796,PHOTO FRAME 3 CLASSIC HANGING,High-Revenue Priority,44.25,37,21,10.0,41.0,4.0,Stockout Risk,Local Warehouse Priority
+23032,DRAWER KNOB CRACKLE GLAZE IVORY,High-Revenue Priority,385.8333333333333,242,14,65.0,245.0,3.0,Stockout Risk,Local Warehouse Priority
+23081,GREEN METAL BOX ARMY SUPPLIES,High-Revenue Priority,62.714285714285715,38,14,12.0,41.0,3.0,Stockout Risk,Local Warehouse Priority
+21908,CHOCOLATE THIS WAY METAL SIGN,High-Revenue Priority,293.0833333333333,186,14,51.0,188.0,2.0,Stockout Risk,Local Warehouse Priority
+23507,MINI PLAYING CARDS BUFFALO BILL,High-Turnover Stable,943.3333333333334,285,30,381.0,1324.0,1039.0,Stockout Risk,Stable Local Warehouse Inventory
+23510,MINI PLAYING CARDS GYMKHANA,High-Turnover Stable,831.0,153,30,360.0,1191.0,1038.0,Stockout Risk,Stable Local Warehouse Inventory
+23434,3 RAFFIA RIBBONS 50'S CHRISTMAS,High-Turnover Stable,643.6666666666666,247,45,319.0,1284.0,1037.0,Stockout Risk,Stable Local Warehouse Inventory
+23367,SET 12 COLOUR PENCILS SPACEBOY,High-Turnover Stable,986.3333333333334,50,21,274.0,964.0,914.0,Stockout Risk,Stable Local Warehouse Inventory
+22610,PENS ASSORTED FUNNY FACE,High-Turnover Stable,776.6666666666666,90,21,227.0,771.0,681.0,Stockout Risk,Stable Local Warehouse Inventory
+22983,CARD BILLBOARD FONT,High-Turnover Stable,421.25,199,45,210.0,842.0,643.0,Stockout Risk,Stable Local Warehouse Inventory
+22996,TRAVEL CARD WALLET VINTAGE TICKET,High-Turnover Stable,464.1,31,30,162.0,626.0,595.0,Stockout Risk,Stable Local Warehouse Inventory
+23508,MINI PLAYING CARDS DOLLY GIRL,High-Turnover Stable,854.3333333333334,49,14,198.0,597.0,548.0,Stockout Risk,Stable Local Warehouse Inventory
+21982,PACK OF 12 SUKI TISSUES,High-Turnover Stable,587.9166666666666,45,21,166.0,578.0,533.0,Stockout Risk,Stable Local Warehouse Inventory
+23345,DOLLY GIRL BEAKER,High-Turnover Stable,474.6,159,30,209.0,684.0,525.0,Stockout Risk,Stable Local Warehouse Inventory
+21918,SET 12 KIDS COLOUR  CHALK STICKS,High-Turnover Stable,592.0,64,21,165.0,579.0,515.0,Stockout Risk,Stable Local Warehouse Inventory
+21980,PACK OF 12 RED RETROSPOT TISSUES,High-Turnover Stable,543.5833333333334,247,30,207.0,751.0,504.0,Stockout Risk,Stable Local Warehouse Inventory
+21829,DINOSAUR KEYRINGS ASSORTED,High-Turnover Stable,554.75,39,21,147.0,535.0,496.0,Stockout Risk,Stable Local Warehouse Inventory
+23374,RED SPOT PAPER GIFT BAG,High-Turnover Stable,533.0,41,21,148.0,521.0,480.0,Stockout Risk,Stable Local Warehouse Inventory
+23346,SPACEBOY BEAKER,High-Turnover Stable,513.6,36,21,150.0,510.0,474.0,Stockout Risk,Stable Local Warehouse Inventory
+23546,WRAP PAISLEY PARK,High-Turnover Stable,615.0,151,21,135.0,566.0,415.0,Stockout Risk,Stable Local Warehouse Inventory
+21500,PINK POLKADOT WRAP,High-Turnover Stable,518.75,77,21,126.0,489.0,412.0,Stockout Risk,Stable Local Warehouse Inventory
+21499,BLUE POLKADOT WRAP,High-Turnover Stable,550.1666666666666,102,21,125.0,510.0,408.0,Stockout Risk,Stable Local Warehouse Inventory
+23545,WRAP RED VINTAGE DOILY,High-Turnover Stable,461.0,206,30,151.0,612.0,406.0,Stockout Risk,Stable Local Warehouse Inventory
+23445,ICE CREAM BUBBLES,High-Turnover Stable,622.0,74,14,121.0,411.0,337.0,Stockout Risk,Stable Local Warehouse Inventory
+21495,SKULLS AND CROSSBONES WRAP,High-Turnover Stable,468.75,125,21,129.0,457.0,332.0,Stockout Risk,Stable Local Warehouse Inventory
+23399,HOME SWEET HOME HANGING HEART,High-Turnover Stable,623.6666666666666,252,21,147.0,584.0,332.0,Stockout Risk,Stable Local Warehouse Inventory
+22045,SPACEBOY GIFT WRAP,High-Turnover Stable,527.25,176,21,138.0,507.0,331.0,Stockout Risk,Stable Local Warehouse Inventory
+23326,HANGING MINI COLOURED BOTTLES,High-Turnover Stable,750.5,163,14,141.0,491.0,328.0,Stockout Risk,Stable Local Warehouse Inventory
+16169E,WRAP 50'S  CHRISTMAS,High-Turnover Stable,832.4,238,14,170.0,558.0,320.0,Stockout Risk,Stable Local Warehouse Inventory
+22712,CARD DOLLY GIRL,High-Turnover Stable,345.3333333333333,181,30,153.0,498.0,317.0,Stockout Risk,Stable Local Warehouse Inventory
+21985,PACK OF 12 HEARTS DESIGN TISSUES,High-Turnover Stable,723.5,162,14,139.0,477.0,315.0,Stockout Risk,Stable Local Warehouse Inventory
+21983,PACK OF 12 BLUE PAISLEY TISSUES,High-Turnover Stable,187.08333333333337,66,45,96.0,377.0,311.0,Stockout Risk,Stable Local Warehouse Inventory
+22534,MAGIC DRAWING SLATE SPACEBOY,High-Turnover Stable,365.4166666666667,203,30,146.0,511.0,308.0,Stockout Risk,Stable Local Warehouse Inventory
+23333,IVORY WICKER HEART MEDIUM,High-Turnover Stable,492.75,170,21,127.0,472.0,302.0,Stockout Risk,Stable Local Warehouse Inventory
+22161,HEART DECORATION RUSTIC HANGING,High-Turnover Stable,409.5,127,21,136.0,423.0,296.0,Stockout Risk,Stable Local Warehouse Inventory
+23119,PACK OF 6 LARGE FRUIT STRAWS,High-Turnover Stable,369.8333333333333,80,21,115.0,374.0,294.0,Stockout Risk,Stable Local Warehouse Inventory
+22774,RED DRAWER KNOB ACRYLIC EDWARDIAN,High-Turnover Stable,186.83333333333337,111,45,117.0,397.0,286.0,Stockout Risk,Stable Local Warehouse Inventory
+23437,50'S CHRISTMAS GIFT BAG LARGE,High-Turnover Stable,469.0,224,21,154.0,482.0,258.0,Stockout Risk,Stable Local Warehouse Inventory
+23378,PACK OF 12 50'S CHRISTMAS TISSUES,High-Turnover Stable,1265.6666666666667,141,7,97.0,392.0,251.0,Stockout Risk,Stable Local Warehouse Inventory
+23231,WRAP DOILEY DESIGN,High-Turnover Stable,643.3636363636364,152,14,97.0,397.0,245.0,Stockout Risk,Stable Local Warehouse Inventory
+23368,SET 12 COLOUR PENCILS DOLLY GIRL,High-Turnover Stable,747.0,245,14,140.0,489.0,244.0,Stockout Risk,Stable Local Warehouse Inventory
+23366,SET 12 COLOURING PENCILS DOILY,High-Turnover Stable,672.0,207,14,135.0,449.0,242.0,Stockout Risk,Stable Local Warehouse Inventory
+23380,PACK OF 12 VINTAGE DOILY TISSUES,High-Turnover Stable,725.6666666666666,229,14,124.0,463.0,234.0,Stockout Risk,Stable Local Warehouse Inventory
+85175,CACTI T-LIGHT CANDLES,High-Turnover Stable,435.4166666666667,176,21,103.0,408.0,232.0,Stockout Risk,Stable Local Warehouse Inventory
+22995,TRAVEL CARD WALLET SUKI,High-Turnover Stable,226.5,71,30,73.0,300.0,229.0,Stockout Risk,Stable Local Warehouse Inventory
+16237,SLEEPING CAT ERASERS,High-Turnover Stable,392.3333333333333,37,14,71.0,254.0,217.0,Stockout Risk,Stable Local Warehouse Inventory
+21989,PACK OF 20 SKULL PAPER NAPKINS,High-Turnover Stable,198.58333333333337,197,45,108.0,406.0,209.0,Stockout Risk,Stable Local Warehouse Inventory
+22437,SET OF 9 BLACK SKULL BALLOONS,High-Turnover Stable,229.75,106,30,84.0,314.0,208.0,Stockout Risk,Stable Local Warehouse Inventory
+22037,ROBOT BIRTHDAY CARD,High-Turnover Stable,302.3333333333333,82,21,77.0,289.0,207.0,Stockout Risk,Stable Local Warehouse Inventory
+22773,GREEN DRAWER KNOB ACRYLIC EDWARDIAN,High-Turnover Stable,169.41666666666666,23,30,59.0,228.0,205.0,Stockout Risk,Stable Local Warehouse Inventory
+22716,CARD CIRCUS PARADE,High-Turnover Stable,258.8333333333333,44,21,58.0,239.0,195.0,Stockout Risk,Stable Local Warehouse Inventory
+22536,MAGIC DRAWING SLATE PURDEY,High-Turnover Stable,391.3333333333333,77,14,87.0,270.0,193.0,Stockout Risk,Stable Local Warehouse Inventory
+21506,"FANCY FONT BIRTHDAY CARD,",High-Turnover Stable,378.5833333333333,171,21,97.0,362.0,191.0,Stockout Risk,Stable Local Warehouse Inventory
+23334,IVORY WICKER HEART SMALL,High-Turnover Stable,543.25,149,14,86.0,340.0,191.0,Stockout Risk,Stable Local Warehouse Inventory
+22710,WRAP I LOVE LONDON,High-Turnover Stable,366.75,61,14,71.0,242.0,181.0,Stockout Risk,Stable Local Warehouse Inventory
+23100,SILVER BELLS TABLE DECORATION,High-Turnover Stable,293.42857142857144,120,21,92.0,297.0,177.0,Stockout Risk,Stable Local Warehouse Inventory
+21395,BLUE POLKADOT BEAKER,High-Turnover Stable,314.6666666666667,36,14,65.0,212.0,176.0,Stockout Risk,Stable Local Warehouse Inventory
+22027,TEA PARTY BIRTHDAY CARD,High-Turnover Stable,342.6666666666667,44,14,54.0,214.0,170.0,Stockout Risk,Stable Local Warehouse Inventory
+23376,PACK OF 12 VINTAGE CHRISTMAS TISSUE,High-Turnover Stable,937.3333333333334,118,7,69.0,288.0,170.0,Stockout Risk,Stable Local Warehouse Inventory
+22963,JAM JAR WITH GREEN LID,High-Turnover Stable,269.5,203,30,101.0,370.0,167.0,Stockout Risk,Stable Local Warehouse Inventory
+21987,PACK OF 6 SKULL PAPER CUPS,High-Turnover Stable,173.75,85,30,74.0,248.0,163.0,Stockout Risk,Stable Local Warehouse Inventory
+16235,RECYCLED PENCIL WITH RABBIT ERASER,High-Turnover Stable,251.0,91,21,77.0,253.0,162.0,Stockout Risk,Stable Local Warehouse Inventory
+85178,VICTORIAN SEWING KIT,High-Turnover Stable,194.08333333333337,41,21,55.0,191.0,150.0,Stockout Risk,Stable Local Warehouse Inventory
+21519,GIN & TONIC DIET GREETING CARD,High-Turnover Stable,268.8333333333333,104,21,60.0,248.0,144.0,Stockout Risk,Stable Local Warehouse Inventory
+22398,MAGNETS PACK OF 4 SWALLOWS,High-Turnover Stable,194.58333333333337,57,21,61.0,197.0,140.0,Stockout Risk,Stable Local Warehouse Inventory
+21878,PACK OF 6 SANDCASTLE FLAGS ASSORTED,High-Turnover Stable,208.75,78,21,70.0,216.0,138.0,Stockout Risk,Stable Local Warehouse Inventory
+85015,SET OF 12  VINTAGE POSTCARD SET,High-Turnover Stable,179.33333333333334,42,21,54.0,180.0,138.0,Stockout Risk,Stable Local Warehouse Inventory
+21984,PACK OF 12 PINK PAISLEY TISSUES,High-Turnover Stable,284.75,53,14,55.0,188.0,135.0,Stockout Risk,Stable Local Warehouse Inventory
+20996,JAZZ HEARTS ADDRESS BOOK,High-Turnover Stable,250.41666666666663,129,21,81.0,256.0,127.0,Stockout Risk,Stable Local Warehouse Inventory
+84832,ZINC WILLIE WINKIE  CANDLE STICK,High-Turnover Stable,229.33333333333337,30,14,50.0,157.0,127.0,Stockout Risk,Stable Local Warehouse Inventory
+21239,PINK  POLKADOT CUP,High-Turnover Stable,246.41666666666663,110,21,63.0,235.0,125.0,Stockout Risk,Stable Local Warehouse Inventory
+22708,WRAP DOLLY GIRL,High-Turnover Stable,222.91666666666663,88,21,54.0,210.0,122.0,Stockout Risk,Stable Local Warehouse Inventory
+16156S,WRAP PINK FAIRY CAKES,High-Turnover Stable,475.0,189,14,83.0,305.0,116.0,Stockout Risk,Stable Local Warehouse Inventory
+23504,PLAYING CARDS JUBILEE UNION JACK,High-Turnover Stable,606.6666666666666,266,14,99.0,382.0,116.0,Stockout Risk,Stable Local Warehouse Inventory
+22030,SWALLOWS GREETING CARD,High-Turnover Stable,454.1666666666667,190,14,88.0,300.0,110.0,Stockout Risk,Stable Local Warehouse Inventory
+22994,TRAVEL CARD WALLET RETROSPOT,High-Turnover Stable,204.8,23,14,35.0,131.0,108.0,Stockout Risk,Stable Local Warehouse Inventory
+23090,VINTAGE GLASS T-LIGHT HOLDER,High-Turnover Stable,264.42857142857144,161,21,72.0,257.0,96.0,Stockout Risk,Stable Local Warehouse Inventory
+22268,DECORATION SITTING BUNNY,High-Turnover Stable,182.63636363636363,31,14,37.0,122.0,91.0,Stockout Risk,Stable Local Warehouse Inventory
+16161P,WRAP ENGLISH ROSE,High-Turnover Stable,585.5,289,14,102.0,375.0,86.0,Stockout Risk,Stable Local Warehouse Inventory
+21313,GLASS HEART T-LIGHT HOLDER,High-Turnover Stable,271.5,166,21,61.0,251.0,85.0,Stockout Risk,Stable Local Warehouse Inventory
+23292,SPACEBOY CHILDRENS CUP,High-Turnover Stable,336.8333333333333,126,14,48.0,205.0,79.0,Stockout Risk,Stable Local Warehouse Inventory
+21786,POLKADOT RAIN HAT,High-Turnover Stable,154.58333333333334,78,21,47.0,155.0,77.0,Stockout Risk,Stable Local Warehouse Inventory
+21544,SKULLS  WATER TRANSFER TATTOOS,High-Turnover Stable,154.75,23,14,27.0,99.0,76.0,Stockout Risk,Stable Local Warehouse Inventory
+22615,PACK OF 12 CIRCUS PARADE TISSUES,High-Turnover Stable,169.0,39,14,34.0,113.0,74.0,Stockout Risk,Stable Local Warehouse Inventory
+82581,TOILET METAL SIGN,High-Turnover Stable,312.25,226,21,77.0,296.0,70.0,Stockout Risk,Stable Local Warehouse Inventory
+22156,HEART DECORATION WITH PEARLS,High-Turnover Stable,172.66666666666666,44,14,29.0,110.0,66.0,Stockout Risk,Stable Local Warehouse Inventory
+22539,MINI JIGSAW DOLLY GIRL,High-Turnover Stable,214.16666666666663,238,30,87.0,301.0,63.0,Stockout Risk,Stable Local Warehouse Inventory
+22704,WRAP RED APPLES,High-Turnover Stable,416.9166666666667,202,14,69.0,264.0,62.0,Stockout Risk,Stable Local Warehouse Inventory
+23436,VINTAGE CHRISTMAS GIFT BAG LARGE,High-Turnover Stable,478.5,258,14,97.0,320.0,62.0,Stockout Risk,Stable Local Warehouse Inventory
+21917,SET 12 KIDS  WHITE CHALK STICKS,High-Turnover Stable,340.5833333333333,160,14,61.0,220.0,60.0,Stockout Risk,Stable Local Warehouse Inventory
+22602,RETROSPOT WOODEN HEART DECORATION,High-Turnover Stable,173.58333333333334,119,21,54.0,176.0,57.0,Stockout Risk,Stable Local Warehouse Inventory
+23212,HEART WREATH DECORATION WITH BELL,High-Turnover Stable,343.0,166,14,62.0,222.0,56.0,Stockout Risk,Stable Local Warehouse Inventory
+47503A,ASS FLORAL PRINT MULTI SCREWDRIVER,High-Turnover Stable,224.83333333333337,99,14,47.0,152.0,53.0,Stockout Risk,Stable Local Warehouse Inventory
+21976,PACK OF 60 MUSHROOM CAKE CASES,High-Turnover Stable,423.6666666666667,223,14,73.0,271.0,48.0,Stockout Risk,Stable Local Warehouse Inventory
+22066,LOVE HEART TRINKET POT,High-Turnover Stable,185.25,214,30,77.0,262.0,48.0,Stockout Risk,Stable Local Warehouse Inventory
+22819,"BIRTHDAY CARD, RETRO SPOT",High-Turnover Stable,211.08333333333337,87,14,35.0,134.0,47.0,Stockout Risk,Stable Local Warehouse Inventory
+22706,WRAP COWBOYS,High-Turnover Stable,161.0,64,14,33.0,108.0,44.0,Stockout Risk,Stable Local Warehouse Inventory
+17091J,VANILLA INCENSE IN TIN,High-Turnover Stable,155.66666666666666,110,21,42.0,151.0,41.0,Stockout Risk,Stable Local Warehouse Inventory
+20983,12 PENCILS TALL TUBE RED RETROSPOT,High-Turnover Stable,223.08333333333337,183,21,63.0,219.0,36.0,Stockout Risk,Stable Local Warehouse Inventory
+22046,TEA PARTY  WRAPPING PAPER,High-Turnover Stable,179.16666666666666,79,14,30.0,114.0,35.0,Stockout Risk,Stable Local Warehouse Inventory
+21916,SET 12 RETRO WHITE CHALK STICKS,High-Turnover Stable,373.4166666666667,91,7,37.0,124.0,33.0,Stockout Risk,Stable Local Warehouse Inventory
+23148,MINIATURE ANTIQUE ROSE HOOK IVORY,High-Turnover Stable,256.25,50,7,23.0,83.0,33.0,Stockout Risk,Stable Local Warehouse Inventory
+23211,RED ROCKING HORSE HAND PAINTED,High-Turnover Stable,362.1666666666667,207,14,65.0,234.0,27.0,Stockout Risk,Stable Local Warehouse Inventory
+22817,CARD SUKI BIRTHDAY,High-Turnover Stable,213.58333333333337,110,14,36.0,136.0,26.0,Stockout Risk,Stable Local Warehouse Inventory
+21509,COWBOYS AND INDIANS BIRTHDAY CARD,High-Turnover Stable,304.1666666666667,167,14,48.0,190.0,23.0,Stockout Risk,Stable Local Warehouse Inventory
+23264,SET OF 3 WOODEN SLEIGH DECORATIONS,High-Turnover Stable,296.3333333333333,182,14,67.0,205.0,23.0,Stockout Risk,Stable Local Warehouse Inventory
+84536A,ENGLISH ROSE NOTEBOOK A7 SIZE,High-Turnover Stable,250.91666666666663,63,7,22.0,81.0,18.0,Stockout Risk,Stable Local Warehouse Inventory
+22540,MINI JIGSAW CIRCUS PARADE,High-Turnover Stable,189.0,172,21,57.0,189.0,17.0,Stockout Risk,Stable Local Warehouse Inventory
+22614,PACK OF 12 SPACEBOY TISSUES,High-Turnover Stable,245.16666666666663,62,7,22.0,79.0,17.0,Stockout Risk,Stable Local Warehouse Inventory
+22465,HANGING METAL STAR LANTERN,High-Turnover Stable,132.83333333333334,72,14,26.0,88.0,16.0,Stockout Risk,Stable Local Warehouse Inventory
+10135,COLOURING PENCILS BROWN TUBE,High-Turnover Stable,180.0,173,21,62.0,188.0,15.0,Stockout Risk,Stable Local Warehouse Inventory
+21507,"ELEPHANT, BIRTHDAY CARD,",High-Turnover Stable,266.0,154,14,42.0,166.0,12.0,Stockout Risk,Stable Local Warehouse Inventory
+22047,EMPIRE GIFT WRAP,High-Turnover Stable,275.0,258,21,72.0,264.0,6.0,Stockout Risk,Stable Local Warehouse Inventory
+82578,KITCHEN METAL SIGN,High-Turnover Stable,145.5,135,21,36.0,138.0,3.0,Stockout Risk,Stable Local Warehouse Inventory
+20668,DISCO BALL CHRISTMAS DECORATION,High-Turnover Volatile,950.75,83,14,264.0,708.0,625.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+84568,GIRLS ALPHABET IRON ON PATCHES,High-Turnover Volatile,1024.6666666666667,105,14,244.0,722.0,617.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22440,BALLOON WATER BOMB PACK OF 35,High-Turnover Volatile,497.5,33,21,223.0,571.0,538.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21967,PACK OF 12 SKULL TISSUES,High-Turnover Volatile,436.0,16,21,189.0,494.0,478.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+40016,CHINESE DRAGON PAPER LANTERNS,High-Turnover Volatile,463.0,56,21,187.0,511.0,455.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22579,WOODEN TREE CHRISTMAS SCANDINAVIAN,High-Turnover Volatile,430.5833333333333,89,21,220.0,521.0,432.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21810,CHRISTMAS HANGING STAR WITH BELL,High-Turnover Volatile,437.75,109,21,230.0,536.0,427.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+16045,POPART WOODEN PENCILS ASST,High-Turnover Volatile,725.0,97,14,174.0,512.0,415.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+84929,ASSTD FRUIT+FLOWERS FRIDGE MAGNETS,High-Turnover Volatile,200.5,66,45,177.0,478.0,412.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22130,PARTY CONE CHRISTMAS DECORATION,High-Turnover Volatile,185.25,45,45,175.0,453.0,408.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+16259,PIECE OF CAMO STATIONERY SET,High-Turnover Volatile,363.55555555555554,52,21,133.0,387.0,335.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+17084R,ASSORTED INCENSE PACK,High-Turnover Volatile,330.0,38,21,135.0,366.0,328.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21818,GLITTER HEART DECORATION,High-Turnover Volatile,221.08333333333337,48,30,150.0,371.0,323.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+72232,FENG SHUI PILLAR CANDLE,High-Turnover Volatile,264.4166666666667,100,30,158.0,422.0,322.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+23506,MINI PLAYING CARDS SPACEBOY,High-Turnover Volatile,866.0,7,7,106.0,308.0,301.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+23005,TRAVEL CARD WALLET I LOVE LONDON,High-Turnover Volatile,456.3,32,14,108.0,321.0,289.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+18007,ESSENTIAL BALM 3.5G TIN IN ENVELOPE,High-Turnover Volatile,490.3333333333333,118,14,172.0,401.0,283.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+20992,JAZZ HEARTS PURSE NOTEBOOK,High-Turnover Volatile,351.5833333333333,87,21,123.0,369.0,282.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+16216,LETTER SHAPE PENCIL SHARPENER,High-Turnover Volatile,268.5833333333333,41,21,132.0,320.0,279.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21811,HANGING HEART WITH BELL,High-Turnover Volatile,400.1666666666667,31,14,123.0,310.0,279.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+84950,ASSORTED COLOUR T-LIGHT HOLDER,High-Turnover Volatile,294.5833333333333,74,21,144.0,350.0,276.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+23121,PACK OF 6 COCKTAIL PARASOL STRAWS,High-Turnover Volatile,415.5,21,14,101.0,295.0,274.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21399,BLUE POLKADOT COFFEE MUG,High-Turnover Volatile,163.16666666666666,15,30,117.0,280.0,265.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22155,STAR DECORATION RUSTIC,High-Turnover Volatile,186.41666666666663,45,30,113.0,299.0,254.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+70006,LOVE HEART POCKET WARMER,High-Turnover Volatile,217.91666666666663,31,21,114.0,267.0,236.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21986,PACK OF 12 PINK POLKADOT TISSUES,High-Turnover Volatile,336.0833333333333,6,14,83.0,240.0,234.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+51014A,"FEATHER PEN,HOT PINK",High-Turnover Volatile,301.75,84,21,107.0,318.0,234.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21902,"KEY FOB , FRONT  DOOR",High-Turnover Volatile,159.58333333333334,12,30,81.0,241.0,229.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22152,PLACE SETTING WHITE STAR,High-Turnover Volatile,198.08333333333337,6,21,78.0,217.0,211.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+20984,12 PENCILS TALL TUBE POSY,High-Turnover Volatile,313.4166666666667,29,14,87.0,233.0,204.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+16218,CARTOON  PENCIL SHARPENERS,High-Turnover Volatile,309.6666666666667,21,14,79.0,224.0,203.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22564,ALPHABET STENCIL CRAFT,High-Turnover Volatile,183.91666666666663,75,30,94.0,278.0,203.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21803,CHRISTMAS TREE STAR DECORATION,High-Turnover Volatile,195.08333333333337,26,21,76.0,213.0,187.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22818,CARD CHRISTMAS VILLAGE,High-Turnover Volatile,278.5,28,14,82.0,212.0,184.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+16219,HOUSE SHAPE PENCIL SHARPENER,High-Turnover Volatile,248.16666666666663,82,21,89.0,263.0,181.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22985,WRAP BILLBOARD FONTS DESIGN,High-Turnover Volatile,311.0,40,14,76.0,221.0,181.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22959,WRAP CHRISTMAS VILLAGE,High-Turnover Volatile,366.6666666666667,103,14,109.0,280.0,177.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+35953,FOLKART STAR CHRISTMAS DECORATIONS,High-Turnover Volatile,263.9166666666667,39,14,92.0,215.0,176.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22574,HEART WOODEN CHRISTMAS DECORATION,High-Turnover Volatile,166.0,23,21,78.0,194.0,171.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21824,PAINTED METAL STAR WITH HOLLY BELLS,High-Turnover Volatile,157.66666666666666,115,30,118.0,276.0,161.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+15039,SANDALWOOD FAN,High-Turnover Volatile,168.58333333333334,100,30,88.0,257.0,157.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+15034,PAPER POCKET TRAVELING FAN,High-Turnover Volatile,437.0833333333333,1,7,52.0,154.0,153.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22816,CARD MOTORBIKE SANTA,High-Turnover Volatile,311.25,85,14,93.0,238.0,153.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22241,GARLAND WOODEN HAPPY EASTER,High-Turnover Volatile,162.5,39,21,75.0,189.0,150.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22154,ANGEL DECORATION 3 BUTTONS,High-Turnover Volatile,291.5,74,14,82.0,218.0,144.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21084,SET/6 COLLAGE PAPER CUPS,High-Turnover Volatile,228.9090909090909,20,14,54.0,161.0,141.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22338,STAR DECORATION PAINTED ZINC,High-Turnover Volatile,344.5,9,7,60.0,140.0,131.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22593,CHRISTMAS GINGHAM STAR,High-Turnover Volatile,175.0,0,14,49.0,131.0,131.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22601,CHRISTMAS RETROSPOT ANGEL WOOD,High-Turnover Volatile,195.75,18,14,56.0,147.0,129.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22597,MUSICAL ZINC HEART DECORATION,High-Turnover Volatile,208.91666666666663,40,14,69.0,166.0,126.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21135,VICTORIAN  METAL POSTCARD SPRING,High-Turnover Volatile,211.25,29,14,55.0,154.0,125.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+23186,FRENCH STYLE STORAGE JAR CAFE,High-Turnover Volatile,213.55555555555551,39,14,54.0,154.0,115.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22594,CHRISTMAS GINGHAM TREE,High-Turnover Volatile,158.16666666666666,15,14,45.0,119.0,104.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+23187,FRENCH STYLE STORAGE JAR BONBONS,High-Turnover Volatile,259.1111111111111,82,14,65.0,186.0,104.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+85199S,SMALL HANGING IVORY/RED WOOD BIRD,High-Turnover Volatile,198.33333333333337,41,14,52.0,145.0,104.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+17021,NAMASTE SWAGAT INCENSE,High-Turnover Volatile,196.25,107,21,72.0,209.0,102.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22098,BOUDOIR SQUARE TISSUE BOX,High-Turnover Volatile,157.75,20,14,46.0,120.0,100.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22792,FLUTED ANTIQUE CANDLE HOLDER,High-Turnover Volatile,206.75,46,14,49.0,145.0,99.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21090,SET/6 COLLAGE PAPER PLATES,High-Turnover Volatile,195.91666666666663,116,21,72.0,209.0,93.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22571,ROCKING HORSE RED CHRISTMAS,High-Turnover Volatile,178.91666666666666,44,14,49.0,132.0,88.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22094,RED RETROSPOT TISSUE BOX,High-Turnover Volatile,172.83333333333334,105,21,64.0,185.0,80.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21802,CHRISTMAS TREE HEART DECORATION,High-Turnover Volatile,176.83333333333334,113,21,67.0,191.0,78.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22573,STAR WOODEN CHRISTMAS DECORATION,High-Turnover Volatile,198.83333333333337,74,14,59.0,152.0,78.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+10133,COLOURING PENCILS BROWN TUBE,High-Turnover Volatile,237.16666666666663,96,14,62.0,173.0,77.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22266,EASTER DECORATION HANGING BUNNY,High-Turnover Volatile,164.63636363636363,110,21,66.0,181.0,71.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21875,KINGS CHOICE MUG,High-Turnover Volatile,163.16666666666666,50,14,44.0,120.0,70.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22945,CHRISTMAS METAL TAGS ASSORTED,High-Turnover Volatile,233.25,99,14,60.0,169.0,70.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22339,CHRISTMAS TREE PAINTED ZINC,High-Turnover Volatile,205.66666666666663,94,14,65.0,161.0,67.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21819,GLITTER CHRISTMAS STAR,High-Turnover Volatile,195.33333333333337,18,7,34.0,80.0,62.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+17096,ASSORTED LAQUERED INCENSE HOLDERS,High-Turnover Volatile,212.08333333333337,27,7,37.0,86.0,59.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21642,ASSORTED TUTTI FRUTTI PEN,High-Turnover Volatile,198.41666666666663,14,7,27.0,73.0,59.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+85078,SCANDINAVIAN 3 HEARTS NAPKIN RING,High-Turnover Volatile,161.0,54,14,38.0,113.0,59.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+51014C,"FEATHER PEN,COAL BLACK",High-Turnover Volatile,216.58333333333337,110,14,51.0,152.0,42.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22336,DOVE DECORATION PAINTED ZINC,High-Turnover Volatile,198.41666666666663,39,7,32.0,78.0,39.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21809,CHRISTMAS HANGING TREE WITH BELL,High-Turnover Volatile,160.91666666666666,41,7,26.0,64.0,23.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+21179,NO JUNK MAIL METAL SIGN,High-Turnover Volatile,161.66666666666666,98,14,45.0,120.0,22.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+47504K,ENGLISH ROSE GARDEN SECATEURS,High-Turnover Volatile,167.16666666666666,44,7,20.0,59.0,15.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22599,CHRISTMAS MUSICAL ZINC STAR,High-Turnover Volatile,141.0,51,7,25.0,58.0,7.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+22546,MINI JIGSAW PURDEY,High-Turnover Volatile,164.58333333333334,54,7,20.0,58.0,4.0,Stockout Risk,Small-Batch Replenishment / Monitor Closely
+23410,CURIO CABINET LINEN AND LACE,Long-Tail,12.0,3,45,7.0,25.0,22.0,Stockout Risk,External or Limited Stock Strategy
+23149,ANTIQUE IVORY WIRE BOWL SMALL,Long-Tail,13.285714285714286,21,45,11.0,31.0,10.0,Stockout Risk,External or Limited Stock Strategy
+35638B,PINK/BLUE STRING CURTAIN,Long-Tail,11.4,0,14,4.0,9.0,9.0,Stockout Risk,External or Limited Stock Strategy
+84857C,PINK MONTE CARLO HANDBAG,Long-Tail,8.166666666666666,6,30,6.0,14.0,8.0,Stockout Risk,External or Limited Stock Strategy
+20903,VINTAGE KEEPSAKE BOX TRAVELOGUE,Long-Tail,6.833333333333333,1,21,3.0,8.0,7.0,Stockout Risk,External or Limited Stock Strategy
+23471,SIX DRAWER OFFICE TIDY,Long-Tail,20.666666666666668,14,21,7.0,21.0,7.0,Stockout Risk,External or Limited Stock Strategy
+22885,NUMBER TILE VINTAGE FONT 6,Long-Tail,7.583333333333333,12,45,7.0,18.0,6.0,Stockout Risk,External or Limited Stock Strategy
+85006,SET 4 NURSERY DES ROUND BOXES,Long-Tail,4.583333333333333,6,45,5.0,12.0,6.0,Stockout Risk,External or Limited Stock Strategy
+90209A,PURPLE ENAMEL+GLASS HAIR COMB,Long-Tail,19.5,24,30,11.0,30.0,6.0,Stockout Risk,External or Limited Stock Strategy
+23632,SET 10 CARDS CHEERFUL ROBIN 17065,Long-Tail,5.0,3,30,3.0,8.0,5.0,Stockout Risk,External or Limited Stock Strategy
+90201C,RED ENAMEL FLOWER RING,Long-Tail,4.583333333333333,0,21,2.0,5.0,5.0,Stockout Risk,External or Limited Stock Strategy
+23303,SET 4 PICNIC CUTLERY FONDANT,Long-Tail,26.5,4,7,2.0,8.0,4.0,Stockout Risk,External or Limited Stock Strategy
+79403,FROSTED WHITE BASE,Long-Tail,7.833333333333333,4,21,3.0,8.0,4.0,Stockout Risk,External or Limited Stock Strategy
+21129,SILVER FISHING GNOME,Long-Tail,4.7272727272727275,4,30,2.0,7.0,3.0,Stockout Risk,External or Limited Stock Strategy
+21132,SILVER STANDING GNOME,Long-Tail,3.5,0,14,1.0,3.0,3.0,Stockout Risk,External or Limited Stock Strategy
+23137,ZINC WIRE SWEETHEART LETTER TRAY,Long-Tail,8.75,6,21,3.0,9.0,3.0,Stockout Risk,External or Limited Stock Strategy
+23627,SET 10 CARDS XMAS GRAPHIC  17218,Long-Tail,7.0,6,30,2.0,9.0,3.0,Stockout Risk,External or Limited Stock Strategy
+35818B,"ACRYLIC JEWEL ICICLE, BLUE",Long-Tail,7.75,0,7,1.0,3.0,3.0,Stockout Risk,External or Limited Stock Strategy
+35920,FOUR RABBIT EASTER DECORATIONS,Long-Tail,6.545454545454546,0,7,1.0,3.0,3.0,Stockout Risk,External or Limited Stock Strategy
+37475,SET/4 COLOURFUL MIXING BOWLS,Long-Tail,5.75,3,21,2.0,6.0,3.0,Stockout Risk,External or Limited Stock Strategy
+40046A,RED DAISY PAPER LAMPSHADE,Long-Tail,4.545454545454546,9,45,5.0,12.0,3.0,Stockout Risk,External or Limited Stock Strategy
+16202A,PASTEL PINK PHOTO ALBUM,Long-Tail,0.7777777777777778,0,30,1.0,2.0,2.0,Stockout Risk,External or Limited Stock Strategy
+23492,VINTAGE JINGLE BELLS WREATH,Long-Tail,34.5,46,30,14.0,48.0,2.0,Stockout Risk,External or Limited Stock Strategy
+84985A,SET OF 72 GREEN PAPER DOILIES,Long-Tail,3.0,0,14,1.0,2.0,2.0,Stockout Risk,External or Limited Stock Strategy
+22486,PLASMATRONIC LAMP,Long-Tail,3.75,1,7,1.0,2.0,1.0,Stockout Risk,External or Limited Stock Strategy
+35833P,4 PINK FLOCK CHRISTMAS BALLS,Long-Tail,4.083333333333333,2,14,1.0,3.0,1.0,Stockout Risk,External or Limited Stock Strategy
+47586A,PINK FAIRY CAKE CUSHION COVER,Long-Tail,1.75,3,45,1.0,4.0,1.0,Stockout Risk,External or Limited Stock Strategy
+81953P,ROUND ARTICULATED PINK CLOCK W/SUCK,Long-Tail,5.6,9,30,4.0,10.0,1.0,Stockout Risk,External or Limited Stock Strategy
+84809B,PINK CHRYSANTHEMUMS ART FLOWER,Long-Tail,1.8,2,30,1.0,3.0,1.0,Stockout Risk,External or Limited Stock Strategy
+23691,WRAP KEEP CALM BIRTHDAY,Regular,875.0,28,30,219.0,1094.0,1066.0,Stockout Risk,Standard Replenishment Review
+23489,VINTAGE BELLS GARLAND,Regular,373.5,41,45,221.0,781.0,740.0,Stockout Risk,Standard Replenishment Review
+23499,SET 12 VINTAGE DOILY CHALK,Regular,547.0,104,30,297.0,844.0,740.0,Stockout Risk,Standard Replenishment Review
+23681,LUNCH BAG RED VINTAGE DOILY,Regular,1271.0,68,14,148.0,741.0,673.0,Stockout Risk,Standard Replenishment Review
+23375,50'S CHRISTMAS PAPER GIFT BAG,Regular,326.0,102,45,220.0,709.0,607.0,Stockout Risk,Standard Replenishment Review
+23373,VINTAGE CHRISTMAS PAPER GIFT BAG,Regular,387.5,1,30,162.0,550.0,549.0,Stockout Risk,Standard Replenishment Review
+23483,HANGING  BUTTERFLY T-LIGHT HOLDER,Regular,552.5,9,21,109.0,496.0,487.0,Stockout Risk,Standard Replenishment Review
+23327,HANGING CLEAR MINI BOTTLE,Regular,432.5,116,30,151.0,584.0,468.0,Stockout Risk,Standard Replenishment Review
+23381,PACK OF 12 VINTAGE LEAF TISSUES,Regular,471.6666666666667,20,21,155.0,485.0,465.0,Stockout Risk,Standard Replenishment Review
+23435,3 RAFFIA RIBBONS VINTAGE CHRISTMAS,Regular,254.0,83,45,130.0,511.0,428.0,Stockout Risk,Standard Replenishment Review
+23371,SET 36 COLOUR PENCILS SPACEBOY,Regular,540.0,115,21,152.0,530.0,415.0,Stockout Risk,Standard Replenishment Review
+23120,PACK OF 6 SMALL FRUIT STRAWS,Regular,267.8333333333333,1,30,139.0,407.0,406.0,Stockout Risk,Standard Replenishment Review
+23550,WRAP ALPHABET POSTER,Regular,366.0,100,30,120.0,486.0,386.0,Stockout Risk,Standard Replenishment Review
+23500,KEY RING BASEBALL BOOT ASSORTED,Regular,675.5,14,14,79.0,394.0,380.0,Stockout Risk,Standard Replenishment Review
+23271,CHRISTMAS TABLE SILVER CANDLE SPIKE,Regular,274.5,37,30,134.0,408.0,371.0,Stockout Risk,Standard Replenishment Review
+23102,SILVER HEARTS TABLE DECORATION,Regular,181.1428571428571,10,45,98.0,370.0,360.0,Stockout Risk,Standard Replenishment Review
+72818,CHRISTMAS DECOUPAGE CANDLE,Regular,150.75,43,45,170.0,396.0,353.0,Stockout Risk,Standard Replenishment Review
+23525,WALL ART BUFFALO BILL,Regular,277.0,74,30,148.0,425.0,351.0,Stockout Risk,Standard Replenishment Review
+23352,ROLL WRAP 50'S RED CHRISTMAS,Regular,413.0,51,21,106.0,395.0,344.0,Stockout Risk,Standard Replenishment Review
+23221,REINDEER HEART DECORATION SILVER,Regular,196.8571428571429,110,45,152.0,447.0,337.0,Stockout Risk,Standard Replenishment Review
+23213,STAR WREATH DECORATION WITH BELL,Regular,261.6666666666667,52,30,114.0,376.0,324.0,Stockout Risk,Standard Replenishment Review
+23365,SET 12 COLOUR PENCILS LOVE LONDON,Regular,597.0,71,14,105.0,384.0,313.0,Stockout Risk,Standard Replenishment Review
+22093,MOTORING TISSUE BOX,Regular,147.75,42,45,124.0,346.0,304.0,Stockout Risk,Standard Replenishment Review
+23220,REINDEER HEART DECORATION GOLD,Regular,156.16666666666666,54,45,116.0,350.0,296.0,Stockout Risk,Standard Replenishment Review
+23360,SET 8 CANDLES VINTAGE DOILY,Regular,292.75,90,30,88.0,381.0,291.0,Stockout Risk,Standard Replenishment Review
+23502,PLAYING CARDS VINTAGE DOILY,Regular,226.33333333333337,24,30,87.0,313.0,289.0,Stockout Risk,Standard Replenishment Review
+23566,EGG CUP MILKMAID HEIDI,Regular,351.5,26,21,69.0,315.0,289.0,Stockout Risk,Standard Replenishment Review
+23379,PACK OF 12 RED APPLE TISSUES,Regular,396.6666666666667,113,21,123.0,401.0,288.0,Stockout Risk,Standard Replenishment Review
+23331,DECORATIVE WICKER HEART SMALL,Regular,372.0,69,21,88.0,348.0,279.0,Stockout Risk,Standard Replenishment Review
+23473,WOODLAND SMALL RED FELT HEART,Regular,303.0,119,30,91.0,394.0,275.0,Stockout Risk,Standard Replenishment Review
+23551,PACK OF 12 PAISLEY PARK TISSUES,Regular,574.3333333333334,80,14,87.0,355.0,275.0,Stockout Risk,Standard Replenishment Review
+23196,VINTAGE LEAF MAGNETIC NOTEPAD,Regular,301.3333333333333,15,21,77.0,288.0,273.0,Stockout Risk,Standard Replenishment Review
+23418,LAVENDER TOILETTE BOTTLE,Regular,175.0,101,45,103.0,366.0,265.0,Stockout Risk,Standard Replenishment Review
+23398,HANGING HEART BONHEUR,Regular,177.66666666666666,95,45,90.0,356.0,261.0,Stockout Risk,Standard Replenishment Review
+23006,TRAVEL CARD WALLET FLOWER MEADOW,Regular,168.0,81,45,82.0,334.0,253.0,Stockout Risk,Standard Replenishment Review
+23396,LE JARDIN BOTANIQUE CUSHION COVER,Regular,205.66666666666663,10,30,56.0,262.0,252.0,Stockout Risk,Standard Replenishment Review
+23291,DOLLY GIRL CHILDRENS CUP,Regular,266.1666666666667,4,21,65.0,251.0,247.0,Stockout Risk,Standard Replenishment Review
+23564,EGG CUP MILKMAID INGRID,Regular,307.0,43,21,75.0,290.0,247.0,Stockout Risk,Standard Replenishment Review
+23431,NATURAL HANGING QUILTED HEARTS,Regular,356.25,109,21,97.0,346.0,237.0,Stockout Risk,Standard Replenishment Review
+22026,BANQUET BIRTHDAY  CARD,Regular,134.33333333333334,42,45,72.0,274.0,232.0,Stockout Risk,Standard Replenishment Review
+23512,EMBROIDERED RIBBON REEL ROSIE,Regular,162.66666666666666,19,30,86.0,249.0,230.0,Stockout Risk,Standard Replenishment Review
+23529,WALL ART DOLLY GIRL,Regular,315.0,86,21,93.0,314.0,228.0,Stockout Risk,Standard Replenishment Review
+23329,DECORATIVE WICKER HEART LARGE,Regular,414.25,24,14,58.0,251.0,227.0,Stockout Risk,Standard Replenishment Review
+23225,CHERUB HEART DECORATION SILVER,Regular,203.66666666666663,79,30,100.0,304.0,225.0,Stockout Risk,Standard Replenishment Review
+23124,18PC WOODEN CUTLERY SET DISPOSABLE,Regular,94.5,11,45,84.0,226.0,215.0,Stockout Risk,Standard Replenishment Review
+23190,BUNDLE OF 3 SCHOOL EXERCISE BOOKS,Regular,237.42857142857144,12,21,59.0,225.0,213.0,Stockout Risk,Standard Replenishment Review
+23509,MINI PLAYING CARDS FUN FAIR,Regular,349.3333333333333,38,14,88.0,251.0,213.0,Stockout Risk,Standard Replenishment Review
+23370,SET 36 COLOURING PENCILS DOILY,Regular,480.3333333333333,102,14,88.0,312.0,210.0,Stockout Risk,Standard Replenishment Review
+79030G,TUMBLER NEW ENGLAND,Regular,116.91666666666669,10,30,88.0,205.0,195.0,Stockout Risk,Standard Replenishment Review
+23697,A PRETTY THANK YOU CARD,Regular,358.0,15,14,42.0,209.0,194.0,Stockout Risk,Standard Replenishment Review
+23223,CHRISTMAS TREE HANGING SILVER,Regular,124.0,84,45,90.0,276.0,192.0,Stockout Risk,Standard Replenishment Review
+23490,T-LIGHT HOLDER HANGING LOVE BIRD,Regular,249.0,51,21,67.0,241.0,190.0,Stockout Risk,Standard Replenishment Review
+84596L,BISCUITS SMALL BOWL LIGHT BLUE,Regular,104.58333333333331,48,45,80.0,237.0,189.0,Stockout Risk,Standard Replenishment Review
+22329,ROUND CONTAINER SET OF 5 RETROSPOT,Regular,131.58333333333334,1,30,56.0,188.0,187.0,Stockout Risk,Standard Replenishment Review
+21382,SET/4 SPRING FLOWER DECORATION,Regular,95.0,26,45,69.0,212.0,186.0,Stockout Risk,Standard Replenishment Review
+23357,HOT WATER BOTTLE SEX BOMB,Regular,91.75,15,45,59.0,197.0,182.0,Stockout Risk,Standard Replenishment Review
+23547,WRAP FLOWER SHOP,Regular,290.0,95,21,73.0,276.0,181.0,Stockout Risk,Standard Replenishment Review
+23058,CHRISTMAS HANGING SNOWFLAKE,Regular,142.0,35,30,73.0,215.0,180.0,Stockout Risk,Standard Replenishment Review
+21096,SET/6 FRUIT SALAD  PAPER PLATES,Regular,114.27272727272728,1,30,65.0,179.0,178.0,Stockout Risk,Standard Replenishment Review
+23377,PACK OF 12 DOLLY GIRL TISSUES,Regular,433.6666666666667,90,14,65.0,267.0,177.0,Stockout Risk,Standard Replenishment Review
+23521,WALL ART CAT AND BIRD,Regular,203.5,117,30,91.0,294.0,177.0,Stockout Risk,Standard Replenishment Review
+85184C,S/4 VALENTINE DECOUPAGE HEART BOX,Regular,136.58333333333334,62,30,102.0,239.0,177.0,Stockout Risk,Standard Replenishment Review
+23695,DOILY THANK YOU CARD,Regular,495.0,113,14,58.0,289.0,176.0,Stockout Risk,Standard Replenishment Review
+22064,PINK DOUGHNUT TRINKET POT,Regular,109.75,53,45,62.0,227.0,174.0,Stockout Risk,Standard Replenishment Review
+22400,MAGNETS PACK OF 4 HOME SWEET HOME,Regular,113.08333333333331,87,45,89.0,259.0,172.0,Stockout Risk,Standard Replenishment Review
+23452,HEART MINI PORTRAIT FRAME,Regular,227.5,43,21,53.0,212.0,169.0,Stockout Risk,Standard Replenishment Review
+23274,STAR T-LIGHT HOLDER WILLIE WINKIE,Regular,187.33333333333337,24,21,60.0,191.0,167.0,Stockout Risk,Standard Replenishment Review
+23214,JINGLE BELL HEART ANTIQUE GOLD,Regular,125.0,17,30,55.0,180.0,163.0,Stockout Risk,Standard Replenishment Review
+23251,VINTAGE RED ENAMEL TRIM MUG,Regular,262.6666666666667,83,21,60.0,244.0,161.0,Stockout Risk,Standard Replenishment Review
+23273,HEART T-LIGHT HOLDER WILLIE WINKIE,Regular,152.0,50,30,59.0,211.0,161.0,Stockout Risk,Standard Replenishment Review
+21403,BLUE EGG  SPOON,Regular,154.25,54,30,60.0,214.0,160.0,Stockout Risk,Standard Replenishment Review
+22543,MINI JIGSAW BAKE A CAKE,Regular,110.58333333333331,19,30,68.0,179.0,160.0,Stockout Risk,Standard Replenishment Review
+23096,PETIT TRAY CHIC,Regular,145.85714285714286,45,30,59.0,205.0,160.0,Stockout Risk,Standard Replenishment Review
+23281,FOLDING BUTTERFLY MIRROR RED,Regular,161.85714285714286,77,30,73.0,235.0,158.0,Stockout Risk,Standard Replenishment Review
+22576,SWALLOW WOODEN CHRISTMAS DECORATION,Regular,115.0,30,30,72.0,187.0,157.0,Stockout Risk,Standard Replenishment Review
+23029,DRAWER KNOB CRACKLE GLAZE GREEN,Regular,215.0,43,21,50.0,200.0,157.0,Stockout Risk,Standard Replenishment Review
+22403,MAGNETS PACK OF 4 VINTAGE LABELS,Regular,107.58333333333331,7,30,55.0,163.0,156.0,Stockout Risk,Standard Replenishment Review
+21163,DO NOT TOUCH MY STUFF DOOR HANGER,Regular,99.66666666666669,1,30,55.0,155.0,154.0,Stockout Risk,Standard Replenishment Review
+23347,I LOVE LONDON BEAKER,Regular,159.8,85,30,78.0,238.0,153.0,Stockout Risk,Standard Replenishment Review
+23516,EMBROIDERED RIBBON REEL SOPHIE,Regular,94.33333333333331,64,45,75.0,216.0,152.0,Stockout Risk,Standard Replenishment Review
+23028,DRAWER KNOB CRACKLE GLAZE BLUE,Regular,228.16666666666663,78,21,69.0,229.0,151.0,Stockout Risk,Standard Replenishment Review
+23289,DOLLY GIRL CHILDRENS BOWL,Regular,265.0,99,21,64.0,250.0,151.0,Stockout Risk,Standard Replenishment Review
+22377,BOTTLE BAG RETROSPOT,Regular,109.66666666666669,106,45,91.0,256.0,150.0,Stockout Risk,Standard Replenishment Review
+21198,WHITE HEART CONFETTI IN TUBE,Regular,78.66666666666667,34,45,65.0,183.0,149.0,Stockout Risk,Standard Replenishment Review
+23265,SET OF 3 WOODEN TREE DECORATIONS,Regular,269.5,38,14,61.0,187.0,149.0,Stockout Risk,Standard Replenishment Review
+85199L,LARGE HANGING IVORY & RED WOOD BIRD,Regular,75.41666666666667,15,45,51.0,164.0,149.0,Stockout Risk,Standard Replenishment Review
+21584,RETROSPOT SMALL TUBE MATCHES,Regular,84.58333333333333,29,45,49.0,176.0,147.0,Stockout Risk,Standard Replenishment Review
+22186,RED STAR CARD HOLDER,Regular,67.16666666666667,22,45,68.0,169.0,147.0,Stockout Risk,Standard Replenishment Review
+85035C,ROSE 3 WICK MORRIS BOX CANDLE,Regular,94.83333333333331,8,30,60.0,155.0,147.0,Stockout Risk,Standard Replenishment Review
+22096,PINK PAISLEY SQUARE TISSUE BOX,Regular,95.16666666666669,18,30,69.0,164.0,146.0,Stockout Risk,Standard Replenishment Review
+23197,SKETCHBOOK MAGNETIC SHOPPING LIST,Regular,218.66666666666663,62,21,55.0,208.0,146.0,Stockout Risk,Standard Replenishment Review
+23287,RED VINTAGE SPOT BEAKER,Regular,308.0,59,14,60.0,204.0,145.0,Stockout Risk,Standard Replenishment Review
+85231B,CINAMMON SET OF 9 T-LIGHTS,Regular,70.16666666666667,13,45,51.0,156.0,143.0,Stockout Risk,Standard Replenishment Review
+21287,SCENTED VELVET LOUNGE CANDLE,Regular,147.91666666666666,17,21,55.0,159.0,142.0,Stockout Risk,Standard Replenishment Review
+21383,PACK OF 12 STICKY BUNNIES,Regular,81.08333333333333,48,45,65.0,187.0,139.0,Stockout Risk,Standard Replenishment Review
+22972,CHILDREN'S SPACEBOY MUG,Regular,145.0,61,30,54.0,199.0,138.0,Stockout Risk,Standard Replenishment Review
+21561,DINOSAUR LUNCH BOX WITH CUTLERY,Regular,105.5,17,30,48.0,154.0,137.0,Stockout Risk,Standard Replenishment Review
+22080,RIBBON REEL POLKADOTS,Regular,94.75,11,30,52.0,147.0,136.0,Stockout Risk,Standard Replenishment Review
+23061,VINTAGE EMBOSSED HEART,Regular,123.625,117,45,67.0,252.0,135.0,Stockout Risk,Standard Replenishment Review
+23501,KEY RING BASEBALL BOOT UNION JACK,Regular,669.0,75,7,53.0,209.0,134.0,Stockout Risk,Standard Replenishment Review
+21591,COSY HOUR CIGAR BOX MATCHES,Regular,109.41666666666669,49,30,71.0,180.0,131.0,Stockout Risk,Standard Replenishment Review
+23227,FILIGREE HEART BUTTERFLY WHITE,Regular,228.8571428571429,16,14,40.0,147.0,131.0,Stockout Risk,Standard Replenishment Review
+23505,PLAYING CARDS I LOVE LONDON,Regular,372.3333333333333,113,14,68.0,242.0,129.0,Stockout Risk,Standard Replenishment Review
+21718,RED METAL BEACH SPADE,Regular,122.75,56,30,60.0,183.0,127.0,Stockout Risk,Standard Replenishment Review
+22897,OVEN MITT APPLES DESIGN,Regular,109.83333333333331,23,30,39.0,149.0,126.0,Stockout Risk,Standard Replenishment Review
+85039A,SET/4 RED MINI ROSE CANDLE IN BOWL,Regular,59.833333333333336,4,45,40.0,130.0,126.0,Stockout Risk,Standard Replenishment Review
+22973,CHILDREN'S CIRCUS PARADE MUG,Regular,97.08333333333331,77,45,55.0,201.0,124.0,Stockout Risk,Standard Replenishment Review
+23498,CLASSIC BICYCLE CLIPS,Regular,517.0,27,7,30.0,151.0,124.0,Stockout Risk,Standard Replenishment Review
+23548,WRAP MAGIC FOREST,Regular,205.0,70,21,51.0,194.0,124.0,Stockout Risk,Standard Replenishment Review
+22705,WRAP GREEN PEARS,Regular,150.66666666666666,22,21,39.0,144.0,122.0,Stockout Risk,Standard Replenishment Review
+23451,SQUARE MINI PORTRAIT FRAME,Regular,118.0,41,30,45.0,163.0,122.0,Stockout Risk,Standard Replenishment Review
+23528,WALL ART SPACEBOY,Regular,236.0,111,21,68.0,233.0,122.0,Stockout Risk,Standard Replenishment Review
+85038,6 CHOCOLATE LOVE HEART T-LIGHTS,Regular,77.5,0,30,44.0,122.0,122.0,Stockout Risk,Standard Replenishment Review
+23372,SET 36 COLOUR PENCILS DOLLY GIRL,Regular,441.3333333333333,23,7,41.0,144.0,121.0,Stockout Risk,Standard Replenishment Review
+22441,GROW YOUR OWN BASIL IN ENAMEL MUG,Regular,82.33333333333333,51,45,46.0,170.0,119.0,Stockout Risk,Standard Replenishment Review
+81952V,ROUND PURPLE CLOCK WITH SUCKER,Regular,73.0,0,30,46.0,119.0,119.0,Stockout Risk,Standard Replenishment Review
+22893,MINI CAKE STAND T-LIGHT HOLDER,Regular,153.25,36,21,47.0,154.0,118.0,Stockout Risk,Standard Replenishment Review
+23242,TREASURE TIN BUFFALO BILL,Regular,220.66666666666663,92,21,56.0,210.0,118.0,Stockout Risk,Standard Replenishment Review
+21199,PINK  HEART CONFETTI IN TUBE,Regular,75.5,5,30,47.0,122.0,117.0,Stockout Risk,Standard Replenishment Review
+21823,PAINTED METAL HEART WITH HOLLY BELL,Regular,114.33333333333331,24,21,60.0,140.0,116.0,Stockout Risk,Standard Replenishment Review
+22055,MINI CAKE STAND  HANGING STRAWBERY,Regular,91.16666666666669,76,45,54.0,191.0,115.0,Stockout Risk,Standard Replenishment Review
+22209,WOOD STAMP SET HAPPY BIRTHDAY,Regular,70.0,35,45,45.0,150.0,115.0,Stockout Risk,Standard Replenishment Review
+23252,VINTAGE RED ENAMEL TRIM JUG,Regular,94.83333333333331,14,30,34.0,129.0,115.0,Stockout Risk,Standard Replenishment Review
+23268,SET OF 2 CERAMIC CHRISTMAS REINDEER,Regular,239.16666666666663,55,14,58.0,170.0,115.0,Stockout Risk,Standard Replenishment Review
+84535B,FAIRY CAKES NOTEBOOK A6 SIZE,Regular,110.41666666666669,43,30,47.0,157.0,114.0,Stockout Risk,Standard Replenishment Review
+37342,POLKADOT COFFEE CUP & SAUCER PINK,Regular,128.83333333333334,21,21,44.0,134.0,113.0,Stockout Risk,Standard Replenishment Review
+22340,NOEL GARLAND PAINTED ZINC,Regular,103.5,14,21,54.0,126.0,112.0,Stockout Risk,Standard Replenishment Review
+47599B,BLUE PARTY BAGS,Regular,122.33333333333331,7,21,33.0,119.0,112.0,Stockout Risk,Standard Replenishment Review
+21068,VINTAGE BILLBOARD LOVE/HATE MUG,Regular,135.5,105,30,81.0,216.0,111.0,Stockout Risk,Standard Replenishment Review
+22292,HANGING CHICK  YELLOW DECORATION,Regular,94.66666666666669,43,30,59.0,154.0,111.0,Stockout Risk,Standard Replenishment Review
+23152,IVORY SWEETHEART WIRE LETTER RACK,Regular,68.375,30,45,38.0,141.0,111.0,Stockout Risk,Standard Replenishment Review
+23515,EMBROIDERED RIBBON REEL DAISY,Regular,186.66666666666663,19,14,43.0,130.0,111.0,Stockout Risk,Standard Replenishment Review
+23660,HENRIETTA HEN MUG,Regular,140.0,22,21,34.0,132.0,110.0,Stockout Risk,Standard Replenishment Review
+23522,WALL ART DOG AND BALL,Regular,170.0,8,14,37.0,116.0,108.0,Stockout Risk,Standard Replenishment Review
+21556,CERAMIC STRAWBERRY MONEY BOX,Regular,81.41666666666667,94,45,79.0,201.0,107.0,Stockout Risk,Standard Replenishment Review
+23359,SET OF 12 T-LIGHTS VINTAGE DOILY,Regular,241.0,37,14,32.0,144.0,107.0,Stockout Risk,Standard Replenishment Review
+23400,SHELF WITH 4 HOOKS HOME SWEET HOME,Regular,152.0,53,21,54.0,160.0,107.0,Stockout Risk,Standard Replenishment Review
+23455,SMALL PARLOUR PICTURE FRAME,Regular,93.0,10,30,24.0,117.0,107.0,Stockout Risk,Standard Replenishment Review
+23031,DRAWER KNOB CRACKLE GLAZE PINK,Regular,204.66666666666663,23,14,33.0,129.0,106.0,Stockout Risk,Standard Replenishment Review
+21634,ASSORTED MINI MADRAS NOTEBOOK,Regular,81.33333333333333,108,45,91.0,213.0,105.0,Stockout Risk,Standard Replenishment Review
+23518,EMBROIDERED RIBBON REEL RACHEL,Regular,116.33333333333331,20,21,44.0,125.0,105.0,Stockout Risk,Standard Replenishment Review
+20829,GLITTER HANGING BUTTERFLY STRING,Regular,107.66666666666669,55,30,51.0,159.0,104.0,Stockout Risk,Standard Replenishment Review
+22700,BLACK AND WHITE DOG BOWL,Regular,99.41666666666669,73,30,75.0,174.0,101.0,Stockout Risk,Standard Replenishment Review
+20674,GREEN POLKADOT BOWL,Regular,127.08333333333331,21,21,31.0,120.0,99.0,Stockout Risk,Standard Replenishment Review
+22906,12 MESSAGE CARDS WITH ENVELOPES,Regular,133.0,28,21,34.0,127.0,99.0,Stockout Risk,Standard Replenishment Review
+23161,REGENCY CAKE FORK,Regular,243.0,56,14,42.0,155.0,99.0,Stockout Risk,Standard Replenishment Review
+23565,EGG CUP MILKMAID HELGA,Regular,187.5,13,14,25.0,112.0,99.0,Stockout Risk,Standard Replenishment Review
+22674,FRENCH TOILET SIGN BLUE METAL,Regular,109.58333333333331,9,21,30.0,107.0,98.0,Stockout Risk,Standard Replenishment Review
+22755,SMALL PURPLE BABUSHKA NOTEBOOK,Regular,101.08333333333331,42,30,39.0,140.0,98.0,Stockout Risk,Standard Replenishment Review
+21883,STARS GIFT TAPE,Regular,136.58333333333334,8,14,41.0,105.0,97.0,Stockout Risk,Standard Replenishment Review
+84818,DANISH ROSE PHOTO FRAME,Regular,114.16666666666669,24,21,41.0,121.0,97.0,Stockout Risk,Standard Replenishment Review
+22600,CHRISTMAS RETROSPOT STAR WOOD,Regular,129.16666666666666,0,14,36.0,96.0,96.0,Stockout Risk,Standard Replenishment Review
+21881,CUTE CATS TAPE,Regular,90.58333333333331,6,21,38.0,101.0,95.0,Stockout Risk,Standard Replenishment Review
+22717,CARD DOG AND BALL,Regular,102.16666666666669,2,21,25.0,97.0,95.0,Stockout Risk,Standard Replenishment Review
+23369,SET 36 COLOUR PENCILS LOVE LONDON,Regular,333.6666666666667,117,14,56.0,212.0,95.0,Stockout Risk,Standard Replenishment Review
+23559,WOODLAND BUNNIES LOLLY MAKERS,Regular,187.66666666666663,24,14,29.0,117.0,93.0,Stockout Risk,Standard Replenishment Review
+21015,DARK BIRD HOUSE TREE DECORATION,Regular,111.75,42,21,56.0,134.0,92.0,Stockout Risk,Standard Replenishment Review
+23282,FOLDING BUTTERFLY MIRROR IVORY,Regular,114.28571428571428,18,21,30.0,110.0,92.0,Stockout Risk,Standard Replenishment Review
+23348,CHILDRENS TOY COOKING UTENSIL SET,Regular,91.75,8,21,36.0,100.0,92.0,Stockout Risk,Standard Replenishment Review
+85034B,3 WHITE CHOC MORRIS BOXED CANDLES,Regular,72.58333333333333,96,45,79.0,188.0,92.0,Stockout Risk,Standard Replenishment Review
+21774,DECORATIVE CATS BATHROOM BOTTLE,Regular,90.33333333333331,8,21,36.0,99.0,91.0,Stockout Risk,Standard Replenishment Review
+21873,IF YOU CAN'T STAND THE HEAT MUG,Regular,126.83333333333331,6,14,38.0,97.0,91.0,Stockout Risk,Standard Replenishment Review
+21391,FRENCH LAVENDER SCENT HEART,Regular,88.83333333333333,13,21,41.0,103.0,90.0,Stockout Risk,Standard Replenishment Review
+23302,KNEELING MAT HOUSEWORK  DESIGN,Regular,152.85714285714286,114,30,51.0,204.0,90.0,Stockout Risk,Standard Replenishment Review
+23403,LETTER HOLDER HOME SWEET HOME,Regular,196.0,31,14,30.0,121.0,90.0,Stockout Risk,Standard Replenishment Review
+23034,DRAWER KNOB CERAMIC BLACK,Regular,160.33333333333334,13,14,27.0,102.0,89.0,Stockout Risk,Standard Replenishment Review
+85114C,RED ENCHANTED FOREST PLACEMAT,Regular,54.666666666666664,30,45,37.0,119.0,89.0,Stockout Risk,Standard Replenishment Review
+21677,HEARTS  STICKERS,Regular,67.58333333333333,53,45,40.0,141.0,88.0,Stockout Risk,Standard Replenishment Review
+23527,WALL ART ANIMALS AND NATURE,Regular,199.0,42,14,37.0,130.0,88.0,Stockout Risk,Standard Replenishment Review
+72802C,VANILLA SCENT CANDLE JEWELLED BOX,Regular,74.33333333333333,100,45,77.0,188.0,88.0,Stockout Risk,Standard Replenishment Review
+85106,CUT GLASS HEXAGON T-LIGHT HOLDER,Regular,54.083333333333336,54,45,61.0,142.0,88.0,Stockout Risk,Standard Replenishment Review
+21159,MOODY BOY  DOOR HANGER,Regular,91.16666666666669,52,30,48.0,139.0,87.0,Stockout Risk,Standard Replenishment Review
+22535,MAGIC DRAWING SLATE BUNNIES,Regular,139.91666666666666,54,21,43.0,141.0,87.0,Stockout Risk,Standard Replenishment Review
+22198,LARGE POPCORN HOLDER,Regular,85.41666666666667,63,30,64.0,149.0,86.0,Stockout Risk,Standard Replenishment Review
+23048,SET OF 10 LANTERNS FAIRY LIGHT STAR,Regular,67.25,72,45,57.0,158.0,86.0,Stockout Risk,Standard Replenishment Review
+22975,SPACEBOY CHILDRENS EGG CUP,Regular,98.66666666666669,119,45,56.0,204.0,85.0,Stockout Risk,Standard Replenishment Review
+85032D,YULETIDE IMAGES GIFT WRAP SET,Regular,57.25,53,45,52.0,138.0,85.0,Stockout Risk,Standard Replenishment Review
+10125,MINI FUNKY DESIGN TAPES,Regular,105.75,21,21,31.0,105.0,84.0,Stockout Risk,Standard Replenishment Review
+85202,HANGING WOOD AND FELT HEART,Regular,56.0,6,30,34.0,90.0,84.0,Stockout Risk,Standard Replenishment Review
+21069,VINTAGE BILLBOARD TEA MUG,Regular,104.0,42,21,52.0,125.0,83.0,Stockout Risk,Standard Replenishment Review
+23125,6PC WOOD PLATE SET DISPOSABLE,Regular,76.5,9,21,38.0,92.0,83.0,Stockout Risk,Standard Replenishment Review
+23358,HOT STUFF HOT WATER BOTTLE,Regular,115.0,83,30,51.0,166.0,83.0,Stockout Risk,Standard Replenishment Review
+11001,ASSTD DESIGN RACING CAR PEN,Regular,132.75,118,30,66.0,199.0,81.0,Stockout Risk,Standard Replenishment Review
+17038,PORCELAIN BUDAH INCENSE HOLDER,Regular,126.83333333333331,3,14,25.0,84.0,81.0,Stockout Risk,Standard Replenishment Review
+22733,3D TRADITIONAL CHRISTMAS STICKERS,Regular,128.41666666666666,16,14,37.0,97.0,81.0,Stockout Risk,Standard Replenishment Review
+46000S,POLYESTER FILLER PAD 40X40CM,Regular,123.08333333333331,0,14,24.0,81.0,81.0,Stockout Risk,Standard Replenishment Review
+20802,SMALL GLASS SUNDAE DISH CLEAR,Regular,61.583333333333336,14,30,32.0,94.0,80.0,Stockout Risk,Standard Replenishment Review
+21167,WHITE SAGE INCENSE,Regular,99.25,59,30,40.0,139.0,80.0,Stockout Risk,Standard Replenishment Review
+21401,BLUE PUDDING SPOON,Regular,84.66666666666667,43,30,38.0,123.0,80.0,Stockout Risk,Standard Replenishment Review
+23267,SET OF 4 SANTA PLACE SETTINGS,Regular,183.33333333333337,107,21,58.0,186.0,79.0,Stockout Risk,Standard Replenishment Review
+47422,ASSORTED MONKEY SUCTION CUP HOOK,Regular,51.25,34,45,36.0,113.0,79.0,Stockout Risk,Standard Replenishment Review
+21014,SWISS CHALET TREE DECORATION,Regular,115.41666666666669,114,30,77.0,192.0,78.0,Stockout Risk,Standard Replenishment Review
+21439,BASKET OF TOADSTOOLS,Regular,83.5,7,21,27.0,85.0,78.0,Stockout Risk,Standard Replenishment Review
+22444,GROW YOUR OWN PLANT IN A CAN,Regular,69.83333333333333,102,45,75.0,180.0,78.0,Stockout Risk,Standard Replenishment Review
+22647,CERAMIC LOVE HEART MONEY BANK,Regular,49.416666666666664,8,30,37.0,86.0,78.0,Stockout Risk,Standard Replenishment Review
+23394,POSTE FRANCE CUSHION COVER,Regular,137.33333333333334,49,21,31.0,127.0,78.0,Stockout Risk,Standard Replenishment Review
+22753,SMALL YELLOW BABUSHKA NOTEBOOK,Regular,63.166666666666664,13,30,27.0,90.0,77.0,Stockout Risk,Standard Replenishment Review
+21700,BIG DOUGHNUT FRIDGE MAGNETS,Regular,139.66666666666666,62,21,40.0,138.0,76.0,Stockout Risk,Standard Replenishment Review
+22304,COFFEE MUG BLUE PAISLEY DESIGN,Regular,59.833333333333336,81,45,67.0,157.0,76.0,Stockout Risk,Standard Replenishment Review
+23519,EMBROIDERED RIBBON REEL CLAIRE,Regular,74.66666666666667,2,21,26.0,78.0,76.0,Stockout Risk,Standard Replenishment Review
+72598,SET/12 TAPER CANDLES,Regular,46.583333333333336,37,45,43.0,113.0,76.0,Stockout Risk,Standard Replenishment Review
+84826,ASSTD DESIGN 3D PAPER STICKERS,Regular,89.16666666666667,30,21,44.0,106.0,76.0,Stockout Risk,Standard Replenishment Review
+85169A,IVORY LOVE BIRD CANDLE,Regular,67.25,91,45,66.0,167.0,76.0,Stockout Risk,Standard Replenishment Review
+23549,WRAP BIRD GARDEN,Regular,256.0,5,7,19.0,79.0,74.0,Stockout Risk,Standard Replenishment Review
+22097,SWALLOW SQUARE TISSUE BOX,Regular,114.5,12,14,32.0,85.0,73.0,Stockout Risk,Standard Replenishment Review
+23474,WOODLAND SMALL BLUE FELT HEART,Regular,129.0,16,14,29.0,89.0,73.0,Stockout Risk,Standard Replenishment Review
+21714,CITRONELLA CANDLE GARDEN POT,Regular,134.16666666666666,19,14,28.0,91.0,72.0,Stockout Risk,Standard Replenishment Review
+84598,BOYS ALPHABET IRON ON PATCHES,Regular,138.58333333333334,26,14,33.0,98.0,72.0,Stockout Risk,Standard Replenishment Review
+84660C,PINK STITCHED WALL CLOCK,Regular,56.583333333333336,21,30,36.0,93.0,72.0,Stockout Risk,Standard Replenishment Review
+21389,IVORY HANGING DECORATION  BIRD,Regular,91.58333333333331,25,21,32.0,96.0,71.0,Stockout Risk,Standard Replenishment Review
+22059,CERAMIC STRAWBERRY DESIGN MUG,Regular,106.33333333333331,32,21,29.0,103.0,71.0,Stockout Risk,Standard Replenishment Review
+23456,MEDIUM PARLOUR PICTURE FRAME,Regular,75.5,24,30,19.0,94.0,70.0,Stockout Risk,Standard Replenishment Review
+22529,MAGIC DRAWING SLATE GO TO THE FAIR,Regular,66.41666666666667,1,21,24.0,70.0,69.0,Stockout Risk,Standard Replenishment Review
+22639,SET OF 4 NAPKIN CHARMS HEARTS,Regular,60.5,16,30,23.0,84.0,68.0,Stockout Risk,Standard Replenishment Review
+22702,BLACK AND WHITE CAT BOWL,Regular,113.41666666666669,71,21,60.0,139.0,68.0,Stockout Risk,Standard Replenishment Review
+23325,RUSTIC STRAWBERRY JAM POT SMALL,Regular,115.5,90,30,43.0,158.0,68.0,Stockout Risk,Standard Replenishment Review
+22043,CHRISTMAS CARD SCREEN PRINT,Regular,99.0,47,21,45.0,114.0,67.0,Stockout Risk,Standard Replenishment Review
+22821,GIFT BAG PSYCHEDELIC APPLES,Regular,94.16666666666669,31,21,32.0,98.0,67.0,Stockout Risk,Standard Replenishment Review
+85231G,ORANGE SCENTED SET/9 T-LIGHTS,Regular,50.0,4,30,21.0,71.0,67.0,Stockout Risk,Standard Replenishment Review
+20961,STRAWBERRY BATH SPONGE,Regular,95.16666666666669,0,14,22.0,66.0,66.0,Stockout Risk,Standard Replenishment Review
+21870,I CAN ONLY PLEASE ONE PERSON MUG,Regular,115.25,19,14,31.0,85.0,66.0,Stockout Risk,Standard Replenishment Review
+22859,EASTER TIN BUNNY BOUQUET,Regular,98.25,82,30,50.0,148.0,66.0,Stockout Risk,Standard Replenishment Review
+23093,SMALL PARISIENNE HEART PHOTO FRAME,Regular,130.57142857142858,117,30,52.0,183.0,66.0,Stockout Risk,Standard Replenishment Review
+37447,CERAMIC CAKE DESIGN SPOTTED PLATE,Regular,66.25,70,45,37.0,136.0,66.0,Stockout Risk,Standard Replenishment Review
+85093,CANDY SPOT EGG WARMER HARE,Regular,59.0,5,21,30.0,71.0,66.0,Stockout Risk,Standard Replenishment Review
+21158,MOODY GIRL DOOR HANGER,Regular,117.33333333333331,60,21,43.0,125.0,65.0,Stockout Risk,Standard Replenishment Review
+21773,DECORATIVE ROSE BATHROOM BOTTLE,Regular,96.91666666666669,93,30,61.0,158.0,65.0,Stockout Risk,Standard Replenishment Review
+22982,PANTRY PASTRY BRUSH,Regular,121.77777777777776,17,14,25.0,82.0,65.0,Stockout Risk,Standard Replenishment Review
+22588,CARD HOLDER GINGHAM HEART,Regular,55.416666666666664,18,30,27.0,82.0,64.0,Stockout Risk,Standard Replenishment Review
+23391,I LOVE LONDON MINI BACKPACK,Regular,121.0,51,21,30.0,115.0,64.0,Stockout Risk,Standard Replenishment Review
+85172,HYACINTH BULB T-LIGHT CANDLES,Regular,98.83333333333331,89,30,54.0,153.0,64.0,Stockout Risk,Standard Replenishment Review
+23088,ZINC HEART FLOWER T-LIGHT HOLDER,Regular,108.71428571428572,90,30,44.0,153.0,63.0,Stockout Risk,Standard Replenishment Review
+23424,GINGHAM RECIPE BOOK BOX,Regular,144.33333333333334,68,21,30.0,131.0,63.0,Stockout Risk,Standard Replenishment Review
+17084N,FAIRY DREAMS INCENSE,Regular,102.83333333333331,36,21,26.0,98.0,62.0,Stockout Risk,Standard Replenishment Review
+22479,DAISY GARDEN MARKER,Regular,94.0,11,14,29.0,73.0,62.0,Stockout Risk,Standard Replenishment Review
+22525,CHILDRENS GARDEN GLOVES PINK,Regular,40.75,4,30,25.0,66.0,62.0,Stockout Risk,Standard Replenishment Review
+23330,DECORATIVE WICKER HEART MEDIUM,Regular,434.75,76,7,37.0,138.0,62.0,Stockout Risk,Standard Replenishment Review
+85194L,HANGING SPRING FLOWER EGG LARGE,Regular,77.91666666666667,27,21,34.0,89.0,62.0,Stockout Risk,Standard Replenishment Review
+21208,PASTEL COLOUR HONEYCOMB FAN,Regular,75.16666666666667,15,21,23.0,76.0,61.0,Stockout Risk,Standard Replenishment Review
+20803,SMALL PINK GLASS SUNDAE DISH,Regular,75.25,33,21,40.0,93.0,60.0,Stockout Risk,Standard Replenishment Review
+21207,SKULL AND CROSSBONES  GARLAND,Regular,87.75,27,21,26.0,87.0,60.0,Stockout Risk,Standard Replenishment Review
+21812,GARLAND WITH HEARTS AND BELLS,Regular,30.5,14,45,28.0,74.0,60.0,Stockout Risk,Standard Replenishment Review
+22102,MIRROR MOSAIC T-LIGHT HOLDER,Regular,75.16666666666667,32,21,39.0,92.0,60.0,Stockout Risk,Standard Replenishment Review
+22210,WOOD STAMP SET BEST WISHES,Regular,76.33333333333333,118,45,64.0,178.0,60.0,Stockout Risk,Standard Replenishment Review
+22586,FELTCRAFT HAIRBAND PINK AND BLUE,Regular,67.25,34,30,27.0,94.0,60.0,Stockout Risk,Standard Replenishment Review
+22737,RIBBON REEL CHRISTMAS PRESENT,Regular,107.91666666666669,62,21,46.0,122.0,60.0,Stockout Risk,Standard Replenishment Review
+85071A,BLUE CHARLIE+LOLA PERSONAL DOORSIGN,Regular,85.5,66,30,40.0,126.0,60.0,Stockout Risk,Standard Replenishment Review
+22707,WRAP MONSTER FUN,Regular,102.66666666666669,8,14,19.0,67.0,59.0,Stockout Risk,Standard Replenishment Review
+20832,RED FLOCK LOVE HEART PHOTO FRAME,Regular,82.91666666666667,1,14,20.0,59.0,58.0,Stockout Risk,Standard Replenishment Review
+21125,SET 6 FOOTBALL CELEBRATION CANDLES,Regular,53.666666666666664,18,30,22.0,76.0,58.0,Stockout Risk,Standard Replenishment Review
+22050,PINK PAISLEY ROSE GIFT WRAP,Regular,97.91666666666669,40,21,29.0,98.0,58.0,Stockout Risk,Standard Replenishment Review
+22613,PACK OF 20 SPACEBOY NAPKINS,Regular,124.66666666666669,68,21,39.0,126.0,58.0,Stockout Risk,Standard Replenishment Review
+23415,HOME SWEET HOME HOOK,Regular,74.33333333333333,42,30,26.0,100.0,58.0,Stockout Risk,Standard Replenishment Review
+20985,HEART CALCULATOR,Regular,94.66666666666669,42,21,33.0,99.0,57.0,Stockout Risk,Standard Replenishment Review
+23453,OVAL  MINI PORTRAIT FRAME,Regular,141.5,74,21,32.0,131.0,57.0,Stockout Risk,Standard Replenishment Review
+21070,VINTAGE BILLBOARD MUG,Regular,91.75,17,14,30.0,73.0,56.0,Stockout Risk,Standard Replenishment Review
+22228,BUNNY WOODEN PAINTED WITH BIRD,Regular,80.91666666666667,28,21,27.0,84.0,56.0,Stockout Risk,Standard Replenishment Review
+22380,TOY TIDY SPACEBOY,Regular,98.91666666666669,5,14,15.0,61.0,56.0,Stockout Risk,Standard Replenishment Review
+22598,CHRISTMAS MUSICAL ZINC TREE,Regular,74.33333333333333,72,30,54.0,128.0,56.0,Stockout Risk,Standard Replenishment Review
+22807,SET OF 6 T-LIGHTS TOADSTOOLS,Regular,59.5,24,30,21.0,80.0,56.0,Stockout Risk,Standard Replenishment Review
+22919,HERB MARKER MINT,Regular,141.08333333333334,38,14,28.0,94.0,56.0,Stockout Risk,Standard Replenishment Review
+35923,CANDY HEART HANGING DECORATION,Regular,117.63636363636364,76,21,50.0,132.0,56.0,Stockout Risk,Standard Replenishment Review
+21111,"SWISS ROLL TOWEL, CHOCOLATE  SPOTS",Regular,58.333333333333336,11,21,25.0,66.0,55.0,Stockout Risk,Standard Replenishment Review
+22932,BAKING MOULD TOFFEE CUP CHOCOLATE,Regular,64.33333333333333,43,30,34.0,98.0,55.0,Stockout Risk,Standard Replenishment Review
+23478,WOODLAND LARGE PINK FELT HEART,Regular,136.5,82,21,41.0,137.0,55.0,Stockout Risk,Standard Replenishment Review
+70007,HI TEC ALPINE HAND WARMER,Regular,65.0,57,30,46.0,111.0,54.0,Stockout Risk,Standard Replenishment Review
+84763,ZINC FINISH 15CM PLANTER POTS,Regular,50.083333333333336,26,30,30.0,80.0,54.0,Stockout Risk,Standard Replenishment Review
+21328,BALLOONS  WRITING SET,Regular,109.58333333333331,104,30,47.0,157.0,53.0,Stockout Risk,Standard Replenishment Review
+22025,RING OF ROSES BIRTHDAY CARD,Regular,150.41666666666666,44,14,27.0,97.0,53.0,Stockout Risk,Standard Replenishment Review
+22937,BAKING MOULD CHOCOLATE CUPCAKES,Regular,79.33333333333333,30,21,27.0,83.0,53.0,Stockout Risk,Standard Replenishment Review
+22974,CHILDRENS DOLLY GIRL MUG,Regular,129.41666666666666,77,21,39.0,130.0,53.0,Stockout Risk,Standard Replenishment Review
+21291,SMALL POLKADOT CHOCOLATE GIFT BAG,Regular,78.58333333333333,30,21,27.0,82.0,52.0,Stockout Risk,Standard Replenishment Review
+21794,CLASSIC FRENCH STYLE BASKET NATURAL,Regular,43.5,46,45,33.0,98.0,52.0,Stockout Risk,Standard Replenishment Review
+23269,SET OF 2 CERAMIC CHRISTMAS TREES,Regular,125.5,38,14,31.0,90.0,52.0,Stockout Risk,Standard Replenishment Review
+21206,STRAWBERRY HONEYCOMB  GARLAND,Regular,107.5,23,14,24.0,74.0,51.0,Stockout Risk,Standard Replenishment Review
+21866,UNION JACK FLAG LUGGAGE TAG,Regular,60.166666666666664,6,21,15.0,57.0,51.0,Stockout Risk,Standard Replenishment Review
+21189,WHITE HONEYCOMB PAPER GARLAND,Regular,23.833333333333332,6,45,20.0,56.0,50.0,Stockout Risk,Standard Replenishment Review
+21215,IVORY PAPER CUP CAKE CASES,Regular,90.41666666666669,8,14,16.0,58.0,50.0,Stockout Risk,Standard Replenishment Review
+21329,DINOSAURS  WRITING SET,Regular,75.75,1,14,16.0,51.0,50.0,Stockout Risk,Standard Replenishment Review
+23520,EMBROIDERED RIBBON REEL RUBY,Regular,53.333333333333336,4,21,17.0,54.0,50.0,Stockout Risk,Standard Replenishment Review
+84520B,PACK 20 ENGLISH ROSE PAPER NAPKINS,Regular,46.166666666666664,31,30,35.0,81.0,50.0,Stockout Risk,Standard Replenishment Review
+20754,RETROSPOT RED WASHING UP GLOVES,Regular,121.33333333333331,71,21,35.0,120.0,49.0,Stockout Risk,Standard Replenishment Review
+22478,BIRDHOUSE GARDEN MARKER,Regular,124.25,42,14,33.0,91.0,49.0,Stockout Risk,Standard Replenishment Review
+20977,36 PENCILS TUBE WOODLAND,Regular,139.58333333333334,45,14,28.0,93.0,48.0,Stockout Risk,Standard Replenishment Review
+22230,JIGSAW TREE WITH WATERING CAN,Regular,86.75,15,14,23.0,63.0,48.0,Stockout Risk,Standard Replenishment Review
+22252,BIRDCAGE DECORATION TEALIGHT HOLDER,Regular,52.083333333333336,63,45,33.0,111.0,48.0,Stockout Risk,Standard Replenishment Review
+22265,EASTER DECORATION NATURAL CHICK,Regular,44.666666666666664,22,30,25.0,70.0,48.0,Stockout Risk,Standard Replenishment Review
+22481,BLACK TEA TOWEL CLASSIC DESIGN,Regular,57.166666666666664,9,21,17.0,57.0,48.0,Stockout Risk,Standard Replenishment Review
+22921,HERB MARKER CHIVES,Regular,138.08333333333334,90,21,41.0,138.0,48.0,Stockout Risk,Standard Replenishment Review
+23066,SMALL DECO JEWELLERY STAND,Regular,32.375,24,45,23.0,72.0,48.0,Stockout Risk,Standard Replenishment Review
+20963,APPLE BATH SPONGE,Regular,106.08333333333331,27,14,24.0,74.0,47.0,Stockout Risk,Standard Replenishment Review
+21058,PARTY INVITES WOODLAND,Regular,94.75,96,30,48.0,143.0,47.0,Stockout Risk,Standard Replenishment Review
+21209,MULTICOLOUR HONEYCOMB FAN,Regular,98.58333333333331,21,14,22.0,68.0,47.0,Stockout Risk,Standard Replenishment Review
+22211,WOOD STAMP SET FLOWERS,Regular,78.66666666666667,6,14,16.0,53.0,47.0,Stockout Risk,Standard Replenishment Review
+22279,POCKET BAG BLUE PAISLEY RED SPOT,Regular,67.0,0,14,16.0,47.0,47.0,Stockout Risk,Standard Replenishment Review
+47518F,ICON PLACEMAT POP ART ELVIS,Regular,69.33333333333333,28,21,26.0,75.0,47.0,Stockout Risk,Standard Replenishment Review
+22040,BOTANICAL ROSE GIFT WRAP,Regular,60.416666666666664,40,30,26.0,86.0,46.0,Stockout Risk,Standard Replenishment Review
+23496,PANTRY KITCHEN THERMOMETER,Regular,41.0,18,30,23.0,64.0,46.0,Stockout Risk,Standard Replenishment Review
+79030D,TUMBLER BAROQUE,Regular,48.416666666666664,29,30,27.0,75.0,46.0,Stockout Risk,Standard Replenishment Review
+21447,12 IVORY ROSE PEG PLACE SETTINGS,Regular,80.66666666666667,10,14,17.0,55.0,45.0,Stockout Risk,Standard Replenishment Review
+22128,PARTY CONES CANDY ASSORTED,Regular,145.83333333333334,105,21,48.0,150.0,45.0,Stockout Risk,Standard Replenishment Review
+22185,SLATE TILE NATURAL HANGING,Regular,97.75,18,14,17.0,63.0,45.0,Stockout Risk,Standard Replenishment Review
+22420,LIPSTICK PEN BABY PINK,Regular,108.5,66,21,35.0,111.0,45.0,Stockout Risk,Standard Replenishment Review
+22924,FRIDGE MAGNETS LA VIE EN ROSE,Regular,82.91666666666667,72,30,34.0,117.0,45.0,Stockout Risk,Standard Replenishment Review
+84828,JUNGLE POPSICLES ICE LOLLY MOULDS,Regular,88.91666666666667,16,14,20.0,61.0,45.0,Stockout Risk,Standard Replenishment Review
+21355,TOAST ITS - I LOVE YOU,Regular,65.5,37,21,34.0,80.0,43.0,Stockout Risk,Standard Replenishment Review
+22129,PARTY CONES CANDY DECORATION,Regular,97.16666666666669,57,21,32.0,100.0,43.0,Stockout Risk,Standard Replenishment Review
+22402,MAGNETS PACK OF 4 VINTAGE COLLAGE,Regular,137.83333333333334,4,7,15.0,47.0,43.0,Stockout Risk,Standard Replenishment Review
+23694,PAISLEY PARK CARD,Regular,274.0,117,14,32.0,160.0,43.0,Stockout Risk,Standard Replenishment Review
+85203,HANGING WOOD AND FELT BUTTERFLY,Regular,72.58333333333333,35,21,27.0,78.0,43.0,Stockout Risk,Standard Replenishment Review
+90058A,CRYSTAL STUD EARRINGS CLEAR DISPLAY,Regular,46.285714285714285,31,30,28.0,74.0,43.0,Stockout Risk,Standard Replenishment Review
+21088,SET/6 FRUIT SALAD PAPER CUPS,Regular,150.27272727272728,118,21,55.0,160.0,42.0,Stockout Risk,Standard Replenishment Review
+21224,SET/4 SKULL BADGES,Regular,73.91666666666667,56,30,24.0,98.0,42.0,Stockout Risk,Standard Replenishment Review
+21822,GLITTER CHRISTMAS TREE WITH BELLS,Regular,49.75,45,30,37.0,87.0,42.0,Stockout Risk,Standard Replenishment Review
+22231,JIGSAW TREE WITH BIRDHOUSE,Regular,78.75,10,14,15.0,52.0,42.0,Stockout Risk,Standard Replenishment Review
+22258,FELT FARM ANIMAL RABBIT,Regular,76.0,46,21,35.0,88.0,42.0,Stockout Risk,Standard Replenishment Review
+22284,HEN HOUSE DECORATION,Regular,75.16666666666667,39,21,28.0,81.0,42.0,Stockout Risk,Standard Replenishment Review
+22416,SET OF 36 DOILIES SPACEBOY DESIGN,Regular,70.83333333333333,38,21,30.0,80.0,42.0,Stockout Risk,Standard Replenishment Review
+22439,6 ROCKET BALLOONS,Regular,147.0,4,7,12.0,46.0,42.0,Stockout Risk,Standard Replenishment Review
+23513,EMBROIDERED RIBBON REEL SUSIE,Regular,183.0,86,14,43.0,128.0,42.0,Stockout Risk,Standard Replenishment Review
+37446,MINI CAKE STAND WITH HANGING CAKES,Regular,110.16666666666669,29,14,20.0,71.0,42.0,Stockout Risk,Standard Replenishment Review
+79191C,RETRO PLASTIC ELEPHANT TRAY,Regular,78.0,11,14,17.0,53.0,42.0,Stockout Risk,Standard Replenishment Review
+85174,S/4 CACTI CANDLES,Regular,50.083333333333336,34,30,26.0,76.0,42.0,Stockout Risk,Standard Replenishment Review
+16049,TEATIME GEL PENS ASST,Regular,63.0,36,21,33.0,77.0,41.0,Stockout Risk,Standard Replenishment Review
+21785,RAIN PONCHO,Regular,34.25,1,21,18.0,42.0,41.0,Stockout Risk,Standard Replenishment Review
+21879,HEARTS GIFT TAPE,Regular,96.75,78,21,51.0,119.0,41.0,Stockout Risk,Standard Replenishment Review
+22306,SILVER MUG BONE CHINA TREE OF LIFE,Regular,90.66666666666669,64,21,42.0,105.0,41.0,Stockout Risk,Standard Replenishment Review
+22695,WICKER WREATH SMALL,Regular,44.25,28,30,25.0,69.0,41.0,Stockout Risk,Standard Replenishment Review
+72351A,SET/6 TURQUOISE BUTTERFLY T-LIGHTS,Regular,104.91666666666669,31,14,23.0,72.0,41.0,Stockout Risk,Standard Replenishment Review
+79164,BLACK WINE GLASS,Regular,138.83333333333334,73,14,49.0,114.0,41.0,Stockout Risk,Standard Replenishment Review
+22074,6 RIBBONS SHIMMERING PINKS,Regular,100.33333333333331,75,21,45.0,115.0,40.0,Stockout Risk,Standard Replenishment Review
+22123,PING MICROWAVE APRON,Regular,33.083333333333336,6,30,13.0,46.0,40.0,Stockout Risk,Standard Replenishment Review
+22715,CARD WEDDING DAY,Regular,128.58333333333334,86,21,36.0,126.0,40.0,Stockout Risk,Standard Replenishment Review
+23147,SINGLE ANTIQUE ROSE HOOK IVORY,Regular,227.875,106,14,40.0,146.0,40.0,Stockout Risk,Standard Replenishment Review
+23469,CARD HOLDER LOVE BIRD SMALL,Regular,106.33333333333331,71,21,37.0,111.0,40.0,Stockout Risk,Standard Replenishment Review
+23482,PEARLISED IVORY HEART LARGE,Regular,190.0,82,14,33.0,122.0,40.0,Stockout Risk,Standard Replenishment Review
+47585A,PINK FAIRY CAKE CUSHION COVER,Regular,21.666666666666668,10,45,17.0,50.0,40.0,Stockout Risk,Standard Replenishment Review
+82599,FANNY'S REST STOPMETAL SIGN,Regular,42.333333333333336,7,21,17.0,47.0,40.0,Stockout Risk,Standard Replenishment Review
+21062,PARTY INVITES SPACEMAN,Regular,43.833333333333336,3,21,11.0,42.0,39.0,Stockout Risk,Standard Replenishment Review
+22572,ROCKING HORSE GREEN CHRISTMAS,Regular,115.0,48,14,33.0,87.0,39.0,Stockout Risk,Standard Replenishment Review
+22591,CARDHOLDER GINGHAM CHRISTMAS TREE,Regular,33.5,17,30,23.0,56.0,39.0,Stockout Risk,Standard Replenishment Review
+23114,VINTAGE LEAF CHOPPING BOARD,Regular,46.0,29,30,22.0,68.0,39.0,Stockout Risk,Standard Replenishment Review
+23160,REGENCY TEA SPOON,Regular,206.0,94,14,37.0,133.0,39.0,Stockout Risk,Standard Replenishment Review
+23228,FILIGREE HEART BIRD WHITE,Regular,187.0,80,14,32.0,119.0,39.0,Stockout Risk,Standard Replenishment Review
+23249,VINTAGE RED ENAMEL TRIM PLATE,Regular,133.5,88,21,34.0,127.0,39.0,Stockout Risk,Standard Replenishment Review
+35971,ROSE FOLKART HEART DECORATIONS,Regular,38.0,17,30,18.0,56.0,39.0,Stockout Risk,Standard Replenishment Review
+37450,CERAMIC CAKE BOWL + HANGING CAKES,Regular,59.166666666666664,18,21,16.0,57.0,39.0,Stockout Risk,Standard Replenishment Review
+84926A,WAKE UP COCKEREL TILE COASTER,Regular,48.333333333333336,77,45,44.0,116.0,39.0,Stockout Risk,Standard Replenishment Review
+85019B,BLOSSOM  IMAGES NOTEBOOK SET,Regular,46.36363636363637,30,30,23.0,69.0,39.0,Stockout Risk,Standard Replenishment Review
+85062,PEARL CRYSTAL PUMPKIN T-LIGHT HLDR,Regular,119.5,37,14,20.0,76.0,39.0,Stockout Risk,Standard Replenishment Review
+22425,ENAMEL COLANDER CREAM,Regular,37.583333333333336,37,45,19.0,75.0,38.0,Stockout Risk,Standard Replenishment Review
+22434,BALLOON PUMP WITH 10 BALLOONS,Regular,62.75,3,14,12.0,41.0,38.0,Stockout Risk,Standard Replenishment Review
+21034,REX CASH+CARRY JUMBO SHOPPER,Regular,148.91666666666666,58,14,26.0,95.0,37.0,Stockout Risk,Standard Replenishment Review
+21537,RED RETROSPOT PUDDING BOWL,Regular,26.583333333333332,2,30,12.0,39.0,37.0,Stockout Risk,Standard Replenishment Review
+22902,TOTE BAG I LOVE LONDON,Regular,103.91666666666669,63,21,27.0,100.0,37.0,Stockout Risk,Standard Replenishment Review
+35924,HANGING FAIRY CAKE DECORATION,Regular,56.25,20,21,18.0,57.0,37.0,Stockout Risk,Standard Replenishment Review
+79190B,RETRO PLASTIC POLKA TRAY,Regular,53.916666666666664,52,30,35.0,89.0,37.0,Stockout Risk,Standard Replenishment Review
+85114A,BLACK ENCHANTED FOREST PLACEMAT,Regular,57.5,22,21,19.0,59.0,37.0,Stockout Risk,Standard Replenishment Review
+21949,SET OF 6 STRAWBERRY CHOPSTICKS,Regular,65.91666666666667,10,14,15.0,46.0,36.0,Stockout Risk,Standard Replenishment Review
+22374,AIRLINE BAG VINTAGE JET SET RED,Regular,44.25,6,21,11.0,42.0,36.0,Stockout Risk,Standard Replenishment Review
+22452,MEASURING TAPE BABUSHKA PINK,Regular,60.0,27,21,21.0,63.0,36.0,Stockout Risk,Standard Replenishment Review
+22856,ASSORTED EASTER DECORATIONS  BELLS,Regular,45.833333333333336,0,14,15.0,36.0,36.0,Stockout Risk,Standard Replenishment Review
+23244,ROUND STORAGE TIN VINTAGE LEAF,Regular,148.33333333333334,60,14,27.0,96.0,36.0,Stockout Risk,Standard Replenishment Review
+15044A,PINK PAPER PARASOL,Regular,37.916666666666664,3,21,11.0,38.0,35.0,Stockout Risk,Standard Replenishment Review
+21990,MODERN FLORAL STATIONERY SET,Regular,131.41666666666666,55,14,29.0,90.0,35.0,Stockout Risk,Standard Replenishment Review
+22254,FELT TOADSTOOL LARGE,Regular,52.75,23,21,21.0,58.0,35.0,Stockout Risk,Standard Replenishment Review
+22521,CHILDS GARDEN TROWEL PINK,Regular,50.75,24,21,23.0,59.0,35.0,Stockout Risk,Standard Replenishment Review
+23217,LAUREL HEART ANTIQUE SILVER,Regular,189.5,29,7,20.0,64.0,35.0,Stockout Risk,Standard Replenishment Review
+23222,CHRISTMAS TREE HANGING GOLD,Regular,122.33333333333331,94,21,43.0,129.0,35.0,Stockout Risk,Standard Replenishment Review
+85040A,S/4 PINK FLOWER CANDLES IN BOWL,Regular,74.41666666666667,69,30,30.0,104.0,35.0,Stockout Risk,Standard Replenishment Review
+22162,HEART GARLAND RUSTIC PADDED,Regular,21.333333333333332,0,30,13.0,34.0,34.0,Stockout Risk,Standard Replenishment Review
+22344,PARTY PIZZA DISH PINK POLKADOT,Regular,83.33333333333333,63,21,39.0,97.0,34.0,Stockout Risk,Standard Replenishment Review
+23270,SET OF 2 CERAMIC PAINTED HEARTS,Regular,191.83333333333337,28,7,17.0,62.0,34.0,Stockout Risk,Standard Replenishment Review
+23423,PANTRY 3 HOOK ROLLING PIN HANGER,Regular,69.66666666666667,32,21,17.0,66.0,34.0,Stockout Risk,Standard Replenishment Review
+23438,RED SPOT GIFT BAG LARGE,Regular,432.0,110,7,43.0,144.0,34.0,Stockout Risk,Standard Replenishment Review
+85054,FRENCH ENAMEL POT W LID,Regular,48.833333333333336,41,30,26.0,75.0,34.0,Stockout Risk,Standard Replenishment Review
+22547,MINI JIGSAW DINOSAUR,Regular,52.333333333333336,18,21,14.0,51.0,33.0,Stockout Risk,Standard Replenishment Review
+22677,FRENCH BLUE METAL DOOR SIGN 2,Regular,79.91666666666667,43,21,20.0,76.0,33.0,Stockout Risk,Standard Replenishment Review
+22918,HERB MARKER PARSLEY,Regular,149.75,114,21,42.0,147.0,33.0,Stockout Risk,Standard Replenishment Review
+23025,DRAWER KNOB VINTAGE GLASS BALL,Regular,55.333333333333336,45,30,23.0,78.0,33.0,Stockout Risk,Standard Replenishment Review
+23568,EGG CUP HENRIETTA HEN CREAM,Regular,238.5,109,14,31.0,142.0,33.0,Stockout Risk,Standard Replenishment Review
+35004C,SET OF 3 COLOURED  FLYING DUCKS,Regular,32.583333333333336,24,30,24.0,57.0,33.0,Stockout Risk,Standard Replenishment Review
+21684,SMALL MEDINA STAMPED METAL BOWL,Regular,63.166666666666664,72,30,41.0,104.0,32.0,Stockout Risk,Standard Replenishment Review
+22250,DECORATION  BUTTERFLY  MAGIC GARDEN,Regular,68.08333333333333,42,21,26.0,74.0,32.0,Stockout Risk,Standard Replenishment Review
+22334,DINOSAUR PARTY BAG + STICKER SET,Regular,58.25,7,14,12.0,39.0,32.0,Stockout Risk,Standard Replenishment Review
+22691,DOORMAT WELCOME SUNRISE,Regular,29.75,0,21,11.0,32.0,32.0,Stockout Risk,Standard Replenishment Review
+22949,36 DOILIES DOLLY GIRL,Regular,78.58333333333333,47,21,24.0,79.0,32.0,Stockout Risk,Standard Replenishment Review
+23538,WALL ART VINTAGE HEART,Regular,164.0,87,14,42.0,119.0,32.0,Stockout Risk,Standard Replenishment Review
+84006,MAGIC TREE -PAPER FLOWERS,Regular,70.16666666666667,78,30,40.0,110.0,32.0,Stockout Risk,Standard Replenishment Review
+20733,GOLD MINI TAPE MEASURE,Regular,75.66666666666667,53,21,31.0,84.0,31.0,Stockout Risk,Standard Replenishment Review
+20868,SILVER FABRIC MIRROR,Regular,37.583333333333336,15,21,20.0,46.0,31.0,Stockout Risk,Standard Replenishment Review
+21578,WOODLAND DESIGN  COTTON TOTE BAG,Regular,62.083333333333336,32,21,20.0,63.0,31.0,Stockout Risk,Standard Replenishment Review
+22076,6 RIBBONS EMPIRE,Regular,75.5,18,14,14.0,49.0,31.0,Stockout Risk,Standard Replenishment Review
+22676,FRENCH BLUE METAL DOOR SIGN 1,Regular,91.75,27,14,15.0,58.0,31.0,Stockout Risk,Standard Replenishment Review
+23476,WOODLAND LARGE RED FELT HEART,Regular,102.5,40,14,23.0,71.0,31.0,Stockout Risk,Standard Replenishment Review
+44235,ASSORTED COLOURED CIRCLE MOBILE,Regular,44.583333333333336,23,21,23.0,54.0,31.0,Stockout Risk,Standard Replenishment Review
+72807A,SET/3 ROSE CANDLE IN JEWELLED BOX,Regular,33.083333333333336,43,45,24.0,74.0,31.0,Stockout Risk,Standard Replenishment Review
+16012,FOOD/DRINK SPONGE STICKERS,Regular,99.58333333333331,76,21,36.0,106.0,30.0,Stockout Risk,Standard Replenishment Review
+21441,BLUE BIRDHOUSE DECORATION,Regular,23.416666666666668,21,45,16.0,51.0,30.0,Stockout Risk,Standard Replenishment Review
+22483,RED GINGHAM TEDDY BEAR,Regular,58.75,29,21,18.0,59.0,30.0,Stockout Risk,Standard Replenishment Review
+22589,CARDHOLDER GINGHAM STAR,Regular,30.166666666666668,19,30,19.0,49.0,30.0,Stockout Risk,Standard Replenishment Review
+85230A,OPIUM SCENTED VOTIVE CANDLE,Regular,68.0,72,30,34.0,102.0,30.0,Stockout Risk,Standard Replenishment Review
+21191,LARGE WHITE HONEYCOMB PAPER BELL,Regular,43.166666666666664,2,14,11.0,31.0,29.0,Stockout Risk,Standard Replenishment Review
+21563,RED HEART SHAPE LOVE BUCKET,Regular,65.16666666666667,36,21,19.0,65.0,29.0,Stockout Risk,Standard Replenishment Review
+21817,GLITTER CHRISTMAS TREE,Regular,75.5,32,14,26.0,61.0,29.0,Stockout Risk,Standard Replenishment Review
+21948,SET OF 6 CAKE CHOPSTICKS,Regular,52.916666666666664,9,14,13.0,38.0,29.0,Stockout Risk,Standard Replenishment Review
+22242,5 HOOK HANGER MAGIC TOADSTOOL,Regular,51.333333333333336,106,45,58.0,135.0,29.0,Stockout Risk,Standard Replenishment Review
+23139,SINGLE WIRE HOOK PINK HEART,Regular,46.25,9,14,16.0,38.0,29.0,Stockout Risk,Standard Replenishment Review
+23491,VINTAGE JINGLE BELLS HEART,Regular,99.5,34,14,17.0,63.0,29.0,Stockout Risk,Standard Replenishment Review
+22313,OFFICE MUG WARMER PINK,Regular,44.583333333333336,25,21,22.0,53.0,28.0,Stockout Risk,Standard Replenishment Review
+22822,CREAM WALL PLANTER HEART SHAPED,Regular,35.833333333333336,8,21,11.0,36.0,28.0,Stockout Risk,Standard Replenishment Review
+47480,HANGING PHOTO CLIP ROPE LADDER,Regular,52.75,48,30,23.0,76.0,28.0,Stockout Risk,Standard Replenishment Review
+85034C,3 ROSE MORRIS BOXED CANDLES,Regular,87.66666666666667,43,14,30.0,71.0,28.0,Stockout Risk,Standard Replenishment Review
+21619,4 VANILLA BOTANICAL CANDLES,Regular,75.41666666666667,34,14,26.0,61.0,27.0,Stockout Risk,Standard Replenishment Review
+21730,GLASS STAR FROSTED T-LIGHT HOLDER,Regular,41.916666666666664,5,14,12.0,32.0,27.0,Stockout Risk,Standard Replenishment Review
+22249,DECORATION WHITE CHICK MAGIC GARDEN,Regular,77.25,2,7,11.0,29.0,27.0,Stockout Risk,Standard Replenishment Review
+35964,FOLKART CLIP ON STARS,Regular,58.333333333333336,44,21,30.0,71.0,27.0,Stockout Risk,Standard Replenishment Review
+72130,COLUMBIAN CANDLE ROUND,Regular,18.25,1,30,10.0,28.0,27.0,Stockout Risk,Standard Replenishment Review
+18098C,PORCELAIN BUTTERFLY OIL BURNER,Regular,22.083333333333332,13,30,17.0,39.0,26.0,Stockout Risk,Standard Replenishment Review
+22135,MINI LADLE LOVE HEART PINK,Regular,44.416666666666664,18,21,13.0,44.0,26.0,Stockout Risk,Standard Replenishment Review
+22566,FELTCRAFT HAIRBAND PINK AND PURPLE,Regular,68.91666666666667,21,14,15.0,47.0,26.0,Stockout Risk,Standard Replenishment Review
+22894,TABLECLOTH RED APPLES DESIGN,Regular,25.25,8,30,9.0,34.0,26.0,Stockout Risk,Standard Replenishment Review
+82567,"AIRLINE LOUNGE,METAL SIGN",Regular,54.583333333333336,8,14,9.0,34.0,26.0,Stockout Risk,Standard Replenishment Review
+84971S,SMALL HEART FLOWERS HOOK,Regular,139.5,61,14,22.0,87.0,26.0,Stockout Risk,Standard Replenishment Review
+85036B,CHOCOLATE 1 WICK MORRIS BOX CANDLE,Regular,29.666666666666668,22,30,18.0,48.0,26.0,Stockout Risk,Standard Replenishment Review
+22293,HANGING CHICK GREEN DECORATION,Regular,75.25,28,14,18.0,53.0,25.0,Stockout Risk,Standard Replenishment Review
+22305,COFFEE MUG PINK PAISLEY DESIGN,Regular,56.75,67,30,35.0,92.0,25.0,Stockout Risk,Standard Replenishment Review
+23432,PRETTY HANGING QUILTED HEARTS,Regular,307.0,86,7,39.0,111.0,25.0,Stockout Risk,Standard Replenishment Review
+51008,AFGHAN SLIPPER SOCK PAIR,Regular,43.25,28,21,23.0,53.0,25.0,Stockout Risk,Standard Replenishment Review
+72817,SET OF 2 CHRISTMAS DECOUPAGE CANDLE,Regular,99.0,52,14,31.0,77.0,25.0,Stockout Risk,Standard Replenishment Review
+20669,RED HEART LUGGAGE TAG,Regular,24.75,0,21,7.0,24.0,24.0,Stockout Risk,Standard Replenishment Review
+22071,SMALL WHITE RETROSPOT MUG IN BOX,Regular,36.666666666666664,19,21,17.0,43.0,24.0,Stockout Risk,Standard Replenishment Review
+22107,PIZZA PLATE IN BOX,Regular,37.833333333333336,35,30,21.0,59.0,24.0,Stockout Risk,Standard Replenishment Review
+22361,GLASS JAR DAISY FRESH COTTON WOOL,Regular,59.333333333333336,15,14,11.0,39.0,24.0,Stockout Risk,Standard Replenishment Review
+22709,WRAP WEDDING DAY,Regular,118.1818181818182,55,14,24.0,79.0,24.0,Stockout Risk,Standard Replenishment Review
+23517,EMBROIDERED RIBBON REEL REBECCA,Regular,108.66666666666669,13,7,12.0,37.0,24.0,Stockout Risk,Standard Replenishment Review
+37327,ASSTD MULTICOLOUR CIRCLES MUG,Regular,131.5,21,7,14.0,45.0,24.0,Stockout Risk,Standard Replenishment Review
+85230E,STRAWBRY SCENTED VOTIVE CANDLE,Regular,91.75,37,14,18.0,61.0,24.0,Stockout Risk,Standard Replenishment Review
+16052,TEATIME PUSH DOWN RUBBER,Regular,39.916666666666664,47,30,30.0,70.0,23.0,Stockout Risk,Standard Replenishment Review
+23224,CHERUB HEART DECORATION GOLD,Regular,110.33333333333331,16,7,13.0,39.0,23.0,Stockout Risk,Standard Replenishment Review
+22163,HEART STRING MEMO HOLDER HANGING,Regular,66.75,5,7,11.0,27.0,22.0,Stockout Risk,Standard Replenishment Review
+23216,LAUREL HEART ANTIQUE GOLD,Regular,86.66666666666667,8,7,10.0,30.0,22.0,Stockout Risk,Standard Replenishment Review
+85227,SET OF 6 3D KIT CARDS FOR KIDS,Regular,117.58333333333331,54,14,21.0,76.0,22.0,Stockout Risk,Standard Replenishment Review
+21294,ETCHED GLASS COASTER,Regular,134.83333333333334,28,7,18.0,49.0,21.0,Stockout Risk,Standard Replenishment Review
+22038,BOTANICAL LAVENDER GIFT WRAP,Regular,45.0,43,30,19.0,64.0,21.0,Stockout Risk,Standard Replenishment Review
+22132,RED LOVE HEART SHAPE CUP,Regular,83.75,65,21,27.0,86.0,21.0,Stockout Risk,Standard Replenishment Review
+22522,CHILDS GARDEN FORK BLUE,Regular,76.41666666666667,33,14,18.0,54.0,21.0,Stockout Risk,Standard Replenishment Review
+22939,APRON APPLE DELIGHT,Regular,33.916666666666664,13,21,10.0,34.0,21.0,Stockout Risk,Standard Replenishment Review
+79066K,RETRO MOD TRAY,Regular,65.83333333333333,46,21,21.0,67.0,21.0,Stockout Risk,Standard Replenishment Review
+84976,RECTANGULAR SHAPED MIRROR,Regular,40.25,12,14,14.0,33.0,21.0,Stockout Risk,Standard Replenishment Review
+22520,CHILDS GARDEN TROWEL BLUE,Regular,59.916666666666664,2,7,8.0,22.0,20.0,Stockout Risk,Standard Replenishment Review
+22820,GIFT BAG BIRTHDAY,Regular,77.25,6,7,8.0,26.0,20.0,Stockout Risk,Standard Replenishment Review
+23178,JAM CLOCK MAGNET,Regular,34.22222222222222,4,14,8.0,24.0,20.0,Stockout Risk,Standard Replenishment Review
+72807C,SET/3 VANILLA SCENTED CANDLE IN BOX,Regular,50.166666666666664,29,21,14.0,49.0,20.0,Stockout Risk,Standard Replenishment Review
+85170D,SET/6 PINK BIRD T-LIGHT CANDLES,Regular,36.833333333333336,5,14,8.0,25.0,20.0,Stockout Risk,Standard Replenishment Review
+85230B,CINNAMON SCENTED VOTIVE CANDLE,Regular,105.33333333333331,89,21,35.0,109.0,20.0,Stockout Risk,Standard Replenishment Review
+10080,GROOVY CACTUS INFLATABLE,Regular,30.3,3,14,8.0,22.0,19.0,Stockout Risk,Standard Replenishment Review
+21636,MADRAS NOTEBOOK MEDIUM,Regular,88.4,111,30,42.0,130.0,19.0,Stockout Risk,Standard Replenishment Review
+22679,FRENCH BLUE METAL DOOR SIGN 4,Regular,59.166666666666664,0,7,5.0,19.0,19.0,Stockout Risk,Standard Replenishment Review
+84341B,SMALL PINK MAGIC CHRISTMAS TREE,Regular,53.75,70,30,35.0,89.0,19.0,Stockout Risk,Standard Replenishment Review
+85177,BASKET OF FLOWERS SEWING KIT,Regular,67.0,55,21,27.0,74.0,19.0,Stockout Risk,Standard Replenishment Review
+16238,PARTY TIME PENCIL ERASERS,Regular,111.25,53,14,19.0,71.0,18.0,Stockout Risk,Standard Replenishment Review
+21789,KIDS RAIN MAC PINK,Regular,74.91666666666667,32,14,15.0,50.0,18.0,Stockout Risk,Standard Replenishment Review
+21867,PINK UNION JACK  LUGGAGE TAG,Regular,28.0,21,30,11.0,39.0,18.0,Stockout Risk,Standard Replenishment Review
+22099,CARAVAN SQUARE TISSUE BOX,Regular,118.25,67,14,30.0,85.0,18.0,Stockout Risk,Standard Replenishment Review
+22562,MONSTERS STENCIL CRAFT,Regular,110.0,55,14,22.0,73.0,18.0,Stockout Risk,Standard Replenishment Review
+23072,MARIE ANTOINETTE TRINKET BOX SILVER,Regular,37.42857142857143,12,14,13.0,30.0,18.0,Stockout Risk,Standard Replenishment Review
+23401,RUSTIC MIRROR WITH LACE HEART,Regular,101.33333333333331,17,7,11.0,35.0,18.0,Stockout Risk,Standard Replenishment Review
+84510C,SET OF 4 POLKADOT COASTERS,Regular,13.833333333333334,2,30,6.0,20.0,18.0,Stockout Risk,Standard Replenishment Review
+85131A,BEADED PEARL HEART WHITE ON STICK,Regular,83.0,68,21,28.0,86.0,18.0,Stockout Risk,Standard Replenishment Review
+21442,GREEN BIRDHOUSE DECORATION,Regular,24.75,18,30,10.0,35.0,17.0,Stockout Risk,Standard Replenishment Review
+21626,VINTAGE UNION JACK PENNANT,Regular,64.75,7,7,9.0,24.0,17.0,Stockout Risk,Standard Replenishment Review
+22449,SILK PURSE BABUSHKA PINK,Regular,40.416666666666664,23,21,12.0,40.0,17.0,Stockout Risk,Standard Replenishment Review
+22473,TV DINNER TRAY VINTAGE PAISLEY,Regular,38.416666666666664,28,21,18.0,45.0,17.0,Stockout Risk,Standard Replenishment Review
+22675,FRENCH KITCHEN SIGN BLUE METAL,Regular,96.16666666666669,15,7,10.0,32.0,17.0,Stockout Risk,Standard Replenishment Review
+22927,GREEN GIANT GARDEN THERMOMETER,Regular,35.416666666666664,33,30,15.0,50.0,17.0,Stockout Risk,Standard Replenishment Review
+23067,HANGING ENGRAVED METAL HEART,Regular,36.375,34,30,15.0,51.0,17.0,Stockout Risk,Standard Replenishment Review
+84912B,GREEN ROSE WASHBAG,Regular,26.416666666666668,18,30,9.0,35.0,17.0,Stockout Risk,Standard Replenishment Review
+85185B,PINK HORSE SOCK PUPPET,Regular,24.75,0,14,5.0,17.0,17.0,Stockout Risk,Standard Replenishment Review
+21564,PINK  HEART SHAPE LOVE BUCKET,Regular,37.083333333333336,9,14,8.0,25.0,16.0,Stockout Risk,Standard Replenishment Review
+22259,FELT FARM ANIMAL HEN,Regular,40.083333333333336,54,30,30.0,70.0,16.0,Stockout Risk,Standard Replenishment Review
+23524,WALL ART HORSE & PONY,Regular,221.0,53,7,17.0,69.0,16.0,Stockout Risk,Standard Replenishment Review
+23567,EGG CUP HENRIETTA HEN PINK,Regular,100.5,77,21,23.0,93.0,16.0,Stockout Risk,Standard Replenishment Review
+84969,BOX OF 6 ASSORTED COLOUR TEASPOONS,Regular,46.166666666666664,14,14,8.0,30.0,16.0,Stockout Risk,Standard Replenishment Review
+85032B,BLOSSOM IMAGES GIFT WRAP SET,Regular,60.75,23,14,11.0,39.0,16.0,Stockout Risk,Standard Replenishment Review
+22477,WATERING CAN GARDEN MARKER,Regular,113.08333333333331,113,21,49.0,128.0,15.0,Stockout Risk,Standard Replenishment Review
+22830,UTILTY CABINET WITH HOOKS,Regular,10.916666666666666,13,45,12.0,28.0,15.0,Stockout Risk,Standard Replenishment Review
+23113,PANTRY CHOPPING BOARD,Regular,67.66666666666667,30,14,13.0,45.0,15.0,Stockout Risk,Standard Replenishment Review
+75131,METAL TUBE CHIME ON BAMBOO,Regular,40.833333333333336,35,21,21.0,50.0,15.0,Stockout Risk,Standard Replenishment Review
+85130D,BEADED CRYSTAL HEART PINK LARGE,Regular,46.416666666666664,22,14,15.0,37.0,15.0,Stockout Risk,Standard Replenishment Review
+17084A,TRANQUILITY MASALA INCENSE,Regular,18.181818181818183,5,21,6.0,19.0,14.0,Stockout Risk,Standard Replenishment Review
+21107,CREAM SLICE FLANNEL PINK SPOT,Regular,55.0,44,21,20.0,58.0,14.0,Stockout Risk,Standard Replenishment Review
+21261,GREEN GOOSE FEATHER CHRISTMAS TREE,Regular,15.5,24,45,15.0,38.0,14.0,Stockout Risk,Standard Replenishment Review
+21264,WHITE GOOSE FEATHER TREE 60CM,Regular,22.166666666666668,3,14,7.0,17.0,14.0,Stockout Risk,Standard Replenishment Review
+22223,CAKE PLATE LOVEBIRD PINK,Regular,36.416666666666664,26,21,15.0,40.0,14.0,Stockout Risk,Standard Replenishment Review
+22291,HANGING CHICK CREAM DECORATION,Regular,105.41666666666669,100,21,40.0,114.0,14.0,Stockout Risk,Standard Replenishment Review
+22396,MAGNETS PACK OF 4 RETRO PHOTO,Regular,97.33333333333331,53,14,22.0,67.0,14.0,Stockout Risk,Standard Replenishment Review
+22747,POPPY'S PLAYHOUSE BATHROOM,Regular,77.75,94,30,30.0,108.0,14.0,Stockout Risk,Standard Replenishment Review
+22811,SET OF 6 T-LIGHTS CACTI,Regular,60.083333333333336,28,14,14.0,42.0,14.0,Stockout Risk,Standard Replenishment Review
+23055,IVORY CHANDELIER T-LIGHT HOLDER,Regular,40.125,16,14,11.0,30.0,14.0,Stockout Risk,Standard Replenishment Review
+81950B,FLOWER BLUE CLOCK WITH SUCKER,Regular,23.2,5,14,8.0,19.0,14.0,Stockout Risk,Standard Replenishment Review
+20866,BLUE ROSE FABRIC MIRROR,Regular,38.833333333333336,30,21,16.0,43.0,13.0,Stockout Risk,Standard Replenishment Review
+20893,HANGING BAUBLE T-LIGHT HOLDER SMALL,Regular,17.416666666666668,8,21,9.0,21.0,13.0,Stockout Risk,Standard Replenishment Review
+21114,LAVENDER SCENTED FABRIC HEART,Regular,110.08333333333331,55,14,17.0,68.0,13.0,Stockout Risk,Standard Replenishment Review
+21197,MULTICOLOUR  CONFETTI IN TUBE,Regular,22.666666666666668,12,21,9.0,25.0,13.0,Stockout Risk,Standard Replenishment Review
+21398,RED POLKADOT COFFEE  MUG,Regular,127.66666666666669,39,7,22.0,52.0,13.0,Stockout Risk,Standard Replenishment Review
+22052,VINTAGE CARAVAN GIFT WRAP,Regular,52.083333333333336,7,7,8.0,20.0,13.0,Stockout Risk,Standard Replenishment Review
+22736,RIBBON REEL MAKING SNOWMEN,Regular,97.0,58,14,26.0,71.0,13.0,Stockout Risk,Standard Replenishment Review
+23094,LE GRAND TRAY CHIC SET,Regular,21.571428571428573,1,14,4.0,14.0,13.0,Stockout Risk,Standard Replenishment Review
+23484,HEART TRELLIS TRIPLE T-LIGHT HOLDER,Regular,57.666666666666664,47,21,20.0,60.0,13.0,Stockout Risk,Standard Replenishment Review
+72819,CUPID DESIGN SCENTED CANDLES,Regular,13.416666666666666,1,21,5.0,14.0,13.0,Stockout Risk,Standard Replenishment Review
+20615,BLUE POLKADOT PASSPORT COVER,Regular,25.583333333333332,15,21,9.0,27.0,12.0,Stockout Risk,Standard Replenishment Review
+21109,LARGE CAKE TOWEL CHOCOLATE SPOTS,Regular,57.75,56,21,28.0,68.0,12.0,Stockout Risk,Standard Replenishment Review
+22533,MAGIC DRAWING SLATE BAKE A CAKE,Regular,146.0,93,14,37.0,105.0,12.0,Stockout Risk,Standard Replenishment Review
+22931,BAKING MOULD HEART WHITE CHOCOLATE,Regular,66.5,13,7,9.0,25.0,12.0,Stockout Risk,Standard Replenishment Review
+23099,FRENCH CARRIAGE LANTERN,Regular,17.428571428571427,5,21,5.0,17.0,12.0,Stockout Risk,Standard Replenishment Review
+37482P,CUBIC MUG PINK POLKADOT,Regular,41.166666666666664,21,14,14.0,33.0,12.0,Stockout Risk,Standard Replenishment Review
+79191B,RETRO PLASTIC POLKA TRAY,Regular,11.083333333333334,4,30,5.0,16.0,12.0,Stockout Risk,Standard Replenishment Review
+85208,SET/12 FUNKY FELT FLOWER PEG IN BAG,Regular,18.583333333333332,33,45,17.0,45.0,12.0,Stockout Risk,Standard Replenishment Review
+21205,MULTICOLOUR 3D BALLS GARLAND,Regular,20.0,9,21,6.0,20.0,11.0,Stockout Risk,Standard Replenishment Review
+21625,VINTAGE UNION JACK APRON,Regular,33.333333333333336,0,7,3.0,11.0,11.0,Stockout Risk,Standard Replenishment Review
+21651,HANGING GLASS ETCHED TEALIGHT,Regular,10.583333333333334,17,45,12.0,28.0,11.0,Stockout Risk,Standard Replenishment Review
+22106,MIRROR MOSAIC HURRICANE LAMP,Regular,18.333333333333332,4,14,6.0,15.0,11.0,Stockout Risk,Standard Replenishment Review
+22251,BIRDHOUSE DECORATION MAGIC GARDEN,Regular,59.083333333333336,78,30,30.0,89.0,11.0,Stockout Risk,Standard Replenishment Review
+22671,FRENCH LAUNDRY SIGN BLUE METAL,Regular,79.08333333333333,16,7,9.0,27.0,11.0,Stockout Risk,Standard Replenishment Review
+23181,BULL DOG BOTTLE TOP WALL CLOCK,Regular,21.22222222222222,17,30,7.0,28.0,11.0,Stockout Risk,Standard Replenishment Review
+23475,WOODLAND SMALL PINK FELT HEART,Regular,124.0,33,7,15.0,44.0,11.0,Stockout Risk,Standard Replenishment Review
+84952B,BLACK LOVE BIRD T-LIGHT HOLDER,Regular,15.166666666666666,15,30,11.0,26.0,11.0,Stockout Risk,Standard Replenishment Review
+85104,SILVER GLASS T-LIGHT SET,Regular,15.583333333333334,8,21,8.0,19.0,11.0,Stockout Risk,Standard Replenishment Review
+85132A,CHARLIE + LOLA BISCUITS TINS,Regular,46.083333333333336,27,14,16.0,38.0,11.0,Stockout Risk,Standard Replenishment Review
+16033,MINI HIGHLIGHTER PENS,Regular,70.0,76,21,37.0,86.0,10.0,Stockout Risk,Standard Replenishment Review
+20771,CHRYSANTHEMUM  JOURNAL,Regular,8.333333333333334,2,30,4.0,12.0,10.0,Stockout Risk,Standard Replenishment Review
+22181,SNOWSTORM PHOTO FRAME FRIDGE MAGNET,Regular,47.25,59,30,22.0,69.0,10.0,Stockout Risk,Standard Replenishment Review
+22762,CUPBOARD 3 DRAWER MA CAMPAGNE,Regular,12.583333333333334,16,45,7.0,26.0,10.0,Stockout Risk,Standard Replenishment Review
+23226,FILIGREE HEART DAISY WHITE,Regular,166.42857142857142,100,14,32.0,110.0,10.0,Stockout Risk,Standard Replenishment Review
+23408,PHOTO FRAME LINEN AND LACE SMALL,Regular,95.0,20,7,8.0,30.0,10.0,Stockout Risk,Standard Replenishment Review
+35954,SMALL FOLKART STAR CHRISTMAS DEC,Regular,103.75,70,14,32.0,80.0,10.0,Stockout Risk,Standard Replenishment Review
+72802B,OCEAN SCENT CANDLE IN JEWELLED BOX,Regular,52.5,30,14,16.0,40.0,10.0,Stockout Risk,Standard Replenishment Review
+84422,PINK/BLUE DISC/MIRROR STRING,Regular,47.166666666666664,72,30,35.0,82.0,10.0,Stockout Risk,Standard Replenishment Review
+85173,SET/6 FROG PRINCE T-LIGHT CANDLES,Regular,36.25,15,14,8.0,25.0,10.0,Stockout Risk,Standard Replenishment Review
+20652,BLUE POLKADOT LUGGAGE TAG,Regular,21.916666666666668,14,21,8.0,23.0,9.0,Stockout Risk,Standard Replenishment Review
+21112,"SWISS ROLL TOWEL, PINK  SPOTS",Regular,113.16666666666669,74,14,30.0,83.0,9.0,Stockout Risk,Standard Replenishment Review
+21249,WOODLAND  HEIGHT CHART STICKERS,Regular,59.583333333333336,11,7,6.0,20.0,9.0,Stockout Risk,Standard Replenishment Review
+22923,FRIDGE MAGNETS LES ENFANTS ASSORTED,Regular,88.83333333333333,21,7,9.0,30.0,9.0,Stockout Risk,Standard Replenishment Review
+23022,SMALL BONNE JAM JAR  T-LIGHT HOLDER,Regular,59.166666666666664,30,14,11.0,39.0,9.0,Stockout Risk,Standard Replenishment Review
+23272,TREE T-LIGHT HOLDER WILLIE WINKIE,Regular,47.666666666666664,58,30,19.0,67.0,9.0,Stockout Risk,Standard Replenishment Review
+23392,SPACEBOY ROCKET LOLLY MAKERS,Regular,203.66666666666663,52,7,13.0,61.0,9.0,Stockout Risk,Standard Replenishment Review
+23447,PINK BUNNY EASTER EGG BASKET,Regular,7.0,7,45,6.0,16.0,9.0,Stockout Risk,Standard Replenishment Review
+47469,ASSORTED SHAPES PHOTO CLIP SILVER,Regular,42.45454545454545,26,14,15.0,35.0,9.0,Stockout Risk,Standard Replenishment Review
+84459A,PINK METAL CHICKEN HEART,Regular,56.666666666666664,34,14,17.0,43.0,9.0,Stockout Risk,Standard Replenishment Review
+84535A,ENGLISH ROSE NOTEBOOK A6 SIZE,Regular,44.333333333333336,28,14,16.0,37.0,9.0,Stockout Risk,Standard Replenishment Review
+84596E,SMALL LICORICE DES PINK BOWL,Regular,47.833333333333336,27,14,14.0,36.0,9.0,Stockout Risk,Standard Replenishment Review
+85017B,ENVELOPE 50 BLOSSOM IMAGES,Regular,88.75,21,7,9.0,30.0,9.0,Stockout Risk,Standard Replenishment Review
+85019A,ROMANTIC IMAGES NOTEBOOK SET,Regular,32.333333333333336,12,14,6.0,21.0,9.0,Stockout Risk,Standard Replenishment Review
+20659,ECONOMY LUGGAGE TAG,Regular,12.0,17,45,7.0,25.0,8.0,Stockout Risk,Standard Replenishment Review
+21327,SKULLS WRITING SET,Regular,69.58333333333333,15,7,7.0,23.0,8.0,Stockout Risk,Standard Replenishment Review
+22247,BUNNY DECORATION MAGIC GARDEN,Regular,55.666666666666664,83,30,35.0,91.0,8.0,Stockout Risk,Standard Replenishment Review
+22248,DECORATION  PINK CHICK MAGIC GARDEN,Regular,48.0,69,30,29.0,77.0,8.0,Stockout Risk,Standard Replenishment Review
+22318,FIVE HEART HANGING DECORATION,Regular,37.666666666666664,28,21,10.0,36.0,8.0,Stockout Risk,Standard Replenishment Review
+22913,RED COAT RACK PARIS FASHION,Regular,28.916666666666668,23,21,11.0,31.0,8.0,Stockout Risk,Standard Replenishment Review
+23479,WIRE EGG BASKET,Regular,52.5,44,21,15.0,52.0,8.0,Stockout Risk,Standard Replenishment Review
+72816,SET/3 CHRISTMAS DECOUPAGE CANDLES,Regular,72.33333333333333,118,30,54.0,126.0,8.0,Stockout Risk,Standard Replenishment Review
+16236,KITTY PENCIL ERASERS,Regular,116.0,70,14,23.0,77.0,7.0,Stockout Risk,Standard Replenishment Review
+21219,SET/4 BADGES BALLOON GIRL,Regular,36.916666666666664,30,21,11.0,37.0,7.0,Stockout Risk,Standard Replenishment Review
+21348,PINK SPOTS CHOCOLATE NESTING BOXES,Regular,11.666666666666666,23,45,13.0,30.0,7.0,Stockout Risk,Standard Replenishment Review
+21354,TOAST ITS - BEST MUM,Regular,64.58333333333333,15,7,7.0,22.0,7.0,Stockout Risk,Standard Replenishment Review
+21422,PORCELAIN ROSE SMALL,Regular,133.91666666666666,41,7,17.0,48.0,7.0,Stockout Risk,Standard Replenishment Review
+21555,CERAMIC STRAWBERRY TRINKET TRAY,Regular,11.083333333333334,5,21,4.0,12.0,7.0,Stockout Risk,Standard Replenishment Review
+21706,FOLDING UMBRELLA RED/WHITE POLKADOT,Regular,28.083333333333332,12,14,6.0,19.0,7.0,Stockout Risk,Standard Replenishment Review
+21788,KIDS RAIN MAC BLUE,Regular,103.75,27,7,10.0,34.0,7.0,Stockout Risk,Standard Replenishment Review
+22075,6 RIBBONS ELEGANT CHRISTMAS,Regular,104.16666666666669,32,7,15.0,39.0,7.0,Stockout Risk,Standard Replenishment Review
+22085,PAPER CHAIN KIT SKULLS,Regular,44.75,23,14,9.0,30.0,7.0,Stockout Risk,Standard Replenishment Review
+22288,HANGING METAL RABBIT DECORATION,Regular,39.333333333333336,59,30,27.0,66.0,7.0,Stockout Risk,Standard Replenishment Review
+22315,200 RED + WHITE BENDY STRAWS,Regular,76.08333333333333,98,30,29.0,105.0,7.0,Stockout Risk,Standard Replenishment Review
+23523,WALL ART TREASURE AHOY,Regular,170.0,52,7,19.0,59.0,7.0,Stockout Risk,Standard Replenishment Review
+47504H,ENGLISH ROSE SPIRIT LEVEL,Regular,73.08333333333333,73,21,29.0,80.0,7.0,Stockout Risk,Standard Replenishment Review
+71038,WHITE HANGING BEADS CANDLE HOLDER,Regular,19.5,5,14,3.0,12.0,7.0,Stockout Risk,Standard Replenishment Review
+84584,PINK GINGHAM CAT WITH SCARF,Regular,12.0,2,14,3.0,9.0,7.0,Stockout Risk,Standard Replenishment Review
+85049D,BRIGHT BLUES RIBBONS,Regular,45.75,41,21,16.0,48.0,7.0,Stockout Risk,Standard Replenishment Review
+21071,VINTAGE BILLBOARD DRINK ME MUG,Regular,82.08333333333333,50,14,18.0,56.0,6.0,Stockout Risk,Standard Replenishment Review
+21801,CHRISTMAS TREE DECORATION WITH BELL,Regular,101.25,72,14,31.0,78.0,6.0,Stockout Risk,Standard Replenishment Review
+22310,IVORY KNITTED MUG COSY,Regular,54.5,34,14,15.0,40.0,6.0,Stockout Risk,Standard Replenishment Review
+22459,CAST IRON HOOK GARDEN TROWEL,Regular,32.166666666666664,20,14,11.0,26.0,6.0,Stockout Risk,Standard Replenishment Review
+22541,MINI JIGSAW LEAP FROG,Regular,41.333333333333336,10,7,6.0,16.0,6.0,Stockout Risk,Standard Replenishment Review
+22592,CARDHOLDER HOLLY WREATH METAL,Regular,49.166666666666664,51,21,23.0,57.0,6.0,Stockout Risk,Standard Replenishment Review
+84459B,YELLOW METAL CHICKEN HEART,Regular,60.083333333333336,40,14,18.0,46.0,6.0,Stockout Risk,Standard Replenishment Review
+84559A,3D SHEET OF DOG STICKERS,Regular,34.666666666666664,43,30,14.0,49.0,6.0,Stockout Risk,Standard Replenishment Review
+85144,JARDIN ETCHED GLASS CHEESE DISH,Regular,18.333333333333332,42,45,21.0,48.0,6.0,Stockout Risk,Standard Replenishment Review
+90057,DIAMANTE RING ASSORTED IN BOX.,Regular,80.0,88,21,38.0,94.0,6.0,Stockout Risk,Standard Replenishment Review
+21190,PINK HEARTS PAPER GARLAND,Regular,9.833333333333334,7,21,5.0,12.0,5.0,Stockout Risk,Standard Replenishment Review
+21457,2 PICTURE BOOK EGGS EASTER DUCKS,Regular,11.272727272727272,13,30,7.0,18.0,5.0,Stockout Risk,Standard Replenishment Review
+22051,BLUE SCANDINAVIAN PAISLEY WRAP,Regular,81.25,72,21,20.0,77.0,5.0,Stockout Risk,Standard Replenishment Review
+22686,FRENCH BLUE METAL DOOR SIGN NO,Regular,71.5,101,30,34.0,106.0,5.0,Stockout Risk,Standard Replenishment Review
+23064,CINDERELLA CHANDELIER,Regular,19.75,19,21,10.0,24.0,5.0,Stockout Risk,Standard Replenishment Review
+23406,HOME SWEET HOME KEY HOLDER,Regular,147.0,42,7,13.0,47.0,5.0,Stockout Risk,Standard Replenishment Review
+85086A,CANDY SPOT HEART DECORATION,Regular,12.166666666666666,5,14,4.0,10.0,5.0,Stockout Risk,Standard Replenishment Review
+85141,JARDIN ETCHED GLASS FRUITBOWL,Regular,9.666666666666666,3,14,3.0,8.0,5.0,Stockout Risk,Standard Replenishment Review
+21200,MULTICOLOUR HONEYCOMB PAPER GARLAND,Regular,92.75,96,21,35.0,100.0,4.0,Stockout Risk,Standard Replenishment Review
+21813,GARLAND WITH STARS AND BELLS,Regular,39.0,60,30,25.0,64.0,4.0,Stockout Risk,Standard Replenishment Review
+22203,MILK PAN RED RETROSPOT,Regular,27.25,13,14,4.0,17.0,4.0,Stockout Risk,Standard Replenishment Review
+22281,EASTER TREE YELLOW BIRDS,Regular,10.833333333333334,14,30,7.0,18.0,4.0,Stockout Risk,Standard Replenishment Review
+44234,ASSORTED CIRCULAR MOBILE,Regular,57.416666666666664,19,7,10.0,23.0,4.0,Stockout Risk,Standard Replenishment Review
+79063C,"RETRO PILL BOX KEY CHAIN,THE KING",Regular,26.0,15,14,7.0,19.0,4.0,Stockout Risk,Standard Replenishment Review
+85034A,3 GARDENIA MORRIS BOXED CANDLES,Regular,41.75,47,21,22.0,51.0,4.0,Stockout Risk,Standard Replenishment Review
+85130C,BEADED CRYSTAL HEART BLUE  LARGE,Regular,43.09090909090909,45,21,19.0,49.0,4.0,Stockout Risk,Standard Replenishment Review
+18094C,WHITE AND BLUE CERAMIC OIL BURNER,Regular,16.0,8,14,4.0,11.0,3.0,Stockout Risk,Standard Replenishment Review
+20846,ZINC HEART LATTICE T-LIGHT HOLDER,Regular,56.0,35,14,12.0,38.0,3.0,Stockout Risk,Standard Replenishment Review
+22277,COSMETIC BAG VINTAGE ROSE PAISLEY,Regular,33.666666666666664,48,30,17.0,51.0,3.0,Stockout Risk,Standard Replenishment Review
+22322,BIRD DECORATION GREEN POLKADOT,Regular,67.33333333333333,102,30,38.0,105.0,3.0,Stockout Risk,Standard Replenishment Review
+22331,WOODLAND PARTY BAG + STICKER SET,Regular,151.75,97,14,29.0,100.0,3.0,Stockout Risk,Standard Replenishment Review
+22341,LOVE GARLAND PAINTED ZINC,Regular,37.333333333333336,77,45,24.0,80.0,3.0,Stockout Risk,Standard Replenishment Review
+22362,GLASS JAR PEACOCK BATH SALTS,Regular,33.583333333333336,21,14,8.0,24.0,3.0,Stockout Risk,Standard Replenishment Review
+22438,BALLOON ART MAKE YOUR OWN FLOWERS,Regular,34.333333333333336,32,21,11.0,35.0,3.0,Stockout Risk,Standard Replenishment Review
+22581,WOOD STOCKING CHRISTMAS SCANDISPOT,Regular,99.91666666666669,114,21,47.0,117.0,3.0,Stockout Risk,Standard Replenishment Review
+22928,YELLOW GIANT GARDEN THERMOMETER,Regular,22.833333333333332,5,7,3.0,8.0,3.0,Stockout Risk,Standard Replenishment Review
+23023,RIDGED BONNE JAM JAR T-LIGHT HOLDER,Regular,44.666666666666664,26,14,8.0,29.0,3.0,Stockout Risk,Standard Replenishment Review
+84625A,PINK NEW BAROQUECANDLESTICK CANDLE,Regular,37.833333333333336,23,14,8.0,26.0,3.0,Stockout Risk,Standard Replenishment Review
+85049G,CHOCOLATE BOX RIBBONS,Regular,137.25,86,14,25.0,89.0,3.0,Stockout Risk,Standard Replenishment Review
+21066,VINTAGE RED MUG,Regular,58.416666666666664,22,7,10.0,24.0,2.0,Stockout Risk,Standard Replenishment Review
+22070,SMALL RED RETROSPOT MUG IN BOX,Regular,53.833333333333336,37,14,14.0,39.0,2.0,Stockout Risk,Standard Replenishment Review
+22116,METAL SIGN HIS DINNER IS SERVED,Regular,45.833333333333336,45,21,15.0,47.0,2.0,Stockout Risk,Standard Replenishment Review
+22582,PACK OF 6 SWEETIE GIFT BOXES,Regular,86.66666666666667,60,14,22.0,62.0,2.0,Stockout Risk,Standard Replenishment Review
+22758,LARGE PURPLE BABUSHKA NOTEBOOK,Regular,54.833333333333336,75,30,22.0,77.0,2.0,Stockout Risk,Standard Replenishment Review
+22863,SOAP DISH BROCANTE,Regular,58.166666666666664,57,21,18.0,59.0,2.0,Stockout Risk,Standard Replenishment Review
+23183,MOTHER'S KITCHEN SPOON REST,Regular,23.77777777777778,22,21,7.0,24.0,2.0,Stockout Risk,Standard Replenishment Review
+23413,VINTAGE COFFEE GRINDER BOX,Regular,48.0,43,21,11.0,45.0,2.0,Stockout Risk,Standard Replenishment Review
+72349B,SET/6 PURPLE BUTTERFLY T-LIGHTS,Regular,67.83333333333333,98,30,32.0,100.0,2.0,Stockout Risk,Standard Replenishment Review
+79067,CORONA MEXICAN TRAY,Regular,14.333333333333334,4,7,3.0,6.0,2.0,Stockout Risk,Standard Replenishment Review
+84927F,PSYCHEDELIC TILE HOOK,Regular,23.25,55,45,22.0,57.0,2.0,Stockout Risk,Standard Replenishment Review
+85039C,S/4 BLACK MINI ROSE CANDLE IN BOWL,Regular,25.25,28,21,12.0,30.0,2.0,Stockout Risk,Standard Replenishment Review
+21025,SPACE FROG,Regular,14.166666666666666,14,21,5.0,15.0,1.0,Stockout Risk,Standard Replenishment Review
+21468,BUTTERFLY CROCHET FOOD COVER,Regular,12.333333333333334,8,14,3.0,9.0,1.0,Stockout Risk,Standard Replenishment Review
+21826,EIGHT PIECE DINOSAUR SET,Regular,10.416666666666666,3,7,2.0,4.0,1.0,Stockout Risk,Standard Replenishment Review
+21926,RED/CREAM STRIPE CUSHION COVER,Regular,35.81818181818182,34,21,10.0,35.0,1.0,Stockout Risk,Standard Replenishment Review
+22095,LADS ONLY TISSUE BOX,Regular,123.91666666666669,89,14,32.0,90.0,1.0,Stockout Risk,Standard Replenishment Review
+22216,T-LIGHT HOLDER WHITE LACE,Regular,33.166666666666664,22,14,8.0,23.0,1.0,Stockout Risk,Standard Replenishment Review
+23411,TRELLIS COAT RACK,Regular,73.33333333333333,47,14,14.0,48.0,1.0,Stockout Risk,Standard Replenishment Review
+23433,HANGING QUILTED PATCHWORK APPLES,Regular,298.5,101,7,32.0,102.0,1.0,Stockout Risk,Standard Replenishment Review
+47594A,CAROUSEL DESIGN WASHBAG,Regular,8.916666666666666,9,21,4.0,10.0,1.0,Stockout Risk,Standard Replenishment Review
+75011,BLUE DAISY MOBILE,Regular,14.333333333333334,10,14,4.0,11.0,1.0,Stockout Risk,Standard Replenishment Review
+82613D,METAL SIGN CUPCAKE SINGLE HOOK,Regular,57.916666666666664,23,7,10.0,24.0,1.0,Stockout Risk,Standard Replenishment Review
+84457,SET/3 RABBITS FLOWER SKIPPPING ROPE,Regular,10.5,25,45,10.0,26.0,1.0,Stockout Risk,Standard Replenishment Review
