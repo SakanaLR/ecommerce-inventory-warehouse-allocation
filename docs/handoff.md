@@ -1,8 +1,80 @@
 # 本轮交接
 
-状态：本轮（实施 R1/T1/T2/E1，`audit/model-assumptions` 分支）Claude 实施已完成，等待 Codex 最终验收。模型假设诊断 + Codex 独立复核、以及更早的 R1–R8 实施 + Codex 验收（已提交 `50ce335`）记录完整保留在下方"历史交接"部分。
+状态：本轮（交付基线收口与自动化验证，`audit/model-assumptions` 分支，HEAD `bfdc558`）Claude 实施和 Codex 定向验收均已完成；本轮修改仍未提交、未 push。R1/T1/T2/E1 实施 + Codex 验收强化（已提交 `bfdc558`）、模型假设诊断 + Codex 独立复核、以及更早的 R1–R8 实施 + Codex 验收（已提交 `50ce335`）记录完整保留在下方"历史交接"部分。
 
-## 本轮交接：实施 R1/T1/T2/E1（模型假设诊断的复核后方案）
+## 本轮交接：交付基线收口与自动化验证
+
+### Git 状态
+
+- 分支：`audit/model-assumptions`（延续，未新建分支）。起点：`bfdc5586f751f6e9d43063e642a7dd6b6f336018`（上一轮 Codex 验收强化后的提交，父提交 `50ce335`）。本轮全程未 commit，HEAD 未变化；未 push（`git status -sb` 无上游 ahead/behind 信息）。
+- 开始前重新核实：`git status --short` 为空（工作区干净），与用户告知的预期状态一致——已实际执行 `git status`/`git branch --show-current`/`git rev-parse HEAD`/`git log --oneline -8` 核实，未直接采信用户转述。
+- **基线测试数字有出入，已发现并如实记录（见下）**：用户告知"127 passed、0 skipped"，但本轮开始时实际运行得到 **126 passed, 1 failed**。已定位根因并修正，修正后确认 127 passed, 0 skipped——过程见"验证证据"表格第一行。
+- 本轮由本会话单独实施，未启动其他并行修改会话。
+- 是否已 commit / push：否。
+
+### 完成内容
+
+| 文件 | 修改内容与理由 |
+| --- | --- |
+| `tests/test_model_assumptions_diagnostics.py` | 修正 `test_cli_scenarios_are_independent_deterministic_and_described` 里 `assert metadata['code']['untracked_file_sha256']` 这一断言——该字段在工作区没有未跟踪文件时合法地是 `{}`，而全新 CI 检出**永远**没有未跟踪文件，这条断言会在 CI 上必定失败。改为 `assert isinstance(..., dict)`，只检查字段类型，不检查是否非空；诊断脚本本身未改。 |
+| `docs/current_task.md` | 顶部改为"交付基线收口与自动化验证"，记录新基线（`bfdc558`）、发现的测试断言问题及修正过程；原"实施 R1/T1/T2/E1"任务书整体移入历史背景 5。 |
+| `.github/workflows/tests.yml`（新建） | Python 3.11；全新检出后 `pip install -r requirements-dev.txt`（走 pip 缓存）；运行 `python -m pytest -W error -ra --junitxml=pytest-results.xml`，读取 JUnit XML 的 skipped 计数，非 0 即失败；设置最小 `contents: read` 权限。不引入发布/打包流程。 |
+| `requirements.txt` | 由完全不锁版本改为只设下限：仅保留代码实际导入的 `pandas>=2.2.3`、`numpy>=1.26.0`、`openpyxl>=3.1.0`。**移除了 `matplotlib`**——grep 全仓库（`src/`、`scripts/`、`notebooks/`）后确认没有任何地方导入或使用它。 |
+| `requirements-dev.txt` | 单独包含 notebook 执行所需的 `jupyter>=1.0.0`、`ipykernel>=6.29.0`、`nbconvert>=7.16.0`，以及 `pytest>=8.0.0`（下限已验证；移除没有独立依据的任意 `<10` 上限，让未来不兼容在严格 CI 中显式失败）。 |
+| `README.md` | 新增"License"小节，如实说明代码目前没有许可证文件（默认保留所有权利），选择许可证是仓库所有者的决定，本轮未替用户选择；"Data Source"下新增数据集许可与引用说明（CC BY 4.0，创建者 Daqing Chen，DOI 10.24432/C5BW33），经 `WebFetch` 直接访问 UCI 页面核实，不是凭记忆断言。 |
+| `CITATION.cff`（新建） | 记录实际仓库 URL；使用非个人占位作者 `Repository maintainers`，不把本地 Git 用户名当作已确认身份；数据集引用条目的文字取自 UCI 页面原文；未设置 `license` 字段（因为代码本身没有许可证，不虚构一个）；未设置 `date-released`/`version`（因为没有正式发布/打标签）。 |
+| `docs/pr_delivery.md`（新建） | 问题、最终行为、五个主要阶段、验证证据表格、已知限制（含"库存/成本/交期/服务水平仍是演示/待校准参数"的明确声明）、审查建议（含"许可证选择留给用户决定""是否精简过程性交接文档"两项明确留给用户的问题）。 |
+| `CHANGELOG.md` | 新增两条 `Unreleased` 记录（置于文件最前）：一条覆盖模型假设诊断/独立复核/R1-T1-T2-E1 实施/Codex 验收强化（`bfdc558`）——此前完全没有被记录过；一条覆盖本轮的 CI/依赖/许可/测试断言修正工作。历史记录未改动。 |
+
+### 验证证据
+
+| 时间与环境 | 实际命令 | 结果 |
+| --- | --- | --- |
+| 2026-09-18，项目 `.venv`（Python 3.11.5, pandas 3.0.3, numpy 2.4.6, pytest 9.1.1） | `source .venv/bin/activate && python -m pytest -W error -ra` | **首次运行：126 passed, 1 failed**（上述 `untracked_file_sha256` 断言）。定位根因、修正断言后重新运行：**127 passed, 0 skipped**。 |
+| 同上 | 全新克隆等价环境：`rsync` 当前工作树（含未提交改动，排除 `.venv`/`.git`/缓存）到 `/tmp/ci_equivalent_check`，该目录内 `git init` 提交一次快照，模拟"全新检出"；另建全新 venv `/tmp/fresh_ci_venv`，`pip install -r requirements-dev.txt` | 安装成功，得到 Python 3.11.5, pandas 3.0.6, numpy 2.4.6, openpyxl 3.1.5, pytest 9.1.1, nbconvert 7.17.1（pip 在无上限约束下选择的最新兼容版本）；`python -m pytest -W error -ra` → **127 passed, 0 skipped**；后续 workflow 改用 JUnit XML 读取 skipped 计数。 |
+| 同上 | 另建全新 venv，精确安装依赖下限版本：`pandas==2.2.0` 先失败（触发 pandas 自身在缺 pyarrow 时的 `DeprecationWarning`，被 `-W error` 转成硬错误），改用 `pandas==2.2.3`、`numpy==1.26.0`、`openpyxl==3.1.0`、`pytest==8.0.0` 重装 | **127 passed, 0 skipped**——这是 `requirements.txt` 里下限版本号的直接依据，不是猜测；同时记录了"2.2.0 在无 pyarrow 时会因这条警告直接失败"这一发现，作为选择 2.2.3 而非 2.2.0 作为下限的理由。 |
+| 同上 | `git diff --check` | 通过，无空白符问题。 |
+| 同上 | `git status --short`（Claude 交接时） | 仅 `CHANGELOG.md`、`README.md`、`docs/current_task.md`、`requirements-dev.txt`、`requirements.txt`、`tests/test_model_assumptions_diagnostics.py` 为修改，`.github/`、`CITATION.cff`、`docs/pr_delivery.md` 为新增；`config/`、`outputs/`、`data/`、`notebooks/`、`reports/` 均未出现在差异中——确认正式文件与历史基线报告未被改写。Codex 随后仅修改本轮 CI、依赖和交接文档范围。 |
+| 同上 | `WebFetch` 访问 `https://archive.ics.uci.edu/dataset/352/online+retail` | 确认 CC BY 4.0 许可、创建者 Daqing Chen（London South Bank University）、引用文本 "Chen, D. (2015). Online Retail [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5BW33."，捐赠日期 2015-11-05。 |
+
+- **关键数据与比较基线：** 本轮所有验证均以 `bfdc558` 为起点；测试基线的"127 passed, 0 skipped"是修正断言之后的结果，不是原样照抄用户告知的数字。
+- **未执行的验证及原因：**
+  - 未对 `jupyter`/`ipykernel`/`nbconvert` 的下限版本做同等的干净环境安装验证——这三者只被 notebook 执行使用，不在 `pytest` 覆盖范围内，验证它们需要额外跑一遍 `verify_pipeline.sh` 级别的 notebook 执行，超出"CI 和复现性"这一本轮范围的性价比；已在 `requirements.txt` 注释和本文件里明确标注这个区别，不假装做过同等严格的验证。
+  - 未实施业务参数校准（B1），未重新讨论短窗口保守策略（B2/D1）——按用户指令排除在本轮之外，`docs/model_assumptions_plan.md` 的相关章节原样保留待用户决定。
+  - 未选择代码许可证——按用户明确指令不擅自选择，只如实记录现状并在 `docs/pr_delivery.md` 里列为需要用户决定的审查项。
+  - 未 push、未创建 PR——按用户指令止步于本地交接。
+- **已知问题与后续事项：**
+  - 全部记录在 `docs/pr_delivery.md`"已知限制"与"审查建议"两节：库存/成本/交期/服务水平参数待业务校准；`jupyter`/`ipykernel`/`nbconvert` 下限未同等验证；代码许可证待用户选择；是否精简过程性交接文档待用户决定。
+- **已停止修改，可以交给 Codex：** 是。本轮到此为止未再修改任何业务代码、notebook、正式配置或正式输出；本文件更新完成后不再变更。
+
+## Codex 定向验收（本轮修正后）
+
+Claude 的交付记录保留在上方。本节记录 Codex 对 CI、依赖、引用和交付状态的独立复核与修正。
+
+### 修正
+
+- `.github/workflows/tests.yml` 不再解析易变的 pytest 终端文本；pytest 生成 `pytest-results.xml`，后续 Python 标准库 XML 解析器读取所有 `testsuite` 的 `skipped` 计数，非零即退出失败。workflow 声明最小 `permissions: contents: read`，checkout/setup-python 使用固定 major 版本，pip 缓存同时依赖 `requirements.txt` 和 `requirements-dev.txt`。
+- 移除 `pytest<10`：项目实际验证了 8.0.0 和 9.1.1，但没有支持任意上限的证据；未来不兼容应由严格 CI 暴露。
+- `CITATION.cff` 不再把未经维护者确认的本地 Git 用户名当作仓库作者；改用 CFF schema 要求的非个人占位作者 `Repository maintainers`，并保留稳定仓库 URL 和已核实的 UCI 数据集引用。数据集 CC BY 4.0 仅适用于数据，不延伸到无 LICENSE 的仓库代码。
+
+### 实际验证
+
+| 验证 | 结果 |
+| --- | --- |
+| Python 3.11.5 全新隔离环境，安装 `pandas==2.2.3`、`numpy==1.26.0`、`openpyxl==3.1.0`、`pytest==8.0.0` 及声明的 Jupyter/nbconvert 依赖 | 安装成功；实际版本为 pandas 2.2.3、NumPy 1.26.0、openpyxl 3.1.0、pytest 8.0.0、jupyter 1.1.1、ipykernel 7.3.0、nbconvert 7.17.1；`pip check` 通过。 |
+| 隔离最低依赖环境运行 `python -m pytest -W error -ra --junitxml=...` | **127 passed，0 skipped**；JUnit XML 解析得到 skipped=0。 |
+| 项目 `.venv`（Python 3.11.5）运行同一严格测试 | **127 passed，0 skipped**。 |
+| workflow YAML 与 CFF | YAML 可解析，权限为 `contents: read`；CFF 可解析，未包含私人邮箱或未经确认的个人作者字段。 |
+| 正式文件和变更边界 | `config/`、`data/`、`notebooks/`、`outputs/`、历史报告未出现在 diff；无新增大文件或拟提交路径符号链接；`git diff --check` 通过。 |
+
+### 未解决事项
+
+- GitHub Actions 尚未在远端运行；当前只能验证 workflow YAML、命令和等价本地环境，不能声称 CI 已绿。
+- Jupyter/nbconvert 最低版本已完成安装兼容性检查，但本轮按要求没有重跑 notebook；其最低版本未以 notebook 执行作为验收证据。
+- 业务参数仍是演示/待校准参数；代码许可证仍待维护者决定。本轮未修改业务公式、配置、notebook 或正式输出。
+- 工作区本轮修改尚未提交、未 push，当前可进入提交准备。
+
+## 历史交接：实施 R1/T1/T2/E1（模型假设诊断的复核后方案）
 
 ### Git 状态
 
@@ -41,6 +113,31 @@
   - 未修改 `docs/management_summary.md`/`README.md`——本轮 R1 的范围经用户信息聚焦于 runbook 的有效超储阈值定义纠正和参数校准状态标注；`docs/model_assumptions_plan.md` §3 提到的 README/management_summary 更新留待用户确认是否需要在下一轮一并处理（这两份文档目前没有与 runbook 相同的错误定义，只是不如 runbook 详细）。
 - **已知问题与后续事项：** 无本轮新发现的业务代码缺陷（T1/T2 的边界测试全部通过，未发现违反既有合同的实际输出）。剩余事项与上一轮 Codex 方案一致：是否进入 B1 业务校准、是否重开 B2/D1，均待用户决定。
 - **已停止修改，可以交给 Codex：** 是。本轮到此为止未再修改任何业务代码、notebook、正式配置或正式输出；本文件更新完成后不再变更。
+
+### Codex 验收强化（实施 R1/T1/T2/E1 之后，提交 `bfdc558`）
+
+本节是对上方 Claude 原始交接的独立补充；原始记录保留，不以其中较早的测试数量替代本节结果。分支仍为 `audit/model-assumptions`，HEAD 仍为 `50ce335c2d5c8f20bbecc1e9eeae44745b076879`，未 commit、未 push。
+
+#### 本轮修正
+
+- 补强 R1 入口：README、管理层摘要和历史审计报告的 MA-04 原文旁均明确链接复核结论；保留历史数字，但说明 69.3% 只回答固定库存实验 A 的分类敏感性，不是误报比例。同步说明 CV 的定义、3 个月边界、短历史局限、£25 的单位和九场景资金敞口。
+- T1/T2 修正了原本不触发上限的边界样例，并增加独立手算的需求统计→安全库存→再订货点断言、覆盖阈值严格边界和非整数 EOQ 上限边界。
+- E1 诊断工具拒绝未知/重复场景和非兼容配置，拒绝已存在目录及其符号链接别名，采用临时目录原子发布并检查输入是否在运行中改变；元数据现在包含暂存 diff、未跟踪文件内容、源文件哈希、实际配置和比较容差。补充了保护、失败路径、确定性和种子覆盖测试。
+
+#### 实际验证
+
+| 验证 | 结果 |
+| --- | --- |
+| `.venv/bin/python -m pytest -W error -ra` | **127 passed, 0 skipped**。 |
+| E1 真实 CLI 两次运行，真实 `outputs/sku_inventory_simulation.csv` 与 live config，A/B + 1a–5 全部场景 | 两次 `scenario_summary.csv`、`field_change_counts.csv` 和风险转移结果逐字节一致；A 的库存变化为 0，B 的库存变化为 2,171。 |
+| 独立结果对比 | 基线、A/B 和九场景的数量、金额、推荐量、封顶数及风险转移与独立复核 CSV 全部一致；按每 SKU 先取到便士再汇总，浮点中间值使用 `rtol=1e-12, atol=1e-9`。 |
+| 变异验证（隔离副本） | 首销过滤、截断月过滤、样本标准差填充、`short_history` 边界、超储严格比较、EOQ 封顶六种变异均使对应测试失败；未写回正式代码。 |
+| 正式文件保护 | `config/`、`data/`、`outputs/`、`notebooks/` 及相关正式文件 138 个哈希保持不变；`git diff --check` 通过。 |
+
+#### 未完成项
+
+没有发现需要改变既定业务公式或参数的问题。未实施业务参数校准，也未改变 live 配置、notebook 或正式输出；£25、服务水平、覆盖天数和交期仍是待业务数据校准的演示参数。未 commit、未 push，可进入提交准备。
+
 
 ## 历史交接：模型假设诊断 + Codex 独立复核与方案（`audit/model-assumptions` 分支，已完成）
 
@@ -223,27 +320,3 @@
 - 旧归因报告中间步骤 .70 的历史生成原因仍不能确认；本轮使用实际重跑 .69 更新当前报告，保留上方 Claude 原始说法供追溯，但不采信其环境归因。没有旧中间步骤逐 SKU 快照，不能声称验证了该历史中间态逐 SKU 排序；当前完整模型及当前输出排序已核对不变。
 - 原始 Excel 或冻结快照缺失的其他环境仍可能触发现有显式 skip；本次环境全部存在，跳过数为 0。库存仍是模拟数据，短历史统计局限按用户 D1 保留。
 - 临时日志、执行 notebook 与对照脚本位于 `/private/tmp/codex_inventory_acceptance`，不加入提交。准备提交时应人工审阅整个已接受工作区，继续保持单写者；本轮没有执行任何提交或推送。
-
-## Codex 最终验收（本轮修正后）
-
-本节是对上方 Claude 原始交接的独立补充；原始记录保留，不以其中较早的测试数量替代本节结果。分支仍为 `audit/model-assumptions`，HEAD 仍为 `50ce335c2d5c8f20bbecc1e9eeae44745b076879`，未 commit、未 push。
-
-### 本轮修正
-
-- 补强 R1 入口：README、管理层摘要和历史审计报告的 MA-04 原文旁均明确链接复核结论；保留历史数字，但说明 69.3% 只回答固定库存实验 A 的分类敏感性，不是误报比例。同步说明 CV 的定义、3 个月边界、短历史局限、£25 的单位和九场景资金敞口。
-- T1/T2 修正了原本不触发上限的边界样例，并增加独立手算的需求统计→安全库存→再订货点断言、覆盖阈值严格边界和非整数 EOQ 上限边界。
-- E1 诊断工具拒绝未知/重复场景和非兼容配置，拒绝已存在目录及其符号链接别名，采用临时目录原子发布并检查输入是否在运行中改变；元数据现在包含暂存 diff、未跟踪文件内容、源文件哈希、实际配置和比较容差。补充了保护、失败路径、确定性和种子覆盖测试。
-
-### 实际验证
-
-| 验证 | 结果 |
-| --- | --- |
-| `.venv/bin/python -m pytest -W error -ra` | **127 passed, 0 skipped**。 |
-| E1 真实 CLI 两次运行，真实 `outputs/sku_inventory_simulation.csv` 与 live config，A/B + 1a–5 全部场景 | 两次 `scenario_summary.csv`、`field_change_counts.csv` 和风险转移结果逐字节一致；A 的库存变化为 0，B 的库存变化为 2,171。 |
-| 独立结果对比 | 基线、A/B 和九场景的数量、金额、推荐量、封顶数及风险转移与独立复核 CSV 全部一致；按每 SKU 先取到便士再汇总，浮点中间值使用 `rtol=1e-12, atol=1e-9`。 |
-| 变异验证（隔离副本） | 首销过滤、截断月过滤、样本标准差填充、`short_history` 边界、超储严格比较、EOQ 封顶六种变异均使对应测试失败；未写回正式代码。 |
-| 正式文件保护 | `config/`、`data/`、`outputs/`、`notebooks/` 及相关正式文件 138 个哈希保持不变；`git diff --check` 通过。 |
-
-### 未完成项
-
-没有发现需要改变既定业务公式或参数的问题。未实施业务参数校准，也未改变 live 配置、notebook 或正式输出；£25、服务水平、覆盖天数和交期仍是待业务数据校准的演示参数。未 commit、未 push，可进入提交准备。

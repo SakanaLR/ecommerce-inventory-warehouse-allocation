@@ -1,3 +1,11 @@
 -r requirements.txt
-pytest>=8,<10
-nbconvert
+# Notebook execution dependencies used by scripts/verify_pipeline.sh, not by
+# the library or pytest suite. Their floors are installation targets; this
+# round verifies installation but does not execute notebooks at the floor.
+jupyter>=1.0.0
+ipykernel>=6.29.0
+# pytest>=8.0.0 verified against a clean install (see requirements.txt's
+# header). There is no arbitrary upper bound; a future incompatibility should
+# fail loudly under the strict CI run rather than be hidden by a stale cap.
+pytest>=8.0.0
+nbconvert>=7.16.0

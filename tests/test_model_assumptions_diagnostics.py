@@ -138,7 +138,11 @@ def test_cli_scenarios_are_independent_deterministic_and_described(inputs, tmp_p
     assert metadata['scenario_configs']['B']['mode'] == 'full_regeneration'
     assert metadata['inputs']['profile_sha256'] == diag._sha256_file(inputs[0])
     assert metadata['code']['source_file_sha256']
-    assert metadata['code']['untracked_file_sha256']
+    # untracked_file_sha256 legitimately maps to {} on a clean tree (e.g. a
+    # fresh CI checkout has no untracked files at all) -- assert the field's
+    # shape, not that it happens to be non-empty in this developer's working
+    # tree, which is incidental to the diagnostics tool's correctness.
+    assert isinstance(metadata['code']['untracked_file_sha256'], dict)
     assert metadata['code']['staged_diff_sha256']
     fields = pd.read_csv(out1 / 'field_change_counts.csv').set_index('scenario')
     assert fields.loc['A_fixed_inventory_uncapped', 'current_inventory_changed_skus'] == 0

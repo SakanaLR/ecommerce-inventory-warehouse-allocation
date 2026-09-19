@@ -1,5 +1,53 @@
 # Changelog
 
+## Unreleased — Delivery baseline closure: CI, dependency floors, and licensing
+
+Housekeeping only; no business model, parameter, notebook, `data/processed/`, `outputs/`, or historical baseline report was touched. See `docs/pr_delivery.md` for the full write-up.
+
+### Added
+
+- `.github/workflows/tests.yml`: Python 3.11, pip-cached install of `requirements-dev.txt` from a fresh checkout, `python -m pytest -W error -ra --junitxml=pytest-results.xml`, then a machine-readable JUnit XML check that fails the build if any test is skipped (a fresh checkout must never silently skip a test for missing data).
+- `CITATION.cff`: records the repository URL and cites the UCI "Online Retail" dataset (citation text taken from the UCI page); it uses the non-personal placeholder "Repository maintainers" until a maintainer confirms the preferred attribution.
+- README: a "License" section stating plainly that the repository's own code currently has **no license file** (default: all rights reserved) and that choosing one is left to the repository owner; a "Dataset license and citation" note under "Data Source" — the dataset is CC BY 4.0 (verified by fetching the UCI page directly, not from memory), which is why it can be committed to the repo at all.
+
+### Changed
+
+- `requirements.txt` / `requirements-dev.txt`: added minimum-version floors (no upper bound) instead of leaving every package unpinned. `pandas>=2.2.3`, `numpy>=1.26.0`, `openpyxl>=3.1.0`, and `pytest>=8.0.0` were verified by installing exactly those floor versions into a clean virtualenv and running `pytest -W error -ra` end to end (127 passed, 0 skipped) — not chosen by guesswork, and not a full `pip freeze` lock file. `jupyter`/`ipykernel`/`nbconvert` floors are set by convention (they're only used to execute notebooks, not exercised by the test suite) and are explicitly flagged in the file as not independently verified the same way.
+- Removed `matplotlib` from `requirements.txt`: grepped the entire codebase (`src/`, `scripts/`, `notebooks/`) and found no import or usage anywhere; it was dead weight.
+
+### Fixed
+
+- `tests/test_model_assumptions_diagnostics.py::test_cli_scenarios_are_independent_deterministic_and_described` asserted `metadata['code']['untracked_file_sha256']` was truthy — but that field is legitimately `{}` whenever the working tree has no untracked files, which is **always true on a fresh CI checkout**. This test would have failed on every CI run as written. Changed the assertion to check the field's type (a dict) instead of its truthiness; the diagnostics script itself is unchanged.
+
+## Unreleased — Model assumptions audit: diagnosis, independent review, and reproducible tooling (R1/T1/T2/E1)
+
+Follows `docs/model_assumptions_audit.md` (diagnosis: short-history demand statistics, EOQ capping, parameter sensitivity), `docs/model_assumptions_review.md` (Codex's independent review — several findings downgraded from "confirmed" to "partially correct" or "insufficient evidence," most notably that the audit's headline "699/1,008 SKUs" figure only holds under one specific experiment methodology, not as a general false-positive rate), and `docs/model_assumptions_plan.md` (the resulting plan). Implements that plan's R1, T1, T2, and E1 only; B1 (business parameter calibration) and B2/D1 (reopening the short-window policy decision) remain open, pending user decisions.
+
+### Fixed (documentation)
+
+- `docs/runbook.md`'s `overstock_capital_exposure` definition was simply wrong ("units above 180 days of demand") for the live `max_stock` method; corrected to the actual effective threshold, `max(reorder_point + EOQ, daily_demand × overstock.coverage_days)`, with the legacy `coverage_only` method's simpler definition kept separate.
+- Added an accurate definition of what `demand_cv` measures (relative monthly-sales volatility including zero-sale months, with the exact Pearson r=0.840224 relationship to zero-month share) in place of the earlier draft's overreaching "mainly measures intermittency" claim.
+- Clarified that `months_in_window == 3` is not the same as `short_history` (the flag is strictly `< 3`).
+- `ordering_cost_gbp`, `annual_holding_rate`, `max_order_coverage_days`, `overstock.coverage_days`, `supplier_lead_time_days`, and the service-level table are now explicitly labeled demonstration/pending-calibration parameters with owner and calibration date stated as "not yet assigned" — not invented.
+- `docs/model_assumptions_audit.md` (the original diagnosis) is kept as historical material with a prominent banner pointing to the review and plan, rather than being silently rewritten.
+
+### Added (tests)
+
+- `tests/test_demand_simulation_interface.py` (T1, 8 tests): 0/1/2/3-month demand observations run through the real `full_months` → `build_sku_profile` → `classify_skus` → `simulate` pipeline end to end, including the exact `short_history` boundary and zero-demand inventory Normal/Overstock cases.
+- `tests/test_simulation.py` (T2, 12 tests): EOQ integer-cap equality/boundary cases, monotonicity invariants (ordering cost, holding rate, cap looseness), current-inventory-equals-threshold boundaries, the `max(Q, shortfall)` replenishment rule, and a direct fixed-inventory-vs-full-regeneration contract comparison. All assert invariants that must hold for any legal configuration, not today's specific diagnostic snapshot numbers.
+- `scripts/model_assumptions_diagnostics.py` (E1): reproduces the review's fixed-inventory (A) and full-regeneration (B) experiments plus the nine sensitivity scenarios, against any `--profile`/`--config`, writing only to an explicit `--output-dir` that must not be, or be inside, any official repository directory. Reports risk counts, shortfall units, and monetary exposure together; never searches for or writes back a "best" parameter set.
+- `tests/test_model_assumptions_diagnostics.py` (added independently by Codex's acceptance pass): CLI safety, atomicity (no partial output on a mid-write failure), determinism, and config-compatibility tests for the diagnostics script.
+
+### Codex acceptance corrections (`bfdc558`)
+
+- E1 hardened: rejects unknown/duplicate scenario names and incompatible configs, refuses an already-existing output directory or a symlink alias for one, publishes results atomically via a temp directory, and detects if an input file changes mid-run. Metadata now also records the staged diff, untracked file contents, source file hashes, and the exact comparison tolerances used.
+- R1/T1/T2 doc and test gaps closed: linked the review's corrections next to the original MA-04 text in the audit report, README, and management summary (699/1,008 is now clearly scoped to the fixed-inventory experiment, not a false-positive rate); added previously-missing boundary fixtures (needs-statistics-derived assertions from demand through safety stock to reorder point, strict coverage-threshold boundaries, non-integer EOQ-cap boundaries).
+- Test count: **127 passed, 0 skipped** (`python -m pytest -W error -ra` in the project `.venv`).
+
+### Not changed
+
+- No business formulas, live parameters, or historical baseline reports were touched. `config/simulation_assumptions.json`, `outputs/`, `data/processed/`, and every notebook are byte-identical to before this round; 138 official file hashes were checked before and after.
+
 ## Unreleased — Post-3B-1 remediation: legacy config compatibility, validation gap, and documentation catch-up
 
 Follows the independent review in `docs/issue_review.md` and the plan in `docs/remediation_plan.md`.

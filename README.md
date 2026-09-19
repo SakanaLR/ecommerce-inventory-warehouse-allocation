@@ -279,6 +279,16 @@ ecommerce-inventory-warehouse-allocation/
 
 The project uses the public [UCI Online Retail dataset](https://archive.ics.uci.edu/dataset/352/online+retail): invoice-level sales from a UK-based online retailer between 1 December 2010 and 9 December 2011. No confidential company data is used.
 
+**Dataset license and citation** (verified against the UCI page on 2026-09-18): the dataset is released under a [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license, which permits sharing, adaptation, and commercial use provided appropriate credit is given. Creator: Daqing Chen, School of Engineering, London South Bank University. Citation:
+
+> Chen, D. (2015). Online Retail [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5BW33.
+
+This license covers the dataset only, not this repository's own code — see [License](#license) below.
+
+## License
+
+This repository's own code, notebooks, and documentation currently carry **no license file**; by default that means all rights are reserved and no reuse, modification, or redistribution rights are granted to others beyond viewing the source on GitHub. This is a factual statement about the repository's current state, not a recommendation — choosing a code license (e.g. MIT, Apache-2.0, or keeping it proprietary/all-rights-reserved) is a decision for the repository owner, since it affects what others are legally permitted to do with this code. The dataset embedded in `data/raw/Online Retail.xlsx` is separately licensed under CC BY 4.0 as described above, independent of whatever license (if any) is chosen for the code.
+
 ## Assumptions and Limitations
 
 - Monthly `demand_cv` measures relative monthly sales variation, including zero-sale months; it does not measure individual order quantities. Its correlation with zero-month share (Pearson r=0.840224, 3,789 complete SKU pairs) is descriptive, not causal evidence or proof of which component dominates. Exactly three months is outside the `< 3` short-history flag, but remains a small statistical sample. A simulated risk label cannot validate actual business performance.
