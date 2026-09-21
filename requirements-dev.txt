@@ -1,4 +1,8 @@
 -r requirements.txt
+# The Streamlit app itself (app/) is a separate runtime concern from the core
+# library, but pytest -- via tests/test_app_pages.py's AppTest cases -- needs
+# it installed, so it is pulled in here rather than duplicated.
+-r requirements-app.txt
 # Notebook execution dependencies used by scripts/verify_pipeline.sh, not by
 # the library or pytest suite. Their floors are installation targets; this
 # round verifies installation but does not execute notebooks at the floor.

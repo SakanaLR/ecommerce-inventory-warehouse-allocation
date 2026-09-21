@@ -1,29 +1,37 @@
-# 当前任务：交付基线收口与自动化验证
+# 当前任务：商户库存分析 App —— 信息架构与只读 MVP
 
-> 本文件已从"实施 R1/T1/T2/E1"改为"交付基线收口与自动化验证"。R1/T1/T2/E1 的实施（Claude）与 Codex 的独立验收强化（提交 `bfdc558`：E1 加固、新增 `tests/test_model_assumptions_diagnostics.py`、127 个测试）均已完成并已提交到本地分支（未 push）。本轮只处理交付文档一致性、CI 自动化和依赖可复现性，**不修改业务模型、正式参数、notebook、`data/processed/`、`outputs/` 或历史基线报告**。原任务书作为历史背景保留在下方。
+> 本文件已从"交付基线收口与自动化验证"改为"商户库存分析 App"。上一轮（交付基线收口）已完成并已提交、已 push 到 `origin/audit/model-assumptions`（HEAD `9cb8932`）。本轮是**新分支**（`feature/merchant-analytics-mvp`，从 `9cb8932` 切出），实现一个面向商户的只读 Streamlit 分析 App，**不修改模型公式、`config/`、`data/`、`outputs/`、notebook 或历史基线报告**。原任务书作为历史背景保留在下方。
 
-## 基线核实结果（本轮开始前重新核实，未直接采信预期状态）
+## 基线核实结果（本轮开始前重新核实）
 
-- 分支：`audit/model-assumptions`；HEAD：`bfdc5586f751f6e9d43063e642a7dd6b6f336018`；工作区在本轮开始前干净；未 push（`git status -sb` 无 ahead/behind 上游信息）——以上均与用户告知的预期状态一致，已用 `git status`/`git branch --show-current`/`git rev-parse HEAD`/`git log` 实际核实。
-- **测试基线有出入，已发现并修正**：直接运行 `python -m pytest -W error -ra` 得到 **126 passed, 1 failed**（`tests/test_model_assumptions_diagnostics.py::test_cli_scenarios_are_independent_deterministic_and_described` 失败在 `assert metadata['code']['untracked_file_sha256']`）——不是"127 passed, 0 skipped"。根因：该断言要求诊断脚本的 `run_metadata.json` 里 `untracked_file_sha256` 字段非空，但这个字段的值取决于当前工作区**恰好有没有**未跟踪文件；本轮开始前工作区是干净的（Codex 验收记录时工作区里还有临时产物，断言当时能通过），在一个全新 CI 检出（永远没有未跟踪文件）下这条断言会**必定失败**。已将断言改为检查字段类型（是 dict）而非非空，不改变诊断脚本本身的行为。修正后重新运行：**127 passed, 0 skipped**，此后本文件里的"127 passed"均指修正后的结果。
+- 分支：`audit/model-assumptions`；HEAD：`9cb8932149507c19747c5873a34c3ad871182f4a`；工作区干净；`origin/audit/model-assumptions` 已存在——均已用 `git status`/`git branch -a`/`git rev-parse HEAD`/`git log` 实际核实，与用户告知的状态一致。
+- 测试基线：`python -m pytest -W error -ra` → **127 passed, 0 skipped**（本轮开始前重新运行确认）。
+- 从 `9cb8932` 新建 `feature/merchant-analytics-mvp` 分支，本轮全程在该分支上单独写入，未启动其他修改会话。
 
 ## 本轮范围与产出
 
-只处理交付、CI 和可复现性，不改业务模型/正式参数/notebook/`data/processed/`/`outputs/`/历史基线报告：
+只做信息架构 + 只读 MVP，不做参数场景比较、登录、云部署或小程序（详见 `docs/app_product_spec.md`"本轮非目标"）：
 
-1. **状态文档收口：** 本文件与 `docs/handoff.md`、`CHANGELOG.md` 更新为与 `bfdc558`/127 passed/已提交未 push 一致，历史记录全部保留在下方，不再让顶部状态显示旧基线（`50ce335`/98 passed 等）。
-2. **GitHub Actions（`.github/workflows/tests.yml`）：** Python 3.11，全新检出安装 `requirements-dev.txt`，运行 `python -m pytest -W error -ra --junitxml=pytest-results.xml`，并读取 JUnit XML 的机器可验证 skipped 计数；任何跳过即失败。用 pip 缓存和最小 `contents: read` 权限，不引入发布/打包流程。
-3. **依赖可复现性：** `requirements.txt`/`requirements-dev.txt` 从"完全不锁版本"改为"仅设下限，不设上限"；运行时文件只保留代码实际导入的 `pandas`、`numpy`、`openpyxl`，notebook 执行所需的 `jupyter`、`ipykernel`、`nbconvert` 单独放在 `requirements-dev.txt`；移除了项目中实际未被任何代码或 notebook 引用的 `matplotlib`。运行时下限（`pandas>=2.2.3`、`numpy>=1.26.0`、`openpyxl>=3.1.0`、`pytest>=8.0.0`）在全新临时环境中实际装到这些精确版本并跑过 `pytest -W error -ra`（127 passed, 0 skipped）；notebook 依赖本轮验证了安装，但未以最低版本执行 notebook，已在文件注释中明确注明。
-4. **许可与数据归属：** 核实仓库当前没有任何 LICENSE 文件（默认视为保留所有权利）；核实 `data/raw/Online Retail.xlsx` 来源于 UCI Machine Learning Repository 的 "Online Retail" 数据集（Daqing Chen 捐赠，DOI 10.24432/C5BW33），该数据集页面明确以 **CC BY 4.0** 授权，允许再分发和商业使用（需署名）——已通过 `WebFetch` 实际访问 UCI 页面核实，不是凭记忆断言。README 新增"License"与"Data Source"下的许可/引用说明；新增 `CITATION.cff`（只记录稳定仓库 URL，以 CFF schema 要求的非个人占位作者 `Repository maintainers` 代替未经确认的个人身份，数据集引用取自 UCI 页面原文）。**代码本身该用什么许可证留给用户决定**，未替用户选择。
-5. **`docs/pr_delivery.md`（新建）：** 问题、最终行为、主要阶段、验证证据、已知限制、审查建议，明确库存/成本/交期/服务水平仍是演示/待校准参数。
+1. **`docs/app_product_spec.md`（新建，先于实现编写）：** 目标用户与经营问题、三个页面的页面与交互、指标定义/单位/数据来源、历史事实与模拟指标的区别、隐私边界、空数据/缺列/输出过期时的行为、本轮非目标。
+2. **`src/retail_analytics/dashboard_data.py`（新建）：** 只读数据适配层，与页面逻辑完全分离。定义 `REQUIRED_SKU_PROFILE_COLUMNS` 等 schema 常量（未来商户本地聚合文件的数据契约）和 `FORBIDDEN_COLUMNS`（`customer_id`/`invoice_no`/`invoice_date`/`cancel_invoice_no`/`credit_invoice_no`）隐私拒绝名单。读取后先检查原始表头的禁止列，随后只返回明确 allowlist 的聚合字段；同时校验数值/布尔类型和唯一键，拒绝会导致重复聚合的 SKU 或 SKU×月记录。缺文件、零字节文件、缺列、错误类型、重复键或含禁止列均抛出 `DashboardDataError`，带清晰指引信息。聚合函数（历史指标、模拟风险计数、筛选、月度趋势、`short_history` 提示文案、`Normal` 风险免责声明、数据新鲜度提示）都是不依赖 Streamlit 的纯函数。
+3. **`app/` 目录（新建）：** 三个 Streamlit 页面——`app/streamlit_app.py`（经营总览，入口）、`app/pages/1_SKU_Analyzer.py`（SKU 分析器）、`app/pages/2_Model_and_Data_Notes.py`（模型与数据说明）。所有路径通过 `Path(__file__).resolve()` 相对仓库根解析，不依赖启动时的 shell 目录。
+4. **`requirements-app.txt`（新建）：** `streamlit>=1.49.0`——这不是随意选的下限，是因为 `app/*.py` 用到的 `st.dataframe(..., width="stretch")` 里 `width` 参数接受字符串枚举值是从 Streamlit 1.49.0 才开始支持的（1.48.x 及更早版本只接受 int/None，传字符串会直接 `TypeError`），逐版本二分实测确认。`requirements-dev.txt` 新增 `-r requirements-app.txt`，因为 pytest 的 `tests/test_app_pages.py` 需要它。
+5. **测试（新增 55 个：`tests/test_dashboard_data.py` 41 个、`tests/test_app_pages.py` 14 个）：** 覆盖数据加载/schema 校验、指标聚合与格式化、SKU 搜索与组合筛选、空筛选/零字节文件/缺列/禁止列/错误类型/重复键的失败行为、allowlist 和非共享 DataFrame、`short_history` 提示逻辑、历史指标与模拟指标不会互相污染（用变异测试证明）、隐私列的显式拒绝测试（对 `FORBIDDEN_COLUMNS` 逐个参数化）、三个页面的 Streamlit `AppTest` 冒烟测试、组件 key、Streamlit 使用统计关闭配置、从仓库外 `cwd` 启动时路径仍正确。
+6. **README：** 新增"Merchant analytics app"一节（启动命令、三个页面简介），更新仓库结构树。
 
 ## 验收结果
 
-详见 `docs/handoff.md` 本轮交接（完整命令、干净环境安装与测试证据、CI 工作流内容、依赖下限验证方法、许可核实过程、正式文件哈希不变的证据）。摘要：`pytest -W error -ra` 在项目 `.venv` 与两个独立的全新临时环境（当前锁定版本的环境、依赖下限版本的环境）中都是 **127 passed, 0 skipped**（前提是先修正了下方发现的一处测试基线问题）；`git diff --check` 通过；`config/`、`data/`、`outputs/`、`notebooks/` 及历史基线报告哈希在本轮前后不变。
+Codex 定向验收新增输入隐私、allowlist、类型/重复键、组件 key、展示格式和 Streamlit 使用统计关闭的覆盖后，两个全新 Python 3.11 临时环境分别按 `requirements-dev.txt` 的最新解析版本和全部声明下限（含 `streamlit==1.49.0`）运行 `python -m pytest -W error -ra`，均为 **182 passed, 0 skipped**。CI workflow 的 pip 缓存键也纳入 `requirements-app.txt`，安装使用 `python -m pip`。`git diff --check` 通过。`config/`、`data/`、`outputs/`、`notebooks/`、`reports/` 均未出现在本轮 `git status --short` 差异中——正式文件未被改写；受保护的 129 个已跟踪路径已在验收前后以 SHA-256 复核。AppTest 实际执行了三个页面及其关键筛选/空状态/短历史交互，未使用仅检查 HTTP 200 来代替页面验收。
 
 ## Git 基线
 
-分支 `audit/model-assumptions`，HEAD `bfdc5586f751f6e9d43063e642a7dd6b6f336018`（本轮全程未变化，未 commit、未 push）。
+分支 `feature/merchant-analytics-mvp`，起点 `9cb8932149507c19747c5873a34c3ad871182f4a`（本轮全程未变化，未 commit、未 push）。
+
+---
+
+## 历史背景 6：交付基线收口与自动化验证（上一轮，已完成、已提交、已 push）
+
+> 该轮把 `docs/current_task.md`/`docs/handoff.md`/`CHANGELOG.md` 的顶部状态与实际提交（`bfdc558`）对齐，新增 GitHub Actions（`.github/workflows/tests.yml`，JUnit XML 校验 0 skipped）、依赖版本下限（`requirements.txt` 只保留 `pandas`/`numpy`/`openpyxl`，`jupyter`/`ipykernel`/`nbconvert`/`pytest` 移到 `requirements-dev.txt`，移除未使用的 `matplotlib`）、核实数据集许可（UCI Online Retail 数据集为 CC BY 4.0）与代码许可现状（无 LICENSE 文件，未替用户选择）、新增 `CITATION.cff` 和 `docs/pr_delivery.md`。过程中发现并修正了一处会在全新 CI 检出下必定失败的测试断言（`untracked_file_sha256` 非空检查）。本轮结束时该分支已提交并 push 到 `origin/audit/model-assumptions`（HEAD 演进为 `9cb8932`：这是 Codex 在该轮基础上进一步调整 CI 校验方式为 JUnit XML、拆分依赖文件、修改 `CITATION.cff` 作者字段后的提交，细节见 `docs/handoff.md`"历史交接：交付基线收口与自动化验证"）。完整记录见 `docs/handoff.md` 与 `CHANGELOG.md`。
 
 ---
 

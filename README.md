@@ -186,7 +186,7 @@ Stockout revenue exposure is the shortfall to the reorder point valued at sellin
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt
 ```
 
 Place the UCI workbook at `data/raw/Online Retail.xlsx`.
@@ -234,10 +234,32 @@ To run the whole chain (validation, standardization, notebooks 01–05, comparis
 mkdir -p tmp && bash scripts/verify_pipeline.sh > tmp/verify_pipeline.log 2>&1
 ```
 
+### Merchant analytics app (read-only MVP)
+
+A read-only [Streamlit](https://streamlit.io) app for non-technical merchant/operations users, built on the same notebook outputs above — see [`docs/app_product_spec.md`](docs/app_product_spec.md) for the full product spec. It never re-runs the pipeline or writes any file. It only passes an explicit allowlist of pre-aggregated, SKU-level fields from the notebook outputs to pages; a source whose original header declares `customer_id`, `invoice_no`, `invoice_date`, or another forbidden order/customer identifier is rejected before that selection. `.streamlit/config.toml` also disables Streamlit usage-stat collection for the project.
+
+```bash
+python -m pip install -r requirements-dev.txt   # includes requirements-app.txt (Streamlit)
+streamlit run app/streamlit_app.py
+```
+
+This opens in your browser at `http://localhost:8501`. Stop it with `Ctrl+C` in the terminal. Three pages (left sidebar):
+
+1. **Merchant Inventory Overview** (`app/streamlit_app.py`) — clean historical revenue and SKU-class mix, alongside simulated stockout/overstock counts, simulated inventory value, and warehouse-strategy distribution. Historical and simulated figures are shown in clearly separate sections.
+2. **SKU Analyzer** (`app/pages/1_SKU_Analyzer.py`) — search/filter SKUs by code, description, class, simulated risk, or warehouse strategy; drill into one SKU's historical monthly sales trend and simulated safety stock/reorder point/EOQ/replenishment recommendation, with an explicit uncertainty notice for SKUs with under 3 months of history.
+3. **Model & Data Notes** (`app/pages/2_Model_and_Data_Notes.py`) — data coverage and cleaning-rule summary, plain-language explanations of the simulation formulas, which parameters are still demonstration/pending-calibration, the app's privacy boundaries, and links to the fuller docs.
+
+The app's data-access layer (`src/retail_analytics/dashboard_data.py`) is tested independently of Streamlit in `tests/test_dashboard_data.py`; `tests/test_app_pages.py` runs the three pages themselves via Streamlit's `AppTest`.
+
 ## Repository Structure
 
 ```text
 ecommerce-inventory-warehouse-allocation/
+├── app/                      # Read-only Streamlit merchant analytics app
+│   ├── streamlit_app.py      # Overview page (entry point)
+│   └── pages/
+│       ├── 1_SKU_Analyzer.py
+│       └── 2_Model_and_Data_Notes.py
 ├── archive/notebooks/        # Previous notebook versions (original and standardized-input tracks)
 ├── config/
 │   ├── schema_mapping_template.csv
@@ -267,11 +289,13 @@ ecommerce-inventory-warehouse-allocation/
 ├── src/retail_analytics/
 │   ├── cleaning.py
 │   ├── demand.py
-│   └── simulation.py
+│   ├── simulation.py
+│   └── dashboard_data.py     # Read-only data layer for app/
 ├── tests/
 ├── CHANGELOG.md
 ├── README.md
 ├── requirements.txt
+├── requirements-app.txt      # Streamlit, for app/ only
 └── requirements-dev.txt
 ```
 
