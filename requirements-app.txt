@@ -1,0 +1,12 @@
+# Runtime dependency for the Streamlit merchant analytics app (app/) only --
+# not needed by the core src/retail_analytics library, notebooks, or pipeline
+# scripts. Floor verified by installing exactly this version into a clean
+# virtualenv (alongside the requirements.txt/requirements-dev.txt floors) and
+# running the full test suite, including the Streamlit AppTest pages
+# (tests/test_app_pages.py): 182 passed, 0 skipped.
+#
+# 1.49.0 is a real functional floor, not an arbitrary choice: app/*.py use
+# st.dataframe(..., width="stretch"), and the string values "stretch"/
+# "content" for `width` were only added in Streamlit 1.49.0 (1.48.x and
+# earlier only accept an int or None and raise a TypeError on a string).
+streamlit>=1.49.0

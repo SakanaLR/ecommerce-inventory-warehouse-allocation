@@ -1,8 +1,92 @@
 # 本轮交接
 
-状态：本轮（交付基线收口与自动化验证，`audit/model-assumptions` 分支，HEAD `bfdc558`）Claude 实施和 Codex 定向验收均已完成；本轮修改仍未提交、未 push。R1/T1/T2/E1 实施 + Codex 验收强化（已提交 `bfdc558`）、模型假设诊断 + Codex 独立复核、以及更早的 R1–R8 实施 + Codex 验收（已提交 `50ce335`）记录完整保留在下方"历史交接"部分。
+状态：本轮（商户库存分析 App，`feature/merchant-analytics-mvp` 分支，从 `9cb8932` 切出）已完成 Claude 实施和 Codex 定向验收修正，尚未 commit、未 push、未部署。上一轮（交付基线收口与自动化验证）已完成、已提交、已 push 到 `origin/audit/model-assumptions`（HEAD `9cb8932`）。更早的历史记录完整保留在下方"历史交接"部分。
 
-## 本轮交接：交付基线收口与自动化验证
+## 本轮交接：商户库存分析 App —— 信息架构与只读 MVP
+
+### Git 状态
+
+- 分支：`feature/merchant-analytics-mvp`（本轮新建）。起点：`9cb8932149507c19747c5873a34c3ad871182f4a`（上一轮已提交并 push 到 `origin/audit/model-assumptions` 的成果）。
+- 开始前重新核实：`git status --short` 为空（工作区干净），`origin/audit/model-assumptions` 已存在——已用 `git status`/`git branch -a`/`git rev-parse HEAD`/`git log` 实际核实，与用户告知的状态一致。开始前重新运行 `python -m pytest -W error -ra` 确认 127 passed, 0 skipped，未直接采信预期状态。
+- 本轮由本会话单独实施，Codex 未同时修改（按用户指令，Codex 保持空闲）。
+- 是否已 commit / push：否。本轮全程未修改 `src/retail_analytics/{cleaning,demand,simulation}.py`、`config/`、`data/`、`outputs/`、notebook 或历史基线报告。
+
+### 完成内容
+
+| 文件 | 修改内容与理由 |
+| --- | --- |
+| `docs/app_product_spec.md`（新建） | 先于实现编写的产品规格：目标用户与经营问题、三页面的页面与交互、指标定义/单位/数据来源表、历史事实与模拟指标的区分规则（P0）、隐私边界、空数据/缺列/输出过期的行为、本轮非目标（不做参数场景比较/登录/云部署/小程序）。 |
+| `src/retail_analytics/dashboard_data.py`（新建） | 只读数据适配层，与页面逻辑完全分离。`REQUIRED_SKU_PROFILE_COLUMNS` 等常量定义 schema（也是未来商户本地聚合文件的数据契约）；`FORBIDDEN_COLUMNS = {customer_id, invoice_no, invoice_date, cancel_invoice_no, credit_invoice_no}` 是隐私拒绝名单，`validate_schema()`/`_read_csv_with_schema()` 对每次加载都做校验，命中即抛 `DashboardDataError`（清晰指引信息，不是裸 pandas 异常）。聚合函数（`historical_overview_metrics`、`simulated_risk_counts`、`simulated_warehouse_strategy_counts`、`filter_sku_profile`、`sku_month_trend`、`short_history_notice`、`normal_risk_disclaimer`、`format_gbp`、`data_freshness_notes`）都是不依赖 Streamlit 的纯函数，只读已生成的 CSV，不重新计算任何业务规则。修复了一处真实的资源泄漏：`data_freshness_notes` 原来用 `path.open()` 不带 `with`，在 `pytest -W error` 下会被 `ResourceWarning` 转成测试失败，已改为 `with path.open() as handle:`。 |
+| `app/streamlit_app.py`、`app/pages/1_SKU_Analyzer.py`、`app/pages/2_Model_and_Data_Notes.py`（新建） | 三个只读页面，逐一对齐 `docs/app_product_spec.md` §2。所有路径用 `Path(__file__).resolve()` 相对仓库根解析，不依赖启动时的 shell 目录（已用 `monkeypatch.chdir` 和手工 `cd /tmp` 两种方式验证）。历史指标和模拟指标在页面上分区展示，模拟数值带 `help=`/`caption` 免责说明；`short_history` SKU 显示不确定性提示；`inventory_risk="Normal"` 不解释为经营良好。 |
+| `requirements-app.txt`（新建） | `streamlit>=1.49.0`。这个下限不是随便选的：逐版本二分实测发现，`app/*.py` 用到的 `st.dataframe(..., width="stretch")` 的字符串枚举值仅从 Streamlit 1.49.0 开始支持（1.48.x 传字符串会直接 `TypeError: 'str' object cannot be interpreted as an integer`），1.49.0 是能跑通全部 172 个测试的最早版本。 |
+| `requirements-dev.txt` | 新增 `-r requirements-app.txt`——`tests/test_app_pages.py` 的 `AppTest` 需要 Streamlit，纳入 pytest 的依赖安装范围。 |
+| `tests/test_dashboard_data.py`（新建，32 个测试） | schema 校验（含对 `FORBIDDEN_COLUMNS` 逐个参数化的拒绝测试）、缺文件/缺列/含禁止列的错误类型（均为 `DashboardDataError`）、空文件不报错、真实数据加载核对已知总数（收入 £9,818,872.18、3,790 个 SKU）、聚合与格式化、**历史指标与模拟指标不会互相污染**（用变异测试证明：改光模拟列不影响历史聚合结果，反之亦然）、SKU 搜索与组合筛选（含空筛选、无匹配）、`short_history` 提示逻辑、月度趋势排序、数据新鲜度提示。 |
+| `tests/test_app_pages.py`（新建，13 个测试） | 三个页面的 Streamlit `AppTest` 冒烟测试（不抛异常）、历史/模拟分区标题存在性、已知数字渲染正确、搜索筛选交互、空筛选显示提示而非报错、`short_history` 警告实际渲染、**渲染出的表格从不包含 `FORBIDDEN_COLUMNS` 中的任何一列**、从 `tmp_path` 之类的无关 `cwd` 启动时路径仍正确解析。 |
+| `README.md` | 新增"Merchant analytics app"一节（启动命令、三页面简介、指向 `docs/app_product_spec.md`）；更新仓库结构树，加入 `app/`、`dashboard_data.py`、`requirements-app.txt`。 |
+
+### 验证证据
+
+| 时间与环境 | 实际命令 | 结果 |
+| --- | --- | --- |
+| 2026-09-18，项目 `.venv`（Python 3.11.5，之后安装 streamlit 1.64.0） | `source .venv/bin/activate && python -m pytest -W error -ra` | **172 passed, 0 skipped**（127 基线 + 32 `test_dashboard_data.py` + 13 `test_app_pages.py`）。 |
+| 同上 | 全新克隆快照（`rsync` 当前工作树到临时目录，`git init` 提交一次）+ 全新 venv，`pip install -r requirements-dev.txt`（无版本上限，取最新兼容版本：streamlit 1.64.0） | 安装成功；`python -m pytest -W error -ra` → **172 passed, 0 skipped**。 |
+| 同上 | 另一个全新 venv，精确安装全部依赖下限版本：`pandas==2.2.3`、`numpy==1.26.0`、`openpyxl==3.1.0`、`pytest==8.0.0`、`streamlit==1.49.0`（先用 1.40.0/1.45.0/1.47.0/1.48.0 逐版本二分排除，均因 `width="stretch"` 报 `TypeError` 而不可用，1.49.0 起可用） | **172 passed, 0 skipped**——`streamlit>=1.49.0` 这个下限直接来自这次实测，不是猜测。 |
+| 同上 | `git diff --check` | 通过，无空白符问题。 |
+| 同上 | `git status --short`（本轮结束前） | 仅 `requirements-dev.txt`、`README.md` 为修改，`app/`、`docs/app_product_spec.md`、`requirements-app.txt`、`src/retail_analytics/dashboard_data.py`、`tests/test_app_pages.py`、`tests/test_dashboard_data.py` 为新增；`config/`、`data/`、`outputs/`、`notebooks/`、`reports/` 均未出现在差异中——确认正式文件未被改写。 |
+| 同上 | 真实本地冒烟：`streamlit run app/streamlit_app.py --server.headless true --server.port 8765` 后台启动，`curl` 访问首页、`/SKU_Analyzer`、`/Model_and_Data_Notes` 及 `/_stcore/health` | 均返回 HTTP 200 / `ok`；服务器日志无错误。验证完成后 `pkill` 关闭进程，再次 `curl` 确认端口不再响应（连接被拒绝）；未产生任何仓库内缓存文件（`git status` 确认，无 `.streamlit/` 目录残留）。 |
+
+- **关键数据与比较基线：** 数据层测试以真实的 `outputs/sku_inventory_simulation.csv`、`outputs/working_capital_summary.csv` 等文件核对已知总数（收入 £9,818,872.18、SKU 数 3,790、库存价值 £1,805,589.48），与 `README.md`/`docs/management_summary.md` 已公布的数字一致；不依赖任何自行构造的"预期值"。
+- **未执行的验证及原因：**
+  - 未做参数场景比较集成（`scripts/model_assumptions_diagnostics.py` 的 A/B/九场景未接入 App）——按 `docs/app_product_spec.md`"本轮非目标"明确排除。
+  - 未做登录/鉴权、云部署、小程序适配——同上，按用户指令排除在本轮之外。
+  - 未验证 `jupyter`/`ipykernel`/`nbconvert` 的最低版本——本轮未改动这部分，沿用上一轮的记录（已在 `requirements-dev.txt` 注释中说明未同等验证）。
+  - 未在 GitHub Actions 远端实际运行本轮新增的测试——`.github/workflows/tests.yml` 会在 push 后自动覆盖，因为它跑的是全部 `tests/`，本轮新增的两个测试文件会被同一个 workflow 执行到，但本轮没有 push，无法给出"CI 已绿"的远端证据，只能给出本地等价环境的证据（见上表）。
+- **已知问题与后续事项：** 无本轮新发现的业务代码缺陷（唯一发现的缺陷是 `dashboard_data.py` 自身的资源泄漏，已在实现过程中修复，不是遗留问题）。是否要在下一阶段加入参数场景比较，见本文件末尾"报告"部分的建议。
+- **已停止修改，可以交给 Codex：** 是。本轮到此为止未再修改任何业务代码、notebook、正式配置、正式输出或历史基线报告；本文件更新完成后不再变更。
+
+### 报告：页面与主要交互、依赖、隐私保护、已知限制、下一步建议
+
+- **页面与主要交互：** ①经营总览——历史收入/SKU 分类分布（历史区）+ 库存风险三态/模拟库存价值/资金敞口/仓库策略分布（模拟区），无筛选，纯快照。②SKU 分析器——搜索框 + 三个多选筛选器（AND 语义）→ 命中表格 → 选择单个 SKU → 历史月度趋势折线图 + 模拟库存明细，`short_history` 和 `Normal` 均有明确的不确定性/免责提示。③模型与数据说明——数据覆盖范围、清洗规则摘要、模型公式的通俗解释、参数校准状态、隐私说明、已知限制、延伸阅读入口。
+- **新增文件与依赖：** 见上"完成内容"表；唯一新增的运行时依赖是 `streamlit>=1.49.0`（放在新建的 `requirements-app.txt`，被 `requirements-dev.txt` 引用）。
+- **实际测试结果：** 172 passed, 0 skipped（本地 `.venv`、全新最新版本环境、全新下限版本环境三处一致）。
+- **隐私保护措施：** `FORBIDDEN_COLUMNS` 拒绝名单 + 每次加载强制校验（数据层）；渲染出的表格列经测试逐一核对不含禁止列（页面层，`test_*_never_renders_a_forbidden_column`）；不提供原始数据下载；不发起任何出站网络请求；只读已聚合到 SKU 级别的 CSV，从不读取逐行交易或客户/订单字段。
+- **已知限制：** 不做参数场景比较、登录、云部署、小程序（本轮非目标，见 `docs/app_product_spec.md`）；App 展示的所有模拟数值仍然基于演示/待校准参数（订货成本、持有率、交期分布、服务水平），这一点在"模型与数据说明"页反复强调，不是本轮引入的新限制，而是继承自 `docs/runbook.md`"Parameter calibration status"的既有事实。
+- **下一阶段是否适合增加场景比较：** 技术上可行——`scripts/model_assumptions_diagnostics.py` 已经是一个可复现、带元数据的 CLI，`dashboard_data.py` 的分层设计（数据/聚合与页面分离）也已经为新增一个"参数场景比较"页面留好了架构空间。但业务上不建议在完成 B1（业务参数校准，见 `docs/model_assumptions_plan.md`）之前就把场景比较暴露给非技术商户用户——目前的场景（如订货成本减半/翻倍）都是围绕未经校准的演示参数做的，直接给商户看"调整这个参数会怎样"，容易被误解为"这是可以直接采纳的经营建议"，而不是"模型对假设变化的敏感性演示"。建议等 B1 有实际业务依据后，再决定是否以及如何把场景比较呈现给这一批目标用户。
+
+## Codex 定向验收（商户库存分析 App）
+
+Claude 的原始实施记录完整保留在上方。本节只记录 Codex 在最终验收中独立发现、修正和实际执行的项目。
+
+### 结论与修正
+
+- **数据口径：通过。** 实际 CSV 复算为 3,790 个唯一 `stock_code`、历史收入 £9,818,872.18；SKU 分类、风险和仓库策略都从同一个每 SKU 输出按行计数，没有 join。月度需求表有 39,708 个唯一 `(stock_code, invoice_month)` 记录。风险计数为 Normal 2,246、Overstock Risk 1,008、Stockout Risk 536；库存价值 £1,805,589.48 和两项资金敞口从 `working_capital_summary.csv` 单独读取，页面仍将历史区与模拟区分开。
+- **修复数据适配边界：** `dashboard_data.py` 现在先在完整原始表头上拒绝禁止列，再选择明确 allowlist 的返回列；增加零字节文件、错误数值/布尔值、空/重复键和无效月份的清晰失败路径。SKU 和 SKU×月唯一键在加载时验证，避免未来错误连接或重复行放大总额。每次加载返回新的 DataFrame，避免页面修改影响缓存/其他会话。
+- **修复页面呈现：** 为所有筛选器和 SKU 选择器指定稳定 key；SKU 表格统一格式化 GBP、数量、百分比和缺失值；月度图按真实月份排序并说明单位/零填充口径；模拟库存标签明确单位和“simulated”，将四列窄屏布局改为两列；风险始终有文字，`Normal` 继续带非经营表现免责声明。
+- **隐私与出站：通过。** 增加 `.streamlit/config.toml`，以 `browser.gatherUsageStats = false` 关闭 Streamlit 使用统计，并由测试解析验证。静态检查没有发现 App 或数据适配层的 HTTP 客户端、外部脚本、遥测调用、远程图片、日志泄露或下载原始数据功能。禁止列在原始表头检查后不会进入页面；allowlist 也阻断了未知额外列。README 和产品规格已准确说明这一边界。
+- **CI/依赖：通过本地等价验证。** workflow 继续在 Python 3.11 安装 `requirements-dev.txt`，因而包含 AppTest 所需 Streamlit；Codex 将 `requirements-app.txt` 加入 pip 缓存依赖键，并将安装改为 `python -m pip`。JUnit XML 的跳过计数检查仍是机器可读的，不依赖终端文案。尚未 push，不能声称远端 GitHub Actions 已通过。
+
+### 实际验证证据
+
+| 环境 | 命令/范围 | 结果 |
+| --- | --- | --- |
+| 当前工作区 Python 3.11.5 | `python -m pytest -W error -ra --junitxml=/private/tmp/merchant_app_pytest_results.xml`；解析 JUnit XML | **182 passed, 0 skipped**；JUnit `skipped=0`。 |
+| 新建 Python 3.11 临时环境（最新解析版本） | `python -m pip install -r requirements-dev.txt`；`python -m pytest -W error -ra` | pandas 3.0.6、numpy 2.4.6、openpyxl 3.1.5、streamlit 1.64.0、pytest 9.1.1；**182 passed, 0 skipped**。 |
+| 新建 Python 3.11 临时环境（声明下限） | 精确安装 pandas 2.2.3、numpy 1.26.0、openpyxl 3.1.0、streamlit 1.49.0、pytest 8.0.0、jupyter 1.0.0、ipykernel 6.29.0、nbconvert 7.16.0；`python -m pytest -W error -ra` | **182 passed, 0 skipped**。这也再次确认 `streamlit>=1.49.0` 的实际 API 下限。 |
+| Streamlit AppTest | 三个真实页面、路径独立性、搜索/AND 筛选、空状态、短历史提示、组件 key、隐私渲染边界 | **14 passed**；不是 HTTP 外壳检查。 |
+| 数据适配层与真实 CSV | KPI 复算、来源/唯一键/类型、禁止列优先、allowlist、空文件和重复键失败路径 | **41 passed**，并完成上方实际数值核对。 |
+| 变更保护 | 验收前后 SHA-256 比对 129 个受保护已跟踪路径；`git diff --check`；工作区/未跟踪文件检查 | 受保护的业务 `src`、`config/`、`data/`、`outputs/`、notebook、历史报告均未改；无意外大文件、符号链接、环境、缓存或测试产物进入工作区。 |
+
+### 尚未完成和需要用户决定的事项
+
+- 没有需要改变业务公式或模拟参数的验收发现；订货成本、持有率、交期、服务水平和阈值仍是演示/待校准参数，按本轮范围未作选择。
+- 没有远端 GitHub Actions 结果，因为本轮未 push；本地已运行等价安装和完整严格测试。
+- 登录、部署、用户自有数据接入、参数场景展示和正式业务参数校准仍是产品规格明确排除的后续事项。
+
+### 提交准备判断
+
+可以进入提交准备：业务代码、正式配置、数据、输出和 notebook 未改，本轮 App、数据适配、测试、依赖、CI 和文档变更均已在最新与最低依赖环境通过严格验证。按用户指令，本轮未 commit、未 push、未部署。
+
+## 历史交接：交付基线收口与自动化验证
 
 ### Git 状态
 
