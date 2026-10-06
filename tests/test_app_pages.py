@@ -11,6 +11,8 @@ import sys
 import tomllib
 from pathlib import Path
 
+import pandas as pd
+import pytest
 from streamlit.testing.v1 import AppTest
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -29,6 +31,36 @@ def _all_rendered_dataframe_columns(app_test: AppTest) -> set[str]:
     for element in app_test.dataframe:
         columns |= set(element.value.columns)
     return columns
+
+
+def _all_markdown_text(app_test: AppTest) -> str:
+    """Every markdown/caption/warning/info string the page rendered, joined."""
+    parts: list[str] = []
+    for group in (app_test.markdown, app_test.caption, app_test.warning, app_test.info):
+        parts.extend(element.value for element in group)
+    return "\n".join(parts)
+
+
+def _write_empty_csv(path: Path, columns: list[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(columns=columns).to_csv(path, index=False)
+
+
+@pytest.fixture
+def empty_data_root(tmp_path: Path) -> Path:
+    """A temporary project root with every app-facing CSV present but 0 rows.
+
+    Built with real (temporary) CSV files run through the real loaders, not
+    hand-built DataFrames, so the dtypes a page actually receives match what
+    an empty real source file would produce. Nothing under the repo's own
+    ``data/``/``outputs/`` is read or written here.
+    """
+    _write_empty_csv(tmp_path / "outputs" / "sku_inventory_simulation.csv", dd.REQUIRED_SKU_PROFILE_COLUMNS)
+    _write_empty_csv(tmp_path / "data" / "processed" / "sku_month_demand.csv", dd.REQUIRED_SKU_MONTH_DEMAND_COLUMNS)
+    _write_empty_csv(tmp_path / "data" / "processed" / "month_coverage.csv", dd.REQUIRED_MONTH_COVERAGE_COLUMNS)
+    _write_empty_csv(tmp_path / "data" / "processed" / "data_quality_summary.csv", dd.REQUIRED_DATA_QUALITY_COLUMNS)
+    _write_empty_csv(tmp_path / "outputs" / "working_capital_summary.csv", dd.REQUIRED_METRIC_VALUE_COLUMNS)
+    return tmp_path
 
 
 # ---------------------------------------------------------------------------
@@ -56,12 +88,43 @@ def test_overview_page_shows_known_headline_numbers():
     metric_values = [m.value for m in at.metric]
     assert "£9,818,872.18" in metric_values
     assert "3,790" in metric_values
+    assert "£1,805,589.48" in metric_values
 
 
 def test_overview_page_never_renders_a_forbidden_column():
     at = AppTest.from_file(str(OVERVIEW), default_timeout=60)
     at.run()
     assert not (_all_rendered_dataframe_columns(at) & dd.FORBIDDEN_COLUMNS)
+
+
+def test_overview_page_risk_metrics_all_carry_a_simulated_data_hint():
+    at = AppTest.from_file(str(OVERVIEW), default_timeout=60)
+    at.run()
+    metrics_by_label = {m.label: m for m in at.metric}
+    for label in ("Normal", "Stockout Risk", "Overstock Risk"):
+        help_text = (metrics_by_label[label].help or "").lower()
+        assert "simulated" in help_text, f"{label} metric is missing a simulated-data hint"
+
+
+def test_overview_page_explains_what_sku_means():
+    at = AppTest.from_file(str(OVERVIEW), default_timeout=60)
+    at.run()
+    metrics_by_label = {m.label: m for m in at.metric}
+    help_text = (metrics_by_label["Active SKUs"].help or "").lower()
+    assert "stock-keeping unit" in help_text
+
+
+def test_overview_page_handles_a_fully_empty_data_root_without_exception(empty_data_root, monkeypatch):
+    empty_profile = dd.load_sku_profile(project_root=empty_data_root)
+    empty_working_capital = dd.load_working_capital_summary(project_root=empty_data_root)
+    monkeypatch.setattr(dd, "load_sku_profile", lambda *a, **k: empty_profile)
+    monkeypatch.setattr(dd, "load_working_capital_summary", lambda *a, **k: empty_working_capital)
+
+    at = AppTest.from_file(str(OVERVIEW), default_timeout=60)
+    at.run()
+    assert not at.exception
+    metric_values = [m.value for m in at.metric]
+    assert "0" in metric_values
 
 
 # ---------------------------------------------------------------------------
@@ -114,6 +177,76 @@ def test_sku_analyzer_never_renders_a_forbidden_column():
     assert not (_all_rendered_dataframe_columns(at) & dd.FORBIDDEN_COLUMNS)
 
 
+def test_sku_analyzer_sidebar_shows_first_use_guidance_with_all_skus_as_default():
+    at = AppTest.from_file(str(SKU_ANALYZER), default_timeout=60)
+    at.run()
+    sidebar_captions = "\n".join(c.value for c in at.sidebar.caption)
+    assert "Showing all SKUs by default" in sidebar_captions
+    # Confirms P1-2's explicit requirement: guidance text only, no SKUs hidden by default.
+    assert any("Matching SKUs (3,790 of 3,790)" in s.value for s in at.subheader)
+
+
+def test_sku_analyzer_detail_selector_shows_code_and_description():
+    at = AppTest.from_file(str(SKU_ANALYZER), default_timeout=60)
+    at.run()
+    at.sidebar.text_input(key="sku_search").set_value("heart").run()
+    selector = at.selectbox(key="sku_detail_selector")
+    assert selector.options
+    assert all(" — " in option for option in selector.options)
+    assert any("heart" in option.lower() for option in selector.options)
+
+
+def test_sku_analyzer_demand_cv_is_rendered_as_a_plain_decimal_not_a_percent():
+    at = AppTest.from_file(str(SKU_ANALYZER), default_timeout=60)
+    at.run()
+    [results_df] = [el.value for el in at.dataframe if "Demand CV (monthly sales)" in el.value.columns]
+    cv_values = results_df["Demand CV (monthly sales)"].dropna().astype(str)
+    assert not cv_values.str.contains("%").any()
+    assert (cv_values.str.match(r"^-?\d+\.\d{2}$") | (cv_values == "Not available")).all()
+
+
+def test_sku_analyzer_detail_metrics_all_carry_plain_language_help():
+    at = AppTest.from_file(str(SKU_ANALYZER), default_timeout=60)
+    at.run()
+    at.sidebar.text_input(key="sku_search").set_value("heart").run()
+    metrics_by_label = {m.label: m for m in at.metric}
+    expected_labels = [
+        "Current inventory (simulated units)", "Safety stock (simulated units)",
+        "Reorder point (simulated units)", "EOQ (simulated order units)",
+        "Recommended replenishment (simulated units)", "Inventory coverage (simulated days)",
+    ]
+    for label in expected_labels:
+        assert label in metrics_by_label, f"missing detail metric: {label}"
+        assert (metrics_by_label[label].help or "").strip(), f"{label} has no help text"
+
+
+def test_sku_analyzer_handles_a_fully_empty_data_root_without_exception(empty_data_root, monkeypatch):
+    empty_profile = dd.load_sku_profile(project_root=empty_data_root)
+    empty_month_demand = dd.load_sku_month_demand(project_root=empty_data_root)
+    monkeypatch.setattr(dd, "load_sku_profile", lambda *a, **k: empty_profile)
+    monkeypatch.setattr(dd, "load_sku_month_demand", lambda *a, **k: empty_month_demand)
+
+    at = AppTest.from_file(str(SKU_ANALYZER), default_timeout=60)
+    at.run()
+    assert not at.exception
+    assert not at.error
+    assert any("No SKUs match" in i.value for i in at.info)
+
+
+def test_sku_analyzer_handles_a_missing_short_history_flag_without_exception(monkeypatch):
+    profile = dd.load_sku_profile().head(1).copy()
+    profile.loc[profile.index[0], "short_history"] = pd.NA
+    month_demand = dd.load_sku_month_demand()
+    monkeypatch.setattr(dd, "load_sku_profile", lambda *a, **k: profile)
+    monkeypatch.setattr(dd, "load_sku_month_demand", lambda *a, **k: month_demand)
+
+    at = AppTest.from_file(str(SKU_ANALYZER), default_timeout=60)
+    at.run()
+    assert not at.exception
+    [results_df] = [el.value for el in at.dataframe if "Short history" in el.value.columns]
+    assert results_df["Short history"].iloc[0] == "Not available"
+
+
 def test_project_disables_streamlit_usage_statistics():
     with (PROJECT_ROOT / ".streamlit" / "config.toml").open("rb") as config_file:
         config = tomllib.load(config_file)
@@ -136,6 +269,49 @@ def test_model_and_data_notes_covers_privacy_and_calibration_status():
     headers = [h.value.lower() for h in at.header]
     assert any("privacy" in h for h in headers)
     assert any("calibration" in h or "demonstration" in h for h in headers)
+
+
+def test_model_and_data_notes_never_calls_a_file_timestamp_the_data_generation_time():
+    at = AppTest.from_file(str(MODEL_NOTES), default_timeout=60)
+    at.run()
+    text = _all_markdown_text(at).lower()
+    assert "data generation time" not in text
+    assert "generation time" not in text
+    # The real headline signal is the dataset's own transaction coverage, framed
+    # as a shipped public snapshot -- not a deploy/checkout timestamp.
+    assert "public demonstration snapshot" in text
+    if "last modified" in text:
+        assert "deployed" in text or "this copy" in text
+
+
+def test_model_and_data_notes_never_leaks_a_local_absolute_path():
+    at = AppTest.from_file(str(MODEL_NOTES), default_timeout=60)
+    at.run()
+    text = _all_markdown_text(at)
+    assert str(PROJECT_ROOT) not in text
+    assert "/Users/" not in text
+
+
+def test_model_and_data_notes_links_repo_paths_to_a_stable_github_blob_url():
+    at = AppTest.from_file(str(MODEL_NOTES), default_timeout=60)
+    at.run()
+    text = _all_markdown_text(at)
+    assert "https://github.com/SakanaLR/ecommerce-inventory-warehouse-allocation/blob/main/docs/runbook.md" in text
+    assert "https://github.com/SakanaLR/ecommerce-inventory-warehouse-allocation/blob/main/README.md" in text
+
+
+def test_model_and_data_notes_handles_empty_coverage_and_quality_tables_without_exception(
+    empty_data_root, monkeypatch
+):
+    empty_coverage = dd.load_month_coverage(project_root=empty_data_root)
+    empty_quality = dd.load_data_quality_summary(project_root=empty_data_root)
+    monkeypatch.setattr(dd, "load_month_coverage", lambda *a, **k: empty_coverage)
+    monkeypatch.setattr(dd, "load_data_quality_summary", lambda *a, **k: empty_quality)
+
+    at = AppTest.from_file(str(MODEL_NOTES), default_timeout=60)
+    at.run()
+    assert not at.exception
+    assert any("No full (non-truncated) months" in w.value for w in at.warning)
 
 
 # ---------------------------------------------------------------------------

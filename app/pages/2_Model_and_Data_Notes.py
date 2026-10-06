@@ -4,6 +4,7 @@ parameter calibration status, privacy notes, and links to fuller docs.
 Read-only. See ``docs/app_product_spec.md`` §2 for the page spec.
 """
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 APP_DIR = Path(__file__).resolve().parent
@@ -15,12 +16,27 @@ import streamlit as st
 
 from retail_analytics import dashboard_data as dd
 
+# Stable links into the public repo for this page's "further reading" references.
+# The repository is public on GitHub at this URL; these point at specific files
+# on `main` so a reader (merchant or portfolio visitor) can actually open them
+# instead of seeing an inert file path they have no way to follow.
+REPO_BLOB_BASE = "https://github.com/SakanaLR/ecommerce-inventory-warehouse-allocation/blob/main/"
+
+
+def repo_link(path: str) -> str:
+    return f"[`{path}`]({REPO_BLOB_BASE}{path})"
+
+
 st.set_page_config(page_title="Model & Data Notes", page_icon="📚", layout="wide")
 
 st.title("📚 Model & Data Notes")
 st.caption(
     "This app runs on a public demonstration dataset (UCI Online Retail). "
     "Nothing on this page or elsewhere in the app is a calibrated, production operational system."
+)
+st.caption(
+    "This is a public demonstration snapshot of that dataset, shipped with this "
+    "repository — not a live feed and not connected to any merchant's real systems."
 )
 
 try:
@@ -50,15 +66,26 @@ freshness = dd.data_freshness_notes(PROJECT_ROOT)
 if freshness["row_count_warning"]:
     st.warning(freshness["row_count_warning"])
 
+if freshness["files"]:
+    with st.expander("Deployed copy's file details (not the data's generation time)"):
+        st.caption(
+            "These are file-system modification timestamps for this deployed/cloned "
+            "copy of the repository — they shift on every checkout or deploy and do "
+            "not indicate when the underlying demonstration data was produced."
+        )
+        for rel_path, mtime in sorted(freshness["files"].items()):
+            stamp = datetime.fromtimestamp(mtime, tz=timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+            st.caption(f"`{rel_path}` — this copy's file last modified: {stamp}")
+
 st.header("Cleaning rules (summary)")
 st.markdown(
     "- Duplicate transaction rows are removed.\n"
     "- Non-product lines (postage, carriage, fees, discounts, samples, gift vouchers, etc.) are "
-    "excluded — see `config/non_product_stock_codes.csv`.\n"
-    "- Sales reversed by a reviewed manual credit are removed — see `config/manual_reversals.csv`.\n"
+    f"excluded — see {repo_link('config/non_product_stock_codes.csv')}.\n"
+    f"- Sales reversed by a reviewed manual credit are removed — see {repo_link('config/manual_reversals.csv')}.\n"
     "- Sales that the same customer later cancelled in full are removed, preferring a match at the "
     "same unit price.\n"
-    "- Full detail: `docs/runbook.md`'s \"Cleaning Rules\" section."
+    f"- Full detail: {repo_link('docs/runbook.md')}'s \"Cleaning Rules\" section."
 )
 st.dataframe(quality, hide_index=True, width="stretch")
 
@@ -81,8 +108,9 @@ st.warning(
     "order-quantity cap, the 180-day overstock coverage limit, the supplier lead-time distribution "
     "(7–45 days), and the per-class service levels are **all demonstration assumptions** — none are "
     "calibrated against real purchasing, warehousing, or supplier data, because this public dataset "
-    "has none. Owner and calibration date: not yet assigned. See `docs/runbook.md`'s "
-    "\"Parameter calibration status\" section and `docs/model_assumptions_review.md` for the full analysis."
+    f"has none. Owner and calibration date: not yet assigned. See {repo_link('docs/runbook.md')}'s "
+    f"\"Parameter calibration status\" section and {repo_link('docs/model_assumptions_review.md')} "
+    "for the full analysis."
 )
 
 st.header("🔒 Data privacy")
@@ -104,12 +132,14 @@ st.markdown(
     "**69.3% is a fixed-snapshot sensitivity result, not a false-positive rate.**\n"
     "- `demand_cv` measures relative monthly-sales volatility including zero-sale months — it is not "
     "a measure of individual order-size variation.\n"
-    "- Full detail: `docs/model_assumptions_review.md` and `README.md`'s \"Assumptions and Limitations\"."
+    f"- Full detail: {repo_link('docs/model_assumptions_review.md')} and {repo_link('README.md')}'s "
+    "\"Assumptions and Limitations\"."
 )
 
 st.header("Further reading in this repository")
 st.markdown(
-    "- `docs/runbook.md` — full pipeline and model documentation.\n"
-    "- `docs/management_summary.md` — management-facing summary.\n"
-    "- `docs/model_assumptions_review.md` — independent review of the simulation model's assumptions."
+    f"- {repo_link('docs/runbook.md')} — full pipeline and model documentation.\n"
+    f"- {repo_link('docs/management_summary.md')} — management-facing summary.\n"
+    f"- {repo_link('docs/model_assumptions_review.md')} — independent review of the simulation "
+    "model's assumptions."
 )

@@ -1,10 +1,16 @@
 # E-Commerce Inventory, Warehouse & Working Capital Analytics
 
+> **📊 [Try the interactive merchant dashboard](#merchant-analytics-app-read-only-mvp)** — a read-only Streamlit app built on this project's own outputs. Jump to [setup](#setup) to run it locally.
+
+**Contents:** [Overview](#overview) · [Business Questions](#business-questions) · [Key Results](#key-results) · [Merchant analytics app](#merchant-analytics-app-read-only-mvp) · [How to Run](#how-to-run) · [Data Source](#data-source) · [Assumptions and Limitations](#assumptions-and-limitations)
+
 ## Overview
 
-This portfolio project turns public e-commerce transaction data into SKU-level decision support for finance and operations teams. It connects sales history to product prioritization, replenishment review, inventory risk, warehouse strategy, and working-capital exposure.
+This portfolio project turns public e-commerce transaction data into SKU-level decision support for finance and operations teams. It connects sales history to product prioritization, replenishment review, inventory risk, warehouse strategy, and working-capital exposure. A read-only [interactive dashboard](#merchant-analytics-app-read-only-mvp) built on the same outputs lets a non-technical merchant explore the results directly.
 
 The workflow validates and standardizes the raw file, cleans it with tested rules, and then runs five analysis notebooks in sequence. All monetary values are in GBP, the currency of the source data.
+
+![Merchant inventory dashboard overview](docs/images/merchant-dashboard-overview.png)
 
 ## Data Quality Highlight
 

@@ -237,6 +237,15 @@ def test_display_formatters_keep_missing_values_distinct_from_zero():
     assert dd.format_gbp(float("nan")) == "Not available"
     assert dd.format_units(None) == "Not available"
     assert dd.format_percent(float("nan")) == "Not available"
+    assert dd.format_ratio(float("nan")) == "Not available"
+
+
+def test_format_ratio_matches_the_repos_own_plain_decimal_convention():
+    # README.md describes demand_cv as a plain ratio ("median CV of 1.01"), not a
+    # percentage -- this keeps the app's own rendering consistent with that.
+    assert dd.format_ratio(1.01) == "1.01"
+    assert dd.format_ratio(0.840224) == "0.84"
+    assert dd.format_ratio(None) == "Not available"
 
 
 # ---------------------------------------------------------------------------
@@ -314,6 +323,47 @@ def test_short_history_notice_absent_for_long_history_sku():
 def test_normal_risk_disclaimer_does_not_claim_confirmed_good_performance():
     text = dd.normal_risk_disclaimer().lower()
     assert "not a confirmed" in text or "not confirmed" in text
+
+
+# ---------------------------------------------------------------------------
+# short_history_notice boundary fixtures: required fields that are *present*
+# (pass schema validation, which does not require non-null) but *empty* --
+# these bypass the CSV loader entirely, the same way a page's own call to this
+# pure function would if a row happened to carry a missing flag/count.
+# ---------------------------------------------------------------------------
+
+def test_short_history_notice_handles_a_missing_short_history_flag_without_crashing():
+    # short_history is a nullable "boolean" column after loading; bool(pd.NA)
+    # raises TypeError, so this must not reach a raw bool() cast.
+    row = pd.Series(_profile_row(short_history=pd.NA, months_in_window=12))
+    assert dd.short_history_notice(row) is None
+
+
+def test_short_history_notice_handles_a_missing_months_in_window_without_crashing():
+    # months_in_window is numeric-but-nullable; int(float("nan")) raises
+    # ValueError, so this must not reach a raw int() cast either.
+    row = pd.Series(_profile_row(short_history=True, months_in_window=float("nan")))
+    notice = dd.short_history_notice(row)
+    assert notice is not None
+    assert "month count is not available" in notice
+    assert "0 month" not in notice
+
+
+def test_simulated_metric_hint_points_readers_to_the_model_and_data_notes_page():
+    hint = dd.simulated_metric_hint().lower()
+    assert "simulated" in hint
+    assert "model & data notes" in hint
+
+
+def test_sku_detail_metric_help_covers_every_simulated_metric_with_distinct_text():
+    expected_keys = {
+        "current_inventory", "safety_stock", "reorder_point",
+        "economic_order_qty", "recommended_replenishment_qty", "inventory_coverage_days",
+    }
+    assert set(dd.SKU_DETAIL_METRIC_HELP) == expected_keys
+    texts = list(dd.SKU_DETAIL_METRIC_HELP.values())
+    assert all(isinstance(text, str) and text.strip() for text in texts)
+    assert len(set(texts)) == len(texts)  # no copy-pasted duplicate explanations
 
 
 # ---------------------------------------------------------------------------
