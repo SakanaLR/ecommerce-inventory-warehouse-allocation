@@ -1,30 +1,51 @@
-# 当前任务：实施修复方案（R1/R2/R3/R4/R5/R7/R8）
+# 当前任务：交付基线收口与自动化验证
 
-> 本文件已从"问题复核与修复方案设计"改为"实施修复方案"。用户已就 `docs/remediation_plan.md` 中的三个业务口径做出决定（见下），本轮据此实施代码修复、测试补充和文档更新。原两轮任务书作为历史背景保留在下方。
+> 本文件已从"实施 R1/T1/T2/E1"改为"交付基线收口与自动化验证"。R1/T1/T2/E1 的实施（Claude）与 Codex 的独立验收强化（提交 `bfdc558`：E1 加固、新增 `tests/test_model_assumptions_diagnostics.py`、127 个测试）均已完成并已提交到本地分支（未 push）。本轮只处理交付文档一致性、CI 自动化和依赖可复现性，**不修改业务模型、正式参数、notebook、`data/processed/`、`outputs/` 或历史基线报告**。原任务书作为历史背景保留在下方。
 
-## 用户决策（业务口径 D1/D2/D3）
+## 基线核实结果（本轮开始前重新核实，未直接采信预期状态）
 
-- **D1：** 保留收入优先分类和现有模拟规则，不新增安全库存下限。已补充 `short_history` 分类边界测试（`tests/test_demand.py`），并在 `docs/management_summary.md`、`README.md`、`docs/runbook.md` 中记录历史不足的统计局限。
-- **D2：** 接受现有工作区作为整体验收基线，不拆分已有改动，不放宽单写者规则。本轮继续在 `phase1-data-correctness` 分支上工作，未新建分支，也未声称完成任何改动拆分。
-- **D3：** 继续支持缺少 `order_quantity` 段的合法 `top_up` 配置；EOQ 专属参数只在 EOQ 路径读取；年度持有成本在没有对应参数时明确标为不可用，不补默认值、不输出 0 冒充计算结果。
+- 分支：`audit/model-assumptions`；HEAD：`bfdc5586f751f6e9d43063e642a7dd6b6f336018`；工作区在本轮开始前干净；未 push（`git status -sb` 无 ahead/behind 上游信息）——以上均与用户告知的预期状态一致，已用 `git status`/`git branch --show-current`/`git rev-parse HEAD`/`git log` 实际核实。
+- **测试基线有出入，已发现并修正**：直接运行 `python -m pytest -W error -ra` 得到 **126 passed, 1 failed**（`tests/test_model_assumptions_diagnostics.py::test_cli_scenarios_are_independent_deterministic_and_described` 失败在 `assert metadata['code']['untracked_file_sha256']`）——不是"127 passed, 0 skipped"。根因：该断言要求诊断脚本的 `run_metadata.json` 里 `untracked_file_sha256` 字段非空，但这个字段的值取决于当前工作区**恰好有没有**未跟踪文件；本轮开始前工作区是干净的（Codex 验收记录时工作区里还有临时产物，断言当时能通过），在一个全新 CI 检出（永远没有未跟踪文件）下这条断言会**必定失败**。已将断言改为检查字段类型（是 dict）而非非空，不改变诊断脚本本身的行为。修正后重新运行：**127 passed, 0 skipped**，此后本文件里的"127 passed"均指修正后的结果。
 
-## 本轮范围
+## 本轮范围与产出
 
-- 完成 `docs/remediation_plan.md` 的 R1、R2、R3、R4、R5、R7、R8（R6 已在复核轮的 `docs/management_summary.md` 更新中一并完成，未重复创建新报告）。
-- 允许修改：`src/retail_analytics/simulation.py`、`scripts/attribute_model_changes.py`、`notebooks/05_working_capital_impact.ipynb`、`tests/*`、`README.md`、`docs/runbook.md`、`docs/management_summary.md`、`CHANGELOG.md`、`docs/handoff.md`、本文件。
-- 不 commit、不 push、不合并。
+只处理交付、CI 和可复现性，不改业务模型/正式参数/notebook/`data/processed/`/`outputs/`/历史基线报告：
 
-## 完成情况摘要
+1. **状态文档收口：** 本文件与 `docs/handoff.md`、`CHANGELOG.md` 更新为与 `bfdc558`/127 passed/已提交未 push 一致，历史记录全部保留在下方，不再让顶部状态显示旧基线（`50ce335`/98 passed 等）。
+2. **GitHub Actions（`.github/workflows/tests.yml`）：** Python 3.11，全新检出安装 `requirements-dev.txt`，运行 `python -m pytest -W error -ra --junitxml=pytest-results.xml`，并读取 JUnit XML 的机器可验证 skipped 计数；任何跳过即失败。用 pip 缓存和最小 `contents: read` 权限，不引入发布/打包流程。
+3. **依赖可复现性：** `requirements.txt`/`requirements-dev.txt` 从"完全不锁版本"改为"仅设下限，不设上限"；运行时文件只保留代码实际导入的 `pandas`、`numpy`、`openpyxl`，notebook 执行所需的 `jupyter`、`ipykernel`、`nbconvert` 单独放在 `requirements-dev.txt`；移除了项目中实际未被任何代码或 notebook 引用的 `matplotlib`。运行时下限（`pandas>=2.2.3`、`numpy>=1.26.0`、`openpyxl>=3.1.0`、`pytest>=8.0.0`）在全新临时环境中实际装到这些精确版本并跑过 `pytest -W error -ra`（127 passed, 0 skipped）；notebook 依赖本轮验证了安装，但未以最低版本执行 notebook，已在文件注释中明确注明。
+4. **许可与数据归属：** 核实仓库当前没有任何 LICENSE 文件（默认视为保留所有权利）；核实 `data/raw/Online Retail.xlsx` 来源于 UCI Machine Learning Repository 的 "Online Retail" 数据集（Daqing Chen 捐赠，DOI 10.24432/C5BW33），该数据集页面明确以 **CC BY 4.0** 授权，允许再分发和商业使用（需署名）——已通过 `WebFetch` 实际访问 UCI 页面核实，不是凭记忆断言。README 新增"License"与"Data Source"下的许可/引用说明；新增 `CITATION.cff`（只记录稳定仓库 URL，以 CFF schema 要求的非个人占位作者 `Repository maintainers` 代替未经确认的个人身份，数据集引用取自 UCI 页面原文）。**代码本身该用什么许可证留给用户决定**，未替用户选择。
+5. **`docs/pr_delivery.md`（新建）：** 问题、最终行为、主要阶段、验证证据、已知限制、审查建议，明确库存/成本/交期/服务水平仍是演示/待校准参数。
 
-详见 `docs/handoff.md`（本轮修改文件、实际验证命令、通过/跳过情况、结果变化说明、剩余限制）。
+## 验收结果
+
+详见 `docs/handoff.md` 本轮交接（完整命令、干净环境安装与测试证据、CI 工作流内容、依赖下限验证方法、许可核实过程、正式文件哈希不变的证据）。摘要：`pytest -W error -ra` 在项目 `.venv` 与两个独立的全新临时环境（当前锁定版本的环境、依赖下限版本的环境）中都是 **127 passed, 0 skipped**（前提是先修正了下方发现的一处测试基线问题）；`git diff --check` 通过；`config/`、`data/`、`outputs/`、`notebooks/` 及历史基线报告哈希在本轮前后不变。
 
 ## Git 基线
 
-分支 `phase1-data-correctness`，HEAD `1e73781429f09d310a4c75e5e94eb085aa3b0fb1`（与复核阶段一致，本轮未变化）。工作区存在大量未提交修改，必须全部保留，不 reset、不强制 checkout。
+分支 `audit/model-assumptions`，HEAD `bfdc5586f751f6e9d43063e642a7dd6b6f336018`（本轮全程未变化，未 commit、未 push）。
 
 ---
 
-## 历史背景 2：问题复核与修复方案设计任务书（上一轮，已完成）
+## 历史背景 5：实施 R1/T1/T2/E1 + Codex 验收强化（上一轮，已提交为 `bfdc558`）
+
+> 该轮完成了 `docs/model_assumptions_plan.md` 的 R1（文档纠正）、T1（`tests/test_demand_simulation_interface.py`，8 个测试）、T2（`tests/test_simulation.py` 新增 12 个测试）、E1（`scripts/model_assumptions_diagnostics.py`），随后 Codex 独立验收并加固了 E1（原子写入、拒绝已存在目录/符号链接、配置兼容性校验、更完整的元数据字段）、新增 `tests/test_model_assumptions_diagnostics.py`，最终测试数到 127，提交为 `bfdc558`（未 push）。完整记录（含逐项数字对照、变异测试证据）见 `docs/handoff.md`"历史交接：实施 R1/T1/T2/E1"及其后的 Codex 验收章节。未实施 B1（业务参数校准），未重开 B2/D1（短窗口保守策略研究）。
+
+## 历史背景 4：模型假设诊断轮 + Codex 独立复核与方案（更早一轮，已完成）
+
+> 该轮产出了 `docs/model_assumptions_audit.md`（Claude 诊断）、`docs/model_assumptions_review.md`（Codex 独立复核，多处认定"部分成立"或"证据不足"并修正措辞）、`docs/model_assumptions_plan.md`（Codex 后续方案）。均未修改业务代码，均未 commit。
+
+## 历史背景 3：实施修复方案任务书（更早一轮，已完成并提交）
+
+> 该轮完成了 `docs/remediation_plan.md` 的 R1、R2、R3、R4、R5、R7、R8，并经 Codex 独立验收（发现并修复了 R1 第三处端到端缺口、收入回归测试容差过宽、验证脚本假成功风险、R2 正向覆盖不足、文档与实跑不一致、归因报告的一便士差异），最终测试数 78，已提交为 `50ce335`。完整记录见 `docs/handoff.md`。
+
+### 用户决策（业务口径 D1/D2/D3，历史）
+
+- **D1：** 保留收入优先分类和现有模拟规则，不新增安全库存下限。已补充 `short_history` 分类边界测试（`tests/test_demand.py`），并在文档中记录历史不足的统计局限。
+- **D2：** 接受现有工作区作为整体验收基线，不拆分已有改动，不放宽单写者规则。
+- **D3：** 继续支持缺少 `order_quantity` 段的合法 `top_up` 配置；EOQ 专属参数只在 EOQ 路径读取；年度持有成本在没有对应参数时明确标为不可用。
+
+## 历史背景 2：问题复核与修复方案设计任务书（更早一轮，已完成）
 
 > 该轮产出了 `docs/issue_review.md` 和 `docs/remediation_plan.md`，确认当前 live 配置实际运行的是 Phase 3B-1 模型（`config/simulation_assumptions.json` 的 `methods` 字段）。
 

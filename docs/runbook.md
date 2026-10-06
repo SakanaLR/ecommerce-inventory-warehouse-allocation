@@ -180,6 +180,10 @@ The volatility cut-off is set by `VOLATILITY_CV` in notebook 03.
 
 Notebook 03 prints a reconciliation of units: panel plus truncated months must equal the total.
 
+**What `demand_cv` actually measures.** It is `sample_std(X, ddof=1) / mean(X)` over the zero-filled monthly panel `X` (first sale month through the last full month) — this is the *relative volatility of monthly sales including zero-sale months*, not a measure of single-order size, and not simply an "intermittency" indicator on its own. For a window of length `n` with zero-month share `z` and non-zero-month population CV `CV₊`, `CV_sample² = n/(n−1) × (CV₊² + z)/(1 − z)`: the observed CV is a mix of positive-month sales-volume variation, how often the SKU has any sales at all in its window, and a small-sample correction. Across the current dataset, `demand_cv` correlates with `zero_month_share` at Pearson r ≈ 0.84 (3,789 of 3,790 SKUs have both values defined) — but that correlation describes this dataset's current mix, not which term dominates for a given SKU, and it does not establish that CV "actually measures intermittency" as a general claim. See [`docs/model_assumptions_review.md`](model_assumptions_review.md) §3 for the full derivation and worked examples.
+
+**`months_in_window == 3` is not the same as `short_history`.** The flag is strictly "fewer than 3 months" (`< 3`), so a SKU with exactly 3 months of observed history is *not* flagged `short_history`, even though 3 months is still a short observation window in a statistical sense. A SKU with only 3 months of data can still be classified High-Revenue Priority or Regular with a low `demand_cv` — that low CV is estimated from limited observations, not a verified stable demand pattern; the resulting `inventory_risk` label (e.g. "Normal") describes what the simulated policy computes under current assumptions, not a confirmed real-world outcome. See [`docs/model_assumptions_review.md`](model_assumptions_review.md) §4 for concrete examples and the corrected SKU-class table (an earlier internal diagnosis draft had mis-stated two of the example SKUs' classes; the review corrects this).
+
 ## Simulated Inventory Layer (Notebooks 04–05)
 
 The logic is in `src/retail_analytics/simulation.py` and is covered by `tests/test_simulation.py`. `config/simulation_assumptions.json`'s `methods` block selects the model per field; the current configuration is `inventory=policy_band`, `safety_stock=service_level`, `order_quantity=eoq`, `overstock=max_stock`. A simpler model (`fixed_range`/`volatility_factor`/`top_up`/`coverage_only`, matching `PHASE_3A_METHODS` in `simulation.py`) is also supported and used for before/after comparison — a config using it does not need an `order_quantity` section at all, since that section is only read on the `eoq` path.
@@ -201,6 +205,8 @@ The logic is in `src/retail_analytics/simulation.py` and is covered by `tests/te
 **How the notebooks share it.** Notebook 04 saves the full layer to `outputs/sku_inventory_simulation.csv`. Notebook 05 reads that file and asserts that a fresh simulation reproduces it.
 
 `scripts/check_simulation_stability.py` compares the legacy row-position method with the hashed method on the real SKU list, and writes `reports/phase3a_simulation_stability.csv`. `scripts/attribute_model_changes.py` isolates the effect of each Phase 3A → Phase 3B-1 method change one at a time and writes `reports/phase3b1_attribution.csv`; read it end to end, since an intermediate step can temporarily look worse than either endpoint (see `docs/management_summary.md`).
+
+**Parameter calibration status.** `ordering_cost_gbp`, `annual_holding_rate`, `max_order_coverage_days`, `overstock.coverage_days`, `supplier_lead_time_days`, and `safety_stock.service_level_by_class` are demonstration assumptions for this portfolio project, not values calibrated against real purchasing, warehousing, or supplier data — this dataset has no such data to calibrate against. `ordering_cost_gbp=25` is applied by the code as a fixed cost per SKU per replenishment event (see `economic_order_quantity()` in `simulation.py`); the model does not represent multi-SKU purchase orders or any cost-sharing across a supplier consolidation, so £25 should not be read as "per purchase order." Source status: demonstration / pending calibration. Owner and calibration date: not yet assigned. A meaningfully high fraction of SKUs currently hit the `max_order_coverage_days` cap and a majority of current "Overstock Risk" flags are sensitive to it — see [`docs/model_assumptions_review.md`](model_assumptions_review.md) §5–6 and [`docs/model_assumptions_plan.md`](model_assumptions_plan.md) §7 for the analysis and what real business input would be needed before treating any of these parameters as calibrated. `scripts/model_assumptions_diagnostics.py` (see Tests and Comparisons below) reproduces the fixed-inventory/full-regeneration comparison and the single-factor sensitivity scenarios from that review on demand, against a compatible policy_band/service_level/eoq/max_stock config copy, without touching the live config or outputs.
 
 ## Generated Outputs
 
@@ -245,7 +251,7 @@ Business outputs (`outputs/`):
 - `warehouse_strategy_count`: the number of unique warehouse strategies (currently 6).
 - `warehouse_allocation_segment_count`: the number of SKU class × strategy rows in `warehouse_allocation_summary.csv` (currently 7).
 - `stockout_revenue_exposure`: for Stockout Risk SKUs, the shortfall to the reorder point valued at average selling price. It is an upper-bound indicator, not a lost-revenue forecast.
-- `overstock_capital_exposure`: for Overstock Risk SKUs, the units above 180 days of demand valued at simulated unit cost.
+- `overstock_capital_exposure`: for Overstock Risk SKUs, `current_inventory` above the *effective* overstock threshold, valued at simulated unit cost. The threshold depends on `methods.overstock`: under `max_stock` (the live method) it is `max(reorder point + EOQ, daily demand × overstock.coverage_days)` — **not simply `daily demand × coverage_days`** — so a SKU's own reorder point and order quantity can raise its threshold above the flat coverage-day line; under the legacy `coverage_only` method the threshold is exactly `daily demand × coverage_days`. See the `overstock` row in the Simulated Inventory Layer table above, and [`docs/model_assumptions_review.md`](model_assumptions_review.md) §9 for the correction history of this definition.
 
 All monetary values are in GBP.
 
@@ -294,6 +300,20 @@ The `phase3a` command compares two frozen snapshots; `phase3b1` compares the Pha
 A snapshot directory holds `baseline_metrics.csv`, `outputs/`, and `data_processed/`. Revisions made within Phase 1 are not snapshots; `reports/phase1_data_correctness.md` describes them separately.
 
 `scripts/verify_pipeline.sh` runs the full chain in the project `.venv`: validation, standardization, notebooks 01–05, both comparisons, the stability check, and the tests. Run it from the project root with `mkdir -p tmp && bash scripts/verify_pipeline.sh > tmp/verify_pipeline.log 2>&1`.
+
+`scripts/model_assumptions_diagnostics.py` reproduces the model-assumptions experiments from [`docs/model_assumptions_review.md`](model_assumptions_review.md) on demand: the fixed-inventory experiment (`A`), the full-regeneration experiment (`B`), and the nine single-factor sensitivity scenarios (`1a`/`1b`/`2a`/`2b`/`3a`/`3b`/`4a`/`4b`/`5`). It takes an explicit `--profile`, `--config`, and `--output-dir`, refuses to write into any official `config/`/`outputs/`/`data/`/`notebooks/`/`reports/` path, and reports risk counts, shortfall units, and monetary exposure together (never counts alone) alongside a full metadata record (code commit, working-tree dirty status, input file hashes, dependency versions, seed, and the actual — not nominal — parameter values applied). It does not search for or write back a "best" parameter set; it only reports what each named scenario produces. Example:
+
+```bash
+python scripts/model_assumptions_diagnostics.py \
+  --profile outputs/sku_inventory_simulation.csv \
+  --config config/simulation_assumptions.json \
+  --output-dir /tmp/model_assumptions_diag \
+  --scenarios all
+```
+
+The destination must be a **new, nonexistent directory outside the repository**. Relative paths and symlink aliases are resolved; existing directories (including old reports) are rejected. No report is published unless all scenarios, validation and output writes succeed. Invalid/duplicate scenario names, incomplete saved simulations, duplicate SKU keys and nonfinite demand inputs fail explicitly. A raw SKU profile or a complete saved simulation is accepted; the latter is checked against its original config before any `--seed` override regenerates a common baseline. A/B and each sensitivity case independently derive from that baseline. The CLI currently supports the four live methods only, not legacy top_up configurations.
+
+Metadata records the effective config, actual per-scenario parameters, input/source hashes, HEAD, staged and unstaged diff hashes, untracked content hashes and dependency versions. Discrete/rounded simulated fields compare exactly; unrounded floating intermediates use rtol=1e-12 and atol=1e-9 (CSV round-trip precision, substantially below one inventory unit or penny). Monetary comparisons use per-SKU pennies then aggregate pennies. Summary CSV includes baseline-relative absolute and percentage changes (zero denominators have unavailable percentages), field changes include the effective overstock threshold, and risk transition CSVs expose movement between categories. Repeating a run compares business results, not environment metadata. Named scenarios 2a–4b use the documented absolute values (e.g. £12.5/£50), so for a different baseline their percentage changes must be read from the recorded before/after values.
 
 ## Known Limitations
 

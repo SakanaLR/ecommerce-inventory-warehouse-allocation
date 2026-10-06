@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: >-
+  If you reference this repository, please cite it using the metadata
+  below. This project has no tagged release yet, so no version or
+  release date is given. The underlying sales dataset is a separate,
+  independently licensed work — see the "references" entry below, and
+  README.md's "Data Source" / "License" sections for full context. This
+  repository's own code currently has no license file (see README.md);
+  citing it does not grant reuse rights beyond what GitHub's default
+  terms allow.
+title: "E-Commerce Inventory, Warehouse & Working Capital Analytics"
+type: software
+authors:
+  - name: "Repository maintainers"
+repository-code: "https://github.com/SakanaLR/ecommerce-inventory-warehouse-allocation"
+references:
+  - type: data
+    title: "Online Retail"
+    authors:
+      - family-names: "Chen"
+        given-names: "Daqing"
+        affiliation: "School of Engineering, London South Bank University"
+    year: 2015
+    doi: "10.24432/C5BW33"
+    url: "https://archive.ics.uci.edu/dataset/352/online+retail"
+    license: "CC-BY-4.0"
+    notes: >-
+      Verified against the UCI Machine Learning Repository page on
+      2026-09-18. Citation as given on that page: Chen, D. (2015).
+      Online Retail [Dataset]. UCI Machine Learning Repository.
+      https://doi.org/10.24432/C5BW33.

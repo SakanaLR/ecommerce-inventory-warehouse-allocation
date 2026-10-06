@@ -1,6 +1,9 @@
-pandas
-numpy
-openpyxl
-matplotlib
-jupyter
-ipykernel
+# Minimum versions actually verified in a clean environment against the full
+# test suite (pandas/numpy/openpyxl/pytest -- see requirements-dev.txt for
+# pytest) -- see docs/pr_delivery.md for the verification method and why
+# these floors, not exact pins, were chosen. No upper bound is set; a future
+# major release that breaks compatibility will show up as a loud CI failure
+# under `pytest -W error`, not a silent one.
+pandas>=2.2.3
+numpy>=1.26.0
+openpyxl>=3.1.0

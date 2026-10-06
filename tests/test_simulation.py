@@ -187,6 +187,164 @@ def test_zero_demand_sku_is_handled(assumptions):
 
 
 # ---------------------------------------------------------------------------
+# EOQ/threshold boundaries and stability invariants (T2)
+#
+# These check properties that must hold for ANY legal parameter choice, not
+# just the current live config's specific numbers (current capped-SKU counts
+# or overstock totals are diagnostic snapshots, not a general contract -- see
+# docs/model_assumptions_review.md §7 / docs/model_assumptions_plan.md §5).
+# ---------------------------------------------------------------------------
+
+def test_eoq_capped_boundary_exactly_at_the_cap_is_not_capped(assumptions):
+    # daily demand = 1 (avg_monthly_units=30) -> cap = ceil(1*180) = 180.
+    # unit_cost chosen so uncapped EOQ == 180 exactly: sqrt(2*360*25/(c*0.25)) = 180
+    # => c = 72000/32400 = 20/9.
+    row = one_sku(assumptions, avg_monthly_units=30.0, std_monthly_units=0.0, unit_cost=20 / 9)
+    assert row["economic_order_qty"] == 180
+    assert not row["eoq_capped"]
+
+
+def test_eoq_capped_boundary_just_over_the_cap_is_capped(assumptions):
+    # Same demand, slightly lower unit cost -> uncapped EOQ pushes just past 180.
+    row = one_sku(assumptions, avg_monthly_units=30.0, std_monthly_units=0.0, unit_cost=2.0)
+    assert row["economic_order_qty"] == 180  # capped down to the coverage limit
+    assert row["eoq_capped"]
+
+
+def test_eoq_order_quantity_never_negative_for_tiny_positive_demand(assumptions):
+    # Regression guard for the cap's `max(..., 1.0)` floor: a technically-positive
+    # but tiny demand must not produce a zero or negative capped order quantity.
+    row = one_sku(assumptions, avg_monthly_units=1e-9, std_monthly_units=0.0, unit_cost=50.0)
+    assert row["economic_order_qty"] >= 1
+
+
+def test_eoq_does_not_decrease_when_ordering_cost_increases():
+    low = simulation.economic_order_quantity([1200.0], 10.0, [2.0], 0.25)[0]
+    high = simulation.economic_order_quantity([1200.0], 100.0, [2.0], 0.25)[0]
+    assert high >= low
+
+
+def test_eoq_does_not_increase_with_holding_rate_or_unit_cost():
+    base = simulation.economic_order_quantity([1200.0], 25.0, [2.0], 0.25)[0]
+    higher_rate = simulation.economic_order_quantity([1200.0], 25.0, [2.0], 0.50)[0]
+    higher_cost = simulation.economic_order_quantity([1200.0], 25.0, [4.0], 0.25)[0]
+    assert higher_rate <= base
+    assert higher_cost <= base
+
+
+def test_looser_cap_does_not_decrease_the_final_order_quantity(assumptions):
+    tight = copy.deepcopy(assumptions)
+    tight["order_quantity"] = dict(tight["order_quantity"], max_order_coverage_days=90)
+    loose = copy.deepcopy(assumptions)
+    loose["order_quantity"] = dict(loose["order_quantity"], max_order_coverage_days=365)
+
+    row_tight = one_sku(tight, avg_monthly_units=30.0, std_monthly_units=0.0, unit_cost=2.0)
+    row_loose = one_sku(loose, avg_monthly_units=30.0, std_monthly_units=0.0, unit_cost=2.0)
+    assert row_tight["economic_order_qty"] == 90
+    assert row_loose["economic_order_qty"] == 190
+
+
+def test_current_inventory_equal_to_reorder_point_is_not_stockout(assumptions):
+    # policy_position=0.0 -> current_inventory = round(ROP + 0*EOQ) = ROP exactly.
+    row = one_sku(assumptions, policy_position=0.0)
+    assert row["current_inventory"] == row["reorder_point"]
+    assert row["inventory_risk"] != "Stockout Risk"
+
+
+def test_current_inventory_equal_to_max_stock_level_is_not_overstock(assumptions):
+    # From test_reorder_point_eoq_cap_and_policy_band_inventory: ROP=50, EOQ=180.
+    # p=1.0 -> current_inventory = round(50 + 1.0*180) = 230 = max_stock_level exactly.
+    row = one_sku(assumptions, policy_position=1.0)
+    assert row["current_inventory"] == row["max_stock_level"]
+    assert row["inventory_risk"] != "Overstock Risk"
+
+
+def test_current_inventory_one_unit_over_max_stock_level_is_overstock(assumptions):
+    row = one_sku(assumptions, policy_position=1 + 1 / 180)
+    assert row["current_inventory"] == row["max_stock_level"] + 1
+    assert row["inventory_risk"] == "Overstock Risk"
+
+
+def test_recommended_replenishment_uses_shortfall_when_it_exceeds_the_capped_eoq(assumptions):
+    # Large observed spread raises ROP; the EOQ really is capped at 180.
+    row = one_sku(
+        assumptions, avg_monthly_units=30.0, std_monthly_units=1000.0,
+        unit_cost=2.0, supplier_lead_time_days=30, policy_position=-100.0,
+    )
+    assert row["eoq_capped"]
+    assert row["economic_order_qty"] == 180
+    shortfall = row["reorder_point"] - row["current_inventory"]
+    assert shortfall > row["economic_order_qty"]
+    assert row["recommended_replenishment_qty"] == shortfall
+
+
+def test_fixed_inventory_experiment_keeps_rop_safety_stock_and_inventory_fixed(assumptions):
+    """Mirrors the 'Experiment A' methodology in docs/model_assumptions_review.md
+    §5: setting methods.inventory="fixed_range" makes apply_replenishment_rules
+    skip its policy_band inventory-regeneration branch, so a given
+    current_inventory passes through unchanged while thresholds/recommendations
+    still respond to the changed order-quantity config. This must hold for any
+    legal cap choice, not just the specific 180-day live value."""
+    row_kwargs = dict(
+        stock_code="A", sku_class="Regular", avg_unit_price=4.0,
+        avg_monthly_units=30.0, std_monthly_units=15.0, demand_cv=0.5,
+        supplier_lead_time_days=30, unit_cost=2.0, current_inventory=200,
+    )
+
+    def fixed_inventory_config(cap_days):
+        adapted = copy.deepcopy(assumptions)
+        adapted["methods"] = dict(adapted["methods"])
+        adapted["methods"]["inventory"] = "fixed_range"  # skip inventory regeneration
+        adapted["order_quantity"] = dict(adapted["order_quantity"], max_order_coverage_days=cap_days)
+        return adapted
+
+    tight = simulation.apply_replenishment_rules(pd.DataFrame([row_kwargs]), fixed_inventory_config(30)).iloc[0]
+    loose = simulation.apply_replenishment_rules(pd.DataFrame([row_kwargs]), fixed_inventory_config(365)).iloc[0]
+
+    assert tight["reorder_point"] == loose["reorder_point"]
+    assert tight["safety_stock"] == loose["safety_stock"]
+    assert tight["current_inventory"] == loose["current_inventory"] == 200
+    assert loose["economic_order_qty"] >= tight["economic_order_qty"]
+    assert loose["max_stock_level"] >= tight["max_stock_level"]
+    # A tight enough cap can flag the same fixed inventory as overstock while a
+    # looser cap does not -- the point of Experiment A: a fixed snapshot judged
+    # against two different thresholds, not a new inventory-generation defect.
+    assert tight["inventory_risk"] == "Overstock Risk"
+    assert loose["inventory_risk"] == "Normal"
+
+
+def test_full_regeneration_changes_inventory_but_not_policy_position_or_rop(assumptions):
+    """Mirrors 'Experiment B' in docs/model_assumptions_review.md §5: unlike the
+    fixed-inventory experiment above, letting inventory stay policy_band means
+    current_inventory legitimately changes when the order-quantity cap changes
+    (because it is defined as reorder_point + p*EOQ), while the hashed
+    policy_position draw and the reorder point/safety stock (independent of
+    the cap) do not."""
+    small_profile = pd.DataFrame({
+        "stock_code": ["X1", "X2", "X3"],
+        "sku_class": ["Regular", "Regular", "Regular"],
+        "avg_unit_price": [4.0, 4.0, 4.0],
+        "avg_monthly_units": [30.0, 60.0, 90.0],
+        "std_monthly_units": [15.0, 30.0, 45.0],
+        "demand_cv": [0.5, 0.5, 0.5],
+    })
+    tight = copy.deepcopy(assumptions)
+    tight["order_quantity"] = dict(tight["order_quantity"], max_order_coverage_days=30)
+    loose = copy.deepcopy(assumptions)
+    loose["order_quantity"] = dict(loose["order_quantity"], max_order_coverage_days=365)
+
+    sim_tight = simulation.simulate(small_profile, tight).set_index("stock_code")
+    sim_loose = simulation.simulate(small_profile, loose).set_index("stock_code")
+
+    pd.testing.assert_series_equal(sim_tight["policy_position"], sim_loose["policy_position"])
+    pd.testing.assert_series_equal(sim_tight["reorder_point"], sim_loose["reorder_point"])
+    pd.testing.assert_series_equal(sim_tight["safety_stock"], sim_loose["safety_stock"])
+    # Unlike Experiment A, current_inventory is free to change here because it
+    # is regenerated from the (now different) EOQ each time.
+    assert (sim_tight["current_inventory"] != sim_loose["current_inventory"]).any()
+
+
+# ---------------------------------------------------------------------------
 # Phase 3A model is still reproducible
 # ---------------------------------------------------------------------------
 
@@ -318,3 +476,28 @@ def test_all_legal_method_combinations(profile, assumptions, inventory, safety_s
     result = simulation.simulate(profile, config)
     assert result['inventory_risk'].isin(['Normal', 'Stockout Risk', 'Overstock Risk']).all()
     assert result['recommended_replenishment_qty'].notna().all()
+
+
+def test_coverage_threshold_dominates_max_stock_at_strict_boundary(assumptions):
+    # daily=1, ROP=50, Q=ceil(sqrt(72))=9; coverage threshold=180 > ROP+Q.
+    at = one_sku(assumptions, unit_cost=1000.0, policy_position=130 / 9)
+    above = one_sku(assumptions, unit_cost=1000.0, policy_position=131 / 9)
+    assert at['economic_order_qty'] == 9
+    assert at['max_stock_level'] == 59
+    assert at['current_inventory'] == 180
+    assert at['inventory_risk'] == 'Normal'
+    assert above['current_inventory'] == 181
+    assert above['inventory_risk'] == 'Overstock Risk'
+    assert above['excess_units'] == 1
+
+
+def test_noninteger_coverage_cap_rounds_up_and_none_removes_cap(assumptions):
+    # .33 / 30 * 180 = 1.98 -> 2 units; uncapped EOQ=ceil(sqrt(396))=20.
+    capped = one_sku(assumptions, avg_monthly_units=.33, std_monthly_units=0., unit_cost=2.)
+    config = copy.deepcopy(assumptions)
+    config['order_quantity']['max_order_coverage_days'] = None
+    uncapped = one_sku(config, avg_monthly_units=.33, std_monthly_units=0., unit_cost=2.)
+    assert capped['economic_order_qty'] == 2
+    assert capped['eoq_capped']
+    assert uncapped['economic_order_qty'] == 20
+    assert not uncapped['eoq_capped']

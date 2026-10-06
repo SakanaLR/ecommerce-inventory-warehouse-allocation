@@ -1,0 +1,50 @@
+name: Tests
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      - name: Install project dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Run the strict test suite
+        run: |
+          python -m pytest -W error -ra --junitxml=pytest-results.xml
+
+      - name: Fail if any test was skipped
+        run: |
+          # Read pytest's machine-readable JUnit result instead of parsing the
+          # human-facing terminal summary, whose wording/indentation can vary.
+          python - <<'PY'
+          import sys
+          import xml.etree.ElementTree as ET
+
+          root = ET.parse("pytest-results.xml").getroot()
+          skipped = sum(int(node.attrib.get("skipped", 0)) for node in root.iter("testsuite"))
+          if skipped:
+              print(f"::error::{skipped} test(s) were skipped on a fresh checkout.", file=sys.stderr)
+              raise SystemExit(1)
+          print("Confirmed: 0 tests skipped.")
+          PY
