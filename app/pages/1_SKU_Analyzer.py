@@ -29,6 +29,11 @@ except dd.DashboardDataError as exc:
 
 with st.sidebar:
     st.header("Filters")
+    st.caption(
+        "Showing all SKUs by default. Search by code/description, or combine the "
+        "filters below (all must match) — for example, pick a risk status to "
+        "focus on SKUs that may need attention."
+    )
     query = st.text_input("Search stock code or description", key="sku_search")
     sku_classes = st.multiselect(
         "SKU class", sorted(profile["sku_class"].dropna().unique()), key="sku_class_filter"
@@ -69,9 +74,9 @@ else:
     display["total_revenue"] = display["total_revenue"].map(dd.format_gbp)
     display["total_units"] = display["total_units"].map(dd.format_units)
     display["short_history"] = display["short_history"].map(
-        lambda value: "Yes" if value else "No"
+        lambda value: "Not available" if pd.isna(value) else "Yes" if bool(value) else "No"
     )
-    display["demand_cv"] = display["demand_cv"].map(dd.format_percent)
+    display["demand_cv"] = display["demand_cv"].map(dd.format_ratio)
     display = display.rename(columns={
         "stock_code": "SKU", "description": "Description", "sku_class": "SKU class",
         "total_revenue": "Historical revenue (GBP)", "total_units": "Historical units",
@@ -82,8 +87,11 @@ else:
     st.dataframe(display, hide_index=True, width="stretch")
 
     st.divider()
+    code_to_description = dict(zip(filtered["stock_code"], filtered["description"]))
     selected_code = st.selectbox(
-        "Select a SKU for detail", filtered["stock_code"].tolist(), key="sku_detail_selector"
+        "Select a SKU for detail", filtered["stock_code"].tolist(),
+        format_func=lambda code: f"{code} — {code_to_description.get(code, '')}",
+        key="sku_detail_selector",
     )
 
     if selected_code:
@@ -113,23 +121,29 @@ else:
         st.caption("Demonstration simulation on assumed cost/lead-time/service-level parameters, not real inventory records.")
 
         sim1, sim2 = st.columns(2)
-        sim1.metric("Current inventory (simulated units)", dd.format_units(row["current_inventory"]))
-        sim2.metric("Safety stock (simulated units)", dd.format_units(row["safety_stock"]))
+        sim1.metric("Current inventory (simulated units)", dd.format_units(row["current_inventory"]),
+                    help=dd.SKU_DETAIL_METRIC_HELP["current_inventory"])
+        sim2.metric("Safety stock (simulated units)", dd.format_units(row["safety_stock"]),
+                    help=dd.SKU_DETAIL_METRIC_HELP["safety_stock"])
         sim3, sim4 = st.columns(2)
-        sim3.metric("Reorder point (simulated units)", dd.format_units(row["reorder_point"]))
-        sim4.metric("EOQ (simulated order units)", dd.format_units(row["economic_order_qty"]))
+        sim3.metric("Reorder point (simulated units)", dd.format_units(row["reorder_point"]),
+                    help=dd.SKU_DETAIL_METRIC_HELP["reorder_point"])
+        sim4.metric("EOQ (simulated order units)", dd.format_units(row["economic_order_qty"]),
+                    help=dd.SKU_DETAIL_METRIC_HELP["economic_order_qty"])
 
         sim5, sim6 = st.columns(2)
         sim5.metric(
             "Recommended replenishment (simulated units)",
             dd.format_units(row["recommended_replenishment_qty"]),
+            help=dd.SKU_DETAIL_METRIC_HELP["recommended_replenishment_qty"],
         )
         coverage = row["inventory_coverage_days"]
         coverage_display = (
             "∞ (no demand)" if pd.notna(coverage) and coverage == float("inf")
             else dd.format_units(coverage)
         )
-        sim6.metric("Inventory coverage (simulated days)", coverage_display)
+        sim6.metric("Inventory coverage (simulated days)", coverage_display,
+                    help=dd.SKU_DETAIL_METRIC_HELP["inventory_coverage_days"])
 
         st.markdown(f"**Inventory risk (simulated):** {row['inventory_risk']}")
         if row["inventory_risk"] == "Normal":

@@ -1,6 +1,41 @@
-# 当前任务：商户库存分析 App —— 信息架构与只读 MVP
+# 当前任务：商户库存分析 Dashboard 交付与展示优化（实施与 Codex 验收完成）
 
-> 本文件已从"交付基线收口与自动化验证"改为"商户库存分析 App"。上一轮（交付基线收口）已完成并已提交、已 push 到 `origin/audit/model-assumptions`（HEAD `9cb8932`）。本轮是**新分支**（`feature/merchant-analytics-mvp`，从 `9cb8932` 切出），实现一个面向商户的只读 Streamlit 分析 App，**不修改模型公式、`config/`、`data/`、`outputs/`、notebook 或历史基线报告**。原任务书作为历史背景保留在下方。
+> 分支 `feature/dashboard-delivery`，HEAD `ce86de6`（与 `origin/main` 一致，本轮全程未变化）。Claude 实施后，Codex 已完成代码、测试与真实页面视觉验收并补修边界。未修改清洗/需求/模拟公式，未改 `config/`/`data/`/`outputs/`/notebook/历史报告/依赖文件，未 commit、未 push、未部署。
+
+## 本轮（展示层实施与验收）摘要
+
+- **完成内容**：Overview 模拟提示、可信快照说明、README 前置入口与目录、SKU 详情指标解释、首次使用引导、代码—描述选择器、`demand_cv` 小数显示、SKU 术语说明、公开 GitHub 文档链接、空表/缺失值边界测试均已完成。
+- **Claude 阶段修复**：空 working-capital 汇总不再因字典下标触发 `KeyError`；`short_history_notice()` 可处理 `pd.NA`/`NaN`；新增 17 个测试。
+- **Codex 补修**：结果表可安全显示 `short_history=pd.NA`；月份未知不再误写成“0 个月”；工作资本指标从三列改为两列，真实桌面视图中的 `£1,805,589.48` 不再截断；新增第 18 个回归测试。
+- **产品截图**：Codex 使用本地真实渲染页面完成视觉复核，生成 `docs/images/merchant-dashboard-overview.png` 并加入 README。
+- **最终验证**：`python -m pytest -W error -ra` → **200 passed, 0 skipped**；`git diff --check` 通过。Overview、SKU Analyzer、Model & Data Notes 已用真实浏览器 DOM 与截图核对；服务器和临时浏览器已关闭。
+- **范围保护**：`config/`、`data/`、`outputs/`、notebook、历史报告、CI、依赖文件和 `.streamlit/` 未改；未使用真实商户数据，未部署。
+- **剩余事项**：目标部署平台与生产依赖安装方式待后续选择；本轮功能和展示验收无未完成项。
+- **Git 状态**：未 commit、未 push；可进入提交准备。
+
+---
+
+## 历史背景 8：商户库存分析 Dashboard 交付与展示优化 —— 诊断阶段 + Codex 复核（已完成，为本轮实施依据）
+
+> 本文件顶部此前为"诊断与 Codex 复核完成"。原文保留如下，诊断结论以 `docs/dashboard_delivery_audit.md`、方案以 `docs/dashboard_delivery_plan.md` 的 Codex 复核版本为准（均不在本文件内重复）。
+
+> 本文件顶部已更新为"Dashboard 交付与展示优化"。分支 `feature/dashboard-delivery`，HEAD `ce86de6`（与 `origin/main` 一致），从已合并的"商户库存分析 App"成果继续。本轮**只做诊断和方案**，未实施任何功能修复、未部署、未 commit、未 push。Claude 的诊断已经由 Codex 独立复核：6 项产品/规格缺口确认，1 项为呈现决策，2 项降级为部署前设计风险；方案已据此修正。
+
+### 本轮（Dashboard 交付与展示优化，诊断阶段）摘要
+
+- **基线核实**：分支 `feature/dashboard-delivery`、HEAD `ce86de65e329e33a93e07e7dbdfcb9cf2e41aced`，与 `origin/main` 一致；开始前工作区干净；`python -m pytest -W error -ra` → 182 passed, 0 skipped。HTTP 200 只证明 Streamlit 外壳/健康端点可达；三页真实执行证据来自 AppTest。
+- **审查范围**：`app/` 三个页面全文、`src/retail_analytics/dashboard_data.py` 全文、`tests/test_app_pages.py`/`tests/test_dashboard_data.py` 全文、`.streamlit/config.toml`、`.github/workflows/tests.yml`、三份 `requirements*.txt`、`README.md` 全文、`docs/app_product_spec.md`、`docs/handoff.md`、`docs/pr_delivery.md`。另核实 `git ls-files` 确认 App 依赖的全部 CSV 和原始 Excel 均已随仓库提交。
+- **确认缺口（6 项）**：来源/新鲜度说明缺失但不能把部署文件 mtime 称为生成时间；Overview 两个风险指标缺少模拟提示；SKU 详情指标缺少逐项术语解释；全量目录缺少首次使用引导；详情选择器只显示代码；README 顶部不展示 App、无产品截图和目录。
+- **重新分类**：`demand_cv` 是呈现选择；额外 `try/except` 与依赖文件拆分是待复现/待平台确定的设计风险，不是当前故障。仓库已经 Public，截图也不依赖 Claude 浏览器扩展。
+- **推荐实施顺序**：P0（README 前置入口、Overview 提示、可信的快照来源说明）→ P1（SKU Analyzer 解释、引导、选择器描述）→ P2（异常 fixture、术语说明、空表页面测试）。详见 `docs/dashboard_delivery_plan.md`。
+- **未做（按任务书要求）**：未实施任何修复、未修改 `app/`/`src/`/`tests/`/`.github/`/依赖文件/`.streamlit/`/`config/`/`data/`/`outputs/`/`notebooks/`/`reports/`、未重跑 notebook、未使用真实商户数据、未部署/登录第三方平台、未 commit、未 push、未删除任何文件。
+- **Codex 独立复核完成**：是；当前可交给 Claude 按修订后的方案实施。
+
+---
+
+## 历史背景 7：商户库存分析 App —— 信息架构与只读 MVP（已完成并合并，现为本轮起点）
+
+> 本文件此前已从"交付基线收口与自动化验证"改为"商户库存分析 App"。上一轮（交付基线收口）已完成并已提交、已 push 到 `origin/audit/model-assumptions`（HEAD `9cb8932`）。该轮是**新分支**（`feature/merchant-analytics-mvp`，从 `9cb8932` 切出），实现一个面向商户的只读 Streamlit 分析 App，**不修改模型公式、`config/`、`data/`、`outputs/`、notebook 或历史基线报告**。该轮任务书原文保留在下方。
 
 ## 基线核实结果（本轮开始前重新核实）
 

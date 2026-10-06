@@ -353,10 +353,25 @@ def short_history_notice(row: pd.Series) -> str | None:
 
     Wording intentionally mirrors docs/model_assumptions_review.md's discipline:
     a low demand_cv from few observations is not evidence of stable demand.
+
+    ``short_history``/``months_in_window`` are schema-validated as boolean/numeric
+    on load but are not required to be *non-null* (see ``validate_schema``), so a
+    caller that builds a row directly (tests, or a future merchant-provided file)
+    can legitimately hand this a missing flag (``pd.NA``) or a missing month count
+    (``NaN``); both are treated as "no notice to show" / "unknown month count"
+    rather than raising, since ``bool(pd.NA)`` and ``int(float("nan"))`` both raise.
     """
-    if not bool(row.get("short_history", False)):
+    flag = row.get("short_history", False)
+    if pd.isna(flag) or not bool(flag):
         return None
-    months = int(row.get("months_in_window", 0))
+    months_value = row.get("months_in_window", 0)
+    if pd.isna(months_value):
+        return (
+            "This SKU is flagged as short-history, but its month count is not available. "
+            "Its demand statistics, especially demand_cv, should not be read as a verified "
+            "stable demand pattern."
+        )
+    months = int(months_value)
     return (
         f"This SKU has only {months} month(s) of sales history (fewer than the 3-month "
         "threshold). Its demand statistics, especially demand_cv, are estimated from very "
@@ -371,6 +386,49 @@ def normal_risk_disclaimer() -> str:
         "does not currently flag this SKU as at risk. It is not a confirmed measurement of "
         "real-world service performance."
     )
+
+
+def simulated_metric_hint() -> str:
+    """Generic ℹ️ hint for a simulated-layer metric (docs/app_product_spec.md §2, page 1)."""
+    return (
+        "Simulated under today's demonstration assumptions (lead times, ordering costs, "
+        "service levels) — not a real inventory measurement. See the Model & Data Notes "
+        "page for the full model and its calibration status."
+    )
+
+
+# One-line, plain-language ``help=`` text for each simulated inventory metric shown
+# on the SKU Analyzer detail view. Kept short on purpose: the full formulas live on
+# the Model & Data Notes page (app/pages/2_Model_and_Data_Notes.py); these summarise
+# the same definitions so the two pages never say materially different things about
+# the same metric.
+SKU_DETAIL_METRIC_HELP: dict[str, str] = {
+    "current_inventory": (
+        "Simulated stock level under the demonstration inventory policy — not a real, "
+        "counted inventory balance."
+    ),
+    "safety_stock": (
+        "Extra simulated stock held to cover demand swings during the supplier lead "
+        "time. z(service level) x monthly demand std-dev x sqrt(lead time / days per "
+        "month). See Model & Data Notes for the full formula."
+    ),
+    "reorder_point": (
+        "Simulated stock level at which the demonstration policy would trigger a new "
+        "order."
+    ),
+    "economic_order_qty": (
+        "Simulated order size balancing ordering cost against holding cost (EOQ), "
+        "capped at 180 days of coverage. See Model & Data Notes for the full formula."
+    ),
+    "recommended_replenishment_qty": (
+        "Simulated suggested order quantity to bring stock back to the policy level "
+        "— not a business recommendation to act on."
+    ),
+    "inventory_coverage_days": (
+        "Simulated number of days the current simulated stock would last at this "
+        "SKU's average demand."
+    ),
+}
 
 
 def format_gbp(value: float | None) -> str:
@@ -389,6 +447,20 @@ def format_percent(value: float | None) -> str:
     if value is None or pd.isna(value) or value in (float("inf"), float("-inf")):
         return "Not available"
     return f"{value:.1%}"
+
+
+def format_ratio(value: float | None, decimals: int = 2) -> str:
+    """Format a unitless ratio (e.g. demand_cv) as a plain decimal, not a percent.
+
+    README.md and the rest of the repo's own documentation describe demand_cv as
+    a plain ratio (e.g. "median CV of 1.01"), not a percentage; this keeps the
+    app's own rendering consistent with that convention instead of showing the
+    same number as e.g. "101.0%", which reads as alarming/out-of-range for a
+    reader expecting a 0-100% figure.
+    """
+    if value is None or pd.isna(value) or value in (float("inf"), float("-inf")):
+        return "Not available"
+    return f"{value:.{decimals}f}"
 
 
 def data_freshness_notes(project_root: Path | None = None) -> dict:

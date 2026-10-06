@@ -1,8 +1,91 @@
 # 本轮交接
 
-状态：本轮（商户库存分析 App，`feature/merchant-analytics-mvp` 分支，从 `9cb8932` 切出）已完成 Claude 实施和 Codex 定向验收修正，尚未 commit、未 push、未部署。上一轮（交付基线收口与自动化验证）已完成、已提交、已 push 到 `origin/audit/model-assumptions`（HEAD `9cb8932`）。更早的历史记录完整保留在下方"历史交接"部分。
+状态：本轮（商户库存分析 Dashboard 交付与展示优化，分支 `feature/dashboard-delivery`，HEAD `ce86de6`，与 `origin/main` 一致）已完成 Claude 实施和 Codex 独立验收补修，`python -m pytest -W error -ra` → 200 passed, 0 skipped，未 commit、未 push、未部署。
 
-## 本轮交接：商户库存分析 App —— 信息架构与只读 MVP
+## 本轮交接：商户库存分析 Dashboard 交付与展示优化（实施轮）
+
+### Git 状态
+
+- 分支：`feature/dashboard-delivery`；HEAD：`ce86de65e329e33a93e07e7dbdfcb9cf2e41aced`，与 `origin/main` 一致，本轮全程未变化；工作区在实施前只有诊断轮遗留的文档改动（无代码改动）——已用 `git branch --show-current`/`git rev-parse --short HEAD`/`git status` 重新核实。
+- 测试：实施前 182 passed；Claude 实施后 199 passed；Codex 补充边界回归后 **200 passed, 0 skipped**。`git diff --check` 通过。
+- 本地 Streamlit：Codex 使用真实浏览器 DOM 与截图复核三个页面；视觉检查发现并修复工作资本金额在三列布局中被截断的问题。服务器和临时浏览器均已关闭。
+- 边界核实：`git status --short -- config/ data/ outputs/ notebooks/ reports/ .github/ requirements.txt requirements-app.txt requirements-dev.txt .streamlit/` 为空——均未改动；未重跑 notebook；未使用真实商户数据；未登录第三方服务、未创建云资源；未 commit、未 push。
+
+### 实际修改文件
+
+`app/streamlit_app.py`、`app/pages/1_SKU_Analyzer.py`、`app/pages/2_Model_and_Data_Notes.py`、`src/retail_analytics/dashboard_data.py`、`tests/test_app_pages.py`、`tests/test_dashboard_data.py`、`README.md`、`docs/images/merchant-dashboard-overview.png`、`docs/app_product_spec.md`、`docs/dashboard_delivery_audit.md`、`docs/dashboard_delivery_plan.md`、`docs/current_task.md`、`docs/handoff.md`（本文件）。未创建或删除业务数据文件。
+
+### 逐项实施对照（`docs/dashboard_delivery_plan.md` 的 P0/P1/P2）
+
+| 项 | 对应发现 | 实施内容 | 验证方式 |
+| --- | --- | --- | --- |
+| P0-1 | F2 | `app/streamlit_app.py` 的 Stockout/Overstock Risk 两个 `st.metric` 补 `help=dd.simulated_metric_hint()`（新函数）。 | `test_overview_page_risk_metrics_all_carry_a_simulated_data_hint`。 |
+| P0-2 | F1 | `docs/app_product_spec.md` §6 改写时间语义措辞；`2_Model_and_Data_Notes.py` 新增"公开演示快照"说明，文件 mtime 移入 `st.expander`，标签改为"Deployed copy's file details (not the data's generation time)"，只显示相对路径。 | `test_model_and_data_notes_never_calls_a_file_timestamp_the_data_generation_time`、`test_model_and_data_notes_never_leaks_a_local_absolute_path`。 |
+| P0-3 | F9 | README 标题下新增 Dashboard 入口、轻量目录与真实产品截图 `docs/images/merchant-dashboard-overview.png`，未强调过程性协作文档。 | 本地真实渲染、截图查看与 README 路径核对。 |
+| P1-1 | F3 | `1_SKU_Analyzer.py` 六个模拟指标补 `help=`，文本取自新常量 `dd.SKU_DETAIL_METRIC_HELP`，与 Model & Data Notes 页公式措辞一致。 | `test_sku_analyzer_detail_metrics_all_carry_plain_language_help`。 |
+| P1-2 | F4 | 侧边栏筛选器上方新增 `st.caption` 引导；**未**预置默认风险筛选（按计划明确保留全量默认视图）。 | `test_sku_analyzer_sidebar_shows_first_use_guidance_with_all_skus_as_default`（同时断言默认仍是 3,790/3,790）。 |
+| P1-3 | F5 | SKU 详情 `st.selectbox` 加 `format_func`，显示"代码 — 描述"，底层值仍是 `stock_code`。 | `test_sku_analyzer_detail_selector_shows_code_and_description`；既有"选中后渲染详情"断言未破坏。 |
+| （用户任务书第 7 项） | F6 | `demand_cv` 改用新函数 `dd.format_ratio()`（小数，如 `1.01`），不再用 `format_percent`。 | `test_sku_analyzer_demand_cv_is_rendered_as_a_plain_decimal_not_a_percent`；`format_ratio` 的 NaN/数值单元测试。 |
+| （用户任务书第 8 项） | D5 | Overview "Active SKUs" 指标补 `help="SKU = Stock-Keeping Unit, i.e. one distinct product."`。 | `test_overview_page_explains_what_sku_means`。 |
+| （用户任务书第 9 项） | D3 | `2_Model_and_Data_Notes.py` 新增 `repo_link()` 辅助函数，把 6 处仓库内路径引用改为指向 `github.com/SakanaLR/ecommerce-inventory-warehouse-allocation/blob/main/...` 的可点击链接，保留路径文字。 | `test_model_and_data_notes_links_repo_paths_to_a_stable_github_blob_url`。 |
+| P2-1 | F7/D4 | 用异常 fixture（不经过 CSV loader）直接构造 `short_history=pd.NA`、`months_in_window=NaN` 两种边界，**复现并修复**了 `dashboard_data.short_history_notice()` 的两处真实崩溃（`bool(pd.NA)`→`TypeError`；`int(nan)`→`ValueError`）；月份异常未重复包裹（loader 已阻断）。另有 3 个页面级空表 AppTest（Overview/SKU Analyzer/Model & Data Notes），用 `tmp_path` 临时空 CSV 跑真实 loader 再 `monkeypatch` 注入页面，不碰正式数据。 | `test_short_history_notice_handles_a_missing_short_history_flag_without_crashing`、`test_short_history_notice_handles_a_missing_months_in_window_without_crashing`、3 个 `*_handles_a_fully_empty_data_root_without_exception`/`*_handles_empty_coverage_and_quality_tables_without_exception`。 |
+| P2-2 | D5 | 见上（与"Active SKUs" help 合并实施）。 | 同上。 |
+
+### 实施过程中新发现并修复的一处真实崩溃（计划之外）
+
+运行新增的 Overview 空表 AppTest 时，**实际复现**了 `app/streamlit_app.py` 里 `working_capital["total_estimated_inventory_value"]`（及另外两处同类下标访问）在 `working_capital_summary.csv` 为 0 行时抛出真实 `KeyError`，导致页面未捕获异常崩溃。按任务书第 11 项"只有实际复现页面异常后才实施最小修复"的要求，已改为 `.get()`——`dd.format_gbp(None)` 已有"Not available"回退，不需要新增数据契约或新的 `try/except`。测试：`test_overview_page_handles_a_fully_empty_data_root_without_exception`。
+
+### Codex 独立验收补修
+
+- 真实浏览器视觉检查确认三页完成渲染，交互说明、模拟提示、SKU 选择器和公开文档链接正常。
+- 发现工作资本三列布局会截断 `£1,805,589.48`，改为两列并实际复核金额完整显示。
+- 发现结果表仍会对 `short_history=pd.NA` 做布尔转换而崩溃，增加“Not available”显示与页面级回归测试。
+- `months_in_window` 未知时不再误报“0 个月”，改为明确说明月数不可用。
+- 生成真实产品截图 `docs/images/merchant-dashboard-overview.png` 并加入 README；Claude 先前的截图限制已解除。
+- 最终严格测试：**200 passed, 0 skipped**；`git diff --check` 通过。
+
+### 剩余事项
+
+- 实际公网部署和生产依赖安装方式仍待目标平台确定，本轮按边界未执行。
+- 本轮功能、测试、视觉和截图验收无未完成项。
+
+### 实施与 Codex 独立复核完成，可进入提交准备：是。
+
+## 历史交接：商户库存分析 Dashboard 交付与展示优化 —— 诊断阶段 + Codex 复核
+
+> 本节是诊断阶段的交接记录（本文件此前的顶层"本轮交接"），完整保留，供实施轮依据和复核参考。
+
+状态：本轮（商户库存分析 Dashboard 交付与展示优化，分支 `feature/dashboard-delivery`，HEAD `ce86de6`，与 `origin/main` 一致）只做诊断和方案，未实施任何功能修复、未 commit、未 push、未部署。Claude 诊断与 Codex 独立复核均已完成，方案已修正，可进入实施轮。上一轮（商户库存分析 App）已完成并已合并进 `main`（见下方"历史交接"）。
+
+### Git 状态
+
+- 分支：`feature/dashboard-delivery`；HEAD：`ce86de65e329e33a93e07e7dbdfcb9cf2e41aced`，与 `origin/main` 一致；工作区干净——已用 `git branch --show-current`/`git rev-parse --short HEAD`/`git status` 实际核实（包括任务中途一次意外的分支切换到 `main` 又切回，已通过 `git reflog` 核实未丢失任何改动，`main`/`feature/dashboard-delivery` 两分支指向同一提交，切换无冲突）。
+- 测试基线：`python -m pytest -W error -ra` → **182 passed, 0 skipped**（本轮开始前重新运行确认）。
+- 本地 Streamlit 冒烟：HTTP 外壳及 `/_stcore/health` 返回 200，验证后进程已停止。Codex 纠正：多个路由返回 200 不能单独证明各页完成渲染；三页真实执行证据来自现有 AppTest。
+- 本轮由本会话单独诊断，是否已 commit/push：否。全程未修改 `app/`、`src/`、`tests/`、`.github/`、依赖文件、`.streamlit/`、`config/`、`data/`、`outputs/`、`notebooks/`、`reports/`。
+
+### 产出
+
+| 文件 | 内容 |
+| --- | --- |
+| `docs/dashboard_delivery_audit.md`（新建） | Claude 初始条目与 Codex 复核结论：6 项确认缺口、1 项呈现决策、2 项部署前设计风险，以及视觉/测试建议。 |
+| `docs/dashboard_delivery_plan.md`（新建） | 经 Codex 修正的 P0/P1/P2 方案、验收标准、隐私影响、最小公开演示范围与部署前清单。 |
+| `docs/current_task.md` | 顶部改为本轮状态摘要；原"商户库存分析 App"任务书整体移入"历史背景 7"，历史内容未删改。 |
+| `docs/handoff.md`（本文件，历史版本） | 本节。 |
+
+### Codex 独立复核结论（详见 `docs/dashboard_delivery_audit.md`）
+
+确认的产品/规格缺口有 6 项：可信来源信息、Overview 模拟提示、SKU 详情术语解释、首次使用引导、选择器描述，以及 README 的 App 展示。`demand_cv` 是呈现决策。额外页面级 `try/except` 尚无可达失败路径证据；依赖拆分是否影响部署取决于目标平台配置，二者均降级为实施前验证项。文件 mtime 在 clone/部署后不等于分析生成时间，方案已改为先修正来源语义。仓库已经 Public；截图可以用本地浏览器或现有 UI 工具完成，不依赖 Claude in Chrome。
+
+### 未执行的验证及原因
+
+- 未做截图级视觉复核；拒绝安装 Claude in Chrome 不构成后续截图阻塞。
+- 未重跑 notebook、未修改任何业务代码/依赖/测试/配置文件——按任务书要求排除在本轮之外。
+- 未尝试真实部署、未登录第三方平台、未创建云资源——按任务书要求排除在本轮之外。
+
+### 诊断与 Codex 复核均已完成，可进入实施轮：是。
+
+## 历史交接：商户库存分析 App —— 信息架构与只读 MVP
 
 ### Git 状态
 
