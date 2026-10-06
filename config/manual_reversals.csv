@@ -1,0 +1,2 @@
+invoice_no,stock_code,quantity,unit_price,credit_invoice_no,reason
+556444,22502,60,649.5,C556445,"60 x 649.50 keyed in error (line value 38970); reversed by manual credit C556445 for 38970 and re-invoiced as 556446 (1 x 649.50)"

@@ -1,0 +1,27 @@
+comparison,area,metric,before,after,change,change_pct
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sales,valid_product_sales_rows,522716.0,519627.0,-3089.0,-0.0059
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sales,total_revenue,10266083.79,9818872.18,-447211.6099999994,-0.0436
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sales,total_units,5561566.0,5337158.0,-224408.0,-0.0403
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sales,order_count,19779.0,19646.0,-133.0,-0.0067
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sales,sku_count,3917.0,3790.0,-127.0,-0.0324
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sales,non_product_rows_excluded,2162.0,2435.0,273.0,0.1263
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,demand,median avg_monthly_units,42.125,45.1538,3.028799999999997,0.0719
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,demand,median demand_cv,0.7606,0.7701,0.009499999999999953,0.0125
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,High-Revenue Priority | sku_count,784.0,758.0,-26.0,-0.0332
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,High-Revenue Priority | revenue_share,0.7884,0.7777,-0.010700000000000043,-0.0136
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,Regular | sku_count,1684.0,1631.0,-53.0,-0.0315
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,Regular | revenue_share,0.154,0.1622,0.008200000000000013,0.0532
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,High-Turnover Stable | sku_count,208.0,201.0,-7.0,-0.0337
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,High-Turnover Stable | revenue_share,0.0348,0.0358,0.0010000000000000009,0.0287
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,Long-Tail | sku_count,1172.0,1133.0,-39.0,-0.0333
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,Long-Tail | revenue_share,0.0134,0.0147,0.001299999999999999,0.097
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,High-Turnover Volatile | sku_count,69.0,67.0,-2.0,-0.029
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,sku_class,High-Turnover Volatile | revenue_share,0.0095,0.0097,0.00020000000000000052,0.0211
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,simulated_inventory,stockout_risk_sku_count,1432.0,1439.0,7.0,0.0049
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,simulated_inventory,overstock_risk_sku_count,924.0,842.0,-82.0,-0.0887
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,simulated_inventory,replenishment_recommendation_count,1432.0,1439.0,7.0,0.0049
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,simulated_working_capital_gbp,total_estimated_inventory_value,1090613.07,663706.48,-426906.5900000001,-0.3914
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,simulated_working_capital_gbp,stockout_revenue_exposure,645275.56,549965.11,-95310.45000000007,-0.1477
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,simulated_working_capital_gbp,overstock_capital_exposure,124125.96,110907.87,-13218.090000000011,-0.1065
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,reversals,revenue_removed | full_cancellation,0.0,387988.81,387988.81,
+reports/baseline_before_phase1 -> reports/baseline_end_phase1,reversals,revenue_removed | manual_credit,0.0,38970.0,38970.0,

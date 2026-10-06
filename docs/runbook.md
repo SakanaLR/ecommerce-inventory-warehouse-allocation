@@ -2,127 +2,263 @@
 
 ## Project Purpose
 
-This project demonstrates a reusable sales-data analytics workflow for e-commerce inventory, SKU classification, warehouse allocation, and finance-facing working capital analysis.
+This project demonstrates a reusable sales-data analytics workflow for e-commerce inventory, SKU classification, warehouse allocation, and finance-facing working-capital analysis.
 
-The current portfolio version uses the public UCI Online Retail dataset. The long-term goal is to make the workflow adaptable to future sales datasets by mapping company-specific column names into a standard schema before running the notebooks.
+The portfolio version uses the public UCI Online Retail dataset. A different sales dataset can be used by mapping its column names into the standard schema before running the pipeline.
 
-No confidential company data is required for this project. Inventory and cost fields used for replenishment, warehouse allocation, and working capital analysis are simulated for portfolio demonstration.
+No confidential company data is required. Inventory and cost fields are simulated for demonstration.
+
+## Workflow
+
+```text
+raw sales file
+-> scripts/validate_input_data.py        (schema and data-quality precheck)
+-> scripts/standardize_raw_sales.py      (rename columns, fix types)
+-> notebooks/01_data_cleaning.ipynb      (cleaning rules from src/retail_analytics/cleaning.py)
+-> notebooks/02_sql_business_queries.ipynb
+-> notebooks/03_sku_classification.ipynb      (demand panel from src/retail_analytics/demand.py)
+-> notebooks/04_replenishment_warehouse_allocation.ipynb  (simulation from src/retail_analytics/simulation.py)
+-> notebooks/05_working_capital_impact.ipynb
+```
+
+Earlier notebook versions (the original UCI-input track and the `b` standardized-input track) are kept for reference in `archive/notebooks/`. They are no longer part of the workflow.
+
+## Setup
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-dev.txt
+```
 
 ## Raw Data Placement
 
-Place the raw sales file under:
+Place the raw sales file in `data/raw/`. The current project expects `data/raw/Online Retail.xlsx`.
 
-```text
-data/raw/
-```
-
-The current project expects the UCI file at:
-
-```text
-data/raw/Online Retail.xlsx
-```
-
-For a different dataset, keep the raw file in `data/raw/` and update `config/schema_mapping_template.csv` so each standard field points to the correct source column name.
+For a different dataset, keep the raw file in `data/raw/` and update `config/schema_mapping_template.csv` so that each standard field points to the matching source column.
 
 ## Expected Standard Schema
 
-The workflow expects sales data to be mapped into these standard fields:
-
 | Standard field | Required | Description |
 | --- | --- | --- |
-| `invoice_no` | Yes | Transaction or invoice identifier. |
+| `invoice_no` | Yes | Transaction or invoice identifier. Cancellations start with `C`. |
 | `stock_code` | Yes | Product or SKU identifier. |
 | `description` | No | Product description used as a display field. |
-| `quantity` | Yes | Quantity sold on the transaction line. |
-| `invoice_date` | Yes | Transaction or invoice timestamp. |
+| `quantity` | Yes | Quantity on the transaction line. |
+| `invoice_date` | Yes | Transaction timestamp. |
 | `unit_price` | Yes | Unit selling price. |
 | `customer_id` | No | Customer identifier when available. |
 | `country` | No | Customer country or region when available. |
 
-The current mapping template uses the UCI Online Retail source fields:
+The validator always treats the five required fields as required, even if the mapping file marks one of them as optional.
 
-```text
-InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
+## Step 1: Validate
+
+```bash
+python scripts/validate_input_data.py \
+  --input "data/raw/Online Retail.xlsx" \
+  --mapping "config/schema_mapping_template.csv" \
+  --output "outputs/data_quality_precheck.csv"
 ```
 
-## Notebook Execution Order
+Add `--sheet-name "Sales"` for a specific Excel sheet.
 
-Run the notebooks in order:
+The script exits with code 1 when a schema check fails. Warnings are expected for this dataset:
 
-```text
-notebooks/01_data_cleaning.ipynb
-notebooks/02_sql_business_queries.ipynb
-notebooks/03_sku_classification.ipynb
-notebooks/04_replenishment_warehouse_allocation.ipynb
-notebooks/05_working_capital_impact.ipynb
+- 10,624 lines with non-positive quantity (returns and cancellations)
+- 2,517 lines with non-positive price
+- 5,268 exact duplicate rows
+
+Notebook 01 handles all three.
+
+## Step 2: Standardize
+
+```bash
+python scripts/standardize_raw_sales.py \
+  --input "data/raw/Online Retail.xlsx" \
+  --mapping "config/schema_mapping_template.csv" \
+  --output "data/interim/standardized_sales.csv"
 ```
 
-Notebook 05 extends the project into working capital analysis. It loads `outputs/sku_profile_classification.csv` and uses simulated inventory and cost fields. If those fields are not already present in the source file, it recreates the simulated inventory layer deterministically for reproducibility.
+The script:
+
+- renames the mapped columns;
+- keeps `invoice_no`, `stock_code`, and `customer_id` as strings so leading zeros survive;
+- converts `quantity`, `unit_price`, and `invoice_date`;
+- reports how many values failed to parse.
+
+## Step 3: Run the Notebooks
+
+Run the notebooks in order, either interactively or from the command line:
+
+```bash
+jupyter nbconvert --to notebook --execute --inplace notebooks/0*.ipynb
+```
+
+Each notebook checks that its inputs exist and names the notebook to run first if they are missing.
+
+## Cleaning Rules (Notebook 01)
+
+The rules are implemented in `src/retail_analytics/cleaning.py` and covered by `tests/test_cleaning.py`.
+
+1. Trim and upper-case `stock_code`. The source contains 112 codes that differ from another code only by case.
+2. Remove exact duplicate rows.
+3. Save cancellation invoices and negative-quantity lines to `returns_cancellations.csv`.
+4. Keep sales lines with positive quantity and price and a usable stock code, description, and date. Missing customer IDs are kept.
+5. Exclude the non-product lines listed in `config/non_product_stock_codes.csv`, and save them to `non_product_lines.csv` with their category.
+6. Remove the sale lines listed in `config/manual_reversals.csv`. These are keying errors that were reversed with a manual credit (stock code `M`) rather than a cancellation of the same stock code.
+7. Remove fully reversed sales:
+   - **Candidates.** A cancellation line can reverse a sale with the same customer, the same stock code, and the same quantity, dated on or before the cancellation.
+   - **Order.** Cancellations are processed in time order.
+   - **Choice.** Each cancellation takes an unused candidate at the same unit price if there is one (the most recent of those), and otherwise the most recent unused candidate.
+   - **Limits.** Each sale line can be removed by only one cancellation. Lines without a customer ID are never matched. Partial returns are not netted.
+8. Save every removed line from steps 6–7 to `reversed_sales.csv`, with these columns:
+   - `reversal_type`: `manual_credit` or `full_cancellation`;
+   - `cancel_invoice_no`, `cancel_date`, `days_to_cancel`;
+   - `cancel_unit_price` and `price_delta` (cancellation price minus sale price);
+   - `match_quality`: `same_price`, `price_mismatch`, or `reviewed_manual_credit`.
+9. Build `sku_master.csv` (display description = most frequent description) and `monthly_sku_sales.csv`.
+10. Write `month_coverage.csv`. `is_truncated_month` is true only for the first or last month when the data starts after the first day or ends before the last day of that month. Here that is December 2011, which ends on the 9th. Gaps inside a month are not detected.
+11. Write two review lists; nothing on them is removed:
+    - `manual_credit_candidates.csv`: manual credits whose value equals a same-customer sale line from the previous day. `reviewed_in_config` shows whether the credit is already in `config/manual_reversals.csv`.
+    - `price_anomalies.csv`: lines priced at least 10 times the median price of SKUs with 3 or more lines.
+
+### Maintaining the rule files
+
+**`config/non_product_stock_codes.csv`** has these columns:
+
+| Column | Meaning |
+| --- | --- |
+| `stock_code` | The code to match. |
+| `match_type` | `exact` or `prefix`. |
+| `category` | `shipping`, `fee`, `adjustment`, or `non_merchandise`. |
+| `reason` | Why the code is excluded. |
+
+The loader rejects:
+- blank values (a blank prefix would match every code);
+- duplicate rules;
+- a rule already covered by a prefix rule.
+
+To extend the list for a new dataset, look for non-standard codes and descriptions containing words such as POSTAGE, CARRIAGE, CHARGE, FEE, DISCOUNT, ADJUST, SAMPLE, or VOUCHER. Notebook 02 reads the same file to confirm that no matching code remains in the clean data.
+
+**`config/manual_reversals.csv`** has these columns:
+
+| Column | Meaning |
+| --- | --- |
+| `invoice_no`, `stock_code`, `quantity`, `unit_price` | Identify the sale line to remove. |
+| `credit_invoice_no` | The manual credit that reversed it. |
+| `reason` | Why the reversal was accepted. |
+
+To add an entry:
+1. Review `manual_credit_candidates.csv`.
+2. Confirm the story from the customer's invoices, for example an error followed by a corrected invoice.
+3. Add the row.
+
+Cleaning stops with an error if a listed sale does not match exactly one line, or if its credit invoice has no same-customer credit of equal value. This keeps the list in sync with the data. The file is dataset-specific; for a new dataset, start with only the header row.
+
+## Demand Basis and Classification (Notebook 03)
+
+The logic is in `src/retail_analytics/demand.py` and is covered by `tests/test_demand.py`.
+
+1. Take the months where `month_coverage.csv` has `is_truncated_month = False`. For this dataset that is December 2010 to November 2011, 12 months.
+2. Build `data/processed/sku_month_demand.csv`: one row per SKU and month, from the SKU's first sale month to the last full month. Months without sales are filled with zero (`is_zero_filled`).
+3. Build the SKU profile:
+   - `total_units`, `total_revenue`, `total_orders`, `active_months`: all months, including December 2011, so they reconcile to clean sales.
+   - `avg_monthly_units`, `std_monthly_units` (sample standard deviation; 0 when there is only one month), `demand_cv`: from the panel.
+   - `avg_monthly_units_active`: the old basis (months with sales only), kept for comparison.
+   - `months_in_window`, `zero_months_in_window`, `zero_month_share`.
+   - `short_history`: fewer than 3 months in the window.
+   - `no_full_month_sales`: the SKU sold only in truncated months. Its demand statistics are 0.
+4. Classify each SKU; the first matching rule wins:
+   1. **High-Revenue Priority:** total revenue at or above the 80th percentile.
+   2. **High-Turnover Volatile:** total units at or above the 80th percentile, and demand CV above 1.0 or `short_history`.
+   3. **High-Turnover Stable:** other SKUs at or above the 80th percentile of units.
+   4. **Long-Tail:** total units at or below the 30th percentile.
+   5. **Regular:** everything else.
+
+The volatility cut-off is set by `VOLATILITY_CV` in notebook 03.
+
+Notebook 03 prints a reconciliation of units: panel plus truncated months must equal the total.
+
+## Simulated Inventory Layer (Notebooks 04–05)
+
+The logic is in `src/retail_analytics/simulation.py` and is covered by `tests/test_simulation.py`. `config/simulation_assumptions.json`'s `methods` block selects the model per field; the current configuration is `inventory=policy_band`, `safety_stock=service_level`, `order_quantity=eoq`, `overstock=max_stock`. A simpler model (`fixed_range`/`volatility_factor`/`top_up`/`coverage_only`, matching `PHASE_3A_METHODS` in `simulation.py`) is also supported and used for before/after comparison — a config using it does not need an `order_quantity` section at all, since that section is only read on the `eoq` path.
+
+| Setting | Meaning |
+| --- | --- |
+| `seed` | Base seed for all draws. |
+| `methods` | Per-field model choice: `inventory` (`fixed_range` or `policy_band`), `safety_stock` (`volatility_factor` or `service_level`), `order_quantity` (`top_up` or `eoq`), `overstock` (`coverage_only` or `max_stock`). `policy_band` and `max_stock` each require `order_quantity=eoq`; this is enforced at load time. |
+| `current_inventory` | Used when `methods.inventory=fixed_range`: integer ranges for priority classes (High-Revenue Priority, High-Turnover Stable) and for all other classes. |
+| `policy_band` | Used when `methods.inventory=policy_band`: current inventory = reorder point + p × EOQ, with p drawn per SKU from a class-dependent range (`position_by_class`). |
+| `supplier_lead_time_days` | Values and probabilities. The probabilities must sum to 1. |
+| `storage_volume_per_unit`, `unit_cost_ratio` | Uniform ranges. |
+| `safety_stock` | `volatility_factor`: lead-time demand × (`base_factor` + `cv_factor` × min(CV, `cv_cap`)). `service_level`: z(service level) × monthly demand std × √(lead time ÷ days per month), with a per-class service level (`service_level_by_class`). |
+| `order_quantity` | Used only when `methods.order_quantity=eoq`: EOQ = √(2 × annual demand × ordering cost ÷ (unit cost × annual holding rate)), capped at `max_order_coverage_days` of demand. `annual_holding_rate` is also used by notebook 05 to compute `annual_holding_cost`, which is only available under this method — left blank, not defaulted to 0, under `top_up`. |
+| `overstock` | `coverage_only`: coverage-day limit, for the listed classes only. `max_stock`: inventory above max(reorder point + EOQ, coverage-day limit), for all classes. |
+
+**How draws are made.** Each draw is `SHA-256(seed | field | stock_code)`, mapped to [0, 1). A SKU keeps its values when other SKUs are added, removed, or re-ordered. Changing the seed re-draws every SKU.
+
+**How the notebooks share it.** Notebook 04 saves the full layer to `outputs/sku_inventory_simulation.csv`. Notebook 05 reads that file and asserts that a fresh simulation reproduces it.
+
+`scripts/check_simulation_stability.py` compares the legacy row-position method with the hashed method on the real SKU list, and writes `reports/phase3a_simulation_stability.csv`. `scripts/attribute_model_changes.py` isolates the effect of each Phase 3A → Phase 3B-1 method change one at a time and writes `reports/phase3b1_attribution.csv`; read it end to end, since an intermediate step can temporarily look worse than either endpoint (see `docs/management_summary.md`).
 
 ## Generated Outputs
 
-Core processed data outputs:
+Processed data (`data/processed/`):
 
-- `data/processed/clean_sales.csv`
-- `data/processed/returns_cancellations.csv`
-- `data/processed/non_product_lines.csv`
-- `data/processed/sku_master.csv`
-- `data/processed/sku_description_check.csv`
-- `data/processed/monthly_sku_sales.csv`
-- `data/processed/data_quality_summary.csv`
+- `clean_sales.csv` (about 70 MB; not committed, regenerate it locally)
+- `returns_cancellations.csv`
+- `non_product_lines.csv`
+- `reversed_sales.csv`
+- `sku_master.csv`
+- `sku_description_check.csv`
+- `monthly_sku_sales.csv`
+- `sku_month_demand.csv`
+- `month_coverage.csv`
+- `manual_credit_candidates.csv`
+- `price_anomalies.csv`
+- `data_quality_summary.csv`
 
-Business analysis outputs:
+Business outputs (`outputs/`):
 
-- `outputs/top_sku_revenue_contribution.csv`
-- `outputs/top_sku_unit_contribution.csv`
-- `outputs/long_tail_skus.csv`
-- `outputs/country_demand_summary.csv`
-- `outputs/monthly_sales_trend.csv`
-- `outputs/sku_profile_classification.csv`
-- `outputs/sku_classification_summary.csv`
-- `outputs/replenishment_recommendations.csv`
-- `outputs/overstock_risk_list.csv`
-- `outputs/warehouse_allocation_summary.csv`
-- `outputs/management_kpi_summary.csv`
+- `data_quality_precheck.csv`
+- `top_sku_revenue_contribution.csv`
+- `top_sku_unit_contribution.csv`
+- `long_tail_skus.csv`
+- `country_demand_summary.csv`
+- `monthly_sales_trend.csv`
+- `sku_profile_classification.csv`
+- `sku_classification_summary.csv`
+- `sku_inventory_simulation.csv`
+- `replenishment_recommendations.csv`
+- `overstock_risk_list.csv`
+- `warehouse_allocation_summary.csv`
+- `management_kpi_summary.csv`
+- `working_capital_summary.csv`
+- `top_overstock_capital_exposure.csv`
+- `top_stockout_revenue_exposure.csv`
+- `inventory_value_by_sku_class.csv`
+- `inventory_value_by_warehouse_strategy.csv`
 
-Working capital outputs:
+## Metric Definitions
 
-- `outputs/working_capital_summary.csv`
-- `outputs/top_overstock_capital_exposure.csv`
-- `outputs/top_stockout_revenue_exposure.csv`
-- `outputs/inventory_value_by_sku_class.csv`
-- `outputs/inventory_value_by_warehouse_strategy.csv`
+- `warehouse_strategy_count`: the number of unique warehouse strategies (currently 6).
+- `warehouse_allocation_segment_count`: the number of SKU class × strategy rows in `warehouse_allocation_summary.csv` (currently 7).
+- `stockout_revenue_exposure`: for Stockout Risk SKUs, the shortfall to the reorder point valued at average selling price. It is an upper-bound indicator, not a lost-revenue forecast.
+- `overstock_capital_exposure`: for Overstock Risk SKUs, the units above 180 days of demand valued at simulated unit cost.
 
-Pre-run validation output:
-
-- `outputs/data_quality_precheck.csv`
-
-## Adapting a Different Sales Dataset
-
-To adapt a different sales dataset:
-
-1. Place the raw file in `data/raw/`.
-2. Open `config/schema_mapping_template.csv`.
-3. Update the `source_field` column so each standard field points to the matching column in the new dataset.
-4. Keep the required fields mapped: `invoice_no`, `stock_code`, `quantity`, `invoice_date`, and `unit_price`.
-5. Run the validation script before executing the notebooks.
-6. Review `outputs/data_quality_precheck.csv` for missing fields, missing values, date parsing issues, invalid quantities, invalid prices, and duplicate rows.
-7. If the precheck looks acceptable, run the notebooks in order.
-
-The notebooks may still need small path or column-loading adjustments if a future dataset has a different file format, sheet structure, or business meaning. The schema mapping template is the first step toward standardization.
-
-The current schema mapping layer supports validation and adaptation planning. The existing notebooks do not yet automatically consume `config/schema_mapping_template.csv`, so any future source-column changes should be reviewed before running the full notebook workflow.
+All monetary values are in GBP.
 
 ## Simulated Fields
 
-The public dataset does not include real inventory or cost data. The following fields are simulated in the inventory and working capital workflow:
+These fields are simulated:
 
 - `current_inventory`
-- `lead_time_days`
+- `supplier_lead_time_days`
 - `storage_volume_per_unit`
 - `unit_cost`
 
-The following decision-support fields are derived from the simulated layer and historical demand:
+These fields are derived from the simulated layer and historical demand:
 
 - `safety_stock`
 - `reorder_point`
@@ -134,140 +270,35 @@ The following decision-support fields are derived from the simulated layer and h
 - `stockout_revenue_exposure`
 - `overstock_capital_exposure`
 
-These outputs are illustrative portfolio examples. They should not be interpreted as real company inventory recommendations, accounting values, or operational decisions.
+The four simulated fields are drawn per SKU (see "Simulated Inventory Layer"). A change to the SKU list does not re-draw the values of other SKUs.
 
-## Common Data Issues
-
-Check for these issues before running the full workflow:
-
-- Missing required columns.
-- Missing values in required fields.
-- Duplicate transaction rows.
-- Cancelled invoices or returns.
-- Negative or zero quantities.
-- Negative or zero unit prices.
-- Product codes used for non-product lines such as postage, fees, discounts, or manual adjustments.
-- Missing or inconsistent product descriptions.
-- Invoice dates that cannot be parsed as dates.
-- Mixed date formats or unexpected currency handling.
-
-## Validate Before Running the Workflow
-
-Run the validation script from the project root:
+## Tests and Comparisons
 
 ```bash
-python scripts/validate_input_data.py --input "data/raw/Online Retail.xlsx"
+python -m pytest -W error
+python scripts/compare_to_baseline.py --baseline reports/baseline_before_phase1 --current reports/baseline_end_phase1 --prefix phase1
+python scripts/compare_to_baseline.py --baseline reports/baseline_end_phase1 --current reports/baseline_end_phase3a --prefix phase3a
+python scripts/check_simulation_stability.py
 ```
 
-Optional arguments:
+`compare_to_baseline.py` compares two versions of the outputs. Each report states its own basis:
 
-```bash
-python scripts/validate_input_data.py \
-  --input "data/raw/company_sales.csv" \
-  --mapping "config/schema_mapping_template.csv" \
-  --output "outputs/data_quality_precheck.csv"
-```
+| Prefix | Before | After | Report |
+| --- | --- | --- | --- |
+| `phase1` | Original pipeline (`reports/baseline_before_phase1/`) | End of Phase 1 (`reports/baseline_end_phase1/`) | `reports/phase1_data_correctness.md` |
+| `phase3a` | End of Phase 1 (`reports/baseline_end_phase1/`) | End of Phase 3A (`reports/baseline_end_phase3a/`) | `reports/phase3a_demand_and_simulation.md` |
+| `phase3b1` | End of Phase 3A (`reports/baseline_end_phase3a/`) | Current outputs (`live`) | `reports/phase3b1_before_after.csv`, `reports/phase3b1_attribution.csv` (step-by-step effect of each model change; no written report yet) |
 
-For Excel files with a specific sheet:
+The `phase3a` command compares two frozen snapshots; `phase3b1` compares the Phase 3A snapshot with `live`. The prefix names output files only and does not select either comparison source.
 
-```bash
-python scripts/validate_input_data.py \
-  --input "data/raw/company_sales.xlsx" \
-  --sheet-name "Sales"
-```
+A snapshot directory holds `baseline_metrics.csv`, `outputs/`, and `data_processed/`. Revisions made within Phase 1 are not snapshots; `reports/phase1_data_correctness.md` describes them separately.
 
-The script writes a summary report to:
+`scripts/verify_pipeline.sh` runs the full chain in the project `.venv`: validation, standardization, notebooks 01–05, both comparisons, the stability check, and the tests. Run it from the project root with `mkdir -p tmp && bash scripts/verify_pipeline.sh > tmp/verify_pipeline.log 2>&1`.
 
-```text
-outputs/data_quality_precheck.csv
-```
+## Known Limitations
 
-Use the precheck as an early warning step. It does not replace detailed data cleaning in notebook 01, but it helps identify schema and quality issues before running the full workflow.
-
-Expected warnings should be interpreted in context. Non-positive quantity records may represent returns or cancellations, non-positive unit prices may represent invalid or non-sales records, and duplicate rows may be removed during cleaning. These issues are warnings rather than automatic failures because notebook 01 handles them downstream.
-
-## Standardize Raw Sales Data
-
-For future reusable pipeline work, the recommended preparation flow is:
-
-```text
-raw sales file
--> scripts/validate_input_data.py
--> scripts/standardize_raw_sales.py
--> downstream cleaning and analysis
-```
-
-The standardization script reads the raw sales file and `config/schema_mapping_template.csv`, renames mapped source columns into the standard schema, preserves identifier fields as strings, converts `quantity` and `unit_price` to numeric values where possible, converts `invoice_date` to datetime where possible, and writes:
-
-```text
-data/interim/standardized_sales.csv
-```
-
-The identifier fields `invoice_no`, `stock_code`, and `customer_id` are kept as strings to avoid losing leading zeros or treating IDs as numeric measures. Because the standardized output is saved as CSV, `invoice_date` is written as a text representation and should be parsed back to datetime in downstream code when date operations are needed.
-
-Run from the project root:
-
-```bash
-python scripts/standardize_raw_sales.py --input "data/raw/Online Retail.xlsx"
-```
-
-Optional arguments:
-
-```bash
-python scripts/standardize_raw_sales.py \
-  --input "data/raw/company_sales.csv" \
-  --mapping "config/schema_mapping_template.csv" \
-  --output "data/interim/standardized_sales.csv"
-```
-
-For Excel files with a specific sheet:
-
-```bash
-python scripts/standardize_raw_sales.py \
-  --input "data/raw/company_sales.xlsx" \
-  --sheet-name "Sales"
-```
-
-This standardization layer prepares a normalized dataset for future pipeline refactoring. Notebook 01 does not yet automatically consume `data/interim/standardized_sales.csv`.
-
-### Optional Standardized-Input Cleaning
-
-`notebooks/01_data_cleaning.ipynb` remains the original UCI-input cleaning notebook and the current production/portfolio workflow. As an optional path, `notebooks/01b_data_cleaning_standardized_input.ipynb` consumes `data/interim/standardized_sales.csv` and writes only to `data/processed_standardized/`, so it does not overwrite the original outputs under `data/processed/`. Notebook 01b is a preparation layer for future reusable pipeline refactoring, not yet a replacement for the original workflow.
-
-### Optional Standardized-Input SQL Queries
-
-`notebooks/02_sql_business_queries.ipynb` remains the original SQL workflow. The optional standardized-input workflow, `notebooks/02b_sql_business_queries_standardized_input.ipynb`, uses `stock_code` as the normalized SKU key and treats `description` as a display field. Because notebook 02 may group some SKU outputs by both `stock_code` and `description`, exact value parity is not expected for every SKU-level output. This difference is intentional and follows the project-wide SKU definition.
-
-## Full Standardized-Input Workflow
-
-Run the following preparation workflow from the project root.
-
-1. Validate the raw input:
-
-   ```bash
-   python scripts/validate_input_data.py \
-     --input "data/raw/Online Retail.xlsx" \
-     --mapping "config/schema_mapping_template.csv" \
-     --output "outputs/data_quality_precheck.csv"
-   ```
-
-2. Standardize the raw sales data:
-
-   ```bash
-   python scripts/standardize_raw_sales.py \
-     --input "data/raw/Online Retail.xlsx" \
-     --mapping "config/schema_mapping_template.csv" \
-     --output "data/interim/standardized_sales.csv"
-   ```
-
-3. Run the standardized-input notebooks in order:
-
-   1. `notebooks/01b_data_cleaning_standardized_input.ipynb`
-   2. `notebooks/02b_sql_business_queries_standardized_input.ipynb`
-   3. `notebooks/03b_sku_classification_standardized_input.ipynb`
-   4. `notebooks/04b_replenishment_warehouse_allocation_standardized_input.ipynb`
-   5. `notebooks/05b_working_capital_impact_standardized_input.ipynb`
-
-The b-notebooks are preparation layers for reusable pipeline refactoring and do not replace the original notebooks yet. They write standardized artifacts to `data/processed_standardized/` and `outputs_standardized/`; generated CSVs in those directories are ignored by Git. Throughout this workflow, `stock_code` is the normalized SKU key and `description` is a display field. Inventory, warehouse, cost, and financial-exposure fields are simulated for demonstration and are not real company data or accounting values.
-
-Warehouse metrics use two explicit definitions: `warehouse_strategy_count` is the number of unique warehouse strategies (`warehouse_strategy.nunique()`), currently 6; `warehouse_allocation_segment_count` is the number of SKU-class-by-strategy rows in `warehouse_allocation_summary`, currently 7.
+- Current inventory position scales with each SKU's own reorder point and EOQ, and safety stock uses a per-class service-level formula. A simpler fixed-range/volatility-factor model is still supported (see `config/simulation_assumptions.json`'s `methods` block and `PHASE_3A_METHODS` in `src/retail_analytics/simulation.py`) and used for before/after comparisons.
+- Demand statistics cover the 12 full months only. A SKU's revenue rank takes priority over its `short_history` flag when assigning it to High-Revenue Priority, so treat that class's demand-volatility statistic as unreliable for the 27 SKUs (as of the current data) with under 3 months of history; see `docs/management_summary.md`'s Assumptions and Limitations section for detail.
+- Partial returns are not netted against sales.
+- Cancellations with no same-price sale are matched at a different price (93 cases); check `match_quality` in `reversed_sales.csv`.
+- `annual_holding_cost` (in `outputs/working_capital_summary.csv` and related outputs) is only computed when `methods.order_quantity = "eoq"`; under the simpler `"top_up"` model it is left blank, not defaulted to 0.

@@ -1,0 +1,8 @@
+sku_class,warehouse_strategy,sku_count,total_revenue,total_units,avg_inventory_coverage_days
+High-Revenue Priority,Local Warehouse Priority,758,7635908.31,3448116,38.509757898950355
+Regular,Standard Replenishment Review,1558,1556652.51,984513,43.269545985293185
+High-Turnover Stable,Stable Local Warehouse Inventory,201,351530.53,637612,18.04969980689491
+High-Turnover Volatile,Small-Batch Replenishment / Monitor Closely,67,95181.65,221226,7.393256570811005
+Long-Tail,Overstock Review / Reduce Replenishment,769,88230.07,18488,805.0364946409225
+Long-Tail,External or Limited Stock Strategy,364,55825.23,16791,82.80565723878746
+Regular,Overstock Review / Reduce Replenishment,73,35543.88,10412,232.00117668276334

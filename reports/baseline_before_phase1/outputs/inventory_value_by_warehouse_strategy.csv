@@ -1,0 +1,7 @@
+warehouse_strategy,sku_count,total_inventory_units,estimated_inventory_value,stockout_revenue_exposure,overstock_capital_exposure
+Local Warehouse Priority,784,121465,746708.1,524066.59,0.0
+Overstock Review / Reduce Replenishment,924,68196,185101.3,0.0,124125.96
+Standard Replenishment Review,1597,90208,124231.13,88834.0,0.0
+External or Limited Stock Strategy,335,10239,18925.54,1685.29,0.0
+Stable Local Warehouse Inventory,208,33156,13613.81,19109.15,0.0
+Small-Batch Replenishment / Monitor Closely,69,4278,2033.19,11580.53,0.0

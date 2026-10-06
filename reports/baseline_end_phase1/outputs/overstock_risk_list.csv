@@ -1,0 +1,843 @@
+stock_code,description,sku_class,avg_monthly_units,current_inventory,inventory_coverage_days,inventory_risk,warehouse_strategy
+84569C,PACK 4 FLOWER/BUTTERFLY PATCHES,Long-Tail,1.0,119,3570.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23664,FLOWER SHOP DESIGN MUG,Long-Tail,1.0,113,3390.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90024D,NEW BAROQUE B'FLY NECKLACE PINK,Long-Tail,1.0,112,3360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23602,SET 10 CARDS 3 WISE MEN 17107,Long-Tail,1.0,112,3360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90020,FILIGREE DIAMANTE CHAIN,Long-Tail,1.0,111,3330.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23630,SET 10 CARDS HANGING BAUBLES 17080,Long-Tail,1.0,111,3330.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21491,SET OF THREE VINTAGE GIFT WRAPS,Long-Tail,1.0,109,3270.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90011C,GREEN CRYSTAL DROP EARRINGS,Long-Tail,1.0,108,3240.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84856L,LARGE TAHITI BEACH BAG,Long-Tail,1.0,105,3150.0,Overstock Risk,Overstock Review / Reduce Replenishment
+37461,FUNKY MONKEY MUG,Long-Tail,1.0,104,3120.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84743C,ORANGE FELT VASE + FLOWERS,Long-Tail,1.0,100,3000.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90152C,BLUE/NAT SHELL NECKLACE W PENDANT,Long-Tail,1.0,100,3000.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21839,MUMMY MOUSE RED GINGHAM RIBBON,Long-Tail,1.0,97,2910.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21310,CAPIZ CHANDELIER,Long-Tail,1.0,96,2880.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90140,PINK SWEETIE NECKLACE,Long-Tail,1.0,94,2820.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90178B,PURPLE CHUNKY GLASS+BEAD NECKLACE,Long-Tail,1.0,94,2820.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90128C,GREEN LEAVES AND BEADS PHONE CHARM,Long-Tail,1.0,94,2820.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84990,60 GOLD AND SILVER FAIRY CAKE CASES,Long-Tail,1.0,94,2820.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90092,BLUE CRYSTAL BOOT PHONE CHARM,Long-Tail,1.0,94,2820.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21414,SCALLOP SHELL SOAP DISH,Long-Tail,1.0,93,2790.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90084,PINK CRYSTAL GUITAR PHONE CHARM,Long-Tail,1.0,92,2760.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90187A,BLUE DROP EARRINGS W BEAD CLUSTER,Long-Tail,1.0,91,2730.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90025F,BAROQUE BUTTERFLY EARRINGS CRYSTAL,Long-Tail,1.3333333333333333,119,2677.5000000000005,Overstock Risk,Overstock Review / Reduce Replenishment
+DCGS0070,CAMOUFLAGE DOG COLLAR,Long-Tail,1.0,88,2640.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23638,SET 10 CARDS ROBIN WATERPUMP  17096,Long-Tail,1.0,88,2640.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90126A,PINK BERTIE MOBILE PHONE CHARM,Long-Tail,1.0,87,2610.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90024E,NEW BAROQUE B'FLY NECKLACE MONTANA,Long-Tail,1.0,86,2580.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90021,LASER CUT MULTI STRAND NECKLACE,Long-Tail,1.0,86,2580.0,Overstock Risk,Overstock Review / Reduce Replenishment
+DCGS0004,HAYNES CAMPER SHOULDER BAG,Long-Tail,1.0,85,2550.0,Overstock Risk,Overstock Review / Reduce Replenishment
+DCGS0069,OOH LA LA DOGS COLLAR,Long-Tail,1.0,83,2490.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90025E,BAROQUE BUTTERFLY EARRINGS MONTANA,Long-Tail,1.0,82,2460.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90053,CRACKED GLAZE EARRINGS IVORY,Long-Tail,1.0,81,2430.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90001A,ANTIQUE RASPBERRY FLOWER EARRINGS,Long-Tail,1.25,101,2424.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90025A,BAROQUE BUTTERFLY EARRINGS BLACK,Long-Tail,1.0,80,2400.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23633,SET 10 CARDS WORLD CHILDREN 17067,Long-Tail,1.5,118,2360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90132,LIGHT TOPAZ TEAL/AQUA COL NECKLACE,Long-Tail,1.0,78,2340.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90026B,GLASS BEAD HOOP NECKLACE MONTANA,Long-Tail,1.5,117,2340.0,Overstock Risk,Overstock Review / Reduce Replenishment
+35609A,PINK FEATHER CHRISTMAS DECORATION,Long-Tail,1.0,78,2340.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90024B,NEW BAROQUE B'FLY NECKLACE RED,Long-Tail,1.5,116,2320.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90181C,BLACK GLASS/SHELL/PEARL NECKLACE,Long-Tail,1.0,77,2310.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85170A,SET/6 IVORY BIRD T-LIGHT CANDLES,Long-Tail,1.0,76,2280.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90179C,BLACK FINE BEAD NECKLACE W TASSEL,Long-Tail,1.2,88,2200.0,Overstock Risk,Overstock Review / Reduce Replenishment
+35597A,DUSTY PINK CHRISTMAS TREE 30CM,Long-Tail,1.0,73,2190.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84824,DANISH ROSE UMBRELLA STAND,Long-Tail,1.0,72,2160.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90179B,PURPLE FINE BEAD NECKLACE W TASSEL,Long-Tail,1.5,107,2140.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90074,BLACK DIAMOND CLUSTER NECKLACE,Long-Tail,1.3333333333333333,95,2137.5000000000005,Overstock Risk,Overstock Review / Reduce Replenishment
+90142A,GREEN PENDANT SHELL NECKLACE,Long-Tail,1.0,69,2070.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90152A,SILVER/NAT SHELL NECKLACE W PENDANT,Long-Tail,1.0,69,2070.0,Overstock Risk,Overstock Review / Reduce Replenishment
+35443,RASTA IN BATH W SPLIFF ASHTRAY,Long-Tail,1.3333333333333333,91,2047.5000000000002,Overstock Risk,Overstock Review / Reduce Replenishment
+85031B,BLOSSOM IMAGES SCRAP BOOK SET,Long-Tail,1.0,68,2040.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84731,3 BIRDS CANVAS SCREEN,Long-Tail,1.0,67,2010.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90135A,ORANGE/FUSCHIA STONES NECKLACE,Long-Tail,1.0,67,2010.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90177A,CLASSIC DIAMANTE EARRINGS JET,Long-Tail,1.0,67,2010.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84227,HEN HOUSE W CHICK IN NEST,Long-Tail,1.0,66,1980.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90141B,IVORY PENDANT TRIPLE SHELL NECKLACE,Long-Tail,1.8,118,1966.6666666666665,Overstock Risk,Overstock Review / Reduce Replenishment
+90056,CHUNKY CRACKED GLAZE NECKLACE IVORY,Long-Tail,1.3333333333333333,87,1957.5000000000002,Overstock Risk,Overstock Review / Reduce Replenishment
+90025B,BAROQUE BUTTERFLY EARRINGS RED,Long-Tail,1.0,65,1950.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90036C,"FLOWER GLASS GARLAND NECKL.36""BLUE",Long-Tail,1.8,117,1949.9999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+90003B,ROSE COLOUR PAIR HEART HAIR SLIDES,Long-Tail,1.8333333333333333,119,1947.2727272727273,Overstock Risk,Overstock Review / Reduce Replenishment
+90014C,SILVER AND BLACK ORBIT NECKLACE,Long-Tail,1.6666666666666667,108,1943.9999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+84873A,FUNKY FLOWER PICNIC BAG FOR 4,Long-Tail,1.0,64,1920.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90011A,MIDNIGHT BLUE CRYSTAL DROP EARRINGS,Long-Tail,1.5,96,1920.0,Overstock Risk,Overstock Review / Reduce Replenishment
+35597B,BLACKCHRISTMAS TREE 30CM,Long-Tail,1.0,63,1890.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90000B,MIDNIGHT BLUE COPPER FLOWER NECKLAC,Long-Tail,1.8333333333333333,115,1881.818181818182,Overstock Risk,Overstock Review / Reduce Replenishment
+90039C,FIRE POLISHED GLASS BRACELET BLACK,Long-Tail,1.2,75,1875.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23609,SET 10 CARDS SNOWY ROBIN 17099,Long-Tail,1.0,62,1860.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21120,*BOOMBOX IPOD CLASSIC,Long-Tail,1.0,62,1860.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90183C,BLACK DROP EARRINGS W LONG BEADS,Long-Tail,1.6666666666666667,103,1853.9999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+84632,DECORATIVE HANGING SHELVING UNIT,Long-Tail,1.6666666666666667,103,1853.9999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+90023,FILIGREE DIAMANTE EARRINGS,Long-Tail,1.8571428571428568,114,1841.538461538462,Overstock Risk,Overstock Review / Reduce Replenishment
+21416,CLAM SHELL LARGE,Long-Tail,1.6666666666666667,102,1835.9999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+90137,PINK COMBO MINI CRYSTALS NECKLACE,Long-Tail,1.0,61,1830.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90180B,PURPLE AMETHYST NECKLACE W TASSEL,Long-Tail,1.25,76,1824.0,Overstock Risk,Overstock Review / Reduce Replenishment
+78034B,BLUE NETTING STORAGE HANGER,Long-Tail,1.6,97,1818.7499999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+21410,COUNTRY COTTAGE  DOORSTOP GREEN,Long-Tail,1.0,60,1800.0,Overstock Risk,Overstock Review / Reduce Replenishment
+35591T,TURQUOISE CHRISTMAS TREE,Long-Tail,1.6666666666666667,99,1781.9999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+90188,DROP EARRINGS W FLOWER & LEAF,Long-Tail,1.5,89,1780.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90141D,ROSE PENDANT TRIPLE SHELL NECKLACE,Long-Tail,2.0,118,1770.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23649,SET 10 CARDS DECK THE HALLS 16960,Long-Tail,2.0,118,1770.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23639,SET 10 CARDS MAGICAL TREE 17086,Long-Tail,1.3333333333333333,78,1755.0000000000002,Overstock Risk,Overstock Review / Reduce Replenishment
+90163B,WHITE ROSEBUD & PEARL NECKLACE,Long-Tail,1.75,102,1748.5714285714284,Overstock Risk,Overstock Review / Reduce Replenishment
+90027B,GLASS BEAD HOOP EARRINGS MONTANA,Long-Tail,1.0,58,1740.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90036B,"FLOWER GLASS GARLAND NECKL.36""GREEN",Long-Tail,2.0,116,1740.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90100,NECKLACE+BRACELET SET PINK DAISY,Long-Tail,1.0,58,1740.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90024F,NEW BAROQUE B'FLY NECKLACE CRYSTAL,Long-Tail,1.25,72,1728.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90190B,GOLD/AMBER DROP EARRINGS W LEAF,Long-Tail,1.8571428571428568,106,1712.3076923076926,Overstock Risk,Overstock Review / Reduce Replenishment
+90024C,NEW BAROQUE B'FLY NECKLACE GREEN,Long-Tail,1.3333333333333333,76,1710.0000000000002,Overstock Risk,Overstock Review / Reduce Replenishment
+90141A,GREEN PENDANT TRIPLE SHELL NECKLACE,Long-Tail,2.0,114,1710.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90077,BLACK DIAMOND CLUSTER EARRINGS,Long-Tail,1.5,85,1700.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90159,COTE D'AZURE NECKLACE,Long-Tail,1.5,85,1700.0,Overstock Risk,Overstock Review / Reduce Replenishment
+44265,M/COLOUR POM-POM CURTAIN,Long-Tail,2.0,113,1695.0,Overstock Risk,Overstock Review / Reduce Replenishment
+18097A,PINK TALL PORCELAIN T-LIGHT HOLDER,Long-Tail,1.6666666666666667,94,1691.9999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+90176D,DIAMANTE NECKLACE PURPLE,Long-Tail,1.75,98,1680.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84816,DANISH ROSE BEDSIDE CABINET,Long-Tail,1.6,89,1668.75,Overstock Risk,Overstock Review / Reduce Replenishment
+22764,"RUSTIC WOODEN CABINET, GLASS DOORS",Long-Tail,2.0,110,1650.0,Overstock Risk,Overstock Review / Reduce Replenishment
+37491D,PURPLE/BLUE CERAMIC CANDLE HOLDER,Long-Tail,2.0,110,1650.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23643,SET 10 CARDS CHRISTMAS BAUBLE 16954,Long-Tail,1.0,55,1650.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85119,WATERING CAN SINGLE HOOK PISTACHIO,Long-Tail,1.0,55,1650.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90069,RUBY GLASS CLUSTER NECKLACE,Long-Tail,2.0,108,1620.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90041,PEARL AND CHERRY QUARTZ BRACLET,Long-Tail,1.25,67,1608.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21331,MOROCCAN BEATEN METAL DISH LARGE,Long-Tail,2.0,106,1590.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84614A,PINK BAROQUE FLOCK CANDLE HOLDER,Long-Tail,2.0,105,1575.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84968B,SET OF 16 VINTAGE IVORY CUTLERY,Long-Tail,1.0,52,1560.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90059C,DIAMANTE HAIR GRIP PACK/2 MONTANA,Long-Tail,1.5,78,1560.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90184A,AMBER CHUNKY BEAD BRACELET W STRAP,Long-Tail,2.1666666666666665,112,1550.769230769231,Overstock Risk,Overstock Review / Reduce Replenishment
+82011A,"BATHROOM SCALES, TROPICAL BEACH",Long-Tail,2.0,103,1545.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90016C,SILVER/BLACK PENDANT ORBIT NECKLACE,Long-Tail,1.0,51,1530.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20964,POLYESTER FILLER PAD 60X40CM,Long-Tail,2.0,102,1530.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90141C,TURQ PENDANT TRIPLE SHELL NECKLACE,Long-Tail,2.0,102,1530.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20695,FLORAL BLUE MONSTER,Long-Tail,1.25,62,1488.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90156,RESIN BRACELET W PASTEL BEADS,Long-Tail,1.3333333333333333,66,1485.0000000000002,Overstock Risk,Overstock Review / Reduce Replenishment
+90060F,FIRE POLISHED GLASS NECKL GREEN,Long-Tail,1.2,59,1475.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90018B,GOLD M.O.P ORBIT DROP EARRINGS,Long-Tail,2.2,108,1472.7272727272727,Overstock Risk,Overstock Review / Reduce Replenishment
+35650,VINTAGE BEAD PINK JEWEL STAND,Long-Tail,1.0,49,1470.0,Overstock Risk,Overstock Review / Reduce Replenishment
+37491A,YELLOW/PINK CERAMIC CANDLE HOLDER,Long-Tail,1.5,73,1460.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90014A,SILVER/MOP ORBIT NECKLACE,Long-Tail,2.25,108,1440.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90068,"RUBY GLASS NECKLACE 42""",Long-Tail,1.0,48,1440.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90181A,AMBER GLASS/SHELL/PEARL NECKLACE,Long-Tail,1.4,67,1435.7142857142858,Overstock Risk,Overstock Review / Reduce Replenishment
+90014B,GOLD M PEARL  ORBIT NECKLACE,Long-Tail,2.125,101,1425.8823529411766,Overstock Risk,Overstock Review / Reduce Replenishment
+90168,2 DAISIES HAIR COMB,Long-Tail,2.0,95,1425.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90123B,TURQUOISE HEART OF GLASS BRACELET,Long-Tail,2.25,106,1413.3333333333335,Overstock Risk,Overstock Review / Reduce Replenishment
+90136,PALE PINK/AMETHYST STONE NECKLACE,Long-Tail,1.5,70,1400.0,Overstock Risk,Overstock Review / Reduce Replenishment
+45013,FOLDING SHOE TIDY,Long-Tail,1.5,70,1400.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90038B,GLASS AND PAINTED BEADS BRACELET OL,Long-Tail,2.1666666666666665,101,1398.4615384615386,Overstock Risk,Overstock Review / Reduce Replenishment
+90026C,GLASS BEAD HOOP NECKLACE GREEN,Long-Tail,1.3333333333333333,62,1395.0000000000002,Overstock Risk,Overstock Review / Reduce Replenishment
+90036E,"FLOWER GLASS GARLD NECKL36""AMETHYST",Long-Tail,1.75,80,1371.4285714285713,Overstock Risk,Overstock Review / Reduce Replenishment
+90076,MONTANA DIAMOND CLUSTER EARRINGS,Long-Tail,2.25,102,1360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90169,DAISY HAIR COMB,Long-Tail,1.625,73,1347.6923076923076,Overstock Risk,Overstock Review / Reduce Replenishment
+72815,3 WICK CHRISTMAS BRIAR CANDLE,Long-Tail,1.5,67,1340.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84925D,LA PALMIERA WALL THERMOMETER,Long-Tail,2.5,111,1332.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90079,VINTAGE ENAMEL & CRYSTAL NECKLACE,Long-Tail,2.5,111,1332.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90126C,AMBER BERTIE MOBILE PHONE CHARM,Long-Tail,2.0,88,1320.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90175D,TIGRIS EYE CHUNKY CHARM BRACELET,Long-Tail,2.3,101,1317.3913043478262,Overstock Risk,Overstock Review / Reduce Replenishment
+72798C,SET/4 GARDEN ROSE DINNER CANDLE,Long-Tail,2.333333333333333,102,1311.4285714285716,Overstock Risk,Overstock Review / Reduce Replenishment
+90130D,RED STONE/CRYSTAL EARRINGS,Long-Tail,1.5,65,1300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90199D,5 STRAND GLASS NECKLACE AMBER,Long-Tail,1.2,52,1300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90212B,JET BLACK LAS VEGAS BRACELET ROUND,Long-Tail,2.5,108,1296.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21275,ZINC TOP  2 DOOR WOODEN SHELF,Long-Tail,2.0,86,1290.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90065A,WHITE VINTAGE CRYSTAL BRACELET,Long-Tail,1.75,75,1285.7142857142858,Overstock Risk,Overstock Review / Reduce Replenishment
+23623,SET 10 CARD CHRISTMAS WELCOME 17112,Long-Tail,2.6666666666666665,114,1282.5000000000002,Overstock Risk,Overstock Review / Reduce Replenishment
+90063A,WHITE VINT ART DECO CRYSTAL NECKLAC,Long-Tail,2.0,85,1275.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23608,SET 10 CARDS RUDOLPHS NOSE 17097,Long-Tail,2.0,85,1275.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90211B,JET BLACK LAS VEGAS NECKLACE 45CM,Long-Tail,1.75,74,1268.5714285714284,Overstock Risk,Overstock Review / Reduce Replenishment
+90067B,BROWN VINTAGE VICTORIAN EARRINGS,Long-Tail,2.0,84,1260.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21268,VINTAGE BLUE TINSEL REEL,Long-Tail,2.0,83,1245.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90190A,SILVER/CRYSTAL DROP EARRINGS W LEAF,Long-Tail,2.6666666666666665,110,1237.5000000000002,Overstock Risk,Overstock Review / Reduce Replenishment
+47579,TEA TIME BREAKFAST BASKET,Long-Tail,1.0,41,1230.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90026D,GLASS BEAD HOOP NECKLACE AMETHYST,Long-Tail,1.0,41,1230.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90011E,AMBER CRYSTAL DROP EARRINGS,Long-Tail,1.0,41,1230.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21332,MOROCCAN BEATEN METAL MIRROR,Long-Tail,2.7142857142857144,111,1226.842105263158,Overstock Risk,Overstock Review / Reduce Replenishment
+90035A,"PEARL & SHELL 42""NECKL. GREEN",Long-Tail,1.6666666666666667,68,1224.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90196B,BLACK GEMSTONE NECKLACE 45CM,Long-Tail,1.6666666666666667,68,1224.0,Overstock Risk,Overstock Review / Reduce Replenishment
+62096B,PURPLE/TURQ FLOWERS HANDBAG,Long-Tail,2.0,81,1215.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90036A,FLOWER GARLAND NECKLACE RED,Long-Tail,2.0,81,1215.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90018C,SILVER BLACK ORBIT DROP EARRINGS,Long-Tail,2.4,97,1212.5,Overstock Risk,Overstock Review / Reduce Replenishment
+84497,BUTTONS AND STRIPES NOTEBOOK,Long-Tail,2.6,105,1211.5384615384614,Overstock Risk,Overstock Review / Reduce Replenishment
+22929,SCHOOL DESK AND CHAIR,Long-Tail,2.2857142857142856,91,1194.375,Overstock Risk,Overstock Review / Reduce Replenishment
+90177E,DROP DIAMANTE EARRINGS GREEN,Long-Tail,1.3333333333333333,53,1192.5000000000002,Overstock Risk,Overstock Review / Reduce Replenishment
+21827,EIGHT PIECE CREEPY CRAWLIE SET,Long-Tail,3.0,118,1180.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90064B,BLACK VINTAGE  CRYSTAL EARRINGS,Long-Tail,2.75,108,1178.1818181818182,Overstock Risk,Overstock Review / Reduce Replenishment
+84679,CLASSICAL ROSE TABLE LAMP,Long-Tail,3.0,117,1170.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20906,VINTAGE NOTEBOOK BEAUTY GIRL,Long-Tail,1.5,58,1160.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90176C,DIAMANTE NECKLACE,Long-Tail,1.5,58,1160.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85136B,BLUE SHARK HELICOPTER,Long-Tail,2.0,77,1155.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90161A,ANT COPPER RED BOUDICCA BRACELET,Long-Tail,2.4,92,1150.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90204,PAIR OF ENAMEL BUTTERFLY HAIRCLIP,Long-Tail,3.125,119,1142.3999999999999,Overstock Risk,Overstock Review / Reduce Replenishment
+90016B,GOLD/M.O.P PENDANT ORBIT NECKLACE,Long-Tail,2.2,83,1131.8181818181818,Overstock Risk,Overstock Review / Reduce Replenishment
+37509,NEW ENGLAND MUG W GIFT BOX,Long-Tail,2.0,75,1125.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23610,SET 10 CARDS CHRISTMAS ROBIN 17095,Long-Tail,1.5,56,1120.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23635,SET 10 CARDS CHRISTMAS HOLLY  17259,Long-Tail,1.0,37,1110.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23619,SET 10 CARDS POINSETTIA 17093,Long-Tail,2.0,74,1110.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84620,BLUE GINGHAM ROSE CUSHION COVER,Long-Tail,2.0,74,1110.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84840,SWEETHEART CARRY-ALL BASKET,Long-Tail,2.0,74,1110.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20820,SILVER LOOKING MIRROR,Long-Tail,2.5,92,1104.0,Overstock Risk,Overstock Review / Reduce Replenishment
+22823,CHEST NATURAL WOOD 20 DRAWERS,Long-Tail,2.4,88,1100.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90179A,AMBER FINE BEAD NECKLACE W TASSEL,Long-Tail,1.5,55,1100.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84971L,LARGE HEART FLOWERS HOOK,Long-Tail,2.0,73,1095.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90184C,BLACK CHUNKY BEAD BRACELET W STRAP,Long-Tail,2.2,80,1090.909090909091,Overstock Risk,Overstock Review / Reduce Replenishment
+23640,SET 10 CARDS SCOTTIE DOG 17211,Long-Tail,3.0,109,1090.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84881,BLUE WIRE SPIRAL CANDLE HOLDER,Long-Tail,3.0,108,1080.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90177B,DROP DIAMANTE EARRINGS BLACK DIAMON,Long-Tail,2.8,100,1071.4285714285716,Overstock Risk,Overstock Review / Reduce Replenishment
+84803A,PINK ALLIUM  ARTIFICIAL FLOWER,Long-Tail,3.0,107,1070.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20851,ZINC HEART LATTICE TRAY OVAL,Long-Tail,2.25,80,1066.6666666666667,Overstock Risk,Overstock Review / Reduce Replenishment
+20871,OPULENT VELVET SET/3 CANDLES,Long-Tail,2.0,71,1065.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90186A,AMETHYST HOOP EARRING FLORAL LEAF,Long-Tail,1.8333333333333333,65,1063.6363636363637,Overstock Risk,Overstock Review / Reduce Replenishment
+22828,REGENCY MIRROR WITH SHUTTERS,Long-Tail,1.6666666666666667,59,1062.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90037C,TINY CRYSTAL BRACELET BLUE,Long-Tail,1.25,44,1056.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90166,PINK & WHITE ROSEBUD RING,Long-Tail,2.333333333333333,82,1054.2857142857144,Overstock Risk,Overstock Review / Reduce Replenishment
+90094,NECKLACE+BRACELET SET FRUIT SALAD,Long-Tail,2.0,70,1050.0,Overstock Risk,Overstock Review / Reduce Replenishment
+35645,VINTAGE BEAD PINK JEWEL BOX,Long-Tail,2.0,70,1050.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90037A,TINY CRYSTAL BRACELET RED,Long-Tail,1.0,35,1050.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90214V,"LETTER ""V"" BLING KEY RING",Long-Tail,2.6,90,1038.4615384615383,Overstock Risk,Overstock Review / Reduce Replenishment
+35833G,4 GOLD FLOCK CHRISTMAS BALLS,Long-Tail,2.0,69,1035.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90118,PINK DAISY BAG CHARM,Long-Tail,2.6666666666666665,91,1023.7500000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+90214W,"LETTER ""W"" BLING KEY RING",Long-Tail,3.2,109,1021.8749999999999,Overstock Risk,Overstock Review / Reduce Replenishment
+90142D,MOP PENDANT SHELL NECKLACE,Long-Tail,3.333333333333333,113,1017.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90010B,BLACK/WHITE GLASS/SILVER BRACELET,Long-Tail,2.75,92,1003.6363636363637,Overstock Risk,Overstock Review / Reduce Replenishment
+90175A,WHITE GLASS CHUNKY CHARM BRACELET,Long-Tail,2.4545454545454546,82,1002.2222222222222,Overstock Risk,Overstock Review / Reduce Replenishment
+90082A,DIAMANTE BOW BROOCH GREEN COLOUR,Long-Tail,2.727272727272727,91,1001.0000000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+47586A,PINK FAIRY CAKE CUSHION COVER,Long-Tail,3.0,100,1000.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90042A,FRESHWATER PEARL BRACELET GOLD,Long-Tail,1.5,50,1000.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90019C,SILVER BLACK ORBIT BRACELET,Long-Tail,1.625,54,996.9230769230769,Overstock Risk,Overstock Review / Reduce Replenishment
+79157V,UBO-LIGHT TRIOBASE PURPLE,Long-Tail,2.5,83,996.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90000A,RASPBERRY ANT COPPER FLOWER NECKLAC,Long-Tail,2.6,86,992.3076923076923,Overstock Risk,Overstock Review / Reduce Replenishment
+22206,"MUG , DOTCOMGIFTSHOP.COM",Long-Tail,1.0,33,990.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90051,CRACKED GLAZE NECKLACE RED,Long-Tail,2.5,82,984.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90064A,WHITE VINTAGE CRYSTAL EARRINGS,Long-Tail,2.5,82,984.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90196A,PURPLE GEMSTONE NECKLACE 45CM,Long-Tail,2.6666666666666665,87,978.7500000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+90143,SILVER BRACELET W PASTEL FLOWER,Long-Tail,3.1,101,977.4193548387096,Overstock Risk,Overstock Review / Reduce Replenishment
+85031C,CURIOUS IMAGES SCRAP BOOK SET,Long-Tail,3.0,97,970.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90011B,BLACK CRYSTAL DROP EARRINGS,Long-Tail,2.0,64,960.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90027D,GLASS BEAD HOOP EARRINGS AMETHYST,Long-Tail,2.25,72,960.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21763,VINTAGE WOODEN BAR STOOL,Long-Tail,2.0,64,960.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23702,HIGH RESOLUTION IMAGE,Long-Tail,2.0,64,960.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90001B,ANTIQUE MID BLUE FLOWER EARRINGS,Long-Tail,1.6666666666666667,53,953.9999999999999,Overstock Risk,Overstock Review / Reduce Replenishment
+90130B,TURQ STONE/CRYSTAL EARRINGS,Long-Tail,3.25,102,941.5384615384615,Overstock Risk,Overstock Review / Reduce Replenishment
+85225,BLING KEY RING STAND,Long-Tail,3.0,94,940.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23637,SET 10 CARDS OUT OF ORDER 17216,Long-Tail,2.75,86,938.1818181818182,Overstock Risk,Overstock Review / Reduce Replenishment
+16206B,RED PURSE WITH PINK HEART,Long-Tail,3.5,109,934.2857142857142,Overstock Risk,Overstock Review / Reduce Replenishment
+90022,EDWARDIAN DROP EARRINGS JET BLACK,Long-Tail,2.2222222222222223,69,931.4999999999999,Overstock Risk,Overstock Review / Reduce Replenishment
+84613C,BLUE NEW BAROQUE FLOCK CANDLESTICK,Long-Tail,1.0,31,930.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90081B,LILY BROOCH WHITE/SILVER COLOUR,Long-Tail,1.0,31,930.0,Overstock Risk,Overstock Review / Reduce Replenishment
+47503J,SET/3 FLORAL GARDEN TOOLS IN BAG,Long-Tail,3.0,93,930.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20821,GOLDIE LOOKING MIRROR,Long-Tail,2.2,68,927.2727272727273,Overstock Risk,Overstock Review / Reduce Replenishment
+85008,SET OF 3 CONEY ISLAND OVAL BOXES,Long-Tail,3.25,100,923.0769230769231,Overstock Risk,Overstock Review / Reduce Replenishment
+23607,SET 10 CARDS HATS & STOCKINGS 17081,Long-Tail,2.6666666666666665,82,922.5000000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+90148,LONG SILVER NECKLACE PASTEL FLOWER,Long-Tail,1.4,43,921.4285714285716,Overstock Risk,Overstock Review / Reduce Replenishment
+90205C,LARGE CRYSTAL DIAMANTE HAIRSLIDE,Long-Tail,2.9,89,920.6896551724138,Overstock Risk,Overstock Review / Reduce Replenishment
+90075,MONTANA DIAMOND CLUSTER NECKLACE,Long-Tail,2.0,61,915.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21364,PEACE SMALL WOOD LETTERS,Long-Tail,2.9,88,910.3448275862069,Overstock Risk,Overstock Review / Reduce Replenishment
+90123A,PINK HEART OF GLASS BRACELET,Long-Tail,2.142857142857143,65,910.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90212C,PURPLE LAS VEGAS BRACELET ROUND,Long-Tail,2.333333333333333,70,900.0000000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+23624,SET 10 CARD PERFECT NATIVITY 17089,Long-Tail,1.3333333333333333,40,900.0000000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+23628,SET 10 CARDS TRIANGLE ICONS  17220,Long-Tail,1.0,30,900.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84856S,SMALL TAHITI BEACH BAG,Long-Tail,4.0,119,892.5,Overstock Risk,Overstock Review / Reduce Replenishment
+90202A,PURPLE ENAMEL FLOWER HAIR TIE,Long-Tail,2.6666666666666665,79,888.7500000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+90131,PINK/AMETHYST/GOLD NECKLACE,Long-Tail,2.5,73,876.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90036D,"FLOWER GLASS GARLAND NECKL.36""BLACK",Long-Tail,2.4,70,875.0,Overstock Risk,Overstock Review / Reduce Replenishment
+79161A,ST GEORGE SET OF 10 PARTY LIGHTS,Long-Tail,2.0,58,870.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90164A,PINK ROSEBUD PEARL BRACELET,Long-Tail,3.0,87,870.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21009,ETCHED GLASS STAR TREE DECORATION,Long-Tail,1.0,29,870.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20848,ZINC HEART LATTICE CHARGER SMALL,Long-Tail,2.625,76,868.5714285714287,Overstock Risk,Overstock Review / Reduce Replenishment
+85031A,ROMANTIC IMAGES SCRAP BOOK SET,Long-Tail,4.0,115,862.5,Overstock Risk,Overstock Review / Reduce Replenishment
+84689,S/2 BEACH HUT TREASURE CHESTS,Long-Tail,1.5,43,860.0,Overstock Risk,Overstock Review / Reduce Replenishment
+44092B,BLUE WHITE PLASTIC RINGS LAMPSHADE,Long-Tail,2.8,80,857.1428571428572,Overstock Risk,Overstock Review / Reduce Replenishment
+85126,LARGE ROUND CUTGLASS CANDLESTICK,Long-Tail,2.0,57,855.0,Overstock Risk,Overstock Review / Reduce Replenishment
+37491B,BLUE/YELLOW CERAMIC CANDLE HOLDER,Long-Tail,4.0,114,855.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84882,GREEN WIRE STANDING CANDLE HOLDER,Long-Tail,3.8,108,852.6315789473686,Overstock Risk,Overstock Review / Reduce Replenishment
+90032,IVORY SHELL HEART NECKLACE,Long-Tail,3.5,99,848.5714285714286,Overstock Risk,Overstock Review / Reduce Replenishment
+90122C,TURQUOISE CRYSTAL+GLASS BRACELET,Long-Tail,2.6666666666666665,75,843.7500000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+90010A,MIDNIGHT BLUE GLASS/SILVER BRACELET,Long-Tail,2.0,56,840.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23652,SET 10 CARD CHRISTMAS STAMPS 16963,Long-Tail,2.0,56,840.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90050,CRACKED GLAZE NECKLACE IVORY,Long-Tail,2.0,56,840.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21681,GIANT MEDINA STAMPED METAL BOWL,Long-Tail,2.0,56,840.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23601,SET 10 CARDS SNOWY SNOWDROPS  17100,Long-Tail,4.0,112,840.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90128B,BLUE LEAVES AND BEADS PHONE CHARM,Long-Tail,2.0,56,840.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90123C,GREEN HEART OF GLASS BRACELET,Long-Tail,2.8,77,825.0000000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+21186,WHITE DOVE HONEYCOMB PAPER GARLAND,Long-Tail,2.0,55,825.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90019B,GOLD M.O.P ORBIT BRACELET,Long-Tail,2.0,55,825.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90162B,ANT SILVER LIME GREEN BOUDICCA RING,Long-Tail,4.333333333333333,119,823.8461538461539,Overstock Risk,Overstock Review / Reduce Replenishment
+84510E,SET OF 4 GREEN CAROUSEL COASTERS,Long-Tail,3.1818181818181817,87,820.2857142857143,Overstock Risk,Overstock Review / Reduce Replenishment
+90060B,FIRE POLISHED GLASS NECKL GOLD,Long-Tail,1.0,27,810.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20892,SET/3 TALL GLASS CANDLE HOLDER PINK,Long-Tail,4.0,108,810.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90184B,AMETHYST CHUNKY BEAD BRACELET W STR,Long-Tail,3.6666666666666665,98,801.8181818181819,Overstock Risk,Overstock Review / Reduce Replenishment
+84709B,PINK OVAL JEWELLED MIRROR,Long-Tail,3.333333333333333,89,801.0,Overstock Risk,Overstock Review / Reduce Replenishment
+79149B,SILICON STAR BULB  BLUE,Long-Tail,3.0,80,800.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90019A,SILVER M.O.P ORBIT BRACELET,Long-Tail,3.1666666666666665,84,795.7894736842105,Overstock Risk,Overstock Review / Reduce Replenishment
+90174,BUTTERFLY HAIR BAND,Long-Tail,2.888888888888889,76,789.2307692307693,Overstock Risk,Overstock Review / Reduce Replenishment
+90197B,BLACK GLASS BRACELET W HEART CHARMS,Long-Tail,3.1818181818181817,83,782.5714285714287,Overstock Risk,Overstock Review / Reduce Replenishment
+DCGS0076,SUNJAR LED NIGHT NIGHT LIGHT,Long-Tail,3.0,78,780.0,Overstock Risk,Overstock Review / Reduce Replenishment
+22323,PINK POLKADOT KIDS BAG,Long-Tail,1.0,26,780.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90214T,"LETTER ""T"" BLING KEY RING",Long-Tail,2.6666666666666665,69,776.2500000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+23654,SET 10 CARD SNOWMAN 16965,Long-Tail,1.6666666666666667,43,774.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90192,JADE DROP EARRINGS W FILIGREE,Long-Tail,3.8181818181818175,98,770.0000000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+90124C,GREEN MURANO TWIST NECKLACE,Long-Tail,1.8333333333333333,47,769.0909090909091,Overstock Risk,Overstock Review / Reduce Replenishment
+90039D,FIRE POLISHED GLASS BRACELET GREEN,Long-Tail,2.625,67,765.7142857142858,Overstock Risk,Overstock Review / Reduce Replenishment
+90039A,FIRE POLISHED GLASS BRACELET RED,Long-Tail,2.6666666666666665,68,765.0000000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+84859B,BLUE DISCO HANDBAG,Long-Tail,3.875,98,758.7096774193548,Overstock Risk,Overstock Review / Reduce Replenishment
+85115B,S/4 BLACK DISCO PARTITION PANEL,Long-Tail,3.0,75,750.0,Overstock Risk,Overstock Review / Reduce Replenishment
+72803B,OCEAN SCENT CANDLE JEWELLED DRAWER,Long-Tail,1.0,25,750.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90185A,AMBER DIAMANTE EXPANDABLE RING,Long-Tail,4.166666666666667,104,748.8,Overstock Risk,Overstock Review / Reduce Replenishment
+23620,SET 10 CARDS PERFECT POST 17090,Long-Tail,3.333333333333333,83,747.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90049,IVORY GOLD METAL BAG CHARM,Long-Tail,1.6666666666666667,41,738.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90187B,GREEN DROP EARRINGS W BEAD CLUSTER,Long-Tail,1.7142857142857142,42,735.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90152B,BLUE/GREEN SHELL NECKLACE W PENDANT,Long-Tail,2.0,49,735.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90133,TEAL/FUSCHIA COL BEAD NECKLACE,Long-Tail,3.8,93,734.2105263157896,Overstock Risk,Overstock Review / Reduce Replenishment
+90129C,GREEN GLASS TASSLE BAG CHARM,Long-Tail,4.375,107,733.7142857142857,Overstock Risk,Overstock Review / Reduce Replenishment
+20847,ZINC HEART LATTICE CHARGER LARGE,Long-Tail,4.727272727272728,115,729.8076923076922,Overstock Risk,Overstock Review / Reduce Replenishment
+90040C,MURANO STYLE GLASS BRACELET GOLD,Long-Tail,3.0,72,720.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90202B,WHITE ENAMEL FLOWER HAIR TIE,Long-Tail,1.8333333333333333,44,720.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90138,WHITE/PINK MINI CRYSTALS NECKLACE,Long-Tail,1.6666666666666667,40,720.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84617,NEW BAROQUE BLACK BOXES,Long-Tail,1.0,24,720.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90181B,AMETHYST GLASS/SHELL/PEARL NECKLACE,Long-Tail,1.875,45,720.0,Overstock Risk,Overstock Review / Reduce Replenishment
+37489D,PINK/GREEN FLOWER DESIGN BIG MUG,Long-Tail,4.0,96,720.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84922,PINK BUTTERFLY WASHBAG,Long-Tail,1.8,43,716.6666666666666,Overstock Risk,Overstock Review / Reduce Replenishment
+90134,OLD ROSE COMBO BEAD NECKLACE,Long-Tail,4.5,107,713.3333333333334,Overstock Risk,Overstock Review / Reduce Replenishment
+35400,WOODEN BOX ADVENT CALENDAR,Long-Tail,3.333333333333333,79,711.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90013A,MIDNIGHT BLUE VINTAGE EARRINGS,Long-Tail,4.4,104,709.0909090909091,Overstock Risk,Overstock Review / Reduce Replenishment
+22803,IVORY EMBROIDERED QUILT,Long-Tail,4.909090909090909,116,708.8888888888889,Overstock Risk,Overstock Review / Reduce Replenishment
+23612,SET 10 MINICARDS CUTE SNOWMAN 17071,Long-Tail,2.5,59,708.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84201C,HAPPY BIRTHDAY CARD TEDDY/CAKE,Long-Tail,5.0,118,708.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84358,FLOOR LAMP SHADE WOOD BASE,Long-Tail,4.125,97,705.4545454545454,Overstock Risk,Overstock Review / Reduce Replenishment
+79191D,RETRO PLASTIC DAISY TRAY,Long-Tail,3.2857142857142856,77,703.0434782608696,Overstock Risk,Overstock Review / Reduce Replenishment
+79071B,ENGLISH ROSE METAL WASTE BIN,Long-Tail,3.333333333333333,78,702.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85089,CANDY SPOT BUNNY,Long-Tail,3.25,76,701.5384615384615,Overstock Risk,Overstock Review / Reduce Replenishment
+90162C,ANT SILVER FUSCHIA BOUDICCA RING,Long-Tail,2.8,65,696.4285714285714,Overstock Risk,Overstock Review / Reduce Replenishment
+90055,CRACKED GLAZE EARRINGS BROWN,Long-Tail,1.25,29,696.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90160A,PURPLE BOUDICCA LARGE BRACELET,Long-Tail,3.1666666666666665,73,691.578947368421,Overstock Risk,Overstock Review / Reduce Replenishment
+23616,SET 10 CARDS JINGLE BELLS 17217,Long-Tail,4.0,92,690.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21757,LIGHTHOUSE PRINTED METAL SIGN,Long-Tail,3.0,69,690.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90214I,"LETTER ""I"" BLING KEY RING",Long-Tail,4.222222222222222,97,689.2105263157895,Overstock Risk,Overstock Review / Reduce Replenishment
+90067A,PINK VINTAGE VICTORIAN EARRINGS,Long-Tail,2.8,64,685.7142857142858,Overstock Risk,Overstock Review / Reduce Replenishment
+21144,PINK POODLE HANGING DECORATION,Long-Tail,5.0,114,684.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90129F,RED GLASS TASSLE BAG CHARM,Long-Tail,4.444444444444445,101,681.7499999999999,Overstock Risk,Overstock Review / Reduce Replenishment
+84033,FLAG OF ST GEORGE,Long-Tail,3.8333333333333335,87,680.8695652173913,Overstock Risk,Overstock Review / Reduce Replenishment
+90046,WHITE WITH METAL BAG CHARM,Long-Tail,3.0,68,680.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90158,ST TROPEZ NECKLACE,Long-Tail,3.75,85,680.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84600,NEW BAROQUE JEWELLERY BOX,Long-Tail,4.818181818181818,109,678.6792452830189,Overstock Risk,Overstock Review / Reduce Replenishment
+90012B,BLACK DROP CRYSTAL NECKLACE,Long-Tail,4.333333333333333,98,678.4615384615386,Overstock Risk,Overstock Review / Reduce Replenishment
+90103,PURPLE FRANGIPANI NECKLACE,Long-Tail,4.833333333333333,109,676.5517241379312,Overstock Risk,Overstock Review / Reduce Replenishment
+90173,PAIR BUTTERFLY HAIR CLIPS,Long-Tail,4.0,90,675.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90122B,JADE CRYSTAL+GLASS BRACELET,Long-Tail,1.2,27,675.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90145,SILVER HOOP EARRINGS WITH FLOWER,Long-Tail,2.5454545454545454,57,671.7857142857142,Overstock Risk,Overstock Review / Reduce Replenishment
+21344,MOROCCAN BEATEN METAL DISH,Long-Tail,3.0,67,670.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20781,GOLD EAR MUFF HEADPHONES,Long-Tail,3.1818181818181817,71,669.4285714285714,Overstock Risk,Overstock Review / Reduce Replenishment
+90165A,PINK ROSEBUD PEARL EARRINGS,Long-Tail,2.2857142857142856,51,669.3750000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+37333,"RETRO ""TEA FOR ONE""",Long-Tail,3.5,78,668.5714285714286,Overstock Risk,Overstock Review / Reduce Replenishment
+90177D,DROP DIAMANTE EARRINGS PURPLE,Long-Tail,2.111111111111111,47,667.8947368421052,Overstock Risk,Overstock Review / Reduce Replenishment
+90016A,SILVER/M.O.P PENDANT ORBIT NECKLACE,Long-Tail,2.4285714285714284,54,667.0588235294118,Overstock Risk,Overstock Review / Reduce Replenishment
+84508B,STRIPES DESIGN TEDDY,Long-Tail,5.090909090909091,113,665.8928571428571,Overstock Risk,Overstock Review / Reduce Replenishment
+90194,SILVER LARIAT BLACK STONE EARRINGS,Long-Tail,2.6666666666666665,59,663.7500000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+47016,LIGHT DECORATION BATTERY OPERATED,Long-Tail,2.0,44,660.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90144,SILVER DROP EARRINGS WITH FLOWER,Long-Tail,2.0,44,660.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23645,SET 10 CHRISTMAS CARDS HOHOHO 16956,Long-Tail,3.0,66,660.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23615,SET 10 CARDS PRINTED GRAPHIC 17219,Long-Tail,1.3333333333333333,29,652.5000000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+20670,VIP HOLIDAY PURSE,Long-Tail,1.75,38,651.4285714285714,Overstock Risk,Overstock Review / Reduce Replenishment
+84984A,GREEN PEONY CUSHION COVER,Long-Tail,3.8,82,647.3684210526317,Overstock Risk,Overstock Review / Reduce Replenishment
+90073,VINTAGE ENAMEL & CRYSTAL EARRINGS,Long-Tail,2.7,58,644.4444444444443,Overstock Risk,Overstock Review / Reduce Replenishment
+21686,MEDINA STAMPED METAL STOOL,Long-Tail,3.4,73,644.1176470588235,Overstock Risk,Overstock Review / Reduce Replenishment
+84499,BLACK FLOWER CANDLE PLATE,Long-Tail,3.5,75,642.8571428571429,Overstock Risk,Overstock Review / Reduce Replenishment
+62097B,BLUE STRIPES SHOULDER BAG,Long-Tail,4.5,95,633.3333333333334,Overstock Risk,Overstock Review / Reduce Replenishment
+47351B,BLUE  VOILE LAMPSHADE,Long-Tail,4.75,100,631.578947368421,Overstock Risk,Overstock Review / Reduce Replenishment
+90081A,LILY BROOCH AMETHYST COLOUR,Long-Tail,2.142857142857143,45,630.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90189A,SILVER 2 STRAND NECKLACE-LEAF CHARM,Long-Tail,1.0,21,630.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84907,PINK YELLOW PATCH CUSHION COVER,Long-Tail,3.625,76,628.9655172413793,Overstock Risk,Overstock Review / Reduce Replenishment
+17090D,VANILLA INCENSE 40 CONES IN TIN,Long-Tail,4.833333333333333,101,626.896551724138,Overstock Risk,Overstock Review / Reduce Replenishment
+37489C,GREEN/BLUE FLOWER DESIGN BIG MUG,Long-Tail,3.8333333333333335,80,626.086956521739,Overstock Risk,Overstock Review / Reduce Replenishment
+84842,HELLO SAILOR BATHROOM SET,Long-Tail,3.5,73,625.7142857142857,Overstock Risk,Overstock Review / Reduce Replenishment
+90029,NEW BAROQUE SMALL NECKLACE BLACK,Long-Tail,1.25,26,624.0,Overstock Risk,Overstock Review / Reduce Replenishment
+16162L,THE KING GIFT BAG,Long-Tail,4.0,83,622.5,Overstock Risk,Overstock Review / Reduce Replenishment
+23646,SET 10 CARDS JINGLE BELLS 16957,Long-Tail,2.6666666666666665,55,618.7500000000001,Overstock Risk,Overstock Review / Reduce Replenishment
+84865,NEW BAROQUE BLACK PHOTO ALBUM,Long-Tail,5.4,111,616.6666666666666,Overstock Risk,Overstock Review / Reduce Replenishment
+21895,POTTING SHED SOW 'N' GROW SET,Long-Tail,2.0,41,615.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84613A,PINK NEW BAROQUE FLOCK CANDLESTICK,Long-Tail,2.0,41,615.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90214N,"LETTER ""N"" BLING KEY RING",Long-Tail,3.4166666666666665,70,614.6341463414634,Overstock Risk,Overstock Review / Reduce Replenishment
+90191,SILVER LARIAT 40CM,Long-Tail,3.25,66,609.2307692307692,Overstock Risk,Overstock Review / Reduce Replenishment
+85096,HILDA CANDY SPOT RABBIT,Long-Tail,3.125,63,604.8,Overstock Risk,Overstock Review / Reduce Replenishment
+20780,BLACK EAR MUFF HEADPHONES,Long-Tail,5.875,118,602.5531914893617,Overstock Risk,Overstock Review / Reduce Replenishment
+20935,ROUND CACTUS CANDLE,Long-Tail,3.0,60,600.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85024C,PINK SMALL JEWELLED PHOTOFRAME,Long-Tail,2.0,40,600.0,Overstock Risk,Overstock Review / Reduce Replenishment
+37464,ROBOT MUG IN DISPLAY BOX,Long-Tail,3.0,60,600.0,Overstock Risk,Overstock Review / Reduce Replenishment
+72133,COLUMBIAN CANDLE RECTANGLE,Long-Tail,5.0,99,594.0,Overstock Risk,Overstock Review / Reduce Replenishment
+22034,ROBIN CHRISTMAS CARD,Long-Tail,5.0,99,594.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90201D,GREEN ENAMEL FLOWER RING,Long-Tail,5.923076923076923,117,592.5974025974025,Overstock Risk,Overstock Review / Reduce Replenishment
+90208,PAIR OF PINK FLOWER CLUSTER SLIDE,Long-Tail,5.875,116,592.3404255319149,Overstock Risk,Overstock Review / Reduce Replenishment
+90160D,PINK BOUDICCA LARGE BRACELET,Long-Tail,3.8,75,592.1052631578948,Overstock Risk,Overstock Review / Reduce Replenishment
+90072,RUBY DROP CHANDELIER EARRINGS,Long-Tail,2.333333333333333,46,591.4285714285716,Overstock Risk,Overstock Review / Reduce Replenishment
+17028J,INCENSE BAZAAR PEACH,Long-Tail,6.0,118,590.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21277,FRENCH STYLE EMBOSSED HEART CABINET,Long-Tail,2.4,47,587.5,Overstock Risk,Overstock Review / Reduce Replenishment
+20763,DAISY SKETCHBOOK,Long-Tail,6.083333333333333,119,586.8493150684932,Overstock Risk,Overstock Review / Reduce Replenishment
+10124G,ARMY CAMO BOOKCOVER TAPE,Long-Tail,4.25,83,585.8823529411765,Overstock Risk,Overstock Review / Reduce Replenishment
+71215,METAL BASE FOR CANDLES,Long-Tail,5.5,107,583.6363636363636,Overstock Risk,Overstock Review / Reduce Replenishment
+72821,CUPID SCENTED CANDLE IN GLASS,Long-Tail,5.5,107,583.6363636363636,Overstock Risk,Overstock Review / Reduce Replenishment
+90001D,ANTIQUE OLIVE GREEN FLOWER EARRINGS,Long-Tail,1.4,27,578.5714285714287,Overstock Risk,Overstock Review / Reduce Replenishment
+90151,SILVER/NATURAL SHELL NECKLACE,Long-Tail,4.0,77,577.5,Overstock Risk,Overstock Review / Reduce Replenishment
+90001C,ANTIQUE OPAL WHITE FLOWER EARRINGS,Long-Tail,1.25,24,576.0,Overstock Risk,Overstock Review / Reduce Replenishment
+17174,ASSTD RASTA KEY-CHAINS,Long-Tail,4.5,86,573.3333333333334,Overstock Risk,Overstock Review / Reduce Replenishment
+21420,OYSTER TRINKET BOX,Long-Tail,4.416666666666667,84,570.566037735849,Overstock Risk,Overstock Review / Reduce Replenishment
+90185C,BLACK DIAMANTE EXPANDABLE RING,Long-Tail,4.0,76,570.0,Overstock Risk,Overstock Review / Reduce Replenishment
+47369B,BLUE GREEN EMBROIDERY COSMETIC BAG,Long-Tail,5.0,95,570.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90065B,BLACK VINT ART DEC CRYSTAL BRACELET,Long-Tail,1.0,19,570.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90035C,"PEARL & SHELL 42""NECKL. IVORY",Long-Tail,2.0,38,570.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20778,GARDEN PATH NOTEBOOK,Long-Tail,3.75,71,568.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90190C,SILVER/AMETHYST DROP EARRINGS LEAF,Long-Tail,2.857142857142857,54,567.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90120D,WHITE MURANO TWIST BRACELET,Long-Tail,3.333333333333333,63,567.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21761,WOOD AND GLASS MEDICINE CABINET,Long-Tail,1.1111111111111112,21,566.9999999999999,Overstock Risk,Overstock Review / Reduce Replenishment
+21836,GINGHAM OVEN GLOVE RED HEART,Long-Tail,2.5,47,564.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90124A,PINK MURANO TWIST NECKLACE,Long-Tail,1.6,30,562.5,Overstock Risk,Overstock Review / Reduce Replenishment
+90199C,5 STRAND GLASS NECKLACE CRYSTAL,Long-Tail,3.0,56,560.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90129A,PINK GLASS TASSLE BAG CHARM,Long-Tail,5.625,105,560.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90040A,MURANO STYLE GLASS BRACELET RED,Long-Tail,4.666666666666667,87,559.2857142857142,Overstock Risk,Overstock Review / Reduce Replenishment
+90013C,GREEN VINTAGE EARRINGS,Long-Tail,3.5454545454545454,66,558.4615384615385,Overstock Risk,Overstock Review / Reduce Replenishment
+90186B,CRYSTAL HOOP EARRING FLORAL LEAF,Long-Tail,2.75,51,556.3636363636364,Overstock Risk,Overstock Review / Reduce Replenishment
+47341B,BLUE TABLE RUN FLOWER,Long-Tail,6.428571428571429,119,555.3333333333333,Overstock Risk,Overstock Review / Reduce Replenishment
+84802B,PURPLE ANEMONE ARTIFICIAL FLOWER,Long-Tail,4.0,74,555.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84638,SMALL KITCHEN FLOWER POTS PLAQUE,Long-Tail,5.0,92,552.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23625,SET 6 CARDS SPARKLY REINDEER 17262,Long-Tail,2.25,41,546.6666666666667,Overstock Risk,Overstock Review / Reduce Replenishment
+79329,PINK FLOCK GLASS CANDLEHOLDER,Long-Tail,6.0,109,545.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84508C,BLUE CIRCLES DESIGN TEDDY,Long-Tail,4.666666666666667,84,540.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21594,DR. JAM'S AROUZER STRESS BALL,Long-Tail,1.0,18,540.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90025D,BAROQUE BUTTERFLY EARRINGS PINK,Long-Tail,1.0,18,540.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90200A,PURPLE SWEETHEART BRACELET,Long-Tail,6.0,108,540.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90195A,PURPLE GEMSTONE BRACELET,Long-Tail,3.1666666666666665,57,540.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84575A,PINK DOG CANNISTER,Long-Tail,4.666666666666667,84,540.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23613,SET 10 XMAS CARDS & BADGES 17070,Long-Tail,5.5,98,534.5454545454546,Overstock Risk,Overstock Review / Reduce Replenishment
+21538,DAIRY MAID  PUDDING BOWL,Long-Tail,5.0,89,534.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90199B,5 STRAND GLASS NECKLACE AMETHYST,Long-Tail,2.25,40,533.3333333333334,Overstock Risk,Overstock Review / Reduce Replenishment
+90146,FINE SILVER NECKLACE W PASTEL FLOWE,Long-Tail,2.833333333333333,50,529.4117647058824,Overstock Risk,Overstock Review / Reduce Replenishment
+90214B,"LETTER ""B"" BLING KEY RING",Long-Tail,3.7,65,527.027027027027,Overstock Risk,Overstock Review / Reduce Replenishment
+90177C,DROP DIAMANTE EARRINGS CRYSTAL,Long-Tail,2.2222222222222223,39,526.4999999999999,Overstock Risk,Overstock Review / Reduce Replenishment
+90123D,WHITE HEART OF GLASS BRACELET,Long-Tail,1.2,21,525.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23605,SET 10 CARDS 12 DAYS OF XMAS 17059,Long-Tail,4.0,70,525.0,Overstock Risk,Overstock Review / Reduce Replenishment
+46138B,BLUE CHENILLE SHAGGY CUSHION COVER,Long-Tail,5.5,96,523.6363636363636,Overstock Risk,Overstock Review / Reduce Replenishment
+22888,NUMBER TILE VINTAGE FONT 9,Long-Tail,6.333333333333333,110,521.0526315789474,Overstock Risk,Overstock Review / Reduce Replenishment
+90155,RESIN NECKLACE W PASTEL BEADS,Long-Tail,1.8,31,516.6666666666666,Overstock Risk,Overstock Review / Reduce Replenishment
+21270,ANTIQUE CREAM CUTLERY CUPBOARD,Long-Tail,5.0,86,516.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20748,KENSINGTON COFFEE SET,Long-Tail,5.181818181818182,89,515.2631578947369,Overstock Risk,Overstock Review / Reduce Replenishment
+84927D,LA PALMIERA TILE HOOK,Long-Tail,6.714285714285714,115,513.8297872340426,Overstock Risk,Overstock Review / Reduce Replenishment
+21375,LARGE CAMPHOR WOOD FIELD MUSHROOM,Long-Tail,3.1538461538461537,54,513.6585365853658,Overstock Risk,Overstock Review / Reduce Replenishment
+90206C,CRYSTAL DIAMANTE STAR BROOCH,Long-Tail,4.090909090909091,70,513.3333333333334,Overstock Risk,Overstock Review / Reduce Replenishment
+90178A,AMBER CHUNKY GLASS+BEAD NECKLACE,Long-Tail,2.0,34,510.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90112,PINK DOLLY HAIR CLIPS,Long-Tail,2.0,34,510.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90202C,GREEN ENAMEL FLOWER HAIR TIE,Long-Tail,2.0,34,510.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90003E,GREEN PAIR HEART HAIR SLIDES,Long-Tail,2.7142857142857144,46,508.42105263157896,Overstock Risk,Overstock Review / Reduce Replenishment
+90210A,GREY ACRYLIC FACETED BANGLE,Long-Tail,6.8,115,507.3529411764706,Overstock Risk,Overstock Review / Reduce Replenishment
+23644,SET 10 CARDS CHRISTMAS TREE 16955,Long-Tail,1.25,21,504.0,Overstock Risk,Overstock Review / Reduce Replenishment
+DCGSSBOY,BOYS PARTY BAG,Long-Tail,6.714285714285714,112,500.4255319148936,Overstock Risk,Overstock Review / Reduce Replenishment
+90085,CRYSTAL STILETTO PHONE CHARM,Long-Tail,4.857142857142857,81,500.2941176470589,Overstock Risk,Overstock Review / Reduce Replenishment
+84507C,BLUE CIRCLES DESIGN MONKEY DOLL,Long-Tail,6.666666666666667,111,499.49999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+22871,NUMBER TILE COTTAGE GARDEN 3,Long-Tail,6.7,111,497.01492537313436,Overstock Risk,Overstock Review / Reduce Replenishment
+84201B,HAPPY BIRTHDAY CARD STRIPEY TEDDY,Long-Tail,6.5,107,493.8461538461538,Overstock Risk,Overstock Review / Reduce Replenishment
+16046,TEATIME PEN CASE & PENS,Long-Tail,6.5,107,493.8461538461538,Overstock Risk,Overstock Review / Reduce Replenishment
+22194,BLACK DINER WALL CLOCK,Long-Tail,7.111111111111111,117,493.59375000000006,Overstock Risk,Overstock Review / Reduce Replenishment
+90059A,DIAMANTE HAIR GRIP PACK/2 CRYSTAL,Long-Tail,4.875,80,492.30769230769226,Overstock Risk,Overstock Review / Reduce Replenishment
+85195,HANGING HEART BASKET,Long-Tail,3.6666666666666665,60,490.90909090909093,Overstock Risk,Overstock Review / Reduce Replenishment
+90198A,VINTAGE ROSE BEAD BRACELET RASPBERR,Long-Tail,6.25,102,489.59999999999997,Overstock Risk,Overstock Review / Reduce Replenishment
+90059D,DIAMANTE HAIR GRIP PACK/2 PERIDOT,Long-Tail,1.9,31,489.47368421052636,Overstock Risk,Overstock Review / Reduce Replenishment
+90120C,GREEN MURANO TWIST BRACELET,Long-Tail,5.1,83,488.23529411764713,Overstock Risk,Overstock Review / Reduce Replenishment
+44089A,PINK GAUZE BUTTERFLY LAMPSHADE,Long-Tail,3.75,61,488.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84306,S/3 PINK SQUARE PLANTERS ROSES,Long-Tail,5.0,81,486.0,Overstock Risk,Overstock Review / Reduce Replenishment
+47341A,FUSCHIA TABLE RUN FLOWER,Long-Tail,6.75,109,484.44444444444446,Overstock Risk,Overstock Review / Reduce Replenishment
+22886,NUMBER TILE VINTAGE FONT 7,Long-Tail,7.25,117,484.13793103448273,Overstock Risk,Overstock Review / Reduce Replenishment
+84548,CROCHET BEAR RED/BLUE  KEYRING,Long-Tail,7.333333333333333,118,482.72727272727275,Overstock Risk,Overstock Review / Reduce Replenishment
+90180A,BLACK+WHITE NECKLACE W TASSEL,Long-Tail,2.4285714285714284,39,481.764705882353,Overstock Risk,Overstock Review / Reduce Replenishment
+35265,COLOURFUL FLOWER FRUIT BOWL,Long-Tail,2.4285714285714284,39,481.764705882353,Overstock Risk,Overstock Review / Reduce Replenishment
+46775D,SUNSET COLOUR CHUNKY KNITTED THROW,Long-Tail,4.615384615384615,74,481.00000000000006,Overstock Risk,Overstock Review / Reduce Replenishment
+37475,SET/4 COLOURFUL MIXING BOWLS,Long-Tail,6.363636363636363,102,480.8571428571429,Overstock Risk,Overstock Review / Reduce Replenishment
+84847,FLORAL BATHROOM SET,Long-Tail,2.5,40,480.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20785,FUSCHIA RETRO BAR STOOL,Long-Tail,3.5,56,480.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90034,WHITE SILVER NECKLACE SHELL GLASS,Long-Tail,1.0,16,480.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90089,PINK CRYSTAL SKULL PHONE CHARM,Long-Tail,3.333333333333333,53,477.0,Overstock Risk,Overstock Review / Reduce Replenishment
+44092C,PURPLE/COPPER HANGING LAMPSHADE,Long-Tail,4.0,63,472.5,Overstock Risk,Overstock Review / Reduce Replenishment
+84870B,BLUE GEISHA GIRL,Long-Tail,6.285714285714286,99,472.5,Overstock Risk,Overstock Review / Reduce Replenishment
+23015,CORDIAL GLASS JUG,Long-Tail,5.666666666666667,89,471.17647058823525,Overstock Risk,Overstock Review / Reduce Replenishment
+DCGSSGIRL,GIRLS PARTY BAG,Long-Tail,5.875,92,469.7872340425532,Overstock Risk,Overstock Review / Reduce Replenishment
+90037B,TINY CRYSTAL BRACELET GREEN,Long-Tail,2.5,39,468.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20667,CHERRY BLOSSOM PURSE,Long-Tail,5.0,78,468.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90182B,AMETHYST 3 BEAD DROP EARRINGS,Long-Tail,1.6666666666666667,26,467.99999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+35922,EASTER BUNNY WREATH,Long-Tail,7.0,108,462.85714285714283,Overstock Risk,Overstock Review / Reduce Replenishment
+35637C,PINK STRING CURTAIN WITH POLE,Long-Tail,5.0,77,462.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84984D,ORIENTAL RED CUSHION COVER,Long-Tail,3.25,50,461.53846153846155,Overstock Risk,Overstock Review / Reduce Replenishment
+20934,SET/3 POT PLANT CANDLES,Long-Tail,5.727272727272728,88,460.95238095238085,Overstock Risk,Overstock Review / Reduce Replenishment
+84712B,PINK JEWELLED PHOTO FRAME,Long-Tail,3.0,46,460.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84562A,PINK/WHITE RIBBED MELAMINE JUG,Long-Tail,1.5,23,460.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85161,ACRYLIC GEOMETRIC LAMP,Long-Tail,4.375,67,459.4285714285714,Overstock Risk,Overstock Review / Reduce Replenishment
+90201A,PURPLE ENAMEL FLOWER RING,Long-Tail,6.2727272727272725,96,459.13043478260875,Overstock Risk,Overstock Review / Reduce Replenishment
+37489B,BLUE/YELLOW FLOWER DESIGN BIG MUG,Long-Tail,3.875,59,456.7741935483871,Overstock Risk,Overstock Review / Reduce Replenishment
+90027C,GLASS BEAD HOOP EARRINGS GREEN,Long-Tail,1.25,19,456.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21366,MIRRORED WALL ART PHOTO FRAMES,Long-Tail,7.416666666666667,112,453.03370786516854,Overstock Risk,Overstock Review / Reduce Replenishment
+20694,FLORAL PINK MONSTER,Long-Tail,4.777777777777778,72,452.09302325581393,Overstock Risk,Overstock Review / Reduce Replenishment
+84751B,BLACK MEDIUM GLASS CAKE STAND,Long-Tail,4.25,64,451.7647058823529,Overstock Risk,Overstock Review / Reduce Replenishment
+84725,FREESTYLE CANVAS ART PICTURE,Long-Tail,5.857142857142857,88,450.7317073170732,Overstock Risk,Overstock Review / Reduce Replenishment
+90183B,AMETHYST DROP EARRINGS W LONG BEADS,Long-Tail,2.333333333333333,35,450.00000000000006,Overstock Risk,Overstock Review / Reduce Replenishment
+35004P,SET OF 3 PINK FLYING DUCKS,Long-Tail,1.0,15,450.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21031,SPACE CADET BLACK,Long-Tail,6.5,97,447.6923076923077,Overstock Risk,Overstock Review / Reduce Replenishment
+21425,SKULLS STORAGE BOX LARGE,Long-Tail,7.909090909090909,118,447.58620689655174,Overstock Risk,Overstock Review / Reduce Replenishment
+84798B,PURPLE FOXGLOVE ARTIIFCIAL FLOWER,Long-Tail,5.5,82,447.2727272727273,Overstock Risk,Overstock Review / Reduce Replenishment
+82011C,BATHROOM SCALES FOOTPRINTS IN SAND,Long-Tail,6.375,95,447.05882352941177,Overstock Risk,Overstock Review / Reduce Replenishment
+90005A,JADE GREEN ENAMEL HAIR COMB,Long-Tail,4.666666666666667,69,443.57142857142856,Overstock Risk,Overstock Review / Reduce Replenishment
+35910B,PINK FLOWERS RABBIT EASTER,Long-Tail,6.5,96,443.07692307692304,Overstock Risk,Overstock Review / Reduce Replenishment
+20941,FROG CANDLE,Long-Tail,8.0,118,442.5,Overstock Risk,Overstock Review / Reduce Replenishment
+21040,MODERN VINTAGE COTTON SHOPPING BAG,Long-Tail,7.333333333333333,108,441.8181818181818,Overstock Risk,Overstock Review / Reduce Replenishment
+90160C,TURQ+RED BOUDICCA LARGE BRACELET,Long-Tail,4.5,66,440.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90124B,BLUE MURANO TWIST NECKLACE,Long-Tail,1.5,22,440.0,Overstock Risk,Overstock Review / Reduce Replenishment
+82011B,BATHROOM SCALES RUBBER DUCKS,Long-Tail,4.777777777777778,70,439.5348837209302,Overstock Risk,Overstock Review / Reduce Replenishment
+22879,NUMBER TILE VINTAGE FONT 0,Long-Tail,7.0,102,437.1428571428571,Overstock Risk,Overstock Review / Reduce Replenishment
+23151,ZINC SWEETHEART SOAP DISH,Long-Tail,7.625,111,436.72131147540983,Overstock Risk,Overstock Review / Reduce Replenishment
+90063B,BLACK VINT ART DEC CRYSTAL NECKLACE,Long-Tail,1.8,26,433.3333333333333,Overstock Risk,Overstock Review / Reduce Replenishment
+47503H,ASS FLORAL PRINT SPIRIT LEVEL,Long-Tail,7.6923076923076925,111,432.8999999999999,Overstock Risk,Overstock Review / Reduce Replenishment
+21816,CHRISTMAS TREE T-LIGHT HOLDER,Long-Tail,8.25,119,432.7272727272727,Overstock Risk,Overstock Review / Reduce Replenishment
+84711B,PINK OVAL SHAPE TRINKET BOX,Long-Tail,2.2222222222222223,32,431.99999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+62094B,TURQ ICE CREAM BUM BAG,Long-Tail,6.333333333333333,91,431.05263157894734,Overstock Risk,Overstock Review / Reduce Replenishment
+85067,CREAM SWEETHEART WALL CABINET,Long-Tail,3.5,50,428.57142857142856,Overstock Risk,Overstock Review / Reduce Replenishment
+90036F,"FLOWER GLASS GARLD NECKL36""TURQUOIS",Long-Tail,2.6666666666666665,38,427.50000000000006,Overstock Risk,Overstock Review / Reduce Replenishment
+16254,TRANSPARENT ACRYLIC TAPE DISPENSER,Long-Tail,6.666666666666667,95,427.49999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+90125E,AMBER BERTIE GLASS BEAD BAG CHARM,Long-Tail,5.5,78,425.4545454545455,Overstock Risk,Overstock Review / Reduce Replenishment
+84352,SILVER CHRISTMAS TREE BAUBLE STAND,Long-Tail,5.666666666666667,80,423.52941176470586,Overstock Risk,Overstock Review / Reduce Replenishment
+20773,BLUE PAISLEY NOTEBOOK,Long-Tail,5.6,79,423.2142857142858,Overstock Risk,Overstock Review / Reduce Replenishment
+84465,15 PINK FLUFFY CHICKS IN BOX,Long-Tail,2.5,35,420.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84711A,SILVER OVAL SHAPE TRINKET BOX,Long-Tail,2.5,35,420.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23047,PAPER LANTERN 5 POINT SEQUIN STAR,Long-Tail,8.285714285714286,116,420.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90129D,AMBER GLASS TASSLE BAG CHARM,Long-Tail,3.5,49,420.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90027A,GLASS BEAD HOOP EARRINGS BLACK,Long-Tail,3.0,41,410.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20661,BLUE POLKADOT PURSE,Long-Tail,5.5,75,409.0909090909091,Overstock Risk,Overstock Review / Reduce Replenishment
+10123C,HEARTS WRAPPING TAPE,Long-Tail,2.5,34,408.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20697,LITTLE GREEN MONSTER SOFT TOY,Long-Tail,3.1666666666666665,43,407.36842105263156,Overstock Risk,Overstock Review / Reduce Replenishment
+85189,HANGING BUTTERFLY  EGG,Long-Tail,4.5,61,406.6666666666667,Overstock Risk,Overstock Review / Reduce Replenishment
+20617,FIRST CLASS PASSPORT COVER,Long-Tail,7.75,105,406.4516129032258,Overstock Risk,Overstock Review / Reduce Replenishment
+23650,SET 10 CARDS FILIGREE BAUBLE 16961,Long-Tail,1.3333333333333333,18,405.00000000000006,Overstock Risk,Overstock Review / Reduce Replenishment
+90214Z,"LETTER ""Z"" BLING KEY RING",Long-Tail,2.75,37,403.6363636363637,Overstock Risk,Overstock Review / Reduce Replenishment
+20903,VINTAGE KEEPSAKE BOX TRAVELOGUE,Long-Tail,8.2,110,402.4390243902439,Overstock Risk,Overstock Review / Reduce Replenishment
+84707B,PINK JEWELLED MIRROR TRINKET TRAY,Long-Tail,4.857142857142857,65,401.47058823529414,Overstock Risk,Overstock Review / Reduce Replenishment
+23464,VINTAGE ZINC WATERING CAN SMALL,Long-Tail,6.0,80,400.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90160B,RED BOUDICCA LARGE BRACELET,Long-Tail,3.75,50,400.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21413,PERIWINKLE T-LIGHT HOLDER,Long-Tail,6.857142857142857,91,398.125,Overstock Risk,Overstock Review / Reduce Replenishment
+84685,BEACH HUT KEY CABINET,Long-Tail,8.25,109,396.3636363636363,Overstock Risk,Overstock Review / Reduce Replenishment
+90141E,ORANGE PENDANT TRIPLE SHELL NECKLAC,Long-Tail,2.5,33,396.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90039B,FIRE POLISHED GLASS BRACELET MONTAN,Long-Tail,2.2,29,395.45454545454544,Overstock Risk,Overstock Review / Reduce Replenishment
+90214K,"LETTER ""K"" BLING KEY RING",Long-Tail,6.0,79,395.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85124B,BLUE JUICY FRUIT PHOTO FRAME,Long-Tail,7.25,94,388.9655172413793,Overstock Risk,Overstock Review / Reduce Replenishment
+90214H,"LETTER ""H"" BLING KEY RING",Long-Tail,4.363636363636363,56,385.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85185D,FROG SOCK PUPPET,Long-Tail,3.75,48,384.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23634,SET 10 CARDS XMAS CHOIR 17068,Long-Tail,1.25,16,384.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84706D,CHERRY BLOSSOM TABLE CLOCK,Long-Tail,4.0,51,382.5,Overstock Risk,Overstock Review / Reduce Replenishment
+84461,12 PINK HEN+CHICKS IN BASKET,Long-Tail,8.75,111,380.57142857142856,Overstock Risk,Overstock Review / Reduce Replenishment
+90198B,VINTAGE ROSE BEAD BRACELET BLACK,Long-Tail,3.0,38,380.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21629,SQUARE FLOOR CUSHION VINTAGE RED,Long-Tail,5.461538461538462,69,379.0140845070423,Overstock Risk,Overstock Review / Reduce Replenishment
+20845,ZINC HEART LATTICE 2 WALL PLANTER,Long-Tail,3.8,48,378.94736842105266,Overstock Risk,Overstock Review / Reduce Replenishment
+20771,CHRYSANTHEMUM  JOURNAL,Regular,9.272727272727272,117,378.52941176470597,Overstock Risk,Overstock Review / Reduce Replenishment
+90033,IVORY SHELL HEART EARRINGS,Long-Tail,1.4285714285714286,18,377.99999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+22870,NUMBER TILE COTTAGE GARDEN 2,Long-Tail,7.75,97,375.4838709677419,Overstock Risk,Overstock Review / Reduce Replenishment
+10124A,SPOTS ON RED BOOKCOVER TAPE,Long-Tail,4.0,50,375.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84795C,OCEAN STRIPE HAMMOCK,Long-Tail,2.0,25,375.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84666,SQUARE CHERRY BLOSSOM CABINET,Long-Tail,8.0,100,375.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20696,FLORAL SOFT CAR TOY,Long-Tail,6.0,75,375.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84984B,RED PEONY CUSHION COVER,Long-Tail,4.25,53,374.11764705882354,Overstock Risk,Overstock Review / Reduce Replenishment
+22887,NUMBER TILE VINTAGE FONT 8,Long-Tail,6.5,81,373.8461538461538,Overstock Risk,Overstock Review / Reduce Replenishment
+21461,BLUE EASTER EGG HUNT START POST,Long-Tail,3.0,37,370.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84963B,BLUE PAINTED KASHMIRI CHAIR,Long-Tail,3.0,37,370.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85160A,WHITE BIRD GARDEN DESIGN MUG,Long-Tail,3.5,43,368.57142857142856,Overstock Risk,Overstock Review / Reduce Replenishment
+84924A,WAKE UP COCKEREL CALENDAR SIGN,Long-Tail,7.363636363636363,89,362.5925925925926,Overstock Risk,Overstock Review / Reduce Replenishment
+78033,FLAG OF ST GEORGE CHAIR,Long-Tail,7.2,87,362.49999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+84706F,RED PEONY TABLE CLOCK,Long-Tail,4.0,48,360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90175B,PINK GLASS CHUNKY CHARM BRACELET,Long-Tail,1.6666666666666667,20,360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21376,LARGE  TALL CAMPHOR WOOD TOADSTOOL,Long-Tail,3.0,36,360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90013D,PURPLE VINTAGE EARRINGS,Long-Tail,2.0,24,360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+77079,DOLPHIN WINDMILL,Long-Tail,1.0,12,360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21160,KEEP OUT GIRLS DOOR HANGER,Long-Tail,1.0,12,360.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21692,SILVER LATTICE VANILLA CANDLE POT,Long-Tail,5.666666666666667,68,359.99999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+84466,TOP SECRET PEN SET,Long-Tail,7.666666666666667,92,359.99999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+90013B,BLACK VINTAGE EARRINGS,Long-Tail,3.272727272727273,39,357.5,Overstock Risk,Overstock Review / Reduce Replenishment
+85129B,BEADED CRYSTAL HEART GREEN SMALL,Regular,9.916666666666666,117,353.9495798319328,Overstock Risk,Overstock Review / Reduce Replenishment
+21279,VINTAGE KITCHEN PRINT FRUITS,Long-Tail,9.444444444444445,111,352.5882352941176,Overstock Risk,Overstock Review / Reduce Replenishment
+21000,ROSE DU SUD COSMETICS BAG,Long-Tail,8.0,94,352.5,Overstock Risk,Overstock Review / Reduce Replenishment
+35833P,4 PINK FLOCK CHRISTMAS BALLS,Long-Tail,7.0,82,351.42857142857144,Overstock Risk,Overstock Review / Reduce Replenishment
+22526,WHEELBARROW FOR CHILDREN,Regular,9.307692307692308,109,351.3223140495868,Overstock Risk,Overstock Review / Reduce Replenishment
+20760,GARDEN PATH POCKET BOOK,Long-Tail,8.625,101,351.304347826087,Overstock Risk,Overstock Review / Reduce Replenishment
+90081C,LILY BROOCH OLIVE COLOUR,Long-Tail,2.2222222222222223,26,350.99999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+22868,NUMBER TILE COTTAGE GARDEN 0,Long-Tail,5.727272727272728,67,350.9523809523809,Overstock Risk,Overstock Review / Reduce Replenishment
+85216,ASSORTED CAKES FRIDGE MAGNETS,Long-Tail,9.166666666666666,107,350.18181818181824,Overstock Risk,Overstock Review / Reduce Replenishment
+84905,PINK BUTTERFLY CUSHION COVER,Long-Tail,8.75,102,349.71428571428567,Overstock Risk,Overstock Review / Reduce Replenishment
+22876,NUMBER TILE COTTAGE GARDEN 8,Long-Tail,6.777777777777778,79,349.672131147541,Overstock Risk,Overstock Review / Reduce Replenishment
+71050,SMALL SINGLE FLAME CANDLE HOLDER,Long-Tail,8.25,96,349.09090909090907,Overstock Risk,Overstock Review / Reduce Replenishment
+20818,GOLD TEDDY BEAR,Long-Tail,5.0,58,348.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84673A,PINK FLY SWAT,Long-Tail,8.363636363636363,97,347.9347826086957,Overstock Risk,Overstock Review / Reduce Replenishment
+23017,APOTHECARY MEASURING JAR,Long-Tail,9.571428571428571,111,347.91044776119406,Overstock Risk,Overstock Review / Reduce Replenishment
+84429A,MEDIUM PINK BUDDHA HEAD,Long-Tail,4.5,52,346.6666666666667,Overstock Risk,Overstock Review / Reduce Replenishment
+22880,NUMBER TILE VINTAGE FONT 1,Long-Tail,8.083333333333334,93,345.15463917525767,Overstock Risk,Overstock Review / Reduce Replenishment
+90176B,DIAMANTE NECKLACE BLACK,Long-Tail,2.0,23,345.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23604,SET 10 MINI SANTA & SNOWMAN  17087,Long-Tail,4.0,46,345.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90214F,"LETTER ""F"" BLING KEY RING",Long-Tail,2.7,31,344.4444444444444,Overstock Risk,Overstock Review / Reduce Replenishment
+71510,SQUARE METAL CANDLEHOLDER BASE,Long-Tail,8.666666666666666,98,339.2307692307693,Overstock Risk,Overstock Review / Reduce Replenishment
+20857,BLUE ROSE PATCH PURSE PINK BUTTERFL,Long-Tail,8.5,96,338.8235294117647,Overstock Risk,Overstock Review / Reduce Replenishment
+22503,CABIN BAG VINTAGE PAISLEY,Long-Tail,9.666666666666666,109,338.2758620689656,Overstock Risk,Overstock Review / Reduce Replenishment
+21370,MIRRORED WALL ART FOXY,Long-Tail,5.333333333333333,60,337.50000000000006,Overstock Risk,Overstock Review / Reduce Replenishment
+22770,MIRROR CORNICE,Long-Tail,7.0,78,334.2857142857143,Overstock Risk,Overstock Review / Reduce Replenishment
+20997,ROSE DU SUD CUSHION COVER,Long-Tail,6.555555555555555,73,334.0677966101695,Overstock Risk,Overstock Review / Reduce Replenishment
+20796,SMALL BLUE PROVENCAL CERAMIC BALL,Long-Tail,8.857142857142858,98,331.93548387096774,Overstock Risk,Overstock Review / Reduce Replenishment
+35598C,WHITE CHRISTMAS TREE 60CM,Long-Tail,2.0,22,330.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90128D,PURPLE LEAVES AND BEADS PHONE CHAR,Long-Tail,1.0,11,330.0,Overstock Risk,Overstock Review / Reduce Replenishment
+22872,NUMBER TILE COTTAGE GARDEN 4,Long-Tail,6.0,66,330.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90052,CRACKED GLAZE NECKLACE BROWN,Long-Tail,1.0,11,330.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21710,FOLDING UMBRELLA PINKWHITE POLKADOT,Regular,9.727272727272728,107,329.99999999999994,Overstock Risk,Overstock Review / Reduce Replenishment
+84920,PINK FLOWER FABRIC PONY,Regular,9.583333333333334,105,328.695652173913,Overstock Risk,Overstock Review / Reduce Replenishment
+84870C,GREEN GEISHA GIRL,Long-Tail,7.666666666666667,84,328.695652173913,Overstock Risk,Overstock Review / Reduce Replenishment
+21678,PAISLEY PATTERN  STICKERS,Regular,10.416666666666666,114,328.32,Overstock Risk,Overstock Review / Reduce Replenishment
+22486,PLASMATRONIC LAMP,Long-Tail,9.428571428571429,103,327.72727272727275,Overstock Risk,Overstock Review / Reduce Replenishment
+84809A,WHITE CHRYSANTHEMUMS ART FLOWER,Long-Tail,9.166666666666666,100,327.2727272727273,Overstock Risk,Overstock Review / Reduce Replenishment
+20894,HANGING BAUBLE T-LIGHT HOLDER LARGE,Long-Tail,4.125,45,327.27272727272725,Overstock Risk,Overstock Review / Reduce Replenishment
+22824,3 TIER SWEETHEART GARDEN SHELF,Long-Tail,4.5,49,326.6666666666667,Overstock Risk,Overstock Review / Reduce Replenishment
+21281,VINTAGE KITCHEN PRINT SEAFOOD,Long-Tail,10.75,117,326.51162790697674,Overstock Risk,Overstock Review / Reduce Replenishment
+90214A,"LETTER ""A"" BLING KEY RING",Regular,10.0,108,324.0,Overstock Risk,Overstock Review / Reduce Replenishment
+72709,IVORY SCULPTED RND CANDLE,Long-Tail,7.333333333333333,79,323.1818181818182,Overstock Risk,Overstock Review / Reduce Replenishment
+90120B,BLUE MURANO TWIST BRACELET,Long-Tail,3.5454545454545454,38,321.53846153846155,Overstock Risk,Overstock Review / Reduce Replenishment
+90054,CRACKED GLAZE EARRINGS RED,Long-Tail,1.5,16,320.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90038C,GLASS AND BEADS BRACELET IVORY,Long-Tail,2.25,24,320.0,Overstock Risk,Overstock Review / Reduce Replenishment
+22351,DOTCOMGIFTSHOP TEA TOWEL,Long-Tail,6.5,69,318.46153846153845,Overstock Risk,Overstock Review / Reduce Replenishment
+21129,SILVER FISHING GNOME,Long-Tail,5.2,55,317.3076923076923,Overstock Risk,Overstock Review / Reduce Replenishment
+37444A,YELLOW BREAKFAST CUP AND SAUCER,Long-Tail,6.625,70,316.9811320754717,Overstock Risk,Overstock Review / Reduce Replenishment
+35913B,WHITE/PINK CHICK EASTER DECORATION,Long-Tail,7.2,76,316.66666666666663,Overstock Risk,Overstock Review / Reduce Replenishment
+23465,TUSCAN VILLA BIRD FEEDER,Long-Tail,9.666666666666666,102,316.55172413793105,Overstock Risk,Overstock Review / Reduce Replenishment
+72812,LARGE ZINC GLASS CANDLEHOLDER,Long-Tail,4.857142857142857,51,315.00000000000006,Overstock Risk,Overstock Review / Reduce Replenishment
+23617,SET 10 CARDS SWIRLY XMAS TREE 17104,Long-Tail,2.0,21,315.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84875D,BLUE SQUARE COMPACT MIRROR,Long-Tail,10.2,107,314.7058823529412,Overstock Risk,Overstock Review / Reduce Replenishment
+22802,FAUX FUR CHOCOLATE THROW,Long-Tail,7.25,76,314.48275862068965,Overstock Risk,Overstock Review / Reduce Replenishment
+21131,GOLD STANDING GNOME,Regular,9.636363636363637,101,314.4339622641509,Overstock Risk,Overstock Review / Reduce Replenishment
+79403,FROSTED WHITE BASE,Long-Tail,9.5,99,312.63157894736844,Overstock Risk,Overstock Review / Reduce Replenishment
+84616,SILVER ROCCOCO CHANDELIER,Long-Tail,2.4,25,312.5,Overstock Risk,Overstock Review / Reduce Replenishment
+20782,CAMOUFLAGE EAR MUFF HEADPHONES,Long-Tail,5.888888888888889,61,310.75471698113205,Overstock Risk,Overstock Review / Reduce Replenishment
+85018D,YULETIDE IMAGES S/6 PAPER BOXES,Long-Tail,6.0,62,310.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90018A,SILVER M.O.P ORBIT DROP EARRINGS,Long-Tail,4.181818181818182,43,308.47826086956525,Overstock Risk,Overstock Review / Reduce Replenishment
+21690,SILVER  CANDLEPOT JARDIN,Long-Tail,11.0,113,308.1818181818182,Overstock Risk,Overstock Review / Reduce Replenishment
+46776C,WOVEN FROST CUSHION COVER,Regular,9.75,100,307.6923076923077,Overstock Risk,Overstock Review / Reduce Replenishment
+46000R,POLYESTER FILLER PAD 45X30CM,Regular,8.583333333333334,88,307.57281553398053,Overstock Risk,Overstock Review / Reduce Replenishment
+84963A,PINK PAINTED KASHMIRI CHAIR,Long-Tail,4.0,41,307.5,Overstock Risk,Overstock Review / Reduce Replenishment
+84801B,WHITE HYDRANGEA ART FLOWER,Long-Tail,7.333333333333333,75,306.8181818181818,Overstock Risk,Overstock Review / Reduce Replenishment
+90175C,BLUE GLASS CHUNKY CHARM BRACELET,Long-Tail,2.25,23,306.6666666666667,Overstock Risk,Overstock Review / Reduce Replenishment
+20794,BLUE  TILE HOOK,Long-Tail,7.583333333333333,77,304.61538461538464,Overstock Risk,Overstock Review / Reduce Replenishment
+47589,CONGRATULATIONS BUNTING,Long-Tail,4.333333333333333,44,304.61538461538464,Overstock Risk,Overstock Review / Reduce Replenishment
+90104,PURPLE FRANGIPANI HAIRCLIP,Long-Tail,7.0,71,304.2857142857143,Overstock Risk,Overstock Review / Reduce Replenishment
+35638A,PINK AND BLACK STRING CURTAIN,Long-Tail,7.6,77,303.94736842105266,Overstock Risk,Overstock Review / Reduce Replenishment
+22528,GARDENERS KNEELING PAD,Long-Tail,1.0,10,300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+16244B,MAXWELL 2 TONE BLUE 60 PAGE PHOTO A,Long-Tail,3.5,35,300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84206C,CHAMPAGNE TRAY BLANK CARD,Long-Tail,4.0,40,300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85030,FRENCH CHATEAU OVAL PLATTER,Long-Tail,7.5,75,300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84924F,PSYCHEDELIC METAL SIGN CALENDAR,Long-Tail,10.0,100,300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+79192A,RETRO PLASTIC 70'S TRAY,Long-Tail,1.5,15,300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90211A,DIAMOND LAS VEGAS NECKLACE 45CM,Long-Tail,3.0,30,300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+40005B,BLUE ORGANDY ROUND LAMPSHADE W BEA,Long-Tail,4.0,40,300.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20759,CHRYSANTHEMUM POCKET BOOK,Long-Tail,5.818181818181818,58,299.0625,Overstock Risk,Overstock Review / Reduce Replenishment
+85020,ROUND PINK HEART MIRROR,Long-Tail,7.727272727272727,77,298.94117647058823,Overstock Risk,Overstock Review / Reduce Replenishment
+23069,EDWARDIAN PHOTO FRAME,Long-Tail,9.77777777777778,97,297.6136363636363,Overstock Risk,Overstock Review / Reduce Replenishment
+21293,MIRRORED DOVE WALL DECORATION,Regular,11.6,115,297.41379310344826,Overstock Risk,Overstock Review / Reduce Replenishment
+90154,LAZER CUT NECKLACE W PASTEL BEADS,Long-Tail,11.4,113,297.36842105263156,Overstock Risk,Overstock Review / Reduce Replenishment
+20766,GARDEN PATH SKETCHBOOK,Regular,9.384615384615383,93,297.29508196721315,Overstock Risk,Overstock Review / Reduce Replenishment
+90147,CHUNKY SILVER NECKLACE PASTEL FLOWE,Long-Tail,3.333333333333333,33,297.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21709,FOLDING UMBRELLA CHOCOLATE POLKADOT,Regular,11.083333333333334,109,295.03759398496237,Overstock Risk,Overstock Review / Reduce Replenishment
+37471,MULTICOLOUR POLKADOT PLATE,Long-Tail,9.666666666666666,95,294.82758620689657,Overstock Risk,Overstock Review / Reduce Replenishment
+90130C,GREEN STONE/CRYSTAL EARRINGS,Long-Tail,1.75,17,291.42857142857144,Overstock Risk,Overstock Review / Reduce Replenishment
+82605,OLD DOC RUSSEL METAL SIGN,Long-Tail,7.0,68,291.42857142857144,Overstock Risk,Overstock Review / Reduce Replenishment
+90214R,"LETTER ""R"" BLING KEY RING",Long-Tail,4.555555555555555,44,289.7560975609756,Overstock Risk,Overstock Review / Reduce Replenishment
+72800D,4 BLUE DINNER CANDLES SILVER FLOCK,Long-Tail,7.25,70,289.6551724137931,Overstock Risk,Overstock Review / Reduce Replenishment
+72132,COLUMBIAN CUBE CANDLE,Long-Tail,4.666666666666667,45,289.2857142857143,Overstock Risk,Overstock Review / Reduce Replenishment
+84549,CROCHET WHITE RABBIT KEYRING,Long-Tail,6.333333333333333,61,288.94736842105266,Overstock Risk,Overstock Review / Reduce Replenishment
+21333,CLASSIC WHITE FRAME,Long-Tail,11.2,107,286.6071428571429,Overstock Risk,Overstock Review / Reduce Replenishment
+90214O,"LETTER ""O"" BLING KEY RING",Long-Tail,4.0,38,285.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21595,DAD'S CAB ELECTRONIC METER,Long-Tail,2.0,19,285.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90214E,"LETTER ""E"" BLING KEY RING",Long-Tail,6.545454545454546,62,284.16666666666663,Overstock Risk,Overstock Review / Reduce Replenishment
+23614,SET 10 CARDS 12 DAYS WRAP  17058,Long-Tail,6.5,61,281.53846153846155,Overstock Risk,Overstock Review / Reduce Replenishment
+85136C,RED SHARK HELICOPTER,Long-Tail,6.5,61,281.53846153846155,Overstock Risk,Overstock Review / Reduce Replenishment
+84805A,CREAM CLIMBING HYDRANGA ART FLOWER,Long-Tail,10.666666666666666,100,281.25000000000006,Overstock Risk,Overstock Review / Reduce Replenishment
+23621,SET 10 CARDS DAVID'S MADONNA 17074,Long-Tail,3.0,28,280.0,Overstock Risk,Overstock Review / Reduce Replenishment
+22137,BATHROOM SET LOVE HEART DESIGN,Long-Tail,10.25,95,278.0487804878049,Overstock Risk,Overstock Review / Reduce Replenishment
+21001,ROSE DU SUD WASHBAG,Long-Tail,5.615384615384615,52,277.80821917808225,Overstock Risk,Overstock Review / Reduce Replenishment
+21630,FLOOR CUSHION ELEPHANT CARNIVAL,Long-Tail,6.181818181818182,57,276.61764705882354,Overstock Risk,Overstock Review / Reduce Replenishment
+90042C,FRESHWATER PEARL BRACELET IVORY,Long-Tail,2.5,23,276.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84708B,PINK JEWELLED PHOTO FRAME,Long-Tail,6.2,57,275.80645161290323,Overstock Risk,Overstock Review / Reduce Replenishment
+90122A,PINK CRYSTAL+GLASS BRACELET,Long-Tail,2.625,24,274.2857142857143,Overstock Risk,Overstock Review / Reduce Replenishment
+23627,SET 10 CARDS XMAS GRAPHIC  17218,Long-Tail,7.0,64,274.2857142857143,Overstock Risk,Overstock Review / Reduce Replenishment
+90214C,"LETTER ""C"" BLING KEY RING",Long-Tail,7.583333333333333,69,272.967032967033,Overstock Risk,Overstock Review / Reduce Replenishment
+84206A,3 BLACK CATS W HEARTS BLANK CARD,Long-Tail,12.0,109,272.5,Overstock Risk,Overstock Review / Reduce Replenishment
+90000D,COPPER/OLIVE GREEN FLOWER NECKLACE,Long-Tail,2.1,19,271.4285714285714,Overstock Risk,Overstock Review / Reduce Replenishment
+22218,CAKE STAND LACE WHITE,Long-Tail,1.0,9,270.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84629,WHITE 3 FRAME BIRDS AND TREE,Long-Tail,6.333333333333333,56,265.2631578947368,Overstock Risk,Overstock Review / Reduce Replenishment
+84931A,PINK SCOTTIE DOG W FLOWER PATTERN,Regular,11.083333333333334,98,265.2631578947368,Overstock Risk,Overstock Review / Reduce Replenishment
+90200D,PINK SWEETHEART BRACELET,Regular,13.461538461538462,119,265.2,Overstock Risk,Overstock Review / Reduce Replenishment
+21722,SWEET PUDDING STICKER SHEET,Long-Tail,8.166666666666666,72,264.48979591836735,Overstock Risk,Overstock Review / Reduce Replenishment
+20662,FIRST CLASS HOLIDAY PURSE,Long-Tail,4.428571428571429,39,264.19354838709677,Overstock Risk,Overstock Review / Reduce Replenishment
+85160B,BLACK BIRD GARDEN DESIGN MUG,Regular,13.25,116,262.64150943396226,Overstock Risk,Overstock Review / Reduce Replenishment
+84921,CREAM AND PINK FLOWERS PONY,Long-Tail,2.75,24,261.8181818181818,Overstock Risk,Overstock Review / Reduce Replenishment
+20698,LITTLE PINK MONSTER SOFT TOY,Long-Tail,4.25,37,261.1764705882353,Overstock Risk,Overstock Review / Reduce Replenishment
+21361,LOVE LARGE WOOD LETTERS,Regular,13.0,113,260.7692307692308,Overstock Risk,Overstock Review / Reduce Replenishment
+20659,ECONOMY LUGGAGE TAG,Regular,13.166666666666666,114,259.746835443038,Overstock Risk,Overstock Review / Reduce Replenishment
+35809B,ENAMEL BLUE RIM TEA CONTAINER,Long-Tail,8.0,69,258.75,Overstock Risk,Overstock Review / Reduce Replenishment
+90096,NECKLACE+BRACELET SET BLUE BLOSSOM,Long-Tail,4.090909090909091,35,256.6666666666667,Overstock Risk,Overstock Review / Reduce Replenishment
+79151B,"SILICON CUBE 25W, BLUE",Long-Tail,5.5,47,256.3636363636364,Overstock Risk,Overstock Review / Reduce Replenishment
+85163B,BLACK BAROQUE WALL CLOCK,Long-Tail,7.636363636363637,65,255.35714285714283,Overstock Risk,Overstock Review / Reduce Replenishment
+20775,DAISY NOTEBOOK,Regular,11.166666666666666,95,255.22388059701495,Overstock Risk,Overstock Review / Reduce Replenishment
+84925F,PSYCHEDELIC WALL THERMOMETER,Long-Tail,11.285714285714286,96,255.1898734177215,Overstock Risk,Overstock Review / Reduce Replenishment
+90200E,GREEN SWEETHEART BRACELET,Regular,8.583333333333334,73,255.14563106796112,Overstock Risk,Overstock Review / Reduce Replenishment
+90078,PINK/WHITE GLASS DEMI CHOKER,Long-Tail,2.0,17,255.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85206B,PINK FELT EASTER EGG BASKET,Long-Tail,14.0,119,255.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84927A,WAKE UP COCKEREL TILE HOOK,Long-Tail,6.25,53,254.39999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+21418,STARFISH SOAP DISH,Long-Tail,6.727272727272728,57,254.18918918918916,Overstock Risk,Overstock Review / Reduce Replenishment
+81953B,ROUND BLUE CLOCK WITH SUCKER,Long-Tail,11.0,93,253.63636363636365,Overstock Risk,Overstock Review / Reduce Replenishment
+90082D,DIAMANTE BOW BROOCH BLACK COLOUR,Long-Tail,4.5,38,253.33333333333334,Overstock Risk,Overstock Review / Reduce Replenishment
+20980,36 PENCILS TUBE POSY,Long-Tail,13.166666666666666,111,252.91139240506328,Overstock Risk,Overstock Review / Reduce Replenishment
+23180,MUM'S KITCHEN CLOCK,Regular,12.1,102,252.89256198347107,Overstock Risk,Overstock Review / Reduce Replenishment
+16207A,PINK STRAWBERRY HANDBAG,Long-Tail,7.5,63,252.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20701,PINK CAT FLORAL CUSHION COVER,Long-Tail,8.333333333333334,70,252.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90201B,BLACK ENAMEL FLOWER RING,Long-Tail,6.666666666666667,56,251.99999999999997,Overstock Risk,Overstock Review / Reduce Replenishment
+20960,WATERMELON BATH SPONGE,Long-Tail,9.666666666666666,81,251.37931034482762,Overstock Risk,Overstock Review / Reduce Replenishment
+20764,ABSTRACT CIRCLES SKETCHBOOK,Regular,10.923076923076923,91,249.92957746478874,Overstock Risk,Overstock Review / Reduce Replenishment
+90214J,"LETTER ""J"" BLING KEY RING",Long-Tail,5.916666666666667,49,248.4507042253521,Overstock Risk,Overstock Review / Reduce Replenishment
+90195B,BLACK GEMSTONE BRACELET,Long-Tail,1.3333333333333333,11,247.50000000000003,Overstock Risk,Overstock Review / Reduce Replenishment
+22883,NUMBER TILE VINTAGE FONT 4,Long-Tail,8.25,68,247.27272727272725,Overstock Risk,Overstock Review / Reduce Replenishment
+90099,NECKLACE+BRACELET SET BLUE HIBISCUS,Long-Tail,4.5,37,246.66666666666669,Overstock Risk,Overstock Review / Reduce Replenishment
+85028L,FRENCH CHATEAU LARGE FRUIT BOWL,Long-Tail,5.0,41,246.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21758,VINTAGE SHELLS PRINT,Long-Tail,4.166666666666667,34,244.79999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+37444C,PINK BREAKFAST CUP AND SAUCER,Long-Tail,7.0,57,244.28571428571428,Overstock Risk,Overstock Review / Reduce Replenishment
+23459,DOLLY CABINET 2 DRAWERS,Long-Tail,10.333333333333334,84,243.8709677419355,Overstock Risk,Overstock Review / Reduce Replenishment
+21476,STEEL SWEETHEART ROUND TABLE CREAM,Long-Tail,4.555555555555555,37,243.65853658536585,Overstock Risk,Overstock Review / Reduce Replenishment
+84804A,CREAM DELPHINIUM ARTIFICIAL FLOWER,Long-Tail,10.0,81,243.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20684,STRAWBERRY DREAM CHILDS UMBRELLA,Long-Tail,10.0,81,243.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84687,BEACH HUT SHELF W 3 DRAWERS,Long-Tail,8.777777777777779,71,242.65822784810123,Overstock Risk,Overstock Review / Reduce Replenishment
+20700,GREEN CAT FLORAL CUSHION COVER,Long-Tail,7.3,59,242.46575342465755,Overstock Risk,Overstock Review / Reduce Replenishment
+22164,STRING OF STARS CARD HOLDER,Long-Tail,13.0,105,242.3076923076923,Overstock Risk,Overstock Review / Reduce Replenishment
+21369,MIRRORED WALL ART SPLODGES,Regular,9.181818181818182,74,241.7821782178218,Overstock Risk,Overstock Review / Reduce Replenishment
+84631,FRUIT TREE AND BIRDS WALL PLAQUE,Long-Tail,6.333333333333333,51,241.57894736842104,Overstock Risk,Overstock Review / Reduce Replenishment
+84509C,SET OF 4 POLKADOT PLACEMATS,Regular,13.307692307692308,107,241.21387283236993,Overstock Risk,Overstock Review / Reduce Replenishment
+17191A,ROSE FLOWER CANDLE+INCENSE 16X16CM,Long-Tail,2.0,16,240.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21633,SUNFLOWER DECORATIVE PARASOL,Regular,13.88888888888889,111,239.76,Overstock Risk,Overstock Review / Reduce Replenishment
+47594A,CAROUSEL DESIGN WASHBAG,Regular,11.88888888888889,94,237.19626168224298,Overstock Risk,Overstock Review / Reduce Replenishment
+85026B,EAU DE NILE JEWELLED T-LIGHT HOLDER,Long-Tail,9.875,78,236.9620253164557,Overstock Risk,Overstock Review / Reduce Replenishment
+21379,CAMPHOR WOOD PORTOBELLO MUSHROOM,Regular,13.692307692307692,108,236.62921348314606,Overstock Risk,Overstock Review / Reduce Replenishment
+21814,HEART T-LIGHT HOLDER,Long-Tail,12.333333333333334,97,235.94594594594594,Overstock Risk,Overstock Review / Reduce Replenishment
+90003C,MIDNIGHT BLUE PAIR HEART HAIR SLIDE,Long-Tail,2.5454545454545454,20,235.7142857142857,Overstock Risk,Overstock Review / Reduce Replenishment
+84898F,YELLOW FLOWERS FELT HANDBAG KIT,Long-Tail,11.5,90,234.78260869565216,Overstock Risk,Overstock Review / Reduce Replenishment
+37491C,GREEN/BLUE CERAMIC CANDLE HOLDER,Long-Tail,8.0,62,232.5,Overstock Risk,Overstock Review / Reduce Replenishment
+20657,TROPICAL LUGGAGE TAG,Long-Tail,6.083333333333333,47,231.78082191780823,Overstock Risk,Overstock Review / Reduce Replenishment
+90083,CRYSTAL CZECH CROSS PHONE CHARM,Long-Tail,6.25,48,230.39999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+90060D,FIRE POLISHED GLASS NECKL BRONZE,Long-Tail,3.0,23,230.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90214D,"LETTER ""D"" BLING KEY RING",Long-Tail,5.230769230769231,40,229.41176470588238,Overstock Risk,Overstock Review / Reduce Replenishment
+84592,CROCHET ROSE PURSE WITH SUEDE BACK,Long-Tail,7.6,58,228.94736842105266,Overstock Risk,Overstock Review / Reduce Replenishment
+84744,S/6 SEW ON CROCHET FLOWERS,Regular,12.22222222222222,93,228.2727272727273,Overstock Risk,Overstock Review / Reduce Replenishment
+21228,"POCKET MIRROR ""GLAMOROUS""",Long-Tail,2.5,19,228.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21025,SPACE FROG,Regular,14.5,110,227.58620689655172,Overstock Risk,Overstock Review / Reduce Replenishment
+71403,"PINK/WHITE ""KEEP CLEAN"" BULLET BIN",Long-Tail,6.333333333333333,48,227.3684210526316,Overstock Risk,Overstock Review / Reduce Replenishment
+21769,VINTAGE POST OFFICE CABINET,Long-Tail,11.0,83,226.36363636363637,Overstock Risk,Overstock Review / Reduce Replenishment
+90201C,RED ENAMEL FLOWER RING,Long-Tail,5.181818181818182,39,225.78947368421052,Overstock Risk,Overstock Review / Reduce Replenishment
+22878,NUMBER TILE COTTAGE GARDEN NO,Long-Tail,6.25,47,225.6,Overstock Risk,Overstock Review / Reduce Replenishment
+90182A,AMBER 3 BEAD DROP EARRINGS,Long-Tail,1.6,12,224.99999999999997,Overstock Risk,Overstock Review / Reduce Replenishment
+84637,KITCHEN FLOWER POTS WALL PLAQUE,Regular,11.6,86,222.41379310344828,Overstock Risk,Overstock Review / Reduce Replenishment
+85168B,BLACK BAROQUE CARRIAGE CLOCK,Long-Tail,7.285714285714286,54,222.35294117647058,Overstock Risk,Overstock Review / Reduce Replenishment
+46776E,WOVEN CANDY CUSHION COVER,Long-Tail,5.666666666666667,42,222.35294117647055,Overstock Risk,Overstock Review / Reduce Replenishment
+84975,HEART SHAPED MIRROR,Long-Tail,5.0,37,222.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21032,SPACE CADET WHITE,Long-Tail,10.77777777777778,79,219.8969072164948,Overstock Risk,Overstock Review / Reduce Replenishment
+90031,BILI NUT AND WOOD NECKLACE,Long-Tail,8.333333333333334,61,219.6,Overstock Risk,Overstock Review / Reduce Replenishment
+84872A,TEATIME FUNKY FLOWER BACKPACK FOR 2,Long-Tail,9.428571428571429,69,219.54545454545456,Overstock Risk,Overstock Review / Reduce Replenishment
+20702,PINK PADDED MOBILE,Regular,13.4,98,219.40298507462688,Overstock Risk,Overstock Review / Reduce Replenishment
+90087,CRYSTAL SEA HORSE PHONE CHARM,Regular,9.727272727272728,71,218.9719626168224,Overstock Risk,Overstock Review / Reduce Replenishment
+90185D,CRYSTAL DIAMANTE EXPANDABLE RING,Long-Tail,7.0,51,218.57142857142856,Overstock Risk,Overstock Review / Reduce Replenishment
+21253,SET OF PICTURE FRAME  STICKERS,Regular,10.307692307692308,75,218.28358208955223,Overstock Risk,Overstock Review / Reduce Replenishment
+90012A,MIDNIGHT BLUE DROP CRYSTAL NECKLACE,Long-Tail,2.75,20,218.1818181818182,Overstock Risk,Overstock Review / Reduce Replenishment
+35916C,PINK FELT HANGING HEART W FLOWER,Regular,13.25,96,217.35849056603774,Overstock Risk,Overstock Review / Reduce Replenishment
+21368,MIRRORED WALL ART LADIES,Regular,16.3,118,217.17791411042944,Overstock Risk,Overstock Review / Reduce Replenishment
+90102,WHITE FRANGIPANI HAIR CLIP,Long-Tail,10.0,72,216.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84661A,WHITE SQUARE TABLE CLOCK,Regular,11.666666666666666,84,216.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23104,IVORY CAFE HANGING LAMP,Regular,14.75,106,215.59322033898306,Overstock Risk,Overstock Review / Reduce Replenishment
+22201,FRYING PAN BLUE POLKADOT,Regular,14.76923076923077,106,215.3125,Overstock Risk,Overstock Review / Reduce Replenishment
+47348A,FUSCHIA VOILE POINTY SHOE DEC,Long-Tail,12.125,87,215.2577319587629,Overstock Risk,Overstock Review / Reduce Replenishment
+84919,BLUE CUSHION COVER WITH FLOWER,Long-Tail,7.25,52,215.17241379310346,Overstock Risk,Overstock Review / Reduce Replenishment
+84705C,PINK FLOCK PHOTO FRAME,Long-Tail,12.0,86,215.0,Overstock Risk,Overstock Review / Reduce Replenishment
+23468,TUSCAN VILLA BIRD TABLE,Long-Tail,9.5,68,214.73684210526318,Overstock Risk,Overstock Review / Reduce Replenishment
+90108,BLUE BLOSSOM HAIR CLIP,Long-Tail,7.0,50,214.28571428571428,Overstock Risk,Overstock Review / Reduce Replenishment
+84686,BEACH HUT MIRROR,Long-Tail,12.25,87,213.06122448979593,Overstock Risk,Overstock Review / Reduce Replenishment
+85109,PINK BOUDOIR T-LIGHT HOLDER,Long-Tail,12.0,85,212.5,Overstock Risk,Overstock Review / Reduce Replenishment
+37488A,YELLOW PINK FLOWER DESIGN BIG BOWL,Long-Tail,14.0,99,212.14285714285714,Overstock Risk,Overstock Review / Reduce Replenishment
+22166,WALL MIRROR RECTANGLE DIAMANTE PINK,Regular,15.846153846153848,112,212.03883495145627,Overstock Risk,Overstock Review / Reduce Replenishment
+20933,YELLOW POT PLANT CANDLE,Long-Tail,3.8333333333333335,27,211.30434782608694,Overstock Risk,Overstock Review / Reduce Replenishment
+20770,ABSTRACT CIRCLE JOURNAL,Regular,15.333333333333334,108,211.30434782608694,Overstock Risk,Overstock Review / Reduce Replenishment
+84968F,SET OF 16 VINTAGE SKY BLUE CUTLERY,Regular,14.833333333333334,104,210.33707865168537,Overstock Risk,Overstock Review / Reduce Replenishment
+21360,JOY LARGE WOOD LETTERS,Long-Tail,5.571428571428571,39,210.00000000000003,Overstock Risk,Overstock Review / Reduce Replenishment
+90028,NEW BAROQUE LARGE NECKLACE BLK/WHIT,Long-Tail,2.2857142857142856,16,210.00000000000003,Overstock Risk,Overstock Review / Reduce Replenishment
+84388,WISE MAN STAR SHAPE EGG PAN,Long-Tail,8.0,56,210.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20861,GOLD COSMETIC BAG PINK STAR,Long-Tail,2.0,14,210.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21278,VINTAGE KITCHEN PRINT PUDDINGS,Long-Tail,7.75,54,209.0322580645161,Overstock Risk,Overstock Review / Reduce Replenishment
+21904,HOUSE WRECKING METAL SIGN,Long-Tail,8.333333333333334,58,208.79999999999998,Overstock Risk,Overstock Review / Reduce Replenishment
+46776F,WOVEN ROSE GARDEN CUSHION COVER,Regular,16.692307692307693,116,208.47926267281105,Overstock Risk,Overstock Review / Reduce Replenishment
+22320,BIRDS MOBILE VINTAGE DESIGN,Regular,14.0,97,207.85714285714286,Overstock Risk,Overstock Review / Reduce Replenishment
+72127,COLUMBIAN CANDLE ROUND,Regular,16.9,116,205.91715976331363,Overstock Risk,Overstock Review / Reduce Replenishment
+23143,ZINC WIRE KITCHEN ORGANISER,Long-Tail,6.0,41,205.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90129E,PURPLE GLASS TASSLE BAG CHARM,Long-Tail,6.0,41,205.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20901,VINTAGE KEEPSAKE BOX PINK FLOWER,Long-Tail,8.5,58,204.7058823529412,Overstock Risk,Overstock Review / Reduce Replenishment
+20622,VIPPASSPORT COVER,Regular,14.23076923076923,97,204.48648648648648,Overstock Risk,Overstock Review / Reduce Replenishment
+21336,GOLD WASHBAG,Long-Tail,6.75,46,204.44444444444443,Overstock Risk,Overstock Review / Reduce Replenishment
+90167,BEADED LOVE HEART JEWELLERY SET,Long-Tail,10.0,68,204.0,Overstock Risk,Overstock Review / Reduce Replenishment
+84846A,SCENTED CANDLE IN DIGITALIS TIN,Long-Tail,11.2,76,203.57142857142858,Overstock Risk,Overstock Review / Reduce Replenishment
+23626,SET 10 CARDS DINKY TREE 17076,Long-Tail,14.333333333333334,97,203.02325581395348,Overstock Risk,Overstock Review / Reduce Replenishment
+22124,SET OF 2 TEA TOWELS PING MICROWAVE,Regular,12.416666666666666,84,202.9530201342282,Overstock Risk,Overstock Review / Reduce Replenishment
+20699,MOUSEY LONG LEGS SOFT TOY,Long-Tail,12.125,82,202.88659793814432,Overstock Risk,Overstock Review / Reduce Replenishment
+18094C,WHITE AND BLUE CERAMIC OIL BURNER,Regular,17.454545454545453,118,202.8125,Overstock Risk,Overstock Review / Reduce Replenishment
+21132,SILVER STANDING GNOME,Long-Tail,4.0,27,202.5,Overstock Risk,Overstock Review / Reduce Replenishment
+72799C,PINK PILLAR CANDLE SILVER FLOCK,Long-Tail,13.5,91,202.22222222222223,Overstock Risk,Overstock Review / Reduce Replenishment
+20761,BLUE PAISLEY SKETCHBOOK,Regular,9.23076923076923,62,201.50000000000003,Overstock Risk,Overstock Review / Reduce Replenishment
+72800C,4 PINK DINNER CANDLE SILVER FLOCK,Regular,11.818181818181818,79,200.53846153846155,Overstock Risk,Overstock Review / Reduce Replenishment
+72128,COLUMBIAN CANDLE ROUND,Regular,17.545454545454547,117,200.05181347150258,Overstock Risk,Overstock Review / Reduce Replenishment
+37379A,PINK CHERRY BLOSSOM CUP & SAUCER,Long-Tail,6.0,40,200.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20765,CHRYSANTHEMUM SKETCHBOOK,Regular,7.846153846153846,52,198.8235294117647,Overstock Risk,Overstock Review / Reduce Replenishment
+84206B,CAT WITH SUNGLASSES BLANK CARD,Long-Tail,5.0,33,198.0,Overstock Risk,Overstock Review / Reduce Replenishment
+35910A,MULTICOLOUR EASTER RABBIT,Long-Tail,6.666666666666667,44,198.0,Overstock Risk,Overstock Review / Reduce Replenishment
+37351,ORANGE FLOWER MUG,Long-Tail,5.0,33,198.0,Overstock Risk,Overstock Review / Reduce Replenishment
+20932,PINK POT PLANT CANDLE,Regular,17.0,112,197.64705882352942,Overstock Risk,Overstock Review / Reduce Replenishment
+85028S,FRENCH CHATEAU SMALL FRUITBOWL,Long-Tail,12.0,79,197.5,Overstock Risk,Overstock Review / Reduce Replenishment
+23019,SMALL APOTHECARY MEASURING JAR,Long-Tail,11.571428571428571,76,197.03703703703704,Overstock Risk,Overstock Review / Reduce Replenishment
+21736,GOLD SCROLL GLASS T-LIGHT HOLDER,Long-Tail,16.0,105,196.875,Overstock Risk,Overstock Review / Reduce Replenishment
+90059F,DIAMANTE HAIR GRIP PACK/2 LT ROSE,Long-Tail,2.142857142857143,14,196.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21473,SWEETHEART CREAM STEEL TABLE RECT,Long-Tail,2.4545454545454546,16,195.55555555555554,Overstock Risk,Overstock Review / Reduce Replenishment
+90043,COPPER AND BRASS BAG CHARM,Long-Tail,2.0,13,195.0,Overstock Risk,Overstock Review / Reduce Replenishment
+90010E,AMBER GLASS/SILVER BRACELET,Long-Tail,2.7777777777777777,18,194.4,Overstock Risk,Overstock Review / Reduce Replenishment
+22512,DOORSTOP RACING CAR DESIGN,Regular,13.555555555555555,87,192.54098360655738,Overstock Risk,Overstock Review / Reduce Replenishment
+23466,TUSCAN VILLA DOVECOTE BIRD FEEDER,Long-Tail,13.75,88,192.0,Overstock Risk,Overstock Review / Reduce Replenishment
+35909A,RABBIT EASTER DECORATION,Long-Tail,2.6666666666666665,17,191.25000000000003,Overstock Risk,Overstock Review / Reduce Replenishment
+23467,VINTAGE ZINC PLANTER,Long-Tail,10.666666666666666,68,191.25000000000003,Overstock Risk,Overstock Review / Reduce Replenishment
+35966,FOLKART CHRISTMAS TREE T-LIGHT HOLD,Long-Tail,13.5,86,191.11111111111111,Overstock Risk,Overstock Review / Reduce Replenishment
+21742,LARGE ROUND WICKER PLATTER,Regular,14.923076923076923,95,190.97938144329896,Overstock Risk,Overstock Review / Reduce Replenishment
+20902,VINTAGE KEEPSAKE BOX PARIS DAYS,Regular,14.0,89,190.71428571428572,Overstock Risk,Overstock Review / Reduce Replenishment
+46776D,WOVEN SUNSET CUSHION COVER,Long-Tail,7.416666666666667,47,190.1123595505618,Overstock Risk,Overstock Review / Reduce Replenishment
+79336,LIGHT PINK FLOCK GLASS CANDLEHOLDER,Long-Tail,12.0,76,190.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21777,RECIPE BOX WITH METAL HEART,Long-Tail,12.0,76,190.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85095,THREE CANVAS LUGGAGE TAGS,Regular,12.5,79,189.6,Overstock Risk,Overstock Review / Reduce Replenishment
+85232A,SET/3 POLKADOT STACKING TINS,Long-Tail,12.5,79,189.6,Overstock Risk,Overstock Review / Reduce Replenishment
+85232D,SET/3 DECOUPAGE STACKING TINS,Regular,17.272727272727273,109,189.3157894736842,Overstock Risk,Overstock Review / Reduce Replenishment
+90114,SUMMER DAISIES BAG CHARM,Regular,12.846153846153848,81,189.16167664670655,Overstock Risk,Overstock Review / Reduce Replenishment
+16010,FOLDING CAMPING SCISSOR W/KNIF & S,Long-Tail,10.0,63,189.0,Overstock Risk,Overstock Review / Reduce Replenishment
+21028,NINJA RABBIT BLACK,Regular,15.583333333333334,98,188.66310160427807,Overstock Risk,Overstock Review / Reduce Replenishment
+16202A,PASTEL PINK PHOTO ALBUM,Long-Tail,3.5,22,188.57142857142856,Overstock Risk,Overstock Review / Reduce Replenishment
+22407,MONEY BOX FIRST ADE DESIGN,Long-Tail,9.4,59,188.29787234042553,Overstock Risk,Overstock Review / Reduce Replenishment
+90214Y,"LETTER ""Y"" BLING KEY RING",Long-Tail,11.0,69,188.1818181818182,Overstock Risk,Overstock Review / Reduce Replenishment
+22353,LUNCH BOX WITH CUTLERY FAIRY CAKES,Long-Tail,15.0,94,188.0,Overstock Risk,Overstock Review / Reduce Replenishment
+22359,GLASS JAR KINGS CHOICE,Regular,14.076923076923077,88,187.54098360655738,Overstock Risk,Overstock Review / Reduce Replenishment
+62074B,ELEPHANT CLIP W SUCTION CUP,Long-Tail,4.0,25,187.5,Overstock Risk,Overstock Review / Reduce Replenishment
+21196,ROUND WHITE CONFETTI IN TUBE,Regular,12.0,75,187.5,Overstock Risk,Overstock Review / Reduce Replenishment
+22516,CHILDS GARDEN RAKE BLUE,Regular,18.727272727272727,117,187.4271844660194,Overstock Risk,Overstock Review / Reduce Replenishment
+22513,DOORSTOP FOOTBALL DESIGN,Regular,12.666666666666666,79,187.10526315789474,Overstock Risk,Overstock Review / Reduce Replenishment
+84247E,PACK OF 12 CHRISTMAS FUN CARDS,Regular,18.285714285714285,114,187.03125000000003,Overstock Risk,Overstock Review / Reduce Replenishment
+72811,SMALL ZINC/GLASS CANDLEHOLDER,Long-Tail,10.6,66,186.7924528301887,Overstock Risk,Overstock Review / Reduce Replenishment
+90040B,MURANO STYLE GLASS BRACELET BLACK,Long-Tail,4.5,28,186.66666666666669,Overstock Risk,Overstock Review / Reduce Replenishment
+72780,BLACK SILOUETTE CANDLE PLATE,Regular,11.416666666666666,71,186.56934306569343,Overstock Risk,Overstock Review / Reduce Replenishment
+84801A,PINK HYDRANGEA ART FLOWER,Long-Tail,9.2,57,185.8695652173913,Overstock Risk,Overstock Review / Reduce Replenishment
+90161B,ANT COPPER TURQ BOUDICCA BRACELET,Long-Tail,7.6,47,185.5263157894737,Overstock Risk,Overstock Review / Reduce Replenishment
+20830,SILVER PHOTO FRAME,Regular,13.6,84,185.29411764705884,Overstock Risk,Overstock Review / Reduce Replenishment
+71495A,CD WALL TIDY BLUE OFFICE,Regular,17.166666666666668,106,185.2427184466019,Overstock Risk,Overstock Review / Reduce Replenishment
+90125B,AQUA BERTIE GLASS BEAD BAG CHARM,Long-Tail,6.0,37,185.0,Overstock Risk,Overstock Review / Reduce Replenishment
+85127,SMALL SQUARE CUT GLASS CANDLESTICK,Regular,14.0,86,184.28571428571428,Overstock Risk,Overstock Review / Reduce Replenishment
+21627,ELEPHANT CARNIVAL POUFFE,Long-Tail,5.727272727272728,35,183.3333333333333,Overstock Risk,Overstock Review / Reduce Replenishment
+84251C,"GREETING CARD, TWO SISTERS.",Regular,15.875,97,183.30708661417322,Overstock Risk,Overstock Review / Reduce Replenishment
+46000U,POLYESTER FILLER PAD 30CMX30CM,Regular,9.727272727272728,59,181.96261682242988,Overstock Risk,Overstock Review / Reduce Replenishment
+44228,CANNABIS LEAF BEAD CURTAIN,Long-Tail,18.0,109,181.66666666666669,Overstock Risk,Overstock Review / Reduce Replenishment
+84581,DOG TOY WITH PINK CROCHET SKIRT,Regular,14.384615384615383,87,181.4438502673797,Overstock Risk,Overstock Review / Reduce Replenishment
+21095,SET/6 POSIES PAPER PLATES,Regular,17.857142857142858,108,181.44,Overstock Risk,Overstock Review / Reduce Replenishment
+37479P,CUBIC MUG FLOCK PINK ON BROWN,Regular,14.818181818181818,89,180.1840490797546,Overstock Risk,Overstock Review / Reduce Replenishment

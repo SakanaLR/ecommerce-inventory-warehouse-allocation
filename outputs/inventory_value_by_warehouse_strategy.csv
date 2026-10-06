@@ -1,7 +1,7 @@
-warehouse_strategy,sku_count,total_inventory_units,estimated_inventory_value,stockout_revenue_exposure,overstock_capital_exposure
-Local Warehouse Priority,784,121465,746708.1,524066.59,0.0
-Overstock Review / Reduce Replenishment,924,68196,185101.3,0.0,124125.96
-Standard Replenishment Review,1597,90208,124231.13,88834.0,0.0
-External or Limited Stock Strategy,335,10239,18925.54,1685.29,0.0
-Stable Local Warehouse Inventory,208,33156,13613.81,19109.15,0.0
-Small-Batch Replenishment / Monitor Closely,69,4278,2033.19,11580.53,0.0
+warehouse_strategy,sku_count,total_inventory_units,estimated_inventory_value,annual_holding_cost,stockout_revenue_exposure,overstock_capital_exposure
+Local Warehouse Priority,748,787419,1082544.31,270636.17,55790.73,0.0
+Standard Replenishment Review,1164,292207,307693.61,76923.45,19997.89,0.0
+Overstock Review / Reduce Replenishment,1008,305712,294727.55,73681.89,0.0,53315.26
+Stable Local Warehouse Inventory,171,186927,71445.38,17861.34,3241.82,0.0
+Small-Batch Replenishment / Monitor Closely,73,79334,29407.38,7351.85,4708.18,0.0
+External or Limited Stock Strategy,626,8799,19771.25,4942.86,675.54,0.0

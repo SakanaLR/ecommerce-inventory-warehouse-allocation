@@ -1,8 +1,11 @@
 sku_class,warehouse_strategy,sku_count,total_revenue,total_units,avg_inventory_coverage_days
-High-Revenue Priority,Local Warehouse Priority,784,8093643.96,3676817,37.32769272396762
-Regular,Standard Replenishment Review,1597,1538620.44,962648,42.7378159663444
-High-Turnover Stable,Stable Local Warehouse Inventory,208,356778.52999999997,651372,19.458123912857495
-High-Turnover Volatile,Small-Batch Replenishment / Monitor Closely,69,97743.3,228387,7.309692061898679
-Long-Tail,Overstock Review / Reduce Replenishment,837,86492.953,17655,882.8672795026977
-Long-Tail,External or Limited Stock Strategy,335,50877.909999999996,13307,83.71023469045453
-Regular,Overstock Review / Reduce Replenishment,87,41926.7,11380,251.01107683842537
+High-Revenue Priority,Local Warehouse Priority,748,7597174.69,3433619,82.5671917652313
+Regular,Standard Replenishment Review,1164,1158942.69,710390,114.21301609331353
+Regular,Overstock Review / Reduce Replenishment,467,433253.7,284535,276.56640316566035
+High-Turnover Stable,Stable Local Warehouse Inventory,171,305347.26,535583,98.54995378476917
+High-Turnover Volatile,Small-Batch Replenishment / Monitor Closely,73,102991.68,245408,108.44171712981472
+Long-Tail,External or Limited Stock Strategy,626,81727.53,18764,210.0455777618133
+Long-Tail,Overstock Review / Reduce Replenishment,507,62327.770000000004,16515,413.9398412279763
+High-Revenue Priority,Overstock Review / Reduce Replenishment,10,38733.62,14497,197.56831389361827
+High-Turnover Stable,Overstock Review / Reduce Replenishment,11,20288.11,41544,210.71642634071642
+High-Turnover Volatile,Overstock Review / Reduce Replenishment,13,18085.13,36303,248.13710559240945

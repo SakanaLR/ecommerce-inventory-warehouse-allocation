@@ -3,7 +3,8 @@
 venv/
 env/
 
-# Python cache
+# Python cache and test cache
+.pytest_cache/
 __pycache__/
 *.py[cod]
 *$py.class
@@ -31,6 +32,9 @@ temp/
 # Generated interim data
 data/interim/*.csv
 !data/interim/.gitkeep
+# Large generated file (about 70 MB); regenerate with notebooks/01_data_cleaning.ipynb
+data/processed/clean_sales.csv
+# Legacy folders from the retired standardized-input notebook track
 # Generated standardized processed data
 data/processed_standardized/*.csv
 !data/processed_standardized/.gitkeep

@@ -1,26 +1,26 @@
-stock_code,description,sku_class,warehouse_strategy,current_inventory,inventory_coverage_days,unit_cost,estimated_inventory_value,overstock_capital_exposure
-22823,CHEST NATURAL WOOD 20 DRAWERS,Long-Tail,Overstock Review / Reduce Replenishment,115,1437.5,73.52,8454.8,7396.11
-84963B,BLUE PAINTED KASHMIRI CHAIR,Long-Tail,Overstock Review / Reduce Replenishment,117,1170.0,24.01,2809.17,2376.99
-gift_0001_50,DOTCOMGIFTSHOP GIFT VOUCHER £50.00,Long-Tail,Overstock Review / Reduce Replenishment,86,1935.0000000000002,21.5,1849.0,1677.0
-gift_0001_30,DOTCOMGIFTSHOP GIFT VOUCHER £30.00,Long-Tail,Overstock Review / Reduce Replenishment,105,2250.0000000000005,16.19,1699.95,1563.95
-S,SAMPLES,Long-Tail,Overstock Review / Reduce Replenishment,97,2910.0,15.88,1540.36,1445.08
-84632,DECORATIVE HANGING SHELVING UNIT,Long-Tail,Overstock Review / Reduce Replenishment,54,810.0,28.84,1557.36,1211.28
-21277,FRENCH STYLE EMBOSSED HEART CABINET,Long-Tail,Overstock Review / Reduce Replenishment,91,1050.0,14.1,1283.1,1063.14
-21667,GLASS CAKE COVER AND PLATE,Long-Tail,Overstock Review / Reduce Replenishment,115,1725.0,9.49,1091.35,977.47
-20785,FUSCHIA RETRO BAR STOOL,Long-Tail,Overstock Review / Reduce Replenishment,75,642.8571428571429,16.75,1256.25,904.5
-22824,3 TIER SWEETHEART GARDEN SHELF,Long-Tail,Overstock Review / Reduce Replenishment,87,569.4545454545455,14.49,1260.63,862.16
-22016,DOTCOMGIFTSHOP GIFT VOUCHER £100.00,Long-Tail,Overstock Review / Reduce Replenishment,35,1050.0,29.51,1032.85,855.79
-47570b,TEA TIME TABLE CLOTH,Long-Tail,Overstock Review / Reduce Replenishment,85,2550.0,10.49,891.65,828.71
-DCGS0070,CAMOUFLAGE DOG COLLAR,Long-Tail,Overstock Review / Reduce Replenishment,98,2940.0,7.87,771.26,724.04
-22761,CHEST 7 DRAWER MA CAMPAGNE,Long-Tail,Overstock Review / Reduce Replenishment,81,810.0,10.69,865.89,673.47
-48189,DOORMAT FRIENDSHIP,Long-Tail,Overstock Review / Reduce Replenishment,111,616.6666666666666,8.05,893.55,632.73
-21761,WOOD AND GLASS MEDICINE CABINET,Long-Tail,Overstock Review / Reduce Replenishment,60,1619.9999999999998,11.85,711.0,631.96
-21628,TRIANGULAR POUFFE VINTAGE,Long-Tail,Overstock Review / Reduce Replenishment,117,612.8571428571428,7.41,866.97,612.36
-90056,CHUNKY CRACKED GLAZE NECKLACE IVORY,Long-Tail,Overstock Review / Reduce Replenishment,108,2430.0000000000005,5.74,619.92,574.0
-gift_0001_40,DOTCOMGIFTSHOP GIFT VOUCHER £40.00,Long-Tail,Overstock Review / Reduce Replenishment,49,1470.0,13.33,653.17,573.19
-84617,NEW BAROQUE BLACK BOXES,Long-Tail,Overstock Review / Reduce Replenishment,110,3300.0,5.5,605.0,572.0
-DCGS0069,OOH LA LA DOGS COLLAR,Long-Tail,Overstock Review / Reduce Replenishment,68,2040.0,8.81,599.08,546.22
-90180A,BLACK+WHITE NECKLACE W TASSEL,Long-Tail,Overstock Review / Reduce Replenishment,116,1432.9411764705885,5.1,591.6,517.29
-22764,"RUSTIC WOODEN CABINET, GLASS DOORS",Long-Tail,Overstock Review / Reduce Replenishment,46,552.0,16.54,760.84,512.74
-22802,FAUX FUR CHOCOLATE THROW,Long-Tail,Overstock Review / Reduce Replenishment,113,467.58620689655174,7.37,832.81,512.22
-85161,ACRYLIC GEOMETRIC LAMP,Long-Tail,Overstock Review / Reduce Replenishment,95,651.4285714285713,7.41,703.95,509.44
+stock_code,description,sku_class,warehouse_strategy,current_inventory,max_stock_level,excess_units,inventory_coverage_days,unit_cost,estimated_inventory_value,overstock_capital_exposure
+22833,HALL CABINET WITH 3 DRAWERS,Long-Tail,Overstock Review / Reduce Replenishment,65,44.0,21.0,307.89473684210526,22.7,1475.5,476.7
+23430,BLUE RETRO KITCHEN WALL CLOCK,Long-Tail,Overstock Review / Reduce Replenishment,228,120.0,102.0,325.7142857142857,4.58,1044.24,467.16
+85163B,BLACK BAROQUE WALL CLOCK,Long-Tail,Overstock Review / Reduce Replenishment,101,54.0,47.0,438.0722891566265,8.09,817.09,380.23
+23056,FLOWERS CHANDELIER T-LIGHT HOLDER,Regular,Overstock Review / Reduce Replenishment,442,338.0,79.75,219.62732919254657,4.19,1851.98,334.15
+22473,TV DINNER TRAY VINTAGE PAISLEY,Regular,Overstock Review / Reduce Replenishment,379,273.0,106.0,295.9652928416486,2.97,1125.63,314.82
+23315,IVORY REFECTORY CLOCK,Regular,Overstock Review / Reduce Replenishment,243,185.0,50.0,226.6321243523316,6.23,1513.89,311.5
+22933,BAKING MOULD EASTER EGG MILK CHOC,Regular,Overstock Review / Reduce Replenishment,570,409.0,161.0,262.4040920716112,1.86,1060.2,299.46
+22471,TV DINNER TRAY AIR HOSTESS,Regular,Overstock Review / Reduce Replenishment,275,187.0,88.0,269.7547683923706,3.23,888.25,284.24
+23459,DOLLY CABINET 2 DRAWERS,Long-Tail,Overstock Review / Reduce Replenishment,117,80.0,37.0,270.0,7.53,881.01,278.61
+21619,4 VANILLA BOTANICAL CANDLES,Regular,Overstock Review / Reduce Replenishment,710,521.0,189.0,282.43093922651934,1.44,1022.4,272.16
+22914,BLUE COAT RACK PARIS FASHION,Regular,Overstock Review / Reduce Replenishment,333,241.0,92.0,261.1764705882353,2.94,979.02,270.48
+23381,PACK OF 12 VINTAGE LEAF TISSUES,Regular,Overstock Review / Reduce Replenishment,4508,3158.0,1350.0,286.7279151943463,0.2,901.6,270.0
+85180A,RED HEARTS LIGHT CHAIN,Regular,Overstock Review / Reduce Replenishment,448,329.0,119.0,325.16129032258067,2.23,999.04,265.37
+23418,LAVENDER TOILETTE BOTTLE,Regular,Overstock Review / Reduce Replenishment,1232,959.0,182.0,211.2,1.45,1786.4,263.9
+23115,RED APPLES CHOPPING BOARD,Regular,Overstock Review / Reduce Replenishment,372,275.0,92.0,239.1428571428571,2.84,1056.48,261.28
+23472,NINE DRAWER OFFICE TIDY,Long-Tail,Overstock Review / Reduce Replenishment,192,150.0,42.0,230.4,6.16,1182.72,258.72
+22675,FRENCH KITCHEN SIGN BLUE METAL,Regular,Overstock Review / Reduce Replenishment,849,566.0,272.0,264.85268630849214,0.95,806.55,258.4
+22441,GROW YOUR OWN BASIL IN ENAMEL MUG,Regular,Overstock Review / Reduce Replenishment,715,548.0,167.0,260.5263157894737,1.54,1101.1,257.18
+22332,SKULLS PARTY BAG + STICKER SET,Regular,Overstock Review / Reduce Replenishment,786,534.0,252.0,278.77832512315274,1.02,801.72,257.04
+84660C,PINK STITCHED WALL CLOCK,Regular,Overstock Review / Reduce Replenishment,559,430.0,129.0,296.37702503681885,1.98,1106.82,255.42
+37500,TEA TIME TEAPOT IN GIFT BOX,Regular,Overstock Review / Reduce Replenishment,264,186.0,78.0,261.0989010989011,3.25,858.0,253.5
+22093,MOTORING TISSUE BOX,Regular,Overstock Review / Reduce Replenishment,1786,1322.0,464.0,362.6395939086295,0.54,964.44,250.56
+23462,ROCOCO WALL MIRROR WHITE,Long-Tail,Overstock Review / Reduce Replenishment,228,125.0,27.0,204.17910447761193,9.15,2086.2,247.05
+22927,GREEN GIANT GARDEN THERMOMETER,Regular,Overstock Review / Reduce Replenishment,310,232.0,78.0,262.5882352941176,3.16,979.6,246.48
+23214,JINGLE BELL HEART ANTIQUE GOLD,Regular,Overstock Review / Reduce Replenishment,1052,803.0,249.0,252.48,0.98,1030.96,244.02

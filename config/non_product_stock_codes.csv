@@ -1,0 +1,16 @@
+stock_code,match_type,category,reason
+POST,exact,shipping,Postage charge
+DOT,exact,shipping,Dotcom postage
+C2,exact,shipping,Carriage charge
+23444,exact,shipping,Next day carriage charge (numeric code)
+BANK CHARGES,exact,fee,Bank charges
+AMAZONFEE,exact,fee,Marketplace fee
+23574,exact,fee,Packing charge (numeric code)
+CRUK,exact,fee,CRUK commission
+D,exact,adjustment,Discount line
+M,exact,adjustment,Manual adjustment (also matches lowercase m after normalization)
+B,exact,adjustment,Adjust bad debt
+S,exact,non_merchandise,Samples
+PADS,exact,non_merchandise,Placeholder line priced at 0.001
+22016,exact,non_merchandise,Gift voucher GBP 100 (numeric code)
+GIFT_,prefix,non_merchandise,Gift vouchers (gift_0001_*) are stored value not inventory

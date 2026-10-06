@@ -1,0 +1,5 @@
+demand_basis,draw_method,stockout,overstock,normal,inv_value,stockout_exp,overstock_exp
+end-of-Phase-1 demand basis (active months),legacy row-position draws,1439,842,1509,663706.48,549965.11,110907.87
+end-of-Phase-1 demand basis (active months),per-SKU hashed draws,1383,855,1552,638683.04,546950.76,104660.78
+zero-filled demand basis,legacy row-position draws,1371,1070,1349,663432.29,568636.63,139328.92
+zero-filled demand basis,per-SKU hashed draws,1326,1086,1378,637918.62,563830.24,135218.48

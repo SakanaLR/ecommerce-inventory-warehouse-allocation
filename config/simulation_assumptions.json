@@ -1,0 +1,106 @@
+{
+  "_note": "Simulated inventory layer for portfolio demonstration only. All values below are assumptions, not company data. 'methods' selects the model; the Phase 3A model is methods = fixed_range / volatility_factor / top_up / coverage_only.",
+  "seed": 42,
+  "days_per_month": 30,
+  "methods": {
+    "inventory": "policy_band",
+    "safety_stock": "service_level",
+    "order_quantity": "eoq",
+    "overstock": "max_stock"
+  },
+  "current_inventory": {
+    "_used_when": "methods.inventory = fixed_range (Phase 3A)",
+    "priority_classes": [
+      "High-Revenue Priority",
+      "High-Turnover Stable"
+    ],
+    "priority_min": 20,
+    "priority_max": 299,
+    "other_min": 0,
+    "other_max": 119
+  },
+  "policy_band": {
+    "_used_when": "methods.inventory = policy_band (Phase 3B-1): current inventory = reorder point + p x EOQ, with p drawn per SKU. p = 0 is the reorder point, p = 1 is the maximum stock (just after a delivery); p < 0 is below the reorder point and p > 1 is above the maximum.",
+    "position_by_class": {
+      "High-Revenue Priority": [
+        -0.3,
+        1.2
+      ],
+      "High-Turnover Stable": [
+        -0.2,
+        1.2
+      ],
+      "High-Turnover Volatile": [
+        -0.4,
+        1.3
+      ],
+      "Regular": [
+        -0.3,
+        1.6
+      ],
+      "Long-Tail": [
+        -0.2,
+        2.2
+      ]
+    },
+    "no_demand_units": [
+      0,
+      20
+    ]
+  },
+  "supplier_lead_time_days": {
+    "values": [
+      7,
+      14,
+      21,
+      30,
+      45
+    ],
+    "probabilities": [
+      0.2,
+      0.35,
+      0.25,
+      0.15,
+      0.05
+    ]
+  },
+  "storage_volume_per_unit": {
+    "min": 0.1,
+    "max": 3.0,
+    "decimals": 2
+  },
+  "unit_cost_ratio": {
+    "min": 0.35,
+    "max": 0.65
+  },
+  "safety_stock": {
+    "_volatility_factor": "Phase 3A: lead-time demand x (base_factor + cv_factor x min(CV, cv_cap))",
+    "base_factor": 0.25,
+    "cv_factor": 0.25,
+    "cv_cap": 2.0,
+    "_service_level": "Phase 3B-1: z(service level) x monthly demand std x sqrt(lead time / days_per_month)",
+    "service_level_by_class": {
+      "High-Revenue Priority": 0.98,
+      "High-Turnover Stable": 0.95,
+      "High-Turnover Volatile": 0.95,
+      "Regular": 0.9,
+      "Long-Tail": 0.85
+    }
+  },
+  "order_quantity": {
+    "_eoq": "Phase 3B-1: sqrt(2 x annual demand x ordering cost / (unit cost x annual holding rate)), rounded up and capped at max_order_coverage_days of demand",
+    "ordering_cost_gbp": 25.0,
+    "annual_holding_rate": 0.25,
+    "months_per_year": 12,
+    "max_order_coverage_days": 180
+  },
+  "overstock": {
+    "coverage_days": 180,
+    "_coverage_only": "Phase 3A: coverage above coverage_days, only for the listed classes",
+    "classes": [
+      "Long-Tail",
+      "Regular"
+    ],
+    "_max_stock": "Phase 3B-1: inventory above max(reorder point + EOQ, coverage_days of demand), all classes"
+  }
+}

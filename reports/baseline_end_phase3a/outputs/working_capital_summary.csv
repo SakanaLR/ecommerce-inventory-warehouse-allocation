@@ -1,0 +1,9 @@
+metric,value
+total_skus,3790
+total_estimated_inventory_value,637918.62
+stockout_risk_skus,1326
+stockout_revenue_exposure,563830.24
+overstock_risk_skus,1086
+overstock_capital_exposure,135218.48
+sku_classes,5
+warehouse_strategy_count,6

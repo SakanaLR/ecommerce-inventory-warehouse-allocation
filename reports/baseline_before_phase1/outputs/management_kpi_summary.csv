@@ -1,0 +1,12 @@
+metric,value
+valid_product_sales_rows,522716
+returns_cancellations_rows,10587
+non_product_rows_excluded,2162
+sku_master_count,3917
+sku_profile_count,3917
+high_revenue_priority_sku_count,784
+long_tail_sku_count,1172
+stockout_risk_sku_count,1432
+overstock_risk_sku_count,924
+replenishment_recommendation_count,1432
+warehouse_strategy_group_count,7

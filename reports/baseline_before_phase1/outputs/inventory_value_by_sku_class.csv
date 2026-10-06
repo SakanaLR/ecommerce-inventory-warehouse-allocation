@@ -1,0 +1,6 @@
+sku_class,sku_count,total_inventory_units,estimated_inventory_value,stockout_revenue_exposure,overstock_capital_exposure
+High-Revenue Priority,784,121465,746708.1,524066.59,0.0
+Long-Tail,1172,70163,187267.85,1685.29,120201.25
+Regular,1684,98480,140990.12,88834.0,3924.71
+High-Turnover Stable,208,33156,13613.81,19109.15,0.0
+High-Turnover Volatile,69,4278,2033.19,11580.53,0.0

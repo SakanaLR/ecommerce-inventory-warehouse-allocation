@@ -1,0 +1,8 @@
+step,row_count,note
+raw_data,541909,Original raw transaction rows
+after_duplicate_removal,536641,Rows after removing exact duplicate records
+returns_cancellations_separated,10587,Cancellation and return-related records separated from main sales data
+non_product_lines_excluded,2162,"Postage, fees, discounts, manual adjustments, and other non-product lines excluded"
+valid_product_sales_final,522716,Final valid physical product sales records
+monthly_sku_sales_records,34020,Monthly SKU-level aggregation records
+sku_master_records,3917,Normalized SKU master records using stock_code as SKU key
